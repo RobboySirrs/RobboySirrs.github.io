@@ -1,162 +1,240 @@
 <!DOCTYPE html>
-<html lang="en" data-bs-theme="dark" >
-
-
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Robin Course application</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css" integrity="sha512-Velp0ebMKjcd9RiCoaHhLXkR1sFoCCWXNp6w4zj1hfMifYB5441C+sKeBl/T/Ka6NjBiRfBBQRaQq65ekYz3UQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.min.js" integrity="sha512-Y2IiVZeaBwXG1wSV7f13plqlmFOx8MdjuHyYFVoYzhyRr3nH/NMDjTBSswijzADdNzMyWNetbLMfOpIPl6Cv9g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-    <link rel="stylesheet" ahref="style.css">
- 
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Robin Axelsson – Blog & Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #ffffff;
+      --primary: #0f172a;
+      --accent: #2563eb;
+      --text: #1e293b;
+      --muted: #64748b;
+      --card-bg: #f1f5f9;
+      --shadow: rgba(0, 0, 0, 0.05);
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0f172a;
+        --primary: #e2e8f0;
+        --accent: #60a5fa;
+        --text: #cbd5e1;
+        --muted: #94a3b8;
+        --card-bg: #1e293b;
+        --shadow: rgba(0, 0, 0, 0.3);
+      }
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Outfit', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      padding: 0 1rem;
+      line-height: 1.6;
+      transition: background 0.3s ease, color 0.3s ease;
+    }
+
+    header {
+      text-align: center;
+      padding: 4rem 1rem 2rem;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      color: var(--primary);
+    }
+
+    header p {
+      font-size: 1.2rem;
+      color: var(--muted);
+      margin-top: 0.5rem;
+    }
+
+    section#blogs {
+      max-width: 800px;
+      margin: 2rem auto;
+    }
+
+    .blog-post {
+      display: none;
+      background: var(--card-bg);
+      padding: 2rem;
+      margin: 2rem 0;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px var(--shadow);
+      transition: all 0.3s ease;
+      opacity: 0;
+      transform: translateY(20px);
+      border-left: 4px solid var(--accent);
+    }
+
+    .blog-post.visible {
+      display: block;
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .blog-post h2 {
+      font-size: 1.5rem;
+      color: var(--primary);
+      margin-bottom: 0.5rem;
+    }
+
+    .blog-post p {
+      color: var(--text);
+      margin-bottom: 1rem;
+    }
+
+    .blog-image {
+      width: 100%;
+      max-width: 700px;
+      margin: 1.5rem auto;
+      display: block;
+      border-radius: 8px;
+      cursor: zoom-in;
+      transition: transform 0.3s ease;
+    }
+
+    .blog-image:hover {
+      transform: scale(1.02);
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.9rem;
+      margin-top: 4rem;
+      color: var(--muted);
+      padding-bottom: 2rem;
+    }
+
+    /* Image modal */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 999;
+      padding-top: 60px;
+      left: 0; top: 0;
+      width: 100%; height: 100%;
+      overflow: auto;
+      background-color: rgba(0,0,0,0.9);
+      text-align: center;
+    }
+
+    .modal-content {
+      margin: auto;
+      display: block;
+      max-width: 90%;
+      max-height: 80vh;
+      border-radius: 12px;
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      color: #fff;
+      font-size: 2rem;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2rem;
+      }
+
+      .blog-post {
+        padding: 1.2rem;
+      }
+    }
+  </style>
 </head>
-
-
 <body>
-  <nav class="navbar navbar-expand-lg bg-body-tertiary">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" class="bi bi-box" viewBox="0 0 64 64">
-        <path d="M36.604 23.043c-.623-.342-1.559-.512-2.805-.512h-6.693v7.795h6.525c1.295 0 2.268-.156 2.916-.473c1.146-.551 1.721-1.639 1.721-3.268c0-1.757-.555-2.939-1.664-3.542" fill="#000000"></path><path d="M32.002 2C15.434 2 2 15.432 2 32s13.434 30 30.002 30s30-13.432 30-30s-13.432-30-30-30m12.82 44.508h-6.693a20.582 20.582 0 0 1-.393-1.555a14.126 14.126 0 0 1-.256-2.5l-.041-2.697c-.023-1.85-.344-3.084-.959-3.701c-.613-.615-1.766-.924-3.453-.924h-5.922v11.377H21.18V17.492h13.879c1.984.039 3.51.289 4.578.748s1.975 1.135 2.717 2.027a9.07 9.07 0 0 1 1.459 2.441c.357.893.537 1.908.537 3.051c0 1.379-.348 2.732-1.043 4.064s-1.844 2.273-3.445 2.826c1.338.537 2.287 1.303 2.844 2.293c.559.99.838 2.504.838 4.537v1.949c0 1.324.053 2.225.16 2.697c.16.748.533 1.299 1.119 1.652v.731z" fill="#000000"></path>
-      </svg> </a>
-     
-  </nav>
-  
 
-  <div class="container px-4 py-5" id="featured-3">
-   
-    <div class="row featurette">
-      <div class="col-md-7 order-md-2">
-        <h2 class="featurette-heading fw-normal lh-1 text-info">Why, this course? </h2>
-        <p class="lead">
-I have spent about, 20 years coding back and forth. I started with ASP, CSS, HTML.
-<br>I do love the back-end (currenty using Node), beacuse is more code and less design. I feel like I have gotten stuck and haven't been able to motivate myself to learn databases and security in the javaScript. <br> I always learn something new because I have to complete the project I'm making, just haven't come up wit ha project to motivate me to learn more in these fields. The course lenght and focues are exaclty what I want to learn. to be able to excell faster.        </p>
-      </div>
-      <div class="col-md-5 order-md-1">
-        <img src="fc.png" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="550" height="550" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 300X300" preserveAspectRatio="xMidYMid slice" focusable="false"></svg>
-        <p class="text-info"><i>"Freight Checkout made with Node & EJS"</i></p>
-        
-      </div>
+  <header>
+    <h1>Robin Axelsson</h1>
+    <p>Business Developer · Process Developer · Full-Stack Coder</p>
+  </header>
+
+  <section id="blogs">
+    <div class="blog-post" id="blog1">
+      <h2>Building Scalable Business Models</h2>
+      <p>This article explores the intersection of tech and strategy. I break down how to validate scalable business models using agile dev and market signals.</p>
+      <img src="https://via.placeholder.com/800x400?text=Business+Model+Diagram" alt="Business Model Diagram" class="blog-image" onclick="openModal(this)">
     </div>
 
-    
-    
-    <div class="container px-4 py-5" id="hanging-icons">
-      <h2 class="pb-2 border-bottom text-info">Why would I be a good developer?</h2>
-      <div class="row g-4 py-5 row-cols-1 row-cols-lg-2">
-        <div class="col d-flex align-items-start">
-          <div class="text-body-emphasis d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check-lg" viewBox="0 0 16 16">
-              <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425z"/>
-            </svg>
-          </div>
-          <div>
-            <h3 class="fs-2 text-body-emphasis">Already deployed project</h3>
-            <p>
-            Back in the days (2006) I deployed a blog for my travels.
-            With functions like, Login/Auth, Blog with comments, newsletter, Upload to image gallery and a subscription to newsletters. 
-            Using ASP, Acess(database), HTML, CSS.
-            <br><br> <b>PAID projects</b>
-            <ul>
-              <li>System for printing shipping labels fast for a e-commerce store. using the exicting TA-System. went from 20sec to 6sec / printout </li>
-              <li>Worked on functions & design to optimize sales in a existing Shopifyshop using, Liquid, JavaScript & CSS.</li>
-            </ul>
-            </p>
-           
-          </div>
-        </div>
-        <div class="col d-flex align-items-start">
-          <div class="text-body-emphasis d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-box" viewBox="0 0 16 16">
-              <path d="M8.186 1.113a.5.5 0 0 0-.372 0L1.846 3.5 8 5.961 14.154 3.5zM15 4.239l-6.5 2.6v7.922l6.5-2.6V4.24zM7.5 14.762V6.838L1 4.239v7.923zM7.443.184a1.5 1.5 0 0 1 1.114 0l7.129 2.852A.5.5 0 0 1 16 3.5v8.662a1 1 0 0 1-.629.928l-7.185 2.874a.5.5 0 0 1-.372 0L.63 13.09a1 1 0 0 1-.63-.928V3.5a.5.5 0 0 1 .314-.464z"/>
-            </svg>
-          </div>
-          <div>
-            <h3 class="fs-2 text-body-emphasis">Problem solver</h3>
-            <p>
-I am a business developer in e-commerce logistics, solving problems is what I do. This is also why i like to code small projects in my spare time, just to have a problem to solve.
-</p>
-           
-          </div>
-        </div>
-        <div class="container" id="hanging-icons">
-          <h2 class="pb-2 border-bottom text-info">Personal letter</h2>
-            <p>My name is Robin Axelsson I live in Stockholm.
-             I have a Exam in "E-commerce logistics" and my hobbies are icehockey, coding, math and my familiy. Also Excell if you can call that a hobby...
-            </p>
-            <p>I have a goal to become a E-commerce consult. working with logistics & supply chain, system integration & some fronend and backend development.
-<br> Since I am interested in both coding and data analytics.
-            </p>
-            <p> I do need to work on design and frontend, I can add thinks to an existing project pretty well. But to make a site from scratch I find really hard. I'm just no the design type of person.</p>
-          </div>
-          <div class="container" id="hanging-icons">
-            <h2 class="pb-2 border-bottom text-info">Coding Experience</h2>
-            <p class="lead">
-              Please see my github for more projects. 
-            </p>
-            <ul>
-              <li>freeCodeCamp: JavaScript Algorithms and Data Structures Certification</li>
-              <li>Udemy: Web Dev Bootcamp: work in progress</li>
-              <li>Developing and maintaining a shopify shop</li>
-              <li>Working on an Electron app for printing out shipping labels, quickly. SAAS solution. Proof of concept done.</li>
-              <li>Coding since 1998, having fun!</li>
-              
-              
-            </ul>
+    <div class="blog-post" id="blog2">
+      <h2>From Idea to MVP in 7 Days</h2>
+      <p>A detailed walkthrough on how I built a prototype SaaS product with Node.js, React, and Stripe — and got my first paying user in under a week.</p>
+      <img src="https://via.placeholder.com/800x400?text=MVP+Architecture" alt="MVP Architecture" class="blog-image" onclick="openModal(this)">
+    </div>
 
-            </div>
-          
+    <div class="blog-post" id="blog3">
+      <h2>Why Coders Should Understand Business Metrics</h2>
+      <p>Tech isn't just about building — it's about creating value. In this post I explain key metrics every developer should know when working in startups.</p>
+      <img src="https://via.placeholder.com/800x400?text=Key+Metrics+Chart" alt="Key Metrics Chart" class="blog-image" onclick="openModal(this)">
+    </div>
 
-         
-            
-              
-         
-          
-          
-        
-        
-        </div>
-        
-   
-        <div class="row featurette">
-          <div class="col-md-7 order-md-2">
-            <h2 class="featurette-heading fw-normal lh-1 text-info">Github "Sort table"</h2>
-            <p class="lead">
-              <p>I do realize I dont't have the cleanest code, but that is probably because I haven't ever had to work with other people and since I'm just playing around I haven't focused on readbility, this project is about 2 years old and I have been working in OOP and think I write cleaner code now days, but nothing that I can show off.
-              </p>
-              <p>
-                This project is made with node-Express & EJS. functions to sort, filter and add/delete data. the data is not stored in a database but saved on the server in a object.<br>
-                All the functions are written from scratch. <br>
-                <br>                  
-    
-                I do have a working example in Glitch:  <a href="https://spurious-quark-beet.glitch.me/" target="_blank">Here!</a>
-                <br>
-                Github link <a href="https://github.com/RobboySirrs/Sorttabledemo" target="_blank">Here!</a>
-              </p>
-              <p>
-              Also would like to mention my Freight Checkout project.
-              <br> Using Node and 3 Api calls, with <b>promise.all</b> But I do also handle if one or more api's gives an error<br>  <a href="https://suave-wood-chronometer.glitch.me/" target="_blank">Freight checkout Demo</a></p>
-              </div>
-          <div class="col-md-5 order-md-1">
-            <img src="st.png" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="550" height="550" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 300X300" preserveAspectRatio="xMidYMid slice" focusable="false"></svg>
-            <p class="text-info"><i>"Screenshoot of demo"</i></p>
-            
-          </div>
-        </div>
-        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-          <div class="col-md-4 d-flex align-items-center">
-            <a href="/" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
-              <svg class="bi" width="30" height="24"><use xlink:href="#bootstrap"></use></svg>
-            </a>
-            <span class="mb-3 mb-md-0 text-body-secondary">2024 Robin Axelsson<br>
-            Site made with bootstrap 2024-05-30 :)</span>
-          </div>
-      
-          
-        </footer>
+    <!-- Add blog4 to blog10 here with similar format -->
+  </section>
+
+  <footer>
+    &copy; 2025 Robin Axelsson · All rights reserved
+  </footer>
+
+  <!-- Image Modal -->
+  <div id="image-modal" class="modal" onclick="closeModal()">
+    <span class="modal-close" onclick="closeModal()">×</span>
+    <img id="modal-img" class="modal-content">
+  </div>
+
+  <script>
+    // Blog reveal schedule
+    const blogSchedule = {
+      blog1: "2025-07-15",
+      blog2: "2025-07-07",
+      blog3: "2025-08-01",
+      blog4: "2025-08-10",
+      blog5: "2025-08-20",
+      blog6: "2025-08-30",
+      blog7: "2025-09-10",
+      blog8: "2025-09-20",
+      blog9: "2025-09-30",
+      blog10: "2025-10-10",
+    };
+
+    const today = new Date();
+
+    for (const [id, dateString] of Object.entries(blogSchedule)) {
+      const revealDate = new Date(dateString);
+      const blogDiv = document.getElementById(id);
+      if (today >= revealDate && blogDiv) {
+        blogDiv.classList.add("visible");
+      }
+    }
+
+    // Image modal functionality
+    function openModal(imgElement) {
+      const modal = document.getElementById("image-modal");
+      const modalImg = document.getElementById("modal-img");
+      modalImg.src = imgElement.src;
+      modal.style.display = "block";
+    }
+
+    function closeModal() {
+      document.getElementById("image-modal").style.display = "none";
+    }
+  </script>
 
 </body>
 </html>
