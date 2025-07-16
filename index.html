@@ -6,157 +6,168 @@
   <title>Robin Axelsson – Blog & Portfolio.</title>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
-    :root {
-      --bg: #ffffff;
-      --primary: #0f172a;
-      --accent: #2563eb;
-      --text: #1e293b;
-      --muted: #64748b;
-      --card-bg: #f1f5f9;
-      --shadow: rgba(0, 0, 0, 0.05);
-    }
+  :root {
+  --bg: #ffffff;
+  --primary: #0f172a;
+  --accent: #32cd32; /* Lime green */
+  --text: #1e293b;
+  --muted: #64748b;
+  --card-bg: #f1f5f9;
+  --shadow: rgba(0, 0, 0, 0.05);
+}
 
-    @media (prefers-color-scheme: dark) {
-      :root {
-        --bg: #0f172a;
-        --primary: #e2e8f0;
-        --accent: #60a5fa;
-        --text: #cbd5e1;
-        --muted: #94a3b8;
-        --card-bg: #1e293b;
-        --shadow: rgba(0, 0, 0, 0.3);
-      }
-    }
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0f172a;
+    --primary: #e2e8f0;
+    --accent: #9aff9a; /* Soft lime for dark mode */
+    --text: #cbd5e1;
+    --muted: #94a3b8;
+    --card-bg: #1e293b;
+    --shadow: rgba(0, 0, 0, 0.3);
+  }
+}
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
-    body {
-      font-family: 'Outfit', sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      padding: 0 1rem;
-      line-height: 1.6;
-      transition: background 0.3s ease, color 0.3s ease;
-    }
+body {
+  font-family: 'Outfit', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  padding: 0 1rem;
+  line-height: 1.6;
+  transition: background 0.3s ease, color 0.3s ease;
+}
 
-    header {
-      text-align: center;
-      padding: 4rem 1rem 2rem;
-    }
+header {
+  text-align: center;
+  padding: 4rem 1rem 2rem;
+}
 
-    header h1 {
-      font-size: 3rem;
-      font-weight: 700;
-      color: var(--primary);
-    }
+header h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--primary);
+}
 
-    header p {
-      font-size: 1.2rem;
-      color: var(--muted);
-      margin-top: 0.5rem;
-    }
+header p {
+  font-size: 1.2rem;
+  color: var(--muted);
+  margin-top: 0.5rem;
+}
 
-    section#blogs {
-      max-width: 800px;
-      margin: 2rem auto;
-    }
+section#blogs {
+  max-width: 800px;
+  margin: 2rem auto;
+}
 
-    .blog-post {
-      display: none;
-      background: var(--card-bg);
-      padding: 2rem;
-      margin: 2rem 0;
-      border-radius: 12px;
-      box-shadow: 0 8px 20px var(--shadow);
-      transition: all 0.3s ease;
-      opacity: 0;
-      transform: translateY(20px);
-      border-left: 4px solid var(--accent);
-    }
+.blog-post {
+  display: none;
+  background: var(--card-bg);
+  padding: 2rem;
+  margin: 2rem 0;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px var(--shadow);
+  transition: all 0.3s ease;
+  opacity: 0;
+  transform: translateY(20px);
+  border-left: 4px solid var(--accent);
+  overflow: auto; /* Keeps floated images contained */
+}
 
-    .blog-post.visible {
-      display: block;
-      opacity: 1;
-      transform: translateY(0);
-    }
+.blog-post.visible {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
 
-    .blog-post h2 {
-      font-size: 1.5rem;
-      color: var(--primary);
-      margin-bottom: 0.5rem;
-    }
+.blog-post h2 {
+  font-size: 1.5rem;
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+}
 
-    .blog-post p {
-      color: var(--text);
-      margin-bottom: 1rem;
-    }
+.blog-post p {
+  color: var(--text);
+  margin-bottom: 1rem;
+}
 
-    .blog-image {
-      width: 100%;
-      max-width: 700px;
-      margin: 1.5rem auto;
-      display: block;
-      border-radius: 8px;
-      cursor: zoom-in;
-      transition: transform 0.3s ease;
-    }
+.blog-image {
+  float: left;
+  width: 30%;
+  height: auto;
+  margin: 0 1rem 1rem 0;
+  border-radius: 8px;
+  cursor: zoom-in;
+  transition: transform 0.3s ease;
+}
 
-    .blog-image:hover {
-      transform: scale(1.02);
-    }
+.blog-image:hover {
+  transform: scale(1.02);
+}
 
-    footer {
-      text-align: center;
-      font-size: 0.9rem;
-      margin-top: 4rem;
-      color: var(--muted);
-      padding-bottom: 2rem;
-    }
+footer {
+  text-align: center;
+  font-size: 0.9rem;
+  margin-top: 4rem;
+  color: var(--muted);
+  padding-bottom: 2rem;
+}
 
-    /* Image modal */
-    .modal {
-      display: none;
-      position: fixed;
-      z-index: 999;
-      padding-top: 60px;
-      left: 0; top: 0;
-      width: 100%; height: 100%;
-      overflow: auto;
-      background-color: rgba(0,0,0,0.9);
-      text-align: center;
-    }
+/* Image modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  padding-top: 60px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.9);
+  text-align: center;
+}
 
-    .modal-content {
-      margin: auto;
-      display: block;
-      max-width: 90%;
-      max-height: 80vh;
-      border-radius: 12px;
-    }
+.modal-content {
+  margin: auto;
+  display: block;
+  max-width: 90%;
+  max-height: 80vh;
+  border-radius: 12px;
+}
 
-    .modal-close {
-      position: absolute;
-      top: 20px;
-      right: 30px;
-      color: #fff;
-      font-size: 2rem;
-      font-weight: bold;
-      cursor: pointer;
-    }
+.modal-close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  color: #fff;
+  font-size: 2rem;
+  font-weight: bold;
+  cursor: pointer;
+}
 
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 2rem;
-      }
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 2rem;
+  }
 
-      .blog-post {
-        padding: 1.2rem;
-      }
-    }
+  .blog-post {
+    padding: 1.2rem;
+  }
+
+  .blog-image {
+    float: none;
+    display: block;
+    width: 100%;
+    margin: 1rem auto;
+  }
+}
+
   </style>
 </head>
 <body>
