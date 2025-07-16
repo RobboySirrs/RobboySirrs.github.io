@@ -178,27 +178,59 @@ footer {
   </header>
 
   <section id="blogs">
-    <div class="blog-post" id="blog1" style="overflow: auto;">
-      <h2>Building Scalable Business Models</h2>
-      <p>This article explores the intersection of tech and strategy. I break down how to validate scalable business models using agile dev and market signals.</p>
-     <img src="https://picsum.photos/480/640"
-     alt="Business Model Diagram"
-     class="blog-image"
-        style="width: 30%; height: auto; margin: 0 1rem 1rem 0; border-radius: 8px; cursor: zoom-in;"
-     onclick="openModal(this)">
-    </div>
+  <section id="blogs">
+  <div class="blog-post" id="blog1" style="overflow: auto;">
+    <h2>Printing Labels Faster with Clever Ideas and JavaScript</h2>
+    <img
+      src="https://picsum.photos/id/1015/480/640"
+      alt="Label Automation Example"
+      class="blog-image"
+      style="float: left; width: 30%; height: auto; margin: 0 1rem 1rem 0; border-radius: 8px; cursor: zoom-in;"
+      onclick="openModal(this)"
+    >
+    <p>
+      In this post, I share how I reduced printing times for thousands of shipping labels by combining simple UX tweaks with vanilla JavaScript. We skipped heavy third-party tools and focused on speed and automation.
+    </p>
+    <p>
+      Key improvements included preloading print dialogs, removing browser delays, and dynamically injecting printer config data. The result? A 40% faster average print cycle in real-world warehouse testing.
+    </p>
+  </div>
 
-    <div class="blog-post" id="blog2" style="overflow: auto;">
-      <h2>From Idea to MVP in 7 Days</h2>
-      <p>A detailed walkthrough on how I built a prototype SaaS product with Node.js, React, and Stripe — and got my first paying user in under a week.</p>
-      <img src="https://via.placeholder.com/800x400?text=MVP+Architecture" alt="MVP Architecture" class="blog-image" onclick="openModal(this)">
-    </div>
+  <div class="blog-post" id="blog2" style="overflow: auto;">
+    <h2>Make / Model / Year Filter with Shopify’s Homemade API</h2>
+    <img
+      src="https://picsum.photos/id/1020/480/640"
+      alt="Year Filter Screenshot"
+      class="blog-image"
+      style="float: left; width: 30%; height: auto; margin: 0 1rem 1rem 0; border-radius: 8px; cursor: zoom-in;"
+      onclick="openModal(this)"
+    >
+    <p>
+      Shopify doesn’t have a built-in year/make/model vehicle filter. But I needed one. So I built a "homemade" API using metafields and a little Liquid/JS bridge to handle user filtering without an app.
+    </p>
+    <p>
+      It loads fast, scales with SKUs, and stays native to the Shopify frontend. If you're a coder stuck with platform limits, this post shows how to bend Shopify to your will — cleanly.
+    </p>
+  </div>
 
-    <div class="blog-post" id="blog3" style="overflow: auto;">
-      <h2>Why Coders Should Understand Business Metrics</h2>
-      <p>Tech isn't just about building — it's about creating value. In this post I explain key metrics every developer should know when working in startups.</p>
-      <img src="https://via.placeholder.com/800x400?text=Key+Metrics+Chart" alt="Key Metrics Chart" class="blog-image" onclick="openModal(this)">
-    </div>
+  <div class="blog-post" id="blog3" style="overflow: auto;">
+    <h2>Buy X Get Y Free: A Native Promo Flow in Shopify</h2>
+    <img
+      src="https://picsum.photos/id/1041/480/640"
+      alt="Promo Offer UI"
+      class="blog-image"
+      style="float: left; width: 30%; height: auto; margin: 0 1rem 1rem 0; border-radius: 8px; cursor: zoom-in;"
+      onclick="openModal(this)"
+    >
+    <p>
+      Shopify Scripts (or Functions) are powerful, but not always an option. In this tutorial I show how to create a Buy X Get Y Free experience using only cart logic, metafields, and a few smart workarounds.
+    </p>
+    <p>
+      No need for external apps. I walk through triggering the offer, auto-adding the free item, and verifying the promotion without breaking checkout. This is great for marketers who want speed and devs who like control.
+    </p>
+  </div>
+</section>
+
 
     <!-- Add blog4 to blog10 here with similar format -->
   </section>
@@ -218,7 +250,7 @@ footer {
     const blogSchedule = {
       blog1: "2025-07-15",
       blog2: "2025-07-07",
-      blog3: "2025-08-01",
+      blog3: "2025-07-01",
       blog4: "2025-08-10",
       blog5: "2025-08-20",
       blog6: "2025-08-30",
