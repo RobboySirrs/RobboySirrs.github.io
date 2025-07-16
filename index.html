@@ -229,6 +229,30 @@ footer {
       No need for external apps. I walk through triggering the offer, auto-adding the free item, and verifying the promotion without breaking checkout. This is great for marketers who want speed and devs who like control.
     </p>
   </div>
+    <div class="blog-post" id="blog4" style="overflow: auto;">
+  <h2>How to Calculate Safety Stock and Reorder Point (with Real-World Variability)</h2>
+  <img
+    src="https://picsum.photos/id/1062/480/640"
+    alt="Inventory Buffer Chart"
+    class="blog-image"
+    style="float: left; width: 30%; height: auto; margin: 0 1rem 1rem 0; border-radius: 8px; cursor: zoom-in;"
+    onclick="openModal(this)"
+  >
+  <p>
+    Reorder point (ROP) isn’t just “average sales × lead time.” That only works in a perfect world. If you’re serious about avoiding stockouts, you need to factor in **variability** — both in your lead time and your sales rate.
+  </p>
+  <p>
+    Here’s the formula I use in real businesses:
+    <br><strong>ROP = (Average daily sales × Average lead time) + Safety stock</strong>
+  </p>
+  <p>
+    To calculate safety stock properly:
+    <br><strong>Safety Stock = Z × √(Lead Time Variance × Daily Sales Variance)</strong>
+    <br>Z is the service level factor (e.g., 1.65 for 95% confidence).
+  </p>
+  <p>
+    We usually gather 90–180 days of data, calculate standard deviations for both daily sales and lead times, and plug that
+
 </section>
 
 
