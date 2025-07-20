@@ -65,22 +65,22 @@ section#blogs {
 }
 
 .blog-post {
-  display: hidden;
+  display: block;
   background: var(--card-bg);
   padding: 2rem;
   margin: 2rem 0;
   border-radius: 12px;
   box-shadow: 0 8px 20px var(--shadow);
-  transition: all 0.5s ease;
-  opacity: 0;
+  transition: none;
+  opacity: 1;
   /* Default: from left */
-  transform: translateX(-40px);
+  transform: none;
   border-left: 4px solid var(--accent);
   overflow: auto;
 }
 
 .blog-post.from-right {
-  transform: translateX(40px);
+  transform: translateX(0px);
 }
 
 .blog-post.visible.in-view,
@@ -124,11 +124,26 @@ section#blogs {
   font-size: 1.5rem;
   color: var(--primary);
   margin-bottom: 0.5rem;
+  opacity: 1;
+  transform: none;
+  transition: none;
 }
 
 .blog-post p {
   color: var(--text);
   margin-bottom: 1rem;
+}
+
+/* Animate inner content */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s cubic-bezier(.4,0,.2,1), transform 0.7s cubic-bezier(.4,0,.2,1);
+}
+
+.reveal.reveal-in-view {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .blog-image {
@@ -282,7 +297,7 @@ footer {
   </header>
 
   <section id="blogs">
-  <section id="blogs">
+  
   <div class="blog-post" id="blog1" style="overflow: auto;">
     <h2>Printing Labels Faster with Clever Ideas and JavaScript</h2>
     <img
@@ -421,25 +436,54 @@ footer {
       }
     }
 
-     
-        // Hide scroll indicator when at bottom
+    // Add .reveal to all children except h2
+    document.querySelectorAll('.blog-post').forEach(post => {
+      Array.from(post.children).forEach(child => {
+        if (child.tagName !== 'H2') {
+          child.classList.add('reveal');
+        }
+      });
+    });
+
+    // Intersection Observer for inner content
+    const observer = new IntersectionObserver(
+      (entries, obs) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.querySelectorAll('.reveal').forEach(el => {
+              el.classList.add('reveal-in-view');
+            });
+            obs.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.35 }
+    );
+
+    window.onload = function() {
+      document.querySelectorAll('.blog-post').forEach(post => {
+        observer.observe(post);
+      });
+    };
+
+    // Hide scroll indicator when at bottom
     function handleScrollIndicator() {
       const indicator = document.getElementById('scroll-indicator-fixed');
       if (!indicator) return;
       const scrollY = window.scrollY || window.pageYOffset;
       const windowH = window.innerHeight;
       const docH = document.documentElement.scrollHeight;
-      // If we're within 40px of the bottom, hide and remove listener
+      // If we're within 110px of the bottom, hide
       if (scrollY + windowH >= docH - 110) {
         indicator.classList.add('hide');
-        window.removeEventListener('scroll', handleScrollIndicator);
+      } else {
+        indicator.classList.remove('hide');
       }
-    
     }
-    
+
     window.addEventListener('scroll', handleScrollIndicator);
-    
-   
+    window.addEventListener('resize', handleScrollIndicator);
+
     // Image modal functionality
     function openModal(imgElement) {
       const modal = document.getElementById("image-modal");
@@ -451,36 +495,10 @@ footer {
     function closeModal() {
       document.getElementById("image-modal").style.display = "none";
     }
-
-    // Animate blog-posts when in view (one by one)
-const observer = new IntersectionObserver(
-  (entries, obs) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('in-view');
-        obs.unobserve(entry.target); // Only animate once
-      }
-    });
-  },
-  { threshold: 0.35  // Trigger when 40% of the element is visible
-   }
-);
-
-window.onload = function() {
-  document.querySelectorAll('.blog-post.visible').forEach(post => {
-    observer.observe(post);
-  });
-};
-
   </script>
 
 <!-- Place just before </body> -->
-<div class="scroll-indicator-fixed" id="scroll-indicator-fixed">
-  <span>Scroll for more</span>
-  <svg width="22" height="20" viewBox="0 0 22 20" fill="none">
-    <path d="M12 16L6 10h12l-6 6z" fill="#94a3b8"/>
-  </svg>
-</div>
+
 
 </body>
 </html>
