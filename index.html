@@ -137,13 +137,15 @@ section#blogs {
 /* Animate inner content */
 .reveal {
   opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.7s cubic-bezier(.4,0,.2,1), transform 0.7s cubic-bezier(.4,0,.2,1);
+  transform: translateY(40px) scale(0.98);
+  transition:
+    opacity 1.3s cubic-bezier(.22,1,.36,1),
+    transform 1.3s cubic-bezier(.22,1,.36,1);
 }
 
 .reveal.reveal-in-view {
   opacity: 1;
-  transform: translateY(0);
+  transform: translateY(0) scale(1);
 }
 
 .blog-image {
