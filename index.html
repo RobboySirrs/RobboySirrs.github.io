@@ -1,4 +1,3 @@
- <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -66,23 +65,59 @@ section#blogs {
 }
 
 .blog-post {
-  display: none;
+  display: hidden;
   background: var(--card-bg);
   padding: 2rem;
   margin: 2rem 0;
   border-radius: 12px;
   box-shadow: 0 8px 20px var(--shadow);
-  transition: all 0.3s ease;
+  transition: all 0.5s ease;
   opacity: 0;
-  transform: translateY(20px);
+  /* Default: from left */
+  transform: translateX(-40px);
   border-left: 4px solid var(--accent);
-  overflow: auto; /* Keeps floated images contained */
+  overflow: auto;
 }
 
-.blog-post.visible {
+.blog-post.from-right {
+  transform: translateX(40px);
+}
+
+.blog-post.visible.in-view,
+.blog-post.visible.in-view.from-left {
   display: block;
   opacity: 1;
-  transform: translateY(0);
+  transform: translateX(0);
+  animation: blogFadeInLeft 0.7s cubic-bezier(.4,0,.2,1);
+}
+
+.blog-post.visible.in-view.from-right {
+  display: block;
+  opacity: 1;
+  transform: translateX(0);
+  animation: blogFadeInRight 0.7s cubic-bezier(.4,0,.2,1);
+}
+
+@keyframes blogFadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes blogFadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 .blog-post h2 {
@@ -151,6 +186,18 @@ footer {
   cursor: pointer;
 }
 
+.scroll-indicator {
+  text-align: center;
+  margin: 2rem 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.scroll-indicator svg {
+  margin-left: 0.5rem;
+  vertical-align: middle;
+}
+
 @media (max-width: 600px) {
   header h1 {
     font-size: 2rem;
@@ -166,6 +213,46 @@ footer {
     width: 100%;
     margin: 1rem auto;
   }
+}
+
+/* Add to your <style> section */
+.scroll-indicator-fixed {
+  position: fixed;
+  right: 2vw;
+  bottom: 2vw;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(241,245,249,0.85); /* subtle background for visibility */
+  padding: .5rem 1rem;
+  border-radius: 2rem;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+  animation: bounce 1.5s infinite;
+  opacity: 0.75;
+  transition: opacity 0.3s;
+  pointer-events: none; /* so it doesn't block clicks */
+}
+
+.scroll-indicator-fixed span {
+  font-size: 1rem;
+  color: var(--muted);
+  margin-bottom: 0.2rem;
+}
+
+.scroll-indicator-fixed svg {
+  margin: 0;
+  vertical-align: middle;
+}
+
+.scroll-indicator-fixed.hide {
+  opacity: 0;
+  pointer-events: none;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0);}
+  50% { transform: translateY(10px);}
 }
 
   </style>
@@ -196,13 +283,12 @@ footer {
     </p>
   </div>
 
+ 
+
   <div class="blog-post" id="blog2" style="overflow: auto;">
     <h2>Make / Model / Year Filter with Shopify’s Homemade API</h2>
     <img
-     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <path d="M12 20V4M12 20L7 15M12 20L17 15" stroke="#84cc16" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
-
+    
       src="https://picsum.photos/id/1020/480/640"
       alt="Year Filter Screenshot"
       class="blog-image"
@@ -272,12 +358,11 @@ footer {
       <path d="M12 20V4M12 20L7 15M12 20L17 15"/>
     </svg>Download Safety Stock Calculator (Excel)
 </a>
+</div> <!-- Close blog4 -->
+
+<!-- Add blog5 to blog10 here with similar format -->
 
 </section>
-
-
-    <!-- Add blog4 to blog10 here with similar format -->
-  </section>
 
   <footer>
     &copy; 2025 Robin Axelsson · All rights reserved
@@ -311,9 +396,33 @@ footer {
       const blogDiv = document.getElementById(id);
       if (today >= revealDate && blogDiv) {
         blogDiv.classList.add("visible");
+        // Determine direction based on even/odd id number
+        const num = parseInt(id.replace('blog', ''), 10);
+        if (!isNaN(num)) {
+          blogDiv.classList.add(num % 2 === 0 ? 'from-right' : 'from-left');
+        }
       }
     }
 
+     
+        // Hide scroll indicator when at bottom
+    function handleScrollIndicator() {
+      const indicator = document.getElementById('scroll-indicator-fixed');
+      if (!indicator) return;
+      const scrollY = window.scrollY || window.pageYOffset;
+      const windowH = window.innerHeight;
+      const docH = document.documentElement.scrollHeight;
+      // If we're within 40px of the bottom, hide and remove listener
+      if (scrollY + windowH >= docH - 110) {
+        indicator.classList.add('hide');
+        window.removeEventListener('scroll', handleScrollIndicator);
+      }
+    
+    }
+    
+    window.addEventListener('scroll', handleScrollIndicator);
+    
+   
     // Image modal functionality
     function openModal(imgElement) {
       const modal = document.getElementById("image-modal");
@@ -325,7 +434,36 @@ footer {
     function closeModal() {
       document.getElementById("image-modal").style.display = "none";
     }
+
+    // Animate blog-posts when in view (one by one)
+const observer = new IntersectionObserver(
+  (entries, obs) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('in-view');
+        obs.unobserve(entry.target); // Only animate once
+      }
+    });
+  },
+  { threshold: 0.35  // Trigger when 40% of the element is visible
+   }
+);
+
+window.onload = function() {
+  document.querySelectorAll('.blog-post.visible').forEach(post => {
+    observer.observe(post);
+  });
+};
+
   </script>
+
+<!-- Place just before </body> -->
+<div class="scroll-indicator-fixed" id="scroll-indicator-fixed">
+  <span>Scroll for more</span>
+  <svg width="22" height="20" viewBox="0 0 22 20" fill="none">
+    <path d="M12 16L6 10h12l-6 6z" fill="#94a3b8"/>
+  </svg>
+</div>
 
 </body>
 </html>
