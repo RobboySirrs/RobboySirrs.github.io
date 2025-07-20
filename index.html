@@ -76,7 +76,7 @@ section#blogs {
   /* Default: from left */
   transform: none;
   border-left: 4px solid var(--accent);
-  overflow: auto;
+  overflow: hidden; /* <-- change from auto to hidden */
 }
 
 .blog-post.from-right {
@@ -148,12 +148,17 @@ section#blogs {
 
 .blog-image {
   float: left;
-  width: 30%;
-  height: auto;
-  margin: 0 1rem 1rem 0;
+  width: 180px;
+  height: 4.5lh; /* About 5 lines of text if line-height is 1.5 */
+  max-width: 50%;
+  margin: 0 1rem 0.3rem 0;
   border-radius: 8px;
   cursor: zoom-in;
   transition: transform 0.3s ease;
+  object-fit: cover;
+  display: block;
+  position: relative;   /* Add this */
+  z-index: 2;           /* And this */
 }
 
 .blog-image:hover {
@@ -222,12 +227,7 @@ footer {
     padding: 1.2rem;
   }
 
-  .blog-image {
-    float: none;
-    display: block;
-    width: 100%;
-    margin: 1rem auto;
-  }
+ 
 }
 
 /* Add to your <style> section */
@@ -304,7 +304,6 @@ footer {
       src="https://picsum.photos/id/1015/480/640"
       alt="Label Automation Example"
       class="blog-image"
-      style="float: left; width: 30%; height: auto; margin: 0 1rem 1rem 0; border-radius: 8px; cursor: zoom-in;"
       onclick="openModal(this)"
     >
     <p>
@@ -319,14 +318,13 @@ footer {
 
   <div class="blog-post" id="blog2" style="overflow: auto;">
     <h2>Make / Model / Year Filter with Shopify’s Homemade API</h2>
-    <img
-    
-      src="https://picsum.photos/id/1020/480/640"
-      alt="Year Filter Screenshot"
+        <img
+      src="https://picsum.photos/id/115/480/640"
+      alt="Label Automation Example"
       class="blog-image"
-      style="float: left; width: 30%; height: auto; margin: 0 1rem 1rem 0; border-radius: 8px; cursor: zoom-in;"
       onclick="openModal(this)"
     >
+    
     <p>
       Shopify doesn’t have a built-in year/make/model vehicle filter. But I needed one. So I built a "homemade" API using metafields and a little Liquid/JS bridge to handle user filtering without an app.
     </p>
@@ -337,12 +335,10 @@ footer {
 
   <div class="blog-post" id="blog3" style="overflow: auto;">
     <h2>Buy X Get Y Free: A Native Promo Flow in Shopify</h2>
-    <img
-     
-      src="https://picsum.photos/id/1041/480/640"
-      alt="Promo Offer UI"
+       <img
+      src="https://picsum.photos/id/12/480/640"
+      alt="Label Automation Example"
       class="blog-image"
-      style="float: left; width: 30%; height: auto; margin: 0 1rem 1rem 0; border-radius: 8px; cursor: zoom-in;"
       onclick="openModal(this)"
     >
     <p>
@@ -354,11 +350,10 @@ footer {
   </div>
     <div class="blog-post" id="blog4" style="overflow: auto;">
   <h2>How to Calculate Safety Stock and Reorder Point (with Real-World Variability)</h2>
-  <img
-    src="https://picsum.photos/id/1062/480/640"
-    alt="Inventory Buffer Chart"
+    <img
+    src="https://picsum.photos/id/23/480/640"
+    alt="Label Automation Example"
     class="blog-image"
-    style="float: left; width: 30%; height: auto; margin: 0 1rem 1rem 0; border-radius: 8px; cursor: zoom-in;"
     onclick="openModal(this)"
   >
   <p>
