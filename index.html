@@ -302,7 +302,7 @@
           obs.unobserve(entry.target);
         }
       });
-    }, { threshold: 0.10 });
+    }, { threshold: 0.05 });
 
     window.onload = () => {
       document.querySelectorAll('.blog-post').forEach(post => observer.observe(post));
