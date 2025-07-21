@@ -59,14 +59,22 @@
     }
 
     header h1 {
-      color: #f9fafb;
-      text-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+      color: #a7bee0; /* softer off-white */
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* subtle shadow */
+      font-size: 3rem;
+      font-weight: 900;
+      line-height: 3.2rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      user-select: none;
     }
 
     header p {
-      font-size: 1.2rem;
+      margin-top: 0.5rem;
+      font-weight: 600;
       color: var(--muted);
-      margin-top: 1.5rem;
+      letter-spacing: 0.04em;
+      font-size: 1.2rem;
     }
 
     section#blogs {
@@ -127,18 +135,16 @@
       will-change: opacity, transform;
     }
 
+    /* direction transforms */
     .reveal-top {
       transform: translateY(-40px) scale(1.05);
     }
-
     .reveal-bottom {
       transform: translateY(40px) scale(1.05);
     }
-
     .reveal-left {
       transform: translateX(-40px) scale(1.05);
     }
-
     .reveal-right {
       transform: translateX(40px) scale(1.05);
     }
@@ -147,37 +153,6 @@
     .reveal-in-view {
       opacity: 1;
       transform: translateX(0) translateY(0) scale(1);
-    }
-
-    /* New scale animations */
-    @keyframes scaleUp {
-      0% {
-        opacity: 0;
-        transform: scale(0.8) translateY(20px);
-      }
-      100% {
-        opacity: 1;
-        transform: scale(1) translateY(0);
-      }
-    }
-
-    @keyframes scaleDown {
-      0% {
-        opacity: 0;
-        transform: scale(1.2) translateY(20px);
-      }
-      100% {
-        opacity: 1;
-        transform: scale(1) translateY(0);
-      }
-    }
-
-    .reveal-scale-up {
-      animation: scaleUp 1.3s cubic-bezier(0.22, 1, 0.36, 1) forwards;
-    }
-
-    .reveal-scale-down {
-      animation: scaleDown 1.3s cubic-bezier(0.22, 1, 0.36, 1) forwards;
     }
 
     footer {
@@ -230,23 +205,6 @@
       }
     }
 
-    .fancy-header {
-      font-size: 3rem;
-      font-weight: 900;
-      line-height: 3.2rem;
-      color: #a7bee0; /* softer off-white */
-      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* very subtle shadow */
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      user-select: none;
-    }
-
-    header p {
-      margin-top: .5rem;
-      font-weight: 600;
-      color: var(--muted);
-      letter-spacing: 0.04em;
-    }
   </style>
 </head>
 <body>
@@ -319,39 +277,28 @@
       }
     }
 
-    // Observer: reveal elements individually with staggered effect
+    // Collect reveal elements inside visible blog posts
     const revealElements = [];
-
     document.querySelectorAll('.blog-post.visible').forEach(blog => {
       const children = blog.querySelectorAll('p, img, h2');
       children.forEach(el => revealElements.push(el));
     });
 
     const directions = ['reveal-top', 'reveal-bottom', 'reveal-left', 'reveal-right'];
-    const scaleClasses = ['reveal-scale-up', 'reveal-scale-down'];
 
+    // Assign each element a random direction and base reveal class BEFORE observing
     revealElements.forEach(el => {
-      // Add the base hidden state
-      el.classList.add('reveal-base');
+      const randomDirection = directions[Math.floor(Math.random() * directions.length)];
+      el.classList.add('reveal-base', randomDirection);
     });
 
     const observer = new IntersectionObserver((entries, obs) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           const el = entry.target;
-
-          // Remove any previous direction classes
-          directions.forEach(dir => el.classList.remove(dir));
-          scaleClasses.forEach(scale => el.classList.remove(scale));
-
-          // Pick random direction and scale animation
-          const randomDirection = directions[Math.floor(Math.random() * directions.length)];
-          const randomScale = scaleClasses[Math.floor(Math.random() * scaleClasses.length)];
           const randomDelay = Math.floor(Math.random() * 1001);
           const randomDuration = 1500;
 
-          // Apply classes and styles
-          el.classList.add(randomDirection, randomScale);
           el.style.transitionDuration = `${randomDuration}ms`;
 
           setTimeout(() => {
