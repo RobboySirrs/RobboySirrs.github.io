@@ -472,7 +472,7 @@ footer {
       (entries, obs) => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
-            entry.target.querySelectorAll('.reveal').forEach(el => {
+            entry.target.querySelectorAll('.reveal, .reveal-top').forEach(el => {
               el.classList.add('reveal-in-view');
             });
             obs.unobserve(entry.target);
