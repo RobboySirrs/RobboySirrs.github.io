@@ -117,21 +117,23 @@
 
     /* Reveal animation styles */
     .reveal, .reveal-top {
-      opacity: 0;
-      transform: translateY(40px) scale(1.05);
-      transition: opacity 1s cubic-bezier(0.22, 1, 0.36, 1), transform 1s cubic-bezier(0.22, 1, 0.36, 1);
-      will-change: opacity, transform;
-    }
+  opacity: 0;
+  transform: translateY(40px) scale(1.05);
+  transition-property: opacity, transform;
+  transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: opacity, transform;
+}
 
-    .reveal-top {
-      transform: translateY(-30px) scale(1.05);
-    }
+.reveal-top {
+  transform: translateY(-30px) scale(1.05);
+}
 
-    .reveal.reveal-in-view,
-    .reveal-top.reveal-in-view {
-      opacity: 1;
-      transform: translateY(0) scale(1);
-    }
+.reveal.reveal-in-view,
+.reveal-top.reveal-in-view {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
 
     footer {
       text-align: center;
@@ -276,15 +278,19 @@ header p {
 
     // Observer: reveal elements individually with staggered effect
     document.querySelectorAll('.reveal, .reveal-top').forEach(el => {
-  const randomDelay = Math.floor(Math.random() * (1400 - 800 + 1)) + 800; // 800 to 1400 ms
+  // Random delay between 80ms and 400ms
+  const randomDelay = Math.floor(Math.random() * (400 - 80 + 1)) + 80;
+  // Random duration between 600ms and 1200ms
+  const randomDuration = Math.floor(Math.random() * (1200 - 600 + 1)) + 600;
+
   el.dataset.delay = randomDelay;
+  el.style.transitionDuration = randomDuration + 'ms';  // set animation duration inline
 });
 
-
-    const observer = new IntersectionObserver((entries, obs) => {
+const observer = new IntersectionObserver((entries, obs) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
-      const delay = entry.target.dataset.delay || 100; // fallback delay
+      const delay = entry.target.dataset.delay || 100;
       setTimeout(() => {
         entry.target.classList.add('reveal-in-view');
       }, delay);
@@ -296,9 +302,7 @@ header p {
   rootMargin: "0px 0px -10% 0px"
 });
 
-
-    document.querySelectorAll('.reveal, .reveal-top').forEach(el => observer.observe(el));
-
+document.querySelectorAll('.reveal, .reveal-top').forEach(el => observer.observe(el));
     // Modal behavior
     function openModal(imgElement) {
       const modal = document.getElementById("image-modal");
