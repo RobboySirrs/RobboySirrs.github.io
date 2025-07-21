@@ -300,8 +300,12 @@
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           entry.target.querySelectorAll('.reveal, .reveal-top').forEach(el => {
-            el.classList.add('reveal-in-view');
-          });
+  el.classList.add('reveal-in-view');
+});
+if (entry.target.classList.contains('reveal') || entry.target.classList.contains('reveal-top')) {
+  entry.target.classList.add('reveal-in-view');
+}
+
           obs.unobserve(entry.target);
         }
       });
