@@ -325,11 +325,11 @@ const observer = new IntersectionObserver((entries, obs) => {
       
       const randomDirection = directions[Math.floor(Math.random() * directions.length)];
       const randomDelay = Math.floor(Math.random() * 1001);
-      const randomDuration = Math.floor(Math.random() * 1001);
+      const randomDuration = 500
 
       // Apply the random direction and duration
       el.classList.add(randomDirection);
-      //el.style.transitionDuration = `${randomDuration}ms`;
+      el.style.transitionDuration = `${randomDuration}ms`;
 
       setTimeout(() => {
         el.classList.add('reveal-in-view');
