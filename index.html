@@ -276,9 +276,10 @@ header p {
 
     // Observer: reveal elements individually with staggered effect
     document.querySelectorAll('.reveal, .reveal-top').forEach(el => {
-  const randomDelay = Math.floor(Math.random() * (140 - 80 + 1)) + 80; // 80 to 140 ms
+  const randomDelay = Math.floor(Math.random() * (1400 - 800 + 1)) + 800; // 800 to 1400 ms
   el.dataset.delay = randomDelay;
 });
+
 
     const observer = new IntersectionObserver((entries, obs) => {
   entries.forEach(entry => {
