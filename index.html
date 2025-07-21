@@ -117,12 +117,11 @@
 
     /* Reveal animation styles */
     .reveal, .reveal-top {
-  op.reveal, .reveal-top {
   opacity: 0;
   transform: translateY(40px) scale(1.05);
   transition-property: opacity, transform;
+  /* transition-duration will be overridden inline by JS */
   transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
-  /* NO transition-duration here */
   will-change: opacity, transform;
 }
 
@@ -135,6 +134,7 @@
   opacity: 1;
   transform: translateY(0) scale(1);
 }
+
 
 
 
