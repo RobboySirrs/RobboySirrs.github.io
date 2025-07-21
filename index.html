@@ -286,11 +286,11 @@ header p {
 
     // Observer: reveal elements individually with staggered effect
     // Observer: reveal elements individually with staggered effect
-const revealElements = document.querySelectorAll('.blog-post p, .blog-post img, .blog-post h2.reveal-top');
+    const revealElements = document.querySelectorAll('.blog-post p, .blog-post img, .blog-post h2.reveal-top');
 
 revealElements.forEach(el => {
-  const randomDelay = Math.floor(Math.random() * (400 - 80 + 1)) + 80;        // 80-400ms delay
-  const randomDuration = Math.floor(Math.random() * (1000 - 600 + 1)) + 600;  // 600-1000ms duration
+  const randomDelay = Math.floor(Math.random() * (400 - 80 + 1)) + 80;        // 80–400ms delay
+  const randomDuration = Math.floor(Math.random() * (1000 - 600 + 1)) + 600;  // 600–1000ms duration
 
   el.dataset.delay = randomDelay;
   el.style.transitionDuration = `${randomDuration}ms`;
@@ -313,7 +313,8 @@ const observer = new IntersectionObserver((entries, obs) => {
   rootMargin: "0px 0px -10% 0px"
 });
 
-revealElements.forEach(el => observer.observe(el));
+revealElements.forEach(el => 
+  observer.observe(el));
     
 
 
