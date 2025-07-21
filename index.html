@@ -274,24 +274,26 @@ header p {
     }
 
     // Observer: reveal elements individually with staggered effect
-    const revealEls = document.querySelectorAll('.reveal, .reveal-top');
+    document.querySelectorAll('.reveal, .reveal-top').forEach(el => {
+  const randomDelay = Math.floor(Math.random() * (140 - 80 + 1)) + 80; // 80 to 140 ms
+  el.dataset.delay = randomDelay;
+});
 
     const observer = new IntersectionObserver((entries, obs) => {
-      entries.forEach((entry, index) => {
-        if (entry.isIntersecting) {
-          const randomDelay = Math.floor(Math.random() * (140 - 80 + 1)) + 80;
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const delay = entry.target.dataset.delay || 100; // fallback delay
+      setTimeout(() => {
+        entry.target.classList.add('reveal-in-view');
+      }, delay);
+      obs.unobserve(entry.target);
+    }
+  });
+}, {
+  threshold: 0.2,
+  rootMargin: "0px 0px -10% 0px"
+});
 
-setTimeout(() => {
-  entry.target.classList.add('reveal-in-view');
-}, randomDelay);
-// stagger delay
-          obs.unobserve(entry.target);
-        }
-      });
-    }, {
-      threshold: 0.2,
-      rootMargin: "0px 0px -10% 0px"
-    });
 
     revealEls.forEach(el => observer.observe(el));
 
