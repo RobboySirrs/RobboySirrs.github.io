@@ -299,7 +299,7 @@ revealElements.forEach(el => {
 const observer = new IntersectionObserver((entries, obs) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
-      const delay = Math.floor(Math.random() * (1000 - 600 + 1)) + 600;
+      const delay = Math.floor(Math.random() * 1001);
 console.log('Revealing:', entry.target, 'with delay:', delay);
       setTimeout(() => {
         entry.target.classList.add('reveal-in-view');
