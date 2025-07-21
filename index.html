@@ -295,7 +295,7 @@
       });
     });
 
-    window.onload = () => {
+    
     const observer = new IntersectionObserver((entries, obs) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -307,7 +307,7 @@
       });
     }, { threshold: 0.05 });
 
-    
+    window.onload = () => {
       document.querySelectorAll('.blog-post').forEach(post => observer.observe(post));
     };
 
