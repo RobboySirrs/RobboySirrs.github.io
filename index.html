@@ -259,9 +259,12 @@
     const observer = new IntersectionObserver((entries, obs) => {
       entries.forEach((entry, index) => {
         if (entry.isIntersecting) {
-          setTimeout(() => {
-            entry.target.classList.add('reveal-in-view');
-          }, index * 120); // stagger delay
+          const randomDelay = Math.floor(Math.random() * (140 - 80 + 1)) + 80;
+
+setTimeout(() => {
+  entry.target.classList.add('reveal-in-view');
+}, randomDelay);
+// stagger delay
           obs.unobserve(entry.target);
         }
       });
