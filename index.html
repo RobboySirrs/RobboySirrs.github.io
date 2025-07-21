@@ -285,6 +285,35 @@ header p {
     }
 
     // Observer: reveal elements individually with staggered effect
+    // Observer: reveal elements individually with staggered effect
+const revealElements = document.querySelectorAll('.blog-post p, .blog-post img');
+
+revealElements.forEach(el => {
+  const randomDelay = Math.floor(Math.random() * (400 - 80 + 1)) + 80;        // 80-400ms delay
+  const randomDuration = Math.floor(Math.random() * (1000 - 600 + 1)) + 600;  // 600-1000ms duration
+
+  el.dataset.delay = randomDelay;
+  el.style.transitionDuration = `${randomDuration}ms`;
+});
+
+const observer = new IntersectionObserver((entries, obs) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const delay = entry.target.dataset.delay || 100;
+
+      setTimeout(() => {
+        entry.target.classList.add('reveal-in-view');
+      }, delay);
+
+      obs.unobserve(entry.target);
+    }
+  });
+}, {
+  threshold: 0.2,
+  rootMargin: "0px 0px -10% 0px"
+});
+
+revealElements.forEach(el => observer.observe(el));
     
 
 
