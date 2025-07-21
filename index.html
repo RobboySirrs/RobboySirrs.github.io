@@ -126,15 +126,38 @@
 }
 
 /* Optional: Specific direction for top-animations */
-.reveal-top {
-  transform: translateY(-30px) scale(1.05);
+
+
+.reveal-base {
+  opacity: 0;
+  transform: scale(1.05);
+  transition-property: opacity, transform;
+  transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: opacity, transform;
 }
 
-/* Final state once revealed */
+.reveal-top {
+  transform: translateY(-40px) scale(1.05);
+}
+
+.reveal-bottom {
+  transform: translateY(40px) scale(1.05);
+}
+
+.reveal-left {
+  transform: translateX(-40px) scale(1.05);
+}
+
+.reveal-right {
+  transform: translateX(40px) scale(1.05);
+}
+
+/* Final state */
 .reveal-in-view {
   opacity: 1;
-  transform: translateY(0) scale(1);
+  transform: translateX(0) translateY(0) scale(1);
 }
+
 
   
 
