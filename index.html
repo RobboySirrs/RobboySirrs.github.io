@@ -311,9 +311,9 @@ if (entry.target.classList.contains('reveal') || entry.target.classList.contains
       });
     }, { threshold: 0.05 });
 
-    window.onload = () => {
+    
       document.querySelectorAll('.blog-post').forEach(post => observer.observe(post));
-    };
+    
 
     function openModal(imgElement) {
       const modal = document.getElementById("image-modal");
