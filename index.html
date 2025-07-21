@@ -5,7 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Robin Axelsson – Blog & Portfolio</title>
   <meta name="description" content="Robin Axelsson - Business Developer, Process Developer, Full-Stack Coder, Logistician. Läs om mina projekt och insikter.">
-  <!-- Preconnect & Preload Fonts -->
+
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap">
@@ -15,12 +16,10 @@
   </noscript>
 
   <style>
-    /* Din befintliga CSS här – oförändrad */
-    /* --- CSS kod (samma som du hade innan, ingen ändring) --- */
     :root {
       --bg: #ffffff;
       --primary: #0f172a;
-      --accent: #228B22; /* darkgreen, bättre kontrast */
+      --accent: #228B22;
       --text: #1e293b;
       --muted: #64748b;
       --card-bg: #f1f5f9;
@@ -82,45 +81,8 @@
       margin: 2rem 0;
       border-radius: 12px;
       box-shadow: 0 8px 20px var(--shadow);
-      opacity: 1;
-      transform: none;
       border-left: 4px solid var(--accent);
       overflow: hidden;
-    }
-
-    .blog-post.visible.in-view.from-left {
-      animation: blogFadeInLeft 0.7s cubic-bezier(.4,0,.2,1);
-    }
-
-    .blog-post.visible.in-view.from-right {
-      animation: blogFadeInRight 0.7s cubic-bezier(.4,0,.2,1);
-    }
-
-    .reveal-top {
-      opacity: 0;
-      transform: translateY(-30px);
-      transition: opacity 1.5s ease-out, transform 1.5s ease-out;
-    }
-
-    .reveal-top.reveal-in-view {
-      opacity: 1;
-      transform: translateY(0);
-      animation: blogFadeInTop 0.9s ease-out;
-    }
-
-    @keyframes blogFadeInLeft {
-      from { opacity: 0; transform: translateX(-40px); }
-      to { opacity: 1; transform: translateX(0); }
-    }
-
-    @keyframes blogFadeInTop {
-      from { opacity: 0; transform: translateY(-30px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    @keyframes blogFadeInRight {
-      from { opacity: 0; transform: translateX(40px); }
-      to { opacity: 1; transform: translateX(0); }
     }
 
     .blog-post h2 {
@@ -132,17 +94,6 @@
     .blog-post p {
       color: var(--text);
       margin-bottom: 1rem;
-    }
-
-    .reveal {
-      opacity: 0;
-      transform: translateY(40px) scale(1.18);
-      transition: opacity 2.3s cubic-bezier(.22,1,.36,1), transform 2.3s cubic-bezier(.22,1,.36,1);
-    }
-
-    .reveal.reveal-in-view {
-      opacity: 1;
-      transform: translateY(0) scale(1);
     }
 
     .blog-image {
@@ -161,6 +112,24 @@
 
     .blog-image:hover {
       transform: scale(1.02);
+    }
+
+    /* Reveal animation styles */
+    .reveal, .reveal-top {
+      opacity: 0;
+      transform: translateY(40px) scale(1.05);
+      transition: opacity 1s cubic-bezier(0.22, 1, 0.36, 1), transform 1s cubic-bezier(0.22, 1, 0.36, 1);
+      will-change: opacity, transform;
+    }
+
+    .reveal-top {
+      transform: translateY(-30px) scale(1.05);
+    }
+
+    .reveal.reveal-in-view,
+    .reveal-top.reveal-in-view {
+      opacity: 1;
+      transform: translateY(0) scale(1);
     }
 
     footer {
@@ -222,7 +191,6 @@
   </header>
 
   <section id="blogs">
-
     <div class="blog-post" id="blog1">
       <h2 class="reveal-top">Printing Labels Faster with Clever Ideas and JavaScript</h2>
       <img src="https://picsum.photos/id/1015/480/640" alt="Label Automation Example" class="blog-image reveal" onclick="openModal(this)">
@@ -230,46 +198,45 @@
     </div>
 
     <div class="blog-post" id="blog2">
-  <h2 class="reveal-top">Make / Model / Year Filter with Shopify’s Homemade API</h2>
-  <img src="https://picsum.photos/id/115/480/640" alt="Filter Example" class="blog-image reveal" loading="lazy" onclick="openModal(this)">
-  <p class="reveal">Shopify doesn’t have a built-in year/make/model vehicle filter. But I needed one...</p>
-</div>
+      <h2 class="reveal-top">Make / Model / Year Filter with Shopify’s Homemade API</h2>
+      <img src="https://picsum.photos/id/115/480/640" alt="Filter Example" class="blog-image reveal" loading="lazy" onclick="openModal(this)">
+      <p class="reveal">Shopify doesn’t have a built-in year/make/model vehicle filter. But I needed one...</p>
+    </div>
 
-<div class="blog-post" id="blog3">
-  <h2 class="reveal-top">Buy X Get Y Free: A Native Promo Flow in Shopify</h2>
-  <img src="https://picsum.photos/id/12/480/640" alt="Promotion Example" class="blog-image reveal" loading="lazy" onclick="openModal(this)">
-  <p class="reveal">Shopify Scripts (or Functions) are powerful, but not always an option...</p>
-</div>
+    <div class="blog-post" id="blog3">
+      <h2 class="reveal-top">Buy X Get Y Free: A Native Promo Flow in Shopify</h2>
+      <img src="https://picsum.photos/id/12/480/640" alt="Promotion Example" class="blog-image reveal" loading="lazy" onclick="openModal(this)">
+      <p class="reveal">Shopify Scripts (or Functions) are powerful, but not always an option...</p>
+    </div>
 
-<div class="blog-post" id="blog4">
-  <h2 class="reveal-top">How to Calculate Safety Stock and Reorder Point</h2>
-  <img src="https://picsum.photos/id/23/480/640" alt="Inventory Management" class="blog-image reveal" loading="lazy" onclick="openModal(this)">
-  <p class="reveal">Reorder point (ROP) isn’t just “average sales × lead time.” That only works in a perfect world...</p>
-  <a href="files/safety-stock-calculator.xlsx" download
-     style="display: flex; align-items: center; gap: 0.3rem; color: var(--accent); font-weight: 600; text-decoration: none;">
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-         stroke-linecap="round" stroke-linejoin="round">
-      <path d="M12 20V4M12 20L7 15M12 20L17 15"/>
-    </svg>
-    Download Safety Stock Calculator (Excel)
-  </a>
-</div>
-    
-
+    <div class="blog-post" id="blog4">
+      <h2 class="reveal-top">How to Calculate Safety Stock and Reorder Point</h2>
+      <img src="https://picsum.photos/id/23/480/640" alt="Inventory Management" class="blog-image reveal" loading="lazy" onclick="openModal(this)">
+      <p class="reveal">Reorder point (ROP) isn’t just “average sales × lead time.” That only works in a perfect world...</p>
+      <a href="files/safety-stock-calculator.xlsx" download
+         style="display: flex; align-items: center; gap: 0.3rem; color: var(--accent); font-weight: 600; text-decoration: none;">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+             stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 20V4M12 20L7 15M12 20L17 15"/>
+        </svg>
+        Download Safety Stock Calculator (Excel)
+      </a>
+    </div>
   </section>
 
   <footer>
     &copy; 2025 Robin Axelsson · All rights reserved
   </footer>
 
-  <!-- Image Modal -->
+  <!-- Modal -->
   <div id="image-modal" class="modal" onclick="closeModal()">
     <span class="modal-close" onclick="closeModal()">×</span>
     <img id="modal-img" class="modal-content">
   </div>
 
-  <!-- Defer script -->
+  <!-- Scripts -->
   <script defer>
+    // Reveal schedule (if using publish timing logic)
     const blogSchedule = {
       blog1: "2025-07-22",
       blog2: "2025-07-07",
@@ -278,46 +245,34 @@
     };
 
     const today = new Date();
-
     for (const [id, dateString] of Object.entries(blogSchedule)) {
       const revealDate = new Date(dateString);
       const blogDiv = document.getElementById(id);
       if (today >= revealDate && blogDiv) {
         blogDiv.classList.add("visible");
-      
       }
     }
 
-    document.querySelectorAll('.blog-post').forEach(post => {
-      Array.from(post.children).forEach(child => {
-        if (child.tagName === 'H2') {
-        //  child.classList.add('reveal-top');
-        } else {
-        //  child.classList.add('reveal');
-        }
-      });
-    });
+    // Observer: reveal elements individually with staggered effect
+    const revealEls = document.querySelectorAll('.reveal, .reveal-top');
 
-    
     const observer = new IntersectionObserver((entries, obs) => {
-      entries.forEach(entry => {
+      entries.forEach((entry, index) => {
         if (entry.isIntersecting) {
-          entry.target.querySelectorAll('.reveal, .reveal-top').forEach(el => {
-  el.classList.add('reveal-in-view');
-});
-if (entry.target.classList.contains('reveal') || entry.target.classList.contains('reveal-top')) {
-  entry.target.classList.add('reveal-in-view');
-}
-
+          setTimeout(() => {
+            entry.target.classList.add('reveal-in-view');
+          }, index * 120); // stagger delay
           obs.unobserve(entry.target);
         }
       });
-    }, { threshold: 0.05 });
+    }, {
+      threshold: 0.2,
+      rootMargin: "0px 0px -10% 0px"
+    });
 
-    
-      document.querySelectorAll('.blog-post').forEach(post => observer.observe(post));
-    
+    revealEls.forEach(el => observer.observe(el));
 
+    // Modal behavior
     function openModal(imgElement) {
       const modal = document.getElementById("image-modal");
       const modalImg = document.getElementById("modal-img");
@@ -329,6 +284,5 @@ if (entry.target.classList.contains('reveal') || entry.target.classList.contains
       document.getElementById("image-modal").style.display = "none";
     }
   </script>
-
 </body>
 </html>
