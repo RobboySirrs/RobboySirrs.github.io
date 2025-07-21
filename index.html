@@ -53,16 +53,15 @@
       transition: background 0.3s ease, color 0.3s ease;
     }
     
-      header {
-  text-align: center;
-  padding: 1rem 1rem 2rem;
-      
+    header {
+      text-align: center;
+      padding: 1rem 1rem 2rem;
     }
 
-  header h1 {
-  color: #f9fafb;
-  text-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
-}
+    header h1 {
+      color: #f9fafb;
+      text-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+    }
 
     header p {
       font-size: 1.2rem;
@@ -86,8 +85,8 @@
       overflow: hidden;
     }
     .blog-post.visible {
-  display: block;
-}
+      display: block;
+    }
 
     .blog-post h2 {
       font-size: 1.5rem;
@@ -120,54 +119,66 @@
 
     /* Reveal animation styles */
     /* Base hidden state before reveal */
-.reveal, .reveal-top {
-  opacity: 0;
-  transform: translateY(40px) scale(1.05);
-  transition-property: opacity, transform;
-  transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
-  will-change: opacity, transform;
-}
+    .reveal-base {
+      opacity: 0;
+      transform: scale(1.05);
+      transition-property: opacity, transform;
+      transition-timing-function: cubic-bezier(0.33, 1, 0.68, 1);
+      will-change: opacity, transform;
+    }
 
-/* Optional: Specific direction for top-animations */
+    .reveal-top {
+      transform: translateY(-40px) scale(1.05);
+    }
 
+    .reveal-bottom {
+      transform: translateY(40px) scale(1.05);
+    }
 
-.reveal-base {
-  opacity: 0;
-  transform: scale(1.05);
-  transition-property: opacity, transform;
-  transition-timing-function: cubic-bezier(0.33, 1, 0.68, 1);
-  will-change: opacity, transform;
-}
+    .reveal-left {
+      transform: translateX(-40px) scale(1.05);
+    }
 
-.reveal-top {
-  transform: translateY(-40px) scale(1.05);
-}
+    .reveal-right {
+      transform: translateX(40px) scale(1.05);
+    }
 
-.reveal-bottom {
-  transform: translateY(40px) scale(1.05);
-}
+    /* Final state */
+    .reveal-in-view {
+      opacity: 1;
+      transform: translateX(0) translateY(0) scale(1);
+    }
 
-.reveal-left {
-  transform: translateX(-40px) scale(1.05);
-}
+    /* New scale animations */
+    @keyframes scaleUp {
+      0% {
+        opacity: 0;
+        transform: scale(0.8) translateY(20px);
+      }
+      100% {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+      }
+    }
 
-.reveal-right {
-  transform: translateX(40px) scale(1.05);
-}
+    @keyframes scaleDown {
+      0% {
+        opacity: 0;
+        transform: scale(1.2) translateY(20px);
+      }
+      100% {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+      }
+    }
 
-/* Final state */
-.reveal-in-view {
-  opacity: 1;
-  transform: translateX(0) translateY(0) scale(1);
-}
+    .reveal-scale-up {
+      animation: scaleUp 1.3s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    }
 
-
-  
-
-  
-
-
-
+    .reveal-scale-down {
+      animation: scaleDown 1.3s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    }
 
     footer {
       text-align: center;
@@ -219,25 +230,23 @@
       }
     }
 
-.fancy-header {
-  font-size: 3rem;
-  font-weight: 900;
-  line-height: 3.2rem;
-  color: #a7bee0; /* softer off-white */
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* very subtle shadow */
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  user-select: none;
-}
+    .fancy-header {
+      font-size: 3rem;
+      font-weight: 900;
+      line-height: 3.2rem;
+      color: #a7bee0; /* softer off-white */
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* very subtle shadow */
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      user-select: none;
+    }
 
-
-
-header p {
-  margin-top: .5rem;
-  font-weight: 600;
-  color: var(--muted);
-  letter-spacing: 0.04em;
-}
+    header p {
+      margin-top: .5rem;
+      font-weight: 600;
+      color: var(--muted);
+      letter-spacing: 0.04em;
+    }
   </style>
 </head>
 <body>
@@ -311,52 +320,53 @@ header p {
     }
 
     // Observer: reveal elements individually with staggered effect
-    // Observer: reveal elements individually with staggered effect
-const revealElements = [];
+    const revealElements = [];
 
-document.querySelectorAll('.blog-post.visible').forEach(blog => {
-  const children = blog.querySelectorAll('p, img, h2');
-  children.forEach(el => revealElements.push(el));
-});
+    document.querySelectorAll('.blog-post.visible').forEach(blog => {
+      const children = blog.querySelectorAll('p, img, h2');
+      children.forEach(el => revealElements.push(el));
+    });
 
-const directions = ['reveal-top', 'reveal-bottom', 'reveal-left', 'reveal-right'];
+    const directions = ['reveal-top', 'reveal-bottom', 'reveal-left', 'reveal-right'];
+    const scaleClasses = ['reveal-scale-up', 'reveal-scale-down'];
 
-revealElements.forEach(el => {
-  // Add the base hidden state
-  el.classList.add('reveal-base');
-});
+    revealElements.forEach(el => {
+      // Add the base hidden state
+      el.classList.add('reveal-base');
+    });
 
-const observer = new IntersectionObserver((entries, obs) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      const el = entry.target;
-      
-      const randomDirection = directions[Math.floor(Math.random() * directions.length)];
-      const randomDelay = Math.floor(Math.random() * 1001);
-      const randomDuration = 1500
+    const observer = new IntersectionObserver((entries, obs) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const el = entry.target;
 
-      // Apply the random direction and duration
-      el.classList.add(randomDirection);
-      el.style.transitionDuration = `${randomDuration}ms`;
+          // Remove any previous direction classes
+          directions.forEach(dir => el.classList.remove(dir));
+          scaleClasses.forEach(scale => el.classList.remove(scale));
 
-      setTimeout(() => {
-        el.classList.add('reveal-in-view');
-      }, randomDelay);
+          // Pick random direction and scale animation
+          const randomDirection = directions[Math.floor(Math.random() * directions.length)];
+          const randomScale = scaleClasses[Math.floor(Math.random() * scaleClasses.length)];
+          const randomDelay = Math.floor(Math.random() * 1001);
+          const randomDuration = 1500;
 
-      obs.unobserve(el);
-    }
-  });
-}, {
-  threshold: 0.2,
-  rootMargin: "0px 0px -10% 0px"
-});
+          // Apply classes and styles
+          el.classList.add(randomDirection, randomScale);
+          el.style.transitionDuration = `${randomDuration}ms`;
 
-revealElements.forEach(el => observer.observe(el));
+          setTimeout(() => {
+            el.classList.add('reveal-in-view');
+          }, randomDelay);
 
-    
-  
-      
+          obs.unobserve(el);
+        }
+      });
+    }, {
+      threshold: 0.2,
+      rootMargin: "0px 0px -10% 0px"
+    });
 
+    revealElements.forEach(el => observer.observe(el));
 
     // Modal behavior
     function openModal(imgElement) {
