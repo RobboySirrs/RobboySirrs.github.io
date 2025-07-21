@@ -117,23 +117,22 @@
 
     /* Reveal animation styles */
     .reveal, .reveal-top {
-  opacity: 0;
-  transform: translateY(40px) scale(1.05);
-  transition-property: opacity, transform;
-  /* transition-duration will be overridden inline by JS */
-  transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
-  will-change: opacity, transform;
-}
+    opacity: 0;
+    transform: translateY(40px) scale(1.05);
+    transition-property: opacity, transform;
+    transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+    will-change: opacity, transform;
+  }
 
-.reveal-top {
-  transform: translateY(-30px) scale(1.05);
-}
+  .reveal-top {
+    transform: translateY(-30px) scale(1.05);
+  }
 
-.reveal.reveal-in-view,
-.reveal-top.reveal-in-view {
-  opacity: 1;
-  transform: translateY(0) scale(1);
-}
+  .reveal.reveal-in-view,
+  .reveal-top.reveal-in-view {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
 
 
 
@@ -280,35 +279,39 @@ header p {
     }
 
     // Observer: reveal elements individually with staggered effect
-    const revealElements = document.querySelectorAll('.reveal, .reveal-top');
+    document.addEventListener("DOMContentLoaded", () => {
+  const revealElements = document.querySelectorAll('.reveal, .reveal-top');
 
-revealElements.forEach(el => {
-  const randomDelay = Math.floor(Math.random() * (400 - 80 + 1)) + 80;      // 80-400ms delay
-  const randomDuration = Math.floor(Math.random() * (1200 - 600 + 1)) + 600; // 600-1200ms duration
+  // Assign random delay & duration per element
+  revealElements.forEach(el => {
+    const randomDelay = Math.floor(Math.random() * (400 - 80 + 1)) + 80;      // 80-400ms delay
+    const randomDuration = Math.floor(Math.random() * (1200 - 600 + 1)) + 600; // 600-1200ms duration
 
-  el.dataset.delay = randomDelay;
-  el.style.transitionDuration = randomDuration + 'ms';
-});
-
-const observer = new IntersectionObserver((entries, obs) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      const delay = entry.target.dataset.delay || 100;
-
-      setTimeout(() => {
-        entry.target.classList.add('reveal-in-view');
-      }, delay);
-
-      obs.unobserve(entry.target);
-    }
+    el.dataset.delay = randomDelay;
+    el.style.transitionDuration = randomDuration + 'ms';
   });
-}, {
-  threshold: 0.2,
-  rootMargin: "0px 0px -10% 0px"
+
+  const observer = new IntersectionObserver((entries, obs) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const delay = entry.target.dataset.delay || 100;
+
+        setTimeout(() => {
+          entry.target.classList.add('reveal-in-view');
+        }, delay);
+
+        obs.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.2,
+    rootMargin: "0px 0px -10% 0px"
+  });
+
+  revealElements.forEach(el => observer.observe(el));
 });
 
-revealElements.forEach(el => observer.observe(el));
-    
+
     // Modal behavior
     function openModal(imgElement) {
       const modal = document.getElementById("image-modal");
