@@ -289,7 +289,7 @@ header p {
     const revealElements = document.querySelectorAll('.blog-post p, .blog-post img, .blog-post h2.reveal-top');
 
 revealElements.forEach(el => {
-  const randomDelay = Math.floor(Math.random() * (400 - 80 + 1)) + 80;
+  const randomDelay = Math.floor(Math.random() * (1000 - 600 + 1)) + 600;
   const randomDuration = Math.floor(Math.random() * (1000 - 600 + 1)) + 600;
 
   el.dataset.delay = randomDelay;
