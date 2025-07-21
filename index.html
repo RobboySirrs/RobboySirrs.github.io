@@ -77,6 +77,7 @@
     }
 
     .blog-post {
+      display:hidden;
       background: var(--card-bg);
       padding: 2rem;
       margin: 2rem 0;
@@ -85,6 +86,9 @@
       border-left: 4px solid var(--accent);
       overflow: hidden;
     }
+    .blog-post.visible {
+  display: block;
+}
 
     .blog-post h2 {
       font-size: 1.5rem;
