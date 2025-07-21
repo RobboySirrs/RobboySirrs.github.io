@@ -295,7 +295,7 @@ header p {
 });
 
 
-    revealEls.forEach(el => observer.observe(el));
+    document.querySelectorAll('.reveal, .reveal-top').forEach(el => observer.observe(el));
 
     // Modal behavior
     function openModal(imgElement) {
