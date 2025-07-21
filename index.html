@@ -116,23 +116,29 @@
     }
 
     /* Reveal animation styles */
-    .reveal, .reveal-top {
-    opacity: 0;
-    transform: translateY(40px) scale(1.05);
-    transition-property: opacity, transform;
-    transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
-    will-change: opacity, transform;
-  }
+    /* Base hidden state before reveal */
+.reveal, .reveal-top {
+  opacity: 0;
+  transform: translateY(40px) scale(1.05);
+  transition-property: opacity, transform;
+  transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: opacity, transform;
+}
 
-  .reveal-top {
-    transform: translateY(-30px) scale(1.05);
-  }
+/* Optional: Specific direction for top-animations */
+.reveal-top {
+  transform: translateY(-30px) scale(1.05);
+}
 
-  .reveal.reveal-in-view,
-  .reveal-top.reveal-in-view {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-  }
+/* Final state once revealed */
+.reveal-in-view {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+  
+
+  
 
 
 
