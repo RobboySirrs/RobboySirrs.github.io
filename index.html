@@ -281,8 +281,7 @@
       const blogDiv = document.getElementById(id);
       if (today >= revealDate && blogDiv) {
         blogDiv.classList.add("visible");
-        const num = parseInt(id.replace('blog', ''), 10);
-        blogDiv.classList.add(num % 2 === 0 ? 'from-right' : 'from-left');
+      
       }
     }
 
