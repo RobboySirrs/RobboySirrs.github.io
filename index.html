@@ -181,12 +181,32 @@
         padding: 1.2rem;
       }
     }
+
+    .fancy-header {
+  font-size: 3rem;
+  font-weight: 900;
+  background: linear-gradient(135deg, #228B22, #9aff9a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  user-select: none;
+  /* subtle drop shadow for depth */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.12);
+}
+
+header p {
+  margin-top: 1rem;
+  font-weight: 600;
+  color: var(--muted);
+  letter-spacing: 0.04em;
+}
   </style>
 </head>
 <body>
 
   <header>
-    <h1>Robin Axelsson</h1>
+    <h1 class="fancy-header">Robin Axelsson</h1>
     <p>Business Developer · Process Developer · Full-Stack Coder · Logistician</p>
   </header>
 
