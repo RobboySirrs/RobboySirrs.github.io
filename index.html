@@ -98,6 +98,20 @@ section#blogs {
   animation: blogFadeInRight 0.7s cubic-bezier(.4,0,.2,1);
 }
 
+    .reveal-top {
+  opacity: 0;
+  transform: translateY(-30px);
+  transition:
+    opacity 1.5s ease-out,
+    transform 1.5s ease-out;
+}
+
+.reveal-top.reveal-in-view {
+  opacity: 1;
+  transform: translateY(0);
+  animation: blogFadeInTop 0.9s ease-out;
+}
+
 @keyframes blogFadeInLeft {
   from {
     opacity: 0;
