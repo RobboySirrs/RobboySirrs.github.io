@@ -293,7 +293,7 @@ header p {
   <script defer>
     // Reveal schedule (if using publish timing logic)
     const blogSchedule = {
-      blog1: "2025-07-22",
+      blog1: "2025-07-23",
       blog2: "2025-07-07",
       blog3: "2025-07-01",
       blog4: "2025-07-10",
@@ -326,7 +326,7 @@ const observer = new IntersectionObserver((entries, obs) => {
       
       const randomDirection = directions[Math.floor(Math.random() * directions.length)];
       const randomDelay = Math.floor(Math.random() * 1001);
-      const randomDuration = 500
+      const randomDuration = 1500
 
       // Apply the random direction and duration
       el.classList.add(randomDirection);
