@@ -109,6 +109,17 @@ section#blogs {
   }
 }
 
+    @keyframes blogFadeInTop {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+    }
+
 @keyframes blogFadeInRight {
   from {
     opacity: 0;
@@ -432,12 +443,15 @@ footer {
 
     // Add .reveal to all children except h2
     document.querySelectorAll('.blog-post').forEach(post => {
-      Array.from(post.children).forEach(child => {
-        
-          child.classList.add('reveal');
-        
-      });
-    });
+  Array.from(post.children).forEach(child => {
+    if (child.tagName === 'H2') {
+      child.classList.add('reveal-top');
+    } else {
+      child.classList.add('reveal');
+    }
+  });
+});
+
 
     // Intersection Observer for inner content
     const observer = new IntersectionObserver(
