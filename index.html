@@ -310,7 +310,12 @@ header p {
 
     // Observer: reveal elements individually with staggered effect
     // Observer: reveal elements individually with staggered effect
- const revealElements = document.querySelectorAll('.blog-post p, .blog-post img, .blog-post h2');
+const revealElements = [];
+
+document.querySelectorAll('.blog-post.visible').forEach(blog => {
+  const children = blog.querySelectorAll('p, img, h2');
+  children.forEach(el => revealElements.push(el));
+});
 
 const directions = ['reveal-top', 'reveal-bottom', 'reveal-left', 'reveal-right'];
 
