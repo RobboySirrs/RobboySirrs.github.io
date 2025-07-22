@@ -296,8 +296,8 @@
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           const el = entry.target;
-          const randomDelay = Math.floor(Math.random() * 5001);
-          const randomDuration = 1500;
+          const randomDelay = Math.floor(Math.random() * 2001);
+          const randomDuration = Math.floor(Math.random() * 2001);
 
           el.style.transitionDuration = `${randomDuration}ms`;
 
