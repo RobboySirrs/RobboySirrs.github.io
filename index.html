@@ -289,7 +289,7 @@
     // Assign each element a random direction and base reveal class BEFORE observing
     revealElements.forEach(el => {
       const randomDirection = directions[Math.floor(Math.random() * directions.length)];
-      el.classList.add('reveal-base', randomDirection);
+      el.classList.add('reveal-base', 'reveal-bottom');
     });
 
     const observer = new IntersectionObserver((entries, obs) => {
