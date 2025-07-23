@@ -23,6 +23,7 @@
         }
 
         /* --- BASE LIGHT MODE STYLES (Guaranteed to work) --- */
+
         body {
             background-color: var(--light-bg-color); /* Your specific light background */
             color: var(--light-text-color); /* Your specific light text */
@@ -31,6 +32,16 @@
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
         }
+        @media (prefers-color-scheme: light) {
+  body {
+            background-color: var(--light-bg-color); /* Your specific light background */
+            color: var(--light-text-color); /* Your specific light text */
+            font-family: 'Merriweather', serif; /* Base font */
+            transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+}
 
         h1, h2, h3 { /* Default text color for headings in light mode */
             color: var(--light-text-color);
