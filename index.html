@@ -171,7 +171,43 @@
             transform: translateY(0);
         }
 
-        /* Removed #darkModeToggle specific styles as the button is removed */
+        /* Dark Mode Toggle Button (Icon) Styling */
+        #darkModeToggle {
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem;
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            z-index: 10;
+            transition: transform 0.2s ease, color 0.3s ease;
+            font-size: 2rem;
+            line-height: 1;
+        }
+
+        #darkModeToggle:hover {
+            transform: scale(1.1);
+        }
+
+        #darkModeToggle span {
+            color: #64748B; /* Default icon color (slate-500 for light mode) */
+            transition: color 0.3s ease;
+        }
+
+        html.dark #darkModeToggle span {
+            color: #FDE047; /* Tailwind yellow-300 for dark mode (sun is "on") */
+        }
+
+        /* Hide dark mode toggle on small screens (e.g., mobile) */
+        @media (max-width: 639px) {
+            #darkModeToggle {
+                display: none !important;
+            }
+        }
 
         .footer-social-links {
             display: flex;
@@ -198,9 +234,29 @@
     
     <script>
         (function() {
-            // Immediately apply theme based on OS preference
             const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-            document.documentElement.className = prefersDark ? 'dark' : 'light';
+            const savedTheme = localStorage.getItem('theme');
+            let initialTheme;
+
+            if (savedTheme) {
+                initialTheme = savedTheme;
+                console.log('Initial theme from localStorage:', initialTheme);
+            } else {
+                initialTheme = prefersDark ? 'dark' : 'light';
+                console.log('Initial theme from OS preference:', initialTheme);
+            }
+            document.documentElement.className = initialTheme;
+
+            // Attempt to set the icon text content immediately
+            const toggleButton = document.getElementById('darkModeToggle');
+            if (toggleButton) {
+                const iconSpan = toggleButton.querySelector('span');
+                if (iconSpan) {
+                    iconSpan.textContent = (initialTheme === 'dark') ? '☾' : '☀';
+                    toggleButton.setAttribute('aria-label', (initialTheme === 'dark') ? 'Switch to Light Mode' : 'Switch to Dark Mode');
+                    console.log('Initial toggle icon set:', iconSpan.textContent);
+                }
+            }
         })();
     </script>
 </head>
@@ -209,7 +265,9 @@
     <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
 
         <header class="text-center mb-12 relative">
-            <!-- Dark mode toggle button removed as per request -->
+            <button id="darkModeToggle" aria-label="Toggle Dark Mode">
+                <span></span> 
+            </button>
             
             <h1 class="text-4xl md:text-5xl font-bold tracking-tight mb-3">Robin Axelsson</h1>
             <p class="text-lg md:text-xl font-montserrat">Business Developer · Process Developer · Coder · Logistician</p>
@@ -340,6 +398,8 @@
             const singlePostView = document.getElementById('single-post-view');
             const postContentArea = document.getElementById('post-content-area');
             const backToProjectsBtn = document.getElementById('back-to-projects-btn');
+            const darkModeToggle = document.getElementById('darkModeToggle');
+            const darkModeToggleIcon = darkModeToggle.querySelector('span');
             const htmlEl = document.documentElement;
             let filterButtons;
 
@@ -348,17 +408,52 @@
 
             function applyTheme(theme) {
                 htmlEl.className = theme;
+                console.log('Applied theme:', theme);
+            }
+
+            function updateDarkModeToggleIcon() {
+                if (htmlEl.classList.contains('dark')) {
+                    darkModeToggleIcon.textContent = '☾'; // Moon icon for dark mode
+                    darkModeToggle.setAttribute('aria-label', 'Switch to Light Mode');
+                } else {
+                    darkModeToggleIcon.textContent = '☀'; // Sun icon for light mode
+                    darkModeToggle.setAttribute('aria-label', 'Switch to Dark Mode');
+                }
+                console.log('Updated toggle icon to:', darkModeToggleIcon.textContent);
+            }
+
+            function toggleDarkMode() {
+                const currentThemeIsDark = htmlEl.classList.contains('dark');
+                const newTheme = currentThemeIsDark ? 'light' : 'dark';
+                
+                applyTheme(newTheme);
+                localStorage.setItem('theme', newTheme); // Save explicit user choice
+                console.log('User manually toggled theme to:', newTheme);
+                updateDarkModeToggleIcon();
             }
 
             const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
 
-            // Initial theme application based on OS preference
-            applyTheme(prefersDarkScheme.matches ? 'dark' : 'light');
+            function handleOSThemeChange(event) {
+                // Only apply OS theme if no manual preference is saved
+                if (!localStorage.getItem('theme')) {
+                    applyTheme(event.matches ? 'dark' : 'light');
+                    console.log('OS theme changed and applied:', event.matches ? 'dark' : 'light');
+                    updateDarkModeToggleIcon(); // Update icon based on OS change
+                } else {
+                    console.log('OS theme changed, but manual preference exists. Not overriding.');
+                }
+            }
+            
+            // Add event listener for manual toggle button
+            darkModeToggle.addEventListener('click', toggleDarkMode);
+            // Listen for changes in OS theme preference, but only if no manual override
+            prefersDarkScheme.addEventListener('change', handleOSThemeChange);
 
-            // Listen for changes in OS theme preference
-            prefersDarkScheme.addEventListener('change', (event) => {
-                applyTheme(event.matches ? 'dark' : 'light');
-            });
+            // Initial icon update after theme is set by the head script
+            // This is redundant with the head script's attempt but ensures consistency
+            // after DOMContentLoaded in case the head script's element access was too early.
+            updateDarkModeToggleIcon();
 
             function generateFilterButtons() {
                 filterControls.innerHTML = '';
