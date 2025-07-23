@@ -237,6 +237,12 @@
         html.dark .footer-social-links a:hover {
             color: #ffffff; /* white on hover in dark mode */
         }
+        /* Hide dark mode toggle on small screens (e.g., mobile) */
+@media (max-width: 639px) {
+    #darkModeToggle {
+        display: none !important;
+    }
+}
     </style>
 </head>
 <body class="antialiased">
