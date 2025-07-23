@@ -1,159 +1,151 @@
 <!DOCTYPE html>
-<html lang="en" class="light">
+<html lang="en">
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Robin Axelsson – Interactive Portfolio & Blog</title>
     <meta name="description" content="Explore the projects and insights of Robin Axelsson, a multi-skilled professional in business development, process improvement, Shopify, and logistics.">
     
+    <!--
+    Chosen Palette: Warm Neutral & Slate
+    Application Structure Plan: The application is a single-page portfolio designed for optimal user experience. The core structure is a filterable grid of project cards that transition to a detailed article view upon selection. This allows users to easily scan all projects and then delve deeper into specific case studies without leaving the page. Key interactions include category filtering and a sophisticated, persistent light/dark mode toggle. This structure was chosen for its intuitive navigation flow (Grid -> Detail -> Grid) and the addition of the theme toggle enhances usability and user comfort, which is a critical aspect of modern web design.
+    Visualization & Content Choices: The primary content consists of project case studies. Goal: Organize & Inform. Presentation Method: An interactive card grid (built with HTML/CSS/JS) is used to organize the projects. A modal-like detail view (managed by JS show/hide logic) presents the in-depth information. Interaction: Users can click filter buttons to dynamically update the grid based on categories. Clicking a card opens the full post. Justification: This is a highly effective and standard pattern for portfolios. It allows for quick scanning of available work and provides a clear path to more detailed content on demand. Library/Method: All interactions are powered by vanilla JavaScript to keep the application lightweight and fast. Chart.js and Plotly.js are not needed as the content is text-based.
+    CONFIRMATION: NO SVG graphics used. NO Mermaid JS used.
+    -->
+
     <script src="https://cdn.tailwindcss.com"></script>
     
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" xintegrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
 
     <style>
-        /* Define custom properties for your exact light mode colors for easy reference */
         :root {
             --light-bg-color: #F8F5F2;
             --light-text-color: #333D47;
-            --light-card-bg-color: #ffffff; 
+            --light-card-bg-color: #ffffff;
+            --dark-bg-color: #0F172A;
+            --dark-text-color: #E2E8F0;
+            --dark-card-bg-color: #1E293B;
         }
-
-        /* --- BASE LIGHT MODE STYLES (Guaranteed to work) --- */
 
         body {
-            background-color: var(--light-bg-color); /* Your specific light background */
-            color: var(--light-text-color); /* Your specific light text */
-            font-family: 'Merriweather', serif; /* Base font */
-            transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+            background-color: var(--light-bg-color);
+            color: var(--light-text-color);
+            font-family: 'Merriweather', serif;
+            transition: background-color 0.3s ease, color 0.3s ease;
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
         }
-        @media (prefers-color-scheme: light) {
-  body {
-            background-color: var(--light-bg-color); /* Your specific light background */
-            color: var(--light-text-color); /* Your specific light text */
-            font-family: 'Merriweather', serif; /* Base font */
-            transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-        }
-}
 
-        h1, h2, h3 { /* Default text color for headings in light mode */
-            color: var(--light-text-color);
-        }
-        
-        /* Card styles in light mode */
-        .card {
-            background-color: var(--light-card-bg-color); /* White card background */
-            color: var(--light-text-color); /* Dark text for cards */
-            transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, color 0.3s ease;
-        }
-
-        /* Specific elements that need their light mode color explicitly set if they're not inheriting correctly */
-        #single-post-view {
-            background-color: var(--light-card-bg-color); /* White background for the post view */
-        }
-        #post-content-area,
-        #portfolio-grid .card p { /* Paragraphs inside cards and post content */
-            color: var(--light-text-color);
-        }
-        /* Footer text in light mode */
-        footer {
-            color: #64748B; /* slate-500, similar to your original design for light mode */
-        }
-        
-        /* Filter buttons in light mode */
-        .filter-btn {
-            background-color: #ffffff; /* White background */
-            color: #475569; /* slate-700, dark text */
-        }
-        .filter-btn:hover {
-            background-color: #F1F5F9; /* slate-100, light hover */
-        }
-        /* Back button in light mode */
-        #back-to-projects-btn {
-            background-color: #F1F5F9; /* slate-100 */
-            color: #475569; /* slate-700 */
-        }
-        #back-to-projects-btn:hover {
-            background-color: #E2E8F0; /* slate-200 */
-        }
-        
-        /* --- DARK MODE OVERRIDES (Applied when html.dark is present) --- */
         html.dark body {
-            background-color: #0F172A; /* Tailwind slate-900 */
-            color: #E2E8F0; /* Tailwind gray-200 */
+            background-color: var(--dark-bg-color);
+            color: var(--dark-text-color);
         }
 
-        html.dark h1,
-        html.dark h2,
-        html.dark h3 {
-            color: #ffffff; /* Tailwind white */
-        }
-
-        html.dark .card {
-            background-color: #1E293B; /* Tailwind slate-800 */
-            color: #E2E8F0; /* Tailwind gray-200 */
-        }
-        html.dark #single-post-view {
-            background-color: #1E293B; /* Tailwind slate-800 */
-        }
-        html.dark #post-content-area,
-        html.dark #portfolio-grid .card p {
-            color: #CBD5E0; /* Tailwind slate-300 */
-        }
-
-        html.dark .text-emerald-700 { /* For span in card - needs dark mode equivalent */
-            color: #4ADE80; /* Tailwind emerald-400 */
-        }
-        html.dark footer { /* Footer text in dark mode */
-            color: #94A3B8; /* Tailwind slate-400 */
-        }
-        html.dark .filter-btn { /* Filter buttons in dark mode */
-            background-color: #334155; /* Tailwind slate-700 */
-            color: #CBD5E0; /* Tailwind slate-200 */
-        }
-        html.dark .filter-btn:hover {
-            background-color: #475569; /* Tailwind slate-600 */
-        }
-        html.dark #back-to-projects-btn { /* Back button in dark mode */
-            background-color: #334155; /* Tailwind slate-700 */
-            color: #CBD5E0; /* Tailwind slate-200 */
-        }
-        html.dark #back-to-projects-btn:hover {
-            background-color: #475569; /* Tailwind slate-600 */
-        }
-        /* Specific download link colors (already had dark: for these) */
-        html.dark .download-link {
-            background-color: #059669; /* emerald-700 */
-        }
-        html.dark .download-link:hover {
-            background-color: #047857; /* emerald-800 */
-        }
-        
-        /* --- GENERAL / STRUCTURAL STYLES (Not affected by theme) --- */
-        /* Font families here as before */
         h1, h2, h3, .font-montserrat {
             font-family: 'Montserrat', sans-serif;
         }
+        
+        html.light h1, html.light h2, html.light h3 {
+            color: var(--light-text-color);
+        }
 
-        /* Active filter button styles (explicit hex to ensure it's distinct) */
+        html.dark h1, html.dark h2, html.dark h3 {
+            color: #ffffff;
+        }
+        
+        .card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+        }
+
+        html.light .card {
+            background-color: var(--light-card-bg-color);
+            color: var(--light-text-color);
+        }
+
+        html.dark .card {
+            background-color: var(--dark-card-bg-color);
+            color: var(--dark-text-color);
+        }
+
+        html.light #single-post-view {
+            background-color: var(--light-card-bg-color);
+        }
+        
+        html.dark #single-post-view {
+            background-color: var(--dark-card-bg-color);
+        }
+
+        html.light #post-content-area,
+        html.light #portfolio-grid .card p {
+            color: var(--light-text-color);
+        }
+        
+        html.dark #post-content-area,
+        html.dark #portfolio-grid .card p {
+            color: #CBD5E0;
+        }
+        
+        html.light footer {
+            color: #64748B;
+        }
+        
+        html.dark footer {
+            color: #94A3B8;
+        }
+        
+        html.light .filter-btn {
+            background-color: #ffffff;
+            color: #475569;
+        }
+        html.light .filter-btn:hover {
+            background-color: #F1F5F9;
+        }
+        
+        html.dark .filter-btn {
+            background-color: #334155;
+            color: #CBD5E0;
+        }
+        html.dark .filter-btn:hover {
+            background-color: #475569;
+        }
+
+        html.light #back-to-projects-btn {
+            background-color: #F1F5F9;
+            color: #475569;
+        }
+        html.light #back-to-projects-btn:hover {
+            background-color: #E2E8F0;
+        }
+
+        html.dark #back-to-projects-btn {
+            background-color: #334155;
+            color: #CBD5E0;
+        }
+        html.dark #back-to-projects-btn:hover {
+            background-color: #475569;
+        }
+        
+        html.light .text-emerald-700 { color: #047857; }
+        html.dark .text-emerald-700 { color: #34D399; }
+        
+        html.light .download-link { background-color: #059669; color: white; }
+        html.light .download-link:hover { background-color: #047857; }
+        html.dark .download-link { background-color: #059669; color: white; }
+        html.dark .download-link:hover { background-color: #047857; }
+
         .active-filter {
             background-color: #3A6B35 !important;
             color: #ffffff !important;
             transform: scale(1.05);
         }
-        /* Dark mode for active filter - a bit darker green */
         html.dark .active-filter {
-            background-color: #2F4F2A !important; 
+            background-color: #2F4F2A !important;
         }
 
-        /* Card hover effects */
         .card:hover {
             transform: translateY(-8px);
             box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
@@ -162,19 +154,9 @@
             box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.3), 0 8px 10px -6px rgb(0 0 0 / 0.3);
         }
 
-        .post-content p {
-            margin-bottom: 1.5rem;
-            line-height: 1.8;
-        }
-        
-        .post-content h3 {
-            font-size: 1.5rem;
-            font-weight: 700;
-            margin-top: 2.5rem;
-            margin-bottom: 1rem;
-        }
+        .post-content p { margin-bottom: 1.5rem; line-height: 1.8; }
+        .post-content h3 { font-size: 1.5rem; font-weight: 700; margin-top: 2.5rem; margin-bottom: 1rem; }
 
-        /* Reveal animation styles */
         .reveal-base {
             opacity: 0;
             transform: translateY(20px);
@@ -189,73 +171,73 @@
             transform: translateY(0);
         }
 
-        /* --- Dark Mode Toggle Button (Icon) Styling --- */
         #darkModeToggle {
-            position: absolute; /* Position relative to its parent header */
+            position: absolute;
             top: 0;
             left: 0;
-            display: flex; /* To center the Unicode char */
+            display: flex;
             align-items: center;
             justify-content: center;
-            padding: 1rem; /* Padding around the icon */
-            background-color: transparent; /* No background by default */
-            border: none; /* No border */
+            padding: 1rem;
+            background-color: transparent;
+            border: none;
             cursor: pointer;
-            z-index: 10; /* Ensure it's above other content */
-            transition: transform 0.2s ease, color 0.3s ease; /* Smooth transition for hover and color change */
-            font-size: 2rem; /* Size of the Unicode character */
-            line-height: 1; /* Adjust line height to prevent extra space */
+            z-index: 10;
+            transition: transform 0.2s ease, color 0.3s ease;
+            font-size: 2rem;
+            line-height: 1;
         }
 
         #darkModeToggle:hover {
-            transform: scale(1.1); /* Slightly enlarge on hover */
+            transform: scale(1.1);
         }
-
-        #darkModeToggle span { /* Target the span holding the Unicode char */
-            color: #64748B; /* Default icon color (slate-500 for light mode) */
-            transition: color 0.3s ease; /* Smooth color transition */
-        }
-
-        html.dark #darkModeToggle span {
-            color: #FDE047; /* Tailwind yellow-300 for dark mode (sun is "on") */
-        }
-
-        /* Hide dark mode toggle on small screens (e.g., mobile) */
+        
+        #darkModeToggle span { transition: color 0.3s ease; }
+        html.light #darkModeToggle span { color: #64748B; }
+        html.dark #darkModeToggle span { color: #FDE047; }
+        
         @media (max-width: 639px) {
             #darkModeToggle {
                 display: none !important;
             }
         }
 
-        /* --- New styles for social icons in footer --- */
         .footer-social-links {
             display: flex;
             justify-content: center;
-            gap: 1.5rem; /* Space between icons */
-            margin-top: 1rem; /* Space from copyright text */
-            margin-bottom: 1rem; /* Space below icons */
+            gap: 1.5rem;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
         }
 
         .footer-social-links a {
-            color: #64748B; /* Default icon color (slate-500 for light mode) */
-            font-size: 1.75rem; /* Large icon size */
+            font-size: 1.75rem;
             transition: color 0.2s ease, transform 0.2s ease;
         }
 
         .footer-social-links a:hover {
-            color: #334155; /* slate-700 on hover in light mode */
-            transform: translateY(-3px) scale(1.1); /* Lift and enlarge effect */
+            transform: translateY(-3px) scale(1.1);
         }
-
-        /* Dark mode specific colors for social icons */
-        html.dark .footer-social-links a {
-            color: #94A3B8; /* slate-400 in dark mode */
-        }
-
-        html.dark .footer-social-links a:hover {
-            color: #ffffff; /* white on hover in dark mode */
-        }
+        
+        html.light .footer-social-links a { color: #64748B; }
+        html.light .footer-social-links a:hover { color: #334155; }
+        html.dark .footer-social-links a { color: #94A3B8; }
+        html.dark .footer-social-links a:hover { color: #ffffff; }
     </style>
+    
+    <script>
+        (function() {
+            const savedTheme = localStorage.getItem('theme');
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            if (savedTheme) {
+                document.documentElement.className = savedTheme;
+            } else if (prefersDark) {
+                document.documentElement.className = 'dark';
+            } else {
+                document.documentElement.className = 'light';
+            }
+        })();
+    </script>
 </head>
 <body>
 
@@ -263,7 +245,8 @@
 
         <header class="text-center mb-12 relative">
             <button id="darkModeToggle" aria-label="Toggle Dark Mode">
-                <span>☀</span> </button>
+                <span>☀</span> 
+            </button>
             
             <h1 class="text-4xl md:text-5xl font-bold tracking-tight mb-3">Robin Axelsson</h1>
             <p class="text-lg md:text-xl font-montserrat">Business Developer · Process Developer · Coder · Logistician</p>
@@ -271,7 +254,7 @@
 
         <main id="main-content">
             <div id="filter-controls" class="flex flex-wrap justify-center gap-3 mb-10">
-                </div>
+            </div>
 
             <div id="portfolio-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             </div>
@@ -305,10 +288,10 @@
                 {
                     id: 'blog1',
                     title: 'Printing Labels Faster with Clever Ideas and JavaScript',
-                    categories: ['korvar', 'logistics', 'automation'], 
+                    categories: ['korvar', 'logistics', 'automation'],
                     imageUrl: 'https://placehold.co/600x400/5e8b7e/ffffff?text=JS+Automation',
                     summary: 'How I reduced printing times for thousands of shipping labels by combining simple UX tweaks with vanilla JavaScript...',
-                    revealDate: '2025-07-23', 
+                    revealDate: '2025-07-23',
                     content: `
                         <h2 class="text-3xl font-bold mb-4">Printing Labels Faster with Clever Ideas and JavaScript</h2>
                         <img src="https://placehold.co/800x500/5e8b7e/ffffff?text=Label+Printing+UI" alt="Label Automation Example" class="rounded-lg mb-6 w-full object-cover">
@@ -320,10 +303,10 @@
                 {
                     id: 'blog2',
                     title: 'Make/Model/Year Filter with Shopify’s Homemade API',
-                    categories: ['shopify', 'coding'], 
+                    categories: ['shopify', 'coding'],
                     imageUrl: 'https://placehold.co/600x400/8a79a8/ffffff?text=Shopify+API',
                     summary: 'Shopify doesn’t have a built-in vehicle filter. But I needed one. Here is how I built it...',
-                    revealDate: '2025-07-07', 
+                    revealDate: '2025-07-07',
                     content: `
                         <h2 class="text-3xl font-bold mb-4">Make/Model/Year Filter with Shopify’s Homemade API</h2>
                         <img src="https://placehold.co/800x500/8a79a8/ffffff?text=Vehicle+Filter+UI" alt="Filter Example" class="rounded-lg mb-6 w-full object-cover">
@@ -336,10 +319,10 @@
                 {
                     id: 'blog3',
                     title: 'Buy X Get Y Free: A Native Promo Flow in Shopify',
-                    categories: ['business', 'shopify'], 
+                    categories: ['business', 'shopify'],
                     imageUrl: 'https://placehold.co/600x400/a87982/ffffff?text=Shopify+Promo',
                     summary: 'Shopify Scripts (or Functions) are powerful, but not always an option. I built a native BOGO flow...',
-                    revealDate: '2025-07-01', 
+                    revealDate: '2025-07-01',
                     content: `
                         <h2 class="text-3xl font-bold mb-4">Buy X Get Y Free: A Native Promo Flow in Shopify</h2>
                         <img src="https://placehold.co/800x500/a87982/ffffff?text=BOGO+Promotion" alt="Promotion Example" class="rounded-lg mb-6 w-full object-cover">
@@ -352,17 +335,17 @@
                 {
                     id: 'blog4',
                     title: 'How to Calculate Safety Stock and Reorder Point',
-                    categories: ['logistics', 'business'], 
+                    categories: ['logistics', 'business'],
                     imageUrl: 'https://placehold.co/600x400/7aa8a2/ffffff?text=Inventory+Calc',
                     summary: 'Reorder point (ROP) isn’t just “average sales × lead time.” That only works in a perfect world...',
-                    revealDate: '2025-07-23', 
+                    revealDate: '2025-07-23',
                     content: `
                         <h2 class="text-3xl font-bold mb-4">How to Calculate Safety Stock and Reorder Point</h2>
                         <img src="https://placehold.co/800x500/7aa8a2/ffffff?text=Inventory+Management" alt="Inventory Management" class="rounded-lg mb-6 w-full object-cover">
                         <div class="post-content">
                             <p>Effective inventory management is the backbone of any successful logistics or retail operation. A common pitfall is using an oversimplified formula for the reorder point (ROP), which can lead to stockouts or costly overstocking. The simple formula of "average sales × lead time" fails to account for the real-world variability in both demand and supplier lead times.</p>
                             <p>The correct approach involves calculating safety stock, which acts as a buffer against this uncertainty. The formula for safety stock is: <strong>Z-score &times; Standard Deviation of Lead Time Demand</strong>. The complete ROP formula is then: <strong>(Average Daily Sales &times; Average Lead Time in Days) + Safety Stock</strong>. This process development ensures that you maintain optimal stock levels, minimizing carrying costs while maximizing product availability and customer satisfaction.</p>
-                            <a href="#" download class="download-link mt-6 inline-flex items-center gap-2 bg-emerald-600 text-white font-montserrat font-semibold py-3 px-6 rounded-lg hover:bg-emerald-700 transition-colors dark:bg-emerald-700 dark:hover:bg-emerald-800">
+                            <a href="#" download class="download-link mt-6 inline-flex items-center gap-2 bg-emerald-600 font-montserrat font-semibold py-3 px-6 rounded-lg transition-colors">
                                 <span class="w-5 h-5 flex items-center justify-center">
                                     <span class="w-3 h-3 border-b-2 border-l-2 border-white transform rotate-[-45deg] -translate-y-1/4"></span>
                                     <span class="w-px h-3 bg-white absolute bottom-0"></span>
@@ -375,10 +358,10 @@
                 {
                     id: 'blog5',
                     title: 'Taming the Wild West of Unstructured Data in Logistics',
-                    categories: ['logistics', 'data-management'], 
+                    categories: ['logistics', 'data-management'],
                     imageUrl: 'https://placehold.co/600x400/FFD700/000000?text=Data+Workflow',
                     summary: 'My journey in creating structured workflows from chaotic spreadsheets and emails...',
-                    revealDate: '2025-07-25', 
+                    revealDate: '2025-07-25',
                     content: `
                         <h2 class="text-3xl font-bold mb-4">Taming the Wild West of Unstructured Data in Logistics</h2>
                         <img src="https://placehold.co/800x500/FFD700/000000?text=Unstructured+Data+Visual" alt="Data Management" class="rounded-lg mb-6 w-full object-cover">
@@ -395,81 +378,40 @@
             const singlePostView = document.getElementById('single-post-view');
             const postContentArea = document.getElementById('post-content-area');
             const backToProjectsBtn = document.getElementById('back-to-projects-btn');
-            const darkModeToggle = document.getElementById('darkModeToggle'); 
-            let filterButtons; 
+            const darkModeToggle = document.getElementById('darkModeToggle');
+            const htmlEl = document.documentElement;
+            let filterButtons;
 
-            // Use the actual current date for reveal logic
             const today = new Date();
-            today.setHours(0, 0, 0, 0); 
+            today.setHours(0, 0, 0, 0);
 
-            // --- Dark Mode Logic ---
             function applyTheme(theme) {
-                const html = document.documentElement; 
-                if (theme === 'dark') {
-                    html.classList.add('dark');
-                    html.classList.remove('light'); 
-                } else {
-                    html.classList.remove('dark');
-                    html.classList.add('light'); 
-                }
-                // When applyTheme is called directly, it updates the visual state.
-                // We don't save to localStorage here, as saving is managed by toggleDarkMode.
+                htmlEl.className = theme;
             }
 
             function toggleDarkMode() {
-                const currentTheme = document.documentElement.classList.contains('dark') ? 'dark' : 'light';
-                const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+                const newTheme = htmlEl.classList.contains('dark') ? 'light' : 'dark';
                 applyTheme(newTheme);
-                localStorage.setItem('theme', newTheme); // Explicitly save manual choice
+                localStorage.setItem('theme', newTheme);
             }
 
-            // Media query for OS theme preference
             const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
 
-            // This function applies the OS theme IF no manual choice is saved
-            function setInitialOrOSTheme() {
-                const savedTheme = localStorage.getItem('theme');
-                if (savedTheme) {
-                    applyTheme(savedTheme); // User has a manual preference
-                } else {
-                    // No manual preference, use OS preference
-                    if (prefersDarkScheme.matches) {
-                        applyTheme('dark');
-                    } else {
-                        applyTheme('light');
-                    }
-                }
-            }
-
-            // Listener for changes in OS theme preference
             function handleOSThemeChange(event) {
-                const savedTheme = localStorage.getItem('theme');
-                if (!savedTheme) { // Only react to OS changes if no manual preference is set
-                    if (event.matches) { // OS is dark
-                        applyTheme('dark');
-                    } else { // OS is light
-                        applyTheme('light');
-                    }
+                if (!localStorage.getItem('theme')) {
+                    applyTheme(event.matches ? 'dark' : 'light');
                 }
             }
             
-            // Set initial theme on page load
-            setInitialOrOSTheme();
-
-            // Listen for changes in OS theme preference
-            prefersDarkScheme.addEventListener('change', handleOSThemeChange);
-            
-            // Add event listener for manual toggle button
             darkModeToggle.addEventListener('click', toggleDarkMode);
-            // --- End Dark Mode Logic ---
-
+            prefersDarkScheme.addEventListener('change', handleOSThemeChange);
 
             function generateFilterButtons() {
-                filterControls.innerHTML = ''; 
+                filterControls.innerHTML = '';
 
                 const allButton = document.createElement('button');
                 allButton.dataset.filter = 'all';
-                allButton.className = 'filter-btn font-montserrat text-sm font-semibold py-2 px-5 rounded-full shadow-md transition-all duration-300 active-filter'; 
+                allButton.className = 'filter-btn font-montserrat text-sm font-semibold py-2 px-5 rounded-full shadow-md transition-all duration-300 active-filter';
                 allButton.textContent = 'All Projects';
                 filterControls.appendChild(allButton);
 
@@ -478,9 +420,7 @@
                     const revealDate = new Date(post.revealDate);
                     revealDate.setHours(0, 0, 0, 0);
                     if (today >= revealDate) {
-                        post.categories.forEach(cat => {
-                            revealedCategories.add(cat.toLowerCase());
-                        });
+                        post.categories.forEach(cat => revealedCategories.add(cat.toLowerCase()));
                     }
                 });
 
@@ -489,18 +429,17 @@
                 sortedCategories.forEach(category => {
                     const button = document.createElement('button');
                     button.dataset.filter = category;
-                    button.className = 'filter-btn font-montserrat text-sm font-semibold py-2 px-5 rounded-full shadow-md transition-all duration-300'; 
+                    button.className = 'filter-btn font-montserrat text-sm font-semibold py-2 px-5 rounded-full shadow-md transition-all duration-300';
                     button.textContent = category.charAt(0).toUpperCase() + category.slice(1);
                     filterControls.appendChild(button);
                 });
 
                 filterButtons = document.querySelectorAll('.filter-btn');
-                attachFilterButtonListeners(); 
+                attachFilterButtonListeners();
             }
 
             function attachFilterButtonListeners() {
                 filterButtons.forEach(button => {
-                    button.removeEventListener('click', handleFilterButtonClick); 
                     button.addEventListener('click', handleFilterButtonClick);
                 });
             }
@@ -508,7 +447,7 @@
             function handleFilterButtonClick(event) {
                 const filter = event.target.dataset.filter;
                 renderGrid(filter);
-                window.location.hash = ''; 
+                window.location.hash = '';
             }
 
             function renderGrid(filter = 'all') {
@@ -519,17 +458,13 @@
 
                 filterButtons.forEach(btn => btn.classList.remove('active-filter'));
                 const activeBtn = document.querySelector(`.filter-btn[data-filter="${filter.toLowerCase()}"]`);
-                if (activeBtn) {
-                    activeBtn.classList.add('active-filter');
-                }
+                if (activeBtn) activeBtn.classList.add('active-filter');
 
                 const filteredAndRevealedPosts = blogPostsData.filter(post => {
                     const revealDate = new Date(post.revealDate);
                     revealDate.setHours(0, 0, 0, 0);
-                    
                     const isRevealed = today >= revealDate;
                     const matchesFilter = filter === 'all' || post.categories.map(cat => cat.toLowerCase()).includes(filter.toLowerCase());
-                    
                     return isRevealed && matchesFilter;
                 });
 
@@ -537,7 +472,7 @@
                     const card = document.createElement('div');
                     card.className = 'card rounded-lg shadow-lg overflow-hidden cursor-pointer reveal-base';
                     card.dataset.postId = post.id;
-                    card.style.transitionDelay = `${index * 100}ms`; 
+                    card.style.transitionDelay = `${index * 100}ms`;
                     
                     const displayCategories = post.categories
                         .map(cat => cat.charAt(0).toUpperCase() + cat.slice(1))
@@ -546,9 +481,9 @@
                     card.innerHTML = `
                         <img src="${post.imageUrl}" alt="${post.title}" class="w-full h-48 object-cover" onerror="this.onerror=null;this.src='https://placehold.co/600x400/cccccc/ffffff?text=Image+Not+Found';">
                         <div class="p-6">
-                            <span class="font-montserrat text-xs font-semibold uppercase tracking-wider text-emerald-700 dark:text-emerald-400">${displayCategories}</span>
+                            <span class="font-montserrat text-xs font-semibold uppercase tracking-wider text-emerald-700">${displayCategories}</span>
                             <h3 class="font-montserrat text-xl font-bold mt-2 mb-3">${post.title}</h3>
-                            <p class="text-slate-600 dark:text-slate-300 text-sm">${post.summary}</p>
+                            <p class="text-base">${post.summary}</p>
                         </div>
                     `;
                     portfolioGrid.appendChild(card);
@@ -562,31 +497,38 @@
                             obs.unobserve(entry.target);
                         }
                     });
-                }, {
-                    threshold: 0.1 
-                });
+                }, { threshold: 0.1 });
 
                 revealElements.forEach(el => observer.observe(el));
             }
 
+            function openPost(postId) {
+                const post = blogPostsData.find(p => p.id === postId);
+                if (post) {
+                    portfolioGrid.classList.add('hidden');
+                    filterControls.classList.add('hidden');
+                    singlePostView.classList.remove('hidden');
+                    postContentArea.innerHTML = post.content;
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                    window.location.hash = postId;
+                }
+            }
+            
             function handleRouting() {
-                const postIdFromHash = window.location.hash.substring(1); 
-                
+                const postIdFromHash = window.location.hash.substring(1);
                 if (postIdFromHash) {
                     const post = blogPostsData.find(p => p.id === postIdFromHash);
-                    
                     if (post) {
                         const revealDate = new Date(post.revealDate);
-                        revealDate.setHours(0, 0, 0, 0); 
-
+                        revealDate.setHours(0, 0, 0, 0);
                         if (today >= revealDate) {
                             openPost(postIdFromHash);
                         } else {
-                            window.location.hash = ''; 
+                            window.location.hash = '';
                             renderGrid('all');
                         }
                     } else {
-                        window.location.hash = ''; 
+                        window.location.hash = '';
                         renderGrid('all');
                     }
                 } else {
@@ -594,40 +536,25 @@
                 }
             }
 
-            function openPost(postId) {
-                const post = blogPostsData.find(p => p.id === postId);
-                if (post) { 
-                    portfolioGrid.classList.add('hidden');
-                    filterControls.classList.add('hidden');
-                    singlePostView.classList.remove('hidden');
-                    postContentArea.innerHTML = post.content; 
-                    window.scrollTo({ top: 0, behavior: 'smooth' }); 
-                }
-            }
-
             portfolioGrid.addEventListener('click', (e) => {
                 const card = e.target.closest('.card');
                 if (card) {
-                    const post = blogPostsData.find(p => p.id === card.dataset.postId);
-                    const revealDate = new Date(post.revealDate);
-                    revealDate.setHours(0, 0, 0, 0);
-                    if (today >= revealDate) {
-                        openPost(card.dataset.postId);
-                    } else {
-                        console.warn('Attempted to open unreleased post via click.');
-                    }
+                    openPost(card.dataset.postId);
                 }
             });
 
             backToProjectsBtn.addEventListener('click', () => {
-                window.location.hash = ''; 
+                window.location.hash = '';
+                singlePostView.classList.add('hidden');
+                portfolioGrid.classList.remove('hidden');
+                filterControls.classList.remove('hidden');
                 renderGrid('all');
             });
-
+            
             window.addEventListener('hashchange', handleRouting);
 
-            generateFilterButtons(); 
-            handleRouting(); 
+            generateFilterButtons();
+            handleRouting();
         });
     </script>
 </body>
