@@ -52,15 +52,15 @@
       line-height: 1.6;
       transition: background 0.3s ease, color 0.3s ease;
     }
-    
+
     header {
       text-align: center;
       padding: 1rem 1rem 2rem;
     }
 
     header h1 {
-      color: #a7bee0; /* softer off-white */
-      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* subtle shadow */
+      color: #a7bee0;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
       font-size: 3rem;
       font-weight: 900;
       line-height: 3.2rem;
@@ -83,7 +83,7 @@
     }
 
     .blog-post {
-      display:none;
+      display: none;
       background: var(--card-bg);
       padding: 2rem;
       margin: 2rem 0;
@@ -92,6 +92,7 @@
       border-left: 4px solid var(--accent);
       overflow: hidden;
     }
+
     .blog-post.visible {
       display: block;
     }
@@ -118,15 +119,24 @@
       transition: transform 1.3s ease;
       object-fit: cover;
       position: relative;
-      z-index: 2;
+      z-index: 1;
+      background-color: rgba(0, 0, 0, 0.25); /* default while loading */
     }
 
     .blog-image:hover {
       transform: scale(1.02);
     }
 
-    /* Reveal animation styles */
-    /* Base hidden state before reveal */
+    /* Placeholder states */
+    .blog-image.loading {
+      background-color: rgba(0, 0, 0, 0.25);
+    }
+
+    .blog-image.loaded {
+      background-color: transparent;
+    }
+
+    /* Reveal animations */
     .reveal-base {
       opacity: 0;
       transform: scale(1.05);
@@ -135,21 +145,22 @@
       will-change: opacity, transform;
     }
 
-    /* direction transforms */
     .reveal-top {
       transform: translateY(-40px) scale(1.2);
     }
+
     .reveal-bottom {
       transform: translateY(40px) scale(1.2);
     }
+
     .reveal-left {
       transform: translateX(-40px) scale(1.2);
     }
+
     .reveal-right {
       transform: translateX(40px) scale(1.2);
     }
 
-    /* Final state */
     .reveal-in-view {
       opacity: 1;
       transform: translateX(0) translateY(0) scale(1);
@@ -204,7 +215,6 @@
         padding: 1.2rem;
       }
     }
-
   </style>
 </head>
 <body>
@@ -260,7 +270,7 @@
 
   <!-- Scripts -->
   <script defer>
-    // Reveal schedule (if using publish timing logic)
+    // Blog reveal logic
     const blogSchedule = {
       blog1: "2025-07-23",
       blog2: "2025-07-07",
@@ -277,7 +287,7 @@
       }
     }
 
-    // Collect reveal elements inside visible blog posts
+    // Reveal animations
     const revealElements = [];
     document.querySelectorAll('.blog-post.visible').forEach(blog => {
       const children = blog.querySelectorAll('p, img, h2');
@@ -285,8 +295,6 @@
     });
 
     const directions = ['reveal-top', 'reveal-bottom', 'reveal-left', 'reveal-right'];
-
-    // Assign each element a random direction and base reveal class BEFORE observing
     revealElements.forEach(el => {
       const randomDirection = directions[Math.floor(Math.random() * directions.length)];
       el.classList.add('reveal-base', 'reveal-bottom');
@@ -297,20 +305,12 @@
         if (entry.isIntersecting) {
           const el = entry.target;
           const randomDelay = Math.floor(Math.random() * 901);
-          const randomDuration = Math.floor(Math.random() * 901);
-
           el.style.transitionDuration = `1250ms`;
-
-          setTimeout(() => {
-            el.classList.add('reveal-in-view');
-          }, randomDelay);
-
+          setTimeout(() => el.classList.add('reveal-in-view'), randomDelay);
           obs.unobserve(el);
         }
       });
-    }, {
-      threshold: 0
-    });
+    }, { threshold: 0 });
 
     revealElements.forEach(el => observer.observe(el));
 
@@ -325,6 +325,20 @@
     function closeModal() {
       document.getElementById("image-modal").style.display = "none";
     }
+
+    // Image loading state
+    document.querySelectorAll('.blog-image').forEach(img => {
+      img.classList.add('loading');
+      if (img.complete) {
+        img.classList.remove('loading');
+        img.classList.add('loaded');
+      } else {
+        img.addEventListener('load', () => {
+          img.classList.remove('loading');
+          img.classList.add('loaded');
+        });
+      }
+    });
   </script>
 </body>
 </html>
