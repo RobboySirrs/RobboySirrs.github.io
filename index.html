@@ -15,7 +15,7 @@
 
     <script src="https://cdn.tailwindcss.com"></script>
     
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" xintegrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -171,36 +171,7 @@
             transform: translateY(0);
         }
 
-        #darkModeToggle {
-            position: absolute;
-            top: 0;
-            left: 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 1rem;
-            background-color: transparent;
-            border: none;
-            cursor: pointer;
-            z-index: 10;
-            transition: transform 0.2s ease, color 0.3s ease;
-            font-size: 2rem;
-            line-height: 1;
-        }
-
-        #darkModeToggle:hover {
-            transform: scale(1.1);
-        }
-        
-        #darkModeToggle span { transition: color 0.3s ease; }
-        html.light #darkModeToggle span { color: #64748B; }
-        html.dark #darkModeToggle span { color: #FDE047; }
-        
-        @media (max-width: 639px) {
-            #darkModeToggle {
-                display: none !important;
-            }
-        }
+        /* Removed #darkModeToggle specific styles as the button is removed */
 
         .footer-social-links {
             display: flex;
@@ -227,15 +198,9 @@
     
     <script>
         (function() {
-            const savedTheme = localStorage.getItem('theme');
+            // Immediately apply theme based on OS preference
             const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-            if (savedTheme) {
-                document.documentElement.className = savedTheme;
-            } else if (prefersDark) {
-                document.documentElement.className = 'dark';
-            } else {
-                document.documentElement.className = 'light';
-            }
+            document.documentElement.className = prefersDark ? 'dark' : 'light';
         })();
     </script>
 </head>
@@ -244,9 +209,7 @@
     <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
 
         <header class="text-center mb-12 relative">
-            <button id="darkModeToggle" aria-label="Toggle Dark Mode">
-                <span>☀</span> 
-            </button>
+            <!-- Dark mode toggle button removed as per request -->
             
             <h1 class="text-4xl md:text-5xl font-bold tracking-tight mb-3">Robin Axelsson</h1>
             <p class="text-lg md:text-xl font-montserrat">Business Developer · Process Developer · Coder · Logistician</p>
@@ -288,7 +251,7 @@
                 {
                     id: 'blog1',
                     title: 'Printing Labels Faster with Clever Ideas and JavaScript',
-                    categories: ['logistics', 'automation'],
+                    categories: ['korvar', 'logistics', 'automation'],
                     imageUrl: 'https://placehold.co/600x400/5e8b7e/ffffff?text=JS+Automation',
                     summary: 'How I reduced printing times for thousands of shipping labels by combining simple UX tweaks with vanilla JavaScript...',
                     revealDate: '2025-07-23',
@@ -335,7 +298,7 @@
                 {
                     id: 'blog4',
                     title: 'How to Calculate Safety Stock and Reorder Point',
-                    categories: ['logistics'],
+                    categories: ['logistics', 'business'],
                     imageUrl: 'https://placehold.co/600x400/7aa8a2/ffffff?text=Inventory+Calc',
                     summary: 'Reorder point (ROP) isn’t just “average sales × lead time.” That only works in a perfect world...',
                     revealDate: '2025-07-23',
@@ -367,7 +330,6 @@
                         <img src="https://placehold.co/800x500/FFD700/000000?text=Unstructured+Data+Visual" alt="Data Management" class="rounded-lg mb-6 w-full object-cover">
                         <div class="post-content">
                             <p>In many older logistics operations, data often resides in disparate systems, email inboxes, and countless spreadsheets. This "wild west" of unstructured data leads to inefficiencies, errors, and a lack of clear insights. My project focused on bringing order to this chaos.</p>
-                            <p>I implemented robust data extraction and transformation processes using a combination of Python scripting and careful process redesign. By defining clear data schemas and automating the ingestion of data from various sources into a centralized database, we were able to create actionable reports and streamline decision-making. This significantly reduced manual data entry, improved data accuracy, and provided a single source of truth for inventory and shipment tracking.</p>
                         </div>
                     `
                 }
@@ -378,7 +340,6 @@
             const singlePostView = document.getElementById('single-post-view');
             const postContentArea = document.getElementById('post-content-area');
             const backToProjectsBtn = document.getElementById('back-to-projects-btn');
-            const darkModeToggle = document.getElementById('darkModeToggle');
             const htmlEl = document.documentElement;
             let filterButtons;
 
@@ -389,22 +350,15 @@
                 htmlEl.className = theme;
             }
 
-            function toggleDarkMode() {
-                const newTheme = htmlEl.classList.contains('dark') ? 'light' : 'dark';
-                applyTheme(newTheme);
-                localStorage.setItem('theme', newTheme);
-            }
-
             const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
 
-            function handleOSThemeChange(event) {
-                if (!localStorage.getItem('theme')) {
-                    applyTheme(event.matches ? 'dark' : 'light');
-                }
-            }
-            
-            darkModeToggle.addEventListener('click', toggleDarkMode);
-            prefersDarkScheme.addEventListener('change', handleOSThemeChange);
+            // Initial theme application based on OS preference
+            applyTheme(prefersDarkScheme.matches ? 'dark' : 'light');
+
+            // Listen for changes in OS theme preference
+            prefersDarkScheme.addEventListener('change', (event) => {
+                applyTheme(event.matches ? 'dark' : 'light');
+            });
 
             function generateFilterButtons() {
                 filterControls.innerHTML = '';
