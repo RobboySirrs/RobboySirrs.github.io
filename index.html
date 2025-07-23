@@ -1,344 +1,604 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="light">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Robin Axelsson – Blog & Portfolio</title>
-  <meta name="description" content="Robin Axelsson - Business Developer, Process Developer, Full-Stack Coder, Logistician. Läs om mina projekt och insikter.">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Robin Axelsson – Interactive Portfolio & Blog</title>
+    <meta name="description" content="Explore the projects and insights of Robin Axelsson, a multi-skilled professional in business development, process improvement, Shopify, and logistics.">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" media="print" onload="this.media='all'">
-  <noscript>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap">
-  </noscript>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
 
-  <style>
-    :root {
-      --bg: #ffffff;
-      --primary: #0f172a;
-      --accent: #176117;
-      --text: #1e293b;
-      --muted: #64748b;
-      --card-bg: #f1f5f9;
-      --shadow: rgba(0, 0, 0, 0.05);
-    }
-
-    @media (prefers-color-scheme: dark) {
-      :root {
-        --bg: #0f172a;
-        --primary: #e2e8f0;
-        --accent: #9aff9a;
-        --text: #cbd5e1;
-        --muted: #94a3b8;
-        --card-bg: #1e293b;
-        --shadow: rgba(0, 0, 0, 0.3);
-      }
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      font-family: 'Outfit', sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      padding: 0 1rem;
-      line-height: 1.6;
-      transition: background 0.3s ease, color 0.3s ease;
-    }
-
-    header {
-      text-align: center;
-      padding: 1rem 1rem 2rem;
-    }
-
-    header h1 {
-      color: #a7bee0;
-      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
-      font-size: 3rem;
-      font-weight: 900;
-      line-height: 3.2rem;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      user-select: none;
-    }
-
-    header p {
-      margin-top: 0.5rem;
-      font-weight: 600;
-      color: var(--muted);
-      letter-spacing: 0.04em;
-      font-size: 1.2rem;
-    }
-
-    section#blogs {
-      max-width: 800px;
-      margin: 2rem auto;
-    }
-
-    .blog-post {
-      display: none;
-      background: var(--card-bg);
-      padding: 2rem;
-      margin: 2rem 0;
-      border-radius: 12px;
-      box-shadow: 0 8px 20px var(--shadow);
-      border-left: 4px solid var(--accent);
-      overflow: hidden;
-    }
-
-    .blog-post.visible {
-      display: block;
-    }
-
-    .blog-post h2 {
-      font-size: 1.5rem;
-      color: var(--primary);
-      margin-bottom: 1.5rem;
-    }
-
-    .blog-post p {
-      color: var(--text);
-      margin-bottom: 1rem;
-    }
-
-    .blog-image {
-      float: left;
-      width: 180px;
-      height: 4.9lh;
-      max-width: 50%;
-      margin: 0 1rem 0 0;
-      border-radius: 8px;
-      cursor: zoom-in;
-      transition: transform 1.3s ease;
-      object-fit: cover;
-      position: relative;
-      z-index: 1;
-      background-color: rgba(0, 0, 0, 0.25); /* default while loading */
-    }
-
-    .blog-image:hover {
-      transform: scale(1.02);
-    }
-
-    /* Placeholder states */
-    .blog-image.loading {
-      background-color: rgba(0, 0, 0, 0.25);
-    }
-
-    .blog-image.loaded {
-      background-color: transparent;
-    }
-
-    /* Reveal animations */
-    .reveal-base {
-      opacity: 0;
-      transform: scale(1.05);
-      transition-property: opacity, transform;
-      transition-timing-function: cubic-bezier(0.33, 1, 0.68, 1);
-      will-change: opacity, transform;
-    }
-
-    .reveal-top {
-      transform: translateY(-40px) scale(1.2);
-    }
-
-    .reveal-bottom {
-      transform: translateY(40px) scale(1.2);
-    }
-
-    .reveal-left {
-      transform: translateX(-40px) scale(1.2);
-    }
-
-    .reveal-right {
-      transform: translateX(40px) scale(1.2);
-    }
-
-    .reveal-in-view {
-      opacity: 1;
-      transform: translateX(0) translateY(0) scale(1);
-    }
-
-    footer {
-      text-align: center;
-      font-size: 0.9rem;
-      margin-top: 4rem;
-      color: var(--muted);
-      padding-bottom: 2rem;
-    }
-
-    .modal {
-      display: none;
-      position: fixed;
-      z-index: 999;
-      padding-top: 60px;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      overflow: auto;
-      background-color: rgba(0, 0, 0, 0.9);
-      text-align: center;
-    }
-
-    .modal-content {
-      margin: auto;
-      display: block;
-      max-width: 90%;
-      max-height: 80vh;
-      border-radius: 12px;
-    }
-
-    .modal-close {
-      position: absolute;
-      top: 20px;
-      right: 30px;
-      color: #fff;
-      font-size: 2rem;
-      font-weight: bold;
-      cursor: pointer;
-    }
-
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 2rem;
-      }
-
-      .blog-post {
-        padding: 1.2rem;
-      }
-    }
-  </style>
-</head>
-<body>
-
-  <header>
-    <h1 class="fancy-header">Robin Axelsson</h1>
-    <p>Business Developer · Process Developer · Coder · Logistician</p>
-  </header>
-
-  <section id="blogs">
-    <div class="blog-post" id="blog1">
-      <h2 class="reveal-top">Printing Labels Faster with Clever Ideas and JavaScript</h2>
-      <img src="https://picsum.photos/id/1015/480/640" alt="Label Automation Example" class="blog-image reveal" onclick="openModal(this)">
-      <p class="reveal">In this post, I share how I reduced printing times for thousands of shipping labels by combining simple UX tweaks with vanilla JavaScript...</p>
-    </div>
-
-    <div class="blog-post" id="blog2">
-      <h2 class="reveal-top">Make / Model / Year Filter with Shopify’s Homemade API</h2>
-      <img src="https://picsum.photos/id/115/480/640" alt="Filter Example" class="blog-image reveal" loading="lazy" onclick="openModal(this)">
-      <p class="reveal">Shopify doesn’t have a built-in year/make/model vehicle filter. But I needed one...</p>
-    </div>
-
-    <div class="blog-post" id="blog3">
-      <h2 class="reveal-top">Buy X Get Y Free: A Native Promo Flow in Shopify</h2>
-      <img src="https://picsum.photos/id/12/480/640" alt="Promotion Example" class="blog-image reveal" loading="lazy" onclick="openModal(this)">
-      <p class="reveal">Shopify Scripts (or Functions) are powerful, but not always an option...</p>
-    </div>
-
-    <div class="blog-post" id="blog4">
-      <h2 class="reveal-top">How to Calculate Safety Stock and Reorder Point</h2>
-      <img src="https://picsum.photos/id/23/480/640" alt="Inventory Management" class="blog-image reveal" loading="lazy" onclick="openModal(this)">
-      <p class="reveal">Reorder point (ROP) isn’t just “average sales × lead time.” That only works in a perfect world...</p>
-      <a href="files/safety-stock-calculator.xlsx" download
-         style="display: flex; align-items: center; gap: 0.3rem; color: var(--accent); font-weight: 600; text-decoration: none;">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-             stroke-linecap="round" stroke-linejoin="round">
-          <path d="M12 20V4M12 20L7 15M12 20L17 15"/>
-        </svg>
-        Download Safety Stock Calculator (Excel)
-      </a>
-    </div>
-  </section>
-
-  <footer>
-    &copy; 2025 Robin Axelsson · All rights reserved
-  </footer>
-
-  <!-- Modal -->
-  <div id="image-modal" class="modal" onclick="closeModal()">
-    <span class="modal-close" onclick="closeModal()">×</span>
-    <img id="modal-img" class="modal-content">
-  </div>
-
-  <!-- Scripts -->
-  <script defer>
-    // Blog reveal logic
-    const blogSchedule = {
-      blog1: "2025-07-23",
-      blog2: "2025-07-07",
-      blog3: "2025-07-01",
-      blog4: "2025-07-10",
-    };
-
-    const today = new Date();
-    for (const [id, dateString] of Object.entries(blogSchedule)) {
-      const revealDate = new Date(dateString);
-      const blogDiv = document.getElementById(id);
-      if (today >= revealDate && blogDiv) {
-        blogDiv.classList.add("visible");
-      }
-    }
-
-    // Reveal animations
-    const revealElements = [];
-    document.querySelectorAll('.blog-post.visible').forEach(blog => {
-      const children = blog.querySelectorAll('p, img, h2');
-      children.forEach(el => revealElements.push(el));
-    });
-
-    const directions = ['reveal-top', 'reveal-bottom', 'reveal-left', 'reveal-right'];
-    revealElements.forEach(el => {
-      const randomDirection = directions[Math.floor(Math.random() * directions.length)];
-      el.classList.add('reveal-base', 'reveal-bottom');
-    });
-
-    const observer = new IntersectionObserver((entries, obs) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          const el = entry.target;
-          const randomDelay = Math.floor(Math.random() * 901);
-          el.style.transitionDuration = `1250ms`;
-          setTimeout(() => el.classList.add('reveal-in-view'), randomDelay);
-          obs.unobserve(el);
+    <style>
+        /* Define custom properties for your exact light mode colors for easy reference */
+        :root {
+            --light-bg-color: #F8F5F2;
+            --light-text-color: #333D47;
+            --light-card-bg-color: #ffffff; 
         }
-      });
-    }, { threshold: 0 });
 
-    revealElements.forEach(el => observer.observe(el));
+        /* --- BASE LIGHT MODE STYLES (Guaranteed to work) --- */
+        body {
+            background-color: var(--light-bg-color); /* Your specific light background */
+            color: var(--light-text-color); /* Your specific light text */
+            font-family: 'Merriweather', serif; /* Base font */
+            transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
 
-    // Modal behavior
-    function openModal(imgElement) {
-      const modal = document.getElementById("image-modal");
-      const modalImg = document.getElementById("modal-img");
-      modalImg.src = imgElement.src;
-      modal.style.display = "block";
-    }
+        h1, h2, h3 { /* Default text color for headings in light mode */
+            color: var(--light-text-color);
+        }
+        
+        /* Card styles in light mode */
+        .card {
+            background-color: var(--light-card-bg-color); /* White card background */
+            color: var(--light-text-color); /* Dark text for cards */
+            transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+        }
 
-    function closeModal() {
-      document.getElementById("image-modal").style.display = "none";
-    }
+        /* Specific elements that need their light mode color explicitly set if they're not inheriting correctly */
+        #single-post-view {
+            background-color: var(--light-card-bg-color); /* White background for the post view */
+        }
+        #post-content-area,
+        #portfolio-grid .card p { /* Paragraphs inside cards and post content */
+            color: var(--light-text-color);
+        }
+        /* Footer text in light mode */
+        footer {
+            color: #64748B; /* slate-500, similar to your original design for light mode */
+        }
+        
+        /* Filter buttons in light mode */
+        .filter-btn {
+            background-color: #ffffff; /* White background */
+            color: #475569; /* slate-700, dark text */
+        }
+        .filter-btn:hover {
+            background-color: #F1F5F9; /* slate-100, light hover */
+        }
+        /* Back button in light mode */
+        #back-to-projects-btn {
+            background-color: #F1F5F9; /* slate-100 */
+            color: #475569; /* slate-700 */
+        }
+        #back-to-projects-btn:hover {
+            background-color: #E2E8F0; /* slate-200 */
+        }
+        
+        /* --- DARK MODE OVERRIDES (Applied when html.dark is present) --- */
+        html.dark body {
+            background-color: #0F172A; /* Tailwind slate-900 */
+            color: #E2E8F0; /* Tailwind gray-200 */
+        }
 
-    // Image loading state
-    document.querySelectorAll('.blog-image').forEach(img => {
-      img.classList.add('loading');
-      if (img.complete) {
-        img.classList.remove('loading');
-        img.classList.add('loaded');
-      } else {
-        img.addEventListener('load', () => {
-          img.classList.remove('loading');
-          img.classList.add('loaded');
+        html.dark h1,
+        html.dark h2,
+        html.dark h3 {
+            color: #ffffff; /* Tailwind white */
+        }
+
+        html.dark .card {
+            background-color: #1E293B; /* Tailwind slate-800 */
+            color: #E2E8F0; /* Tailwind gray-200 */
+        }
+        html.dark #single-post-view {
+            background-color: #1E293B; /* Tailwind slate-800 */
+        }
+        html.dark #post-content-area,
+        html.dark #portfolio-grid .card p {
+            color: #CBD5E0; /* Tailwind slate-300 */
+        }
+
+        html.dark .text-emerald-700 { /* For span in card - needs dark mode equivalent */
+            color: #4ADE80; /* Tailwind emerald-400 */
+        }
+        html.dark footer { /* Footer text in dark mode */
+            color: #94A3B8; /* Tailwind slate-400 */
+        }
+        html.dark .filter-btn { /* Filter buttons in dark mode */
+            background-color: #334155; /* Tailwind slate-700 */
+            color: #CBD5E0; /* Tailwind slate-200 */
+        }
+        html.dark .filter-btn:hover {
+            background-color: #475569; /* Tailwind slate-600 */
+        }
+        html.dark #back-to-projects-btn { /* Back button in dark mode */
+            background-color: #334155; /* Tailwind slate-700 */
+            color: #CBD5E0; /* Tailwind slate-200 */
+        }
+        html.dark #back-to-projects-btn:hover {
+            background-color: #475569; /* Tailwind slate-600 */
+        }
+        /* Specific download link colors (already had dark: for these) */
+        html.dark .download-link {
+            background-color: #059669; /* emerald-700 */
+        }
+        html.dark .download-link:hover {
+            background-color: #047857; /* emerald-800 */
+        }
+        
+        /* --- GENERAL / STRUCTURAL STYLES (Not affected by theme) --- */
+        /* Font families here as before */
+        h1, h2, h3, .font-montserrat {
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        /* Active filter button styles (explicit hex to ensure it's distinct) */
+        .active-filter {
+            background-color: #3A6B35 !important;
+            color: #ffffff !important;
+            transform: scale(1.05);
+        }
+        /* Dark mode for active filter - a bit darker green */
+        html.dark .active-filter {
+            background-color: #2F4F2A !important; 
+        }
+
+        /* Card hover effects */
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+        }
+        html.dark .card:hover {
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.3), 0 8px 10px -6px rgb(0 0 0 / 0.3);
+        }
+
+        .post-content p {
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+        
+        .post-content h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Reveal animation styles */
+        .reveal-base {
+            opacity: 0;
+            transform: translateY(20px);
+            transition-duration: 1s;
+            transition-property: opacity, transform;
+            transition-timing-function: cubic-bezier(0.33, 1, 0.68, 1);
+            will-change: opacity, transform;
+        }
+
+        .reveal-in-view {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* --- Dark Mode Toggle Button (Icon) Styling --- */
+        #darkModeToggle {
+            position: absolute; /* Position relative to its parent header */
+            top: 0;
+            left: 0;
+            display: flex; /* To center the Unicode char */
+            align-items: center;
+            justify-content: center;
+            padding: 1rem; /* Padding around the icon */
+            background-color: transparent; /* No background by default */
+            border: none; /* No border */
+            cursor: pointer;
+            z-index: 10; /* Ensure it's above other content */
+            transition: transform 0.2s ease, color 0.3s ease; /* Smooth transition for hover and color change */
+            font-size: 2rem; /* Size of the Unicode character */
+            line-height: 1; /* Adjust line height to prevent extra space */
+        }
+
+        #darkModeToggle:hover {
+            transform: scale(1.1); /* Slightly enlarge on hover */
+        }
+
+        #darkModeToggle span { /* Target the span holding the Unicode char */
+            color: #64748B; /* Default icon color (slate-500 for light mode) */
+            transition: color 0.3s ease; /* Smooth color transition */
+        }
+
+        html.dark #darkModeToggle span {
+            color: #FDE047; /* Tailwind yellow-300 for dark mode (sun is "on") */
+        }
+
+        /* --- New styles for social icons in footer --- */
+        .footer-social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem; /* Space between icons */
+            margin-top: 1rem; /* Space from copyright text */
+            margin-bottom: 1rem; /* Space below icons */
+        }
+
+        .footer-social-links a {
+            color: #64748B; /* Default icon color (slate-500 for light mode) */
+            font-size: 1.75rem; /* Large icon size */
+            transition: color 0.2s ease, transform 0.2s ease;
+        }
+
+        .footer-social-links a:hover {
+            color: #334155; /* slate-700 on hover in light mode */
+            transform: translateY(-3px) scale(1.1); /* Lift and enlarge effect */
+        }
+
+        /* Dark mode specific colors for social icons */
+        html.dark .footer-social-links a {
+            color: #94A3B8; /* slate-400 in dark mode */
+        }
+
+        html.dark .footer-social-links a:hover {
+            color: #ffffff; /* white on hover in dark mode */
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
+
+        <header class="text-center mb-12 relative">
+            <button id="darkModeToggle" aria-label="Toggle Dark Mode">
+                <span>☀</span> </button>
+            
+            <h1 class="text-4xl md:text-5xl font-bold tracking-tight mb-3">Robin Axelsson</h1>
+            <p class="text-lg md:text-xl font-montserrat">Business Developer · Process Developer · Coder · Logistician</p>
+        </header>
+
+        <main id="main-content">
+            <div id="filter-controls" class="flex flex-wrap justify-center gap-3 mb-10">
+                </div>
+
+            <div id="portfolio-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            </div>
+
+            <div id="single-post-view" class="hidden max-w-3xl mx-auto rounded-lg shadow-lg p-8 sm:p-12">
+                <button id="back-to-projects-btn" class="font-montserrat text-sm font-semibold py-2 px-4 rounded-full shadow-md transition-colors mb-8">
+                    &larr; Back to All Projects
+                </button>
+                <div id="post-content-area"></div>
+            </div>
+        </main>
+
+        <footer class="text-center mt-16">
+            &copy; 2025 Robin Axelsson · All rights reserved
+            
+            <div class="footer-social-links">
+                <a href="https://github.com/RobboySirrs/" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/robin-axelsson/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+            </div>
+        </footer>
+
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const blogPostsData = [
+                {
+                    id: 'blog1',
+                    title: 'Printing Labels Faster with Clever Ideas and JavaScript',
+                    categories: ['korvar', 'logistics', 'automation'], 
+                    imageUrl: 'https://placehold.co/600x400/5e8b7e/ffffff?text=JS+Automation',
+                    summary: 'How I reduced printing times for thousands of shipping labels by combining simple UX tweaks with vanilla JavaScript...',
+                    revealDate: '2025-07-23', 
+                    content: `
+                        <h2 class="text-3xl font-bold mb-4">Printing Labels Faster with Clever Ideas and JavaScript</h2>
+                        <img src="https://placehold.co/800x500/5e8b7e/ffffff?text=Label+Printing+UI" alt="Label Automation Example" class="rounded-lg mb-6 w-full object-cover">
+                        <div class="post-content">
+                            <p>In any high-volume logistics operation, time is money. One of the most repetitive and time-consuming tasks can be printing shipping labels, especially when dealing with thousands of orders daily. My solution involved a combination of user experience (UX) improvements and clever client-side scripting with vanilla JavaScript. I developed a single-page interface that allowed operators to select, batch, and print labels with minimal interaction. By leveraging asynchronous requests and manipulating the DOM directly, I eliminated unnecessary page reloads, cutting down the process time by over 70%. This not only saved countless hours but also significantly reduced user frustration and potential for errors.</p>
+                        </div>
+                    `
+                },
+                {
+                    id: 'blog2',
+                    title: 'Make/Model/Year Filter with Shopify’s Homemade API',
+                    categories: ['shopify', 'coding'], 
+                    imageUrl: 'https://placehold.co/600x400/8a79a8/ffffff?text=Shopify+API',
+                    summary: 'Shopify doesn’t have a built-in vehicle filter. But I needed one. Here is how I built it...',
+                    revealDate: '2025-07-07', 
+                    content: `
+                        <h2 class="text-3xl font-bold mb-4">Make/Model/Year Filter with Shopify’s Homemade API</h2>
+                        <img src="https://placehold.co/800x500/8a79a8/ffffff?text=Vehicle+Filter+UI" alt="Filter Example" class="rounded-lg mb-6 w-full object-cover">
+                        <div class="post-content">
+                            <p>A common challenge for automotive parts e-commerce stores on Shopify is the lack of a native "Year/Make/Model" filter. This is a critical feature for ensuring customers find the correct parts for their vehicles. To solve this, I engineered a custom solution.</p>
+                            <p>I utilized Shopify's tagging system and product metafields to store vehicle compatibility data. Then, I built a "homemade API" using a combination of JavaScript and Shopify's Liquid templating language. This script dynamically fetched and filtered product collections based on the user's selections without relying on a costly third-party app. The result was a seamless, fast, and intuitive filtering experience that dramatically improved the customer journey and increased conversion rates for the client.</p>
+                        </div>
+                    `
+                },
+                {
+                    id: 'blog3',
+                    title: 'Buy X Get Y Free: A Native Promo Flow in Shopify',
+                    categories: ['business', 'shopify'], 
+                    imageUrl: 'https://placehold.co/600x400/a87982/ffffff?text=Shopify+Promo',
+                    summary: 'Shopify Scripts (or Functions) are powerful, but not always an option. I built a native BOGO flow...',
+                    revealDate: '2025-07-01', 
+                    content: `
+                        <h2 class="text-3xl font-bold mb-4">Buy X Get Y Free: A Native Promo Flow in Shopify</h2>
+                        <img src="https://placehold.co/800x500/a87982/ffffff?text=BOGO+Promotion" alt="Promotion Example" class="rounded-lg mb-6 w-full object-cover">
+                        <div class="post-content">
+                            <p>While Shopify Plus offers powerful scripting capabilities for complex promotions, many businesses on standard plans need creative solutions for offers like "Buy X, Get Y Free" (BOGO). I was tasked with creating this functionality without access to Shopify Scripts.</p>
+                            <p>My approach involved a combination of a custom theme section and JavaScript that interacted with the cart. I created an interface where the merchant could define the BOGO rules. On the customer-facing side, JavaScript would monitor the cart's contents. When the conditions for the promotion were met, it would automatically add the free item to the cart and apply a discount code via a shareable link, creating a near-native BOGO experience. This business development initiative allowed the client to run more aggressive marketing campaigns, boosting average order value.</p>
+                        </div>
+                    `
+                },
+                {
+                    id: 'blog4',
+                    title: 'How to Calculate Safety Stock and Reorder Point',
+                    categories: ['logistics', 'business'], 
+                    imageUrl: 'https://placehold.co/600x400/7aa8a2/ffffff?text=Inventory+Calc',
+                    summary: 'Reorder point (ROP) isn’t just “average sales × lead time.” That only works in a perfect world...',
+                    revealDate: '2025-07-23', 
+                    content: `
+                        <h2 class="text-3xl font-bold mb-4">How to Calculate Safety Stock and Reorder Point</h2>
+                        <img src="https://placehold.co/800x500/7aa8a2/ffffff?text=Inventory+Management" alt="Inventory Management" class="rounded-lg mb-6 w-full object-cover">
+                        <div class="post-content">
+                            <p>Effective inventory management is the backbone of any successful logistics or retail operation. A common pitfall is using an oversimplified formula for the reorder point (ROP), which can lead to stockouts or costly overstocking. The simple formula of "average sales × lead time" fails to account for the real-world variability in both demand and supplier lead times.</p>
+                            <p>The correct approach involves calculating safety stock, which acts as a buffer against this uncertainty. The formula for safety stock is: <strong>Z-score &times; Standard Deviation of Lead Time Demand</strong>. The complete ROP formula is then: <strong>(Average Daily Sales &times; Average Lead Time in Days) + Safety Stock</strong>. This process development ensures that you maintain optimal stock levels, minimizing carrying costs while maximizing product availability and customer satisfaction.</p>
+                            <a href="#" download class="download-link mt-6 inline-flex items-center gap-2 bg-emerald-600 text-white font-montserrat font-semibold py-3 px-6 rounded-lg hover:bg-emerald-700 transition-colors dark:bg-emerald-700 dark:hover:bg-emerald-800">
+                                <span class="w-5 h-5 flex items-center justify-center">
+                                    <span class="w-3 h-3 border-b-2 border-l-2 border-white transform rotate-[-45deg] -translate-y-1/4"></span>
+                                    <span class="w-px h-3 bg-white absolute bottom-0"></span>
+                                </span>
+                                Download Safety Stock Calculator (Excel)
+                            </a>
+                        </div>
+                    `
+                },
+                {
+                    id: 'blog5',
+                    title: 'Taming the Wild West of Unstructured Data in Logistics',
+                    categories: ['logistics', 'data-management'], 
+                    imageUrl: 'https://placehold.co/600x400/FFD700/000000?text=Data+Workflow',
+                    summary: 'My journey in creating structured workflows from chaotic spreadsheets and emails...',
+                    revealDate: '2025-07-25', 
+                    content: `
+                        <h2 class="text-3xl font-bold mb-4">Taming the Wild West of Unstructured Data in Logistics</h2>
+                        <img src="https://placehold.co/800x500/FFD700/000000?text=Unstructured+Data+Visual" alt="Data Management" class="rounded-lg mb-6 w-full object-cover">
+                        <div class="post-content">
+                            <p>In many older logistics operations, data often resides in disparate systems, email inboxes, and countless spreadsheets. This "wild west" of unstructured data leads to inefficiencies, errors, and a lack of clear insights. My project focused on bringing order to this chaos.</p>
+                            <p>I implemented robust data extraction and transformation processes using a combination of Python scripting and careful process redesign. By defining clear data schemas and automating the ingestion of data from various sources into a centralized database, we were able to create actionable reports and streamline decision-making. This significantly reduced manual data entry, improved data accuracy, and provided a single source of truth for inventory and shipment tracking.</p>
+                        </div>
+                    `
+                }
+            ];
+
+            const portfolioGrid = document.getElementById('portfolio-grid');
+            const filterControls = document.getElementById('filter-controls');
+            const singlePostView = document.getElementById('single-post-view');
+            const postContentArea = document.getElementById('post-content-area');
+            const backToProjectsBtn = document.getElementById('back-to-projects-btn');
+            const darkModeToggle = document.getElementById('darkModeToggle'); 
+            let filterButtons; 
+
+            // Use the actual current date for reveal logic
+            const today = new Date();
+            today.setHours(0, 0, 0, 0); 
+
+            // --- Dark Mode Logic ---
+            function applyTheme(theme) {
+                const html = document.documentElement; 
+                if (theme === 'dark') {
+                    html.classList.add('dark');
+                    html.classList.remove('light'); 
+                } else {
+                    html.classList.remove('dark');
+                    html.classList.add('light'); 
+                }
+                localStorage.setItem('theme', theme); 
+            }
+
+            function toggleDarkMode() {
+                const currentTheme = localStorage.getItem('theme');
+                if (currentTheme === 'dark') {
+                    applyTheme('light');
+                } else {
+                    applyTheme('dark');
+                }
+            }
+
+            // Check for saved theme preference on load
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme) {
+                applyTheme(savedTheme);
+            } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                // Check for OS preference if no saved theme
+                applyTheme('dark');
+            } else {
+                // Default to light if no preference
+                applyTheme('light');
+            }
+
+            darkModeToggle.addEventListener('click', toggleDarkMode);
+            // --- End Dark Mode Logic ---
+
+
+            function generateFilterButtons() {
+                filterControls.innerHTML = ''; 
+
+                const allButton = document.createElement('button');
+                allButton.dataset.filter = 'all';
+                allButton.className = 'filter-btn font-montserrat text-sm font-semibold py-2 px-5 rounded-full shadow-md transition-all duration-300 active-filter'; 
+                allButton.textContent = 'All Projects';
+                filterControls.appendChild(allButton);
+
+                const revealedCategories = new Set();
+                blogPostsData.forEach(post => {
+                    const revealDate = new Date(post.revealDate);
+                    revealDate.setHours(0, 0, 0, 0);
+                    if (today >= revealDate) {
+                        post.categories.forEach(cat => {
+                            revealedCategories.add(cat.toLowerCase());
+                        });
+                    }
+                });
+
+                const sortedCategories = Array.from(revealedCategories).sort();
+
+                sortedCategories.forEach(category => {
+                    const button = document.createElement('button');
+                    button.dataset.filter = category;
+                    button.className = 'filter-btn font-montserrat text-sm font-semibold py-2 px-5 rounded-full shadow-md transition-all duration-300'; 
+                    button.textContent = category.charAt(0).toUpperCase() + category.slice(1);
+                    filterControls.appendChild(button);
+                });
+
+                filterButtons = document.querySelectorAll('.filter-btn');
+                attachFilterButtonListeners(); 
+            }
+
+            function attachFilterButtonListeners() {
+                filterButtons.forEach(button => {
+                    button.removeEventListener('click', handleFilterButtonClick); 
+                    button.addEventListener('click', handleFilterButtonClick);
+                });
+            }
+
+            function handleFilterButtonClick(event) {
+                const filter = event.target.dataset.filter;
+                renderGrid(filter);
+                window.location.hash = ''; 
+            }
+
+            function renderGrid(filter = 'all') {
+                portfolioGrid.innerHTML = '';
+                singlePostView.classList.add('hidden');
+                portfolioGrid.classList.remove('hidden');
+                filterControls.classList.remove('hidden');
+
+                filterButtons.forEach(btn => btn.classList.remove('active-filter'));
+                const activeBtn = document.querySelector(`.filter-btn[data-filter="${filter.toLowerCase()}"]`);
+                if (activeBtn) {
+                    activeBtn.classList.add('active-filter');
+                }
+
+                const filteredAndRevealedPosts = blogPostsData.filter(post => {
+                    const revealDate = new Date(post.revealDate);
+                    revealDate.setHours(0, 0, 0, 0);
+                    
+                    const isRevealed = today >= revealDate;
+                    const matchesFilter = filter === 'all' || post.categories.map(cat => cat.toLowerCase()).includes(filter.toLowerCase());
+                    
+                    return isRevealed && matchesFilter;
+                });
+
+                filteredAndRevealedPosts.forEach((post, index) => {
+                    const card = document.createElement('div');
+                    card.className = 'card rounded-lg shadow-lg overflow-hidden cursor-pointer reveal-base';
+                    card.dataset.postId = post.id;
+                    card.style.transitionDelay = `${index * 100}ms`; 
+                    
+                    const displayCategories = post.categories
+                        .map(cat => cat.charAt(0).toUpperCase() + cat.slice(1))
+                        .join(' / ');
+
+                    card.innerHTML = `
+                        <img src="${post.imageUrl}" alt="${post.title}" class="w-full h-48 object-cover" onerror="this.onerror=null;this.src='https://placehold.co/600x400/cccccc/ffffff?text=Image+Not+Found';">
+                        <div class="p-6">
+                            <span class="font-montserrat text-xs font-semibold uppercase tracking-wider text-emerald-700 dark:text-emerald-400">${displayCategories}</span>
+                            <h3 class="font-montserrat text-xl font-bold mt-2 mb-3">${post.title}</h3>
+                            <p class="text-slate-600 dark:text-slate-300 text-sm">${post.summary}</p>
+                        </div>
+                    `;
+                    portfolioGrid.appendChild(card);
+                });
+
+                const revealElements = document.querySelectorAll('.card.reveal-base');
+                const observer = new IntersectionObserver((entries, obs) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('reveal-in-view');
+                            obs.unobserve(entry.target);
+                        }
+                    });
+                }, {
+                    threshold: 0.1 
+                });
+
+                revealElements.forEach(el => observer.observe(el));
+            }
+
+            // --- Updated handleRouting function ---
+            function handleRouting() {
+                const postIdFromHash = window.location.hash.substring(1); 
+                
+                if (postIdFromHash) {
+                    const post = blogPostsData.find(p => p.id === postIdFromHash);
+                    
+                    if (post) {
+                        const revealDate = new Date(post.revealDate);
+                        revealDate.setHours(0, 0, 0, 0); // Normalize to start of day
+
+                        // If the post exists AND is revealed, then open it
+                        if (today >= revealDate) {
+                            openPost(postIdFromHash);
+                        } else {
+                            // If the post is found but not yet revealed, redirect to grid
+                            window.location.hash = ''; // Clear the hash
+                            renderGrid('all');
+                        }
+                    } else {
+                        // If post ID from hash doesn't exist at all, redirect to grid
+                        window.location.hash = ''; // Clear the hash
+                        renderGrid('all');
+                    }
+                } else {
+                    // No hash, just render the default grid
+                    renderGrid('all');
+                }
+            }
+            // --- End Updated handleRouting function ---
+
+
+            function openPost(postId) {
+                const post = blogPostsData.find(p => p.id === postId);
+                if (post) { // This check is a safeguard, handleRouting already checks revealDate
+                    portfolioGrid.classList.add('hidden');
+                    filterControls.classList.add('hidden');
+                    singlePostView.classList.remove('hidden');
+                    postContentArea.innerHTML = post.content; 
+                    window.scrollTo({ top: 0, behavior: 'smooth' }); 
+                    // No need to set window.location.hash here, handleRouting already sets it
+                }
+            }
+
+            portfolioGrid.addEventListener('click', (e) => {
+                const card = e.target.closest('.card');
+                if (card) {
+                    // When clicking a card, ensure it's revealed before trying to open it
+                    const post = blogPostsData.find(p => p.id === card.dataset.postId);
+                    const revealDate = new Date(post.revealDate);
+                    revealDate.setHours(0, 0, 0, 0);
+                    if (today >= revealDate) {
+                        openPost(card.dataset.postId);
+                    } else {
+                        // This case should ideally not happen if renderGrid is correct,
+                        // but it's a defensive check.
+                        console.warn('Attempted to open unreleased post via click.');
+                    }
+                }
+            });
+
+            backToProjectsBtn.addEventListener('click', () => {
+                window.location.hash = ''; 
+                renderGrid('all');
+            });
+
+            window.addEventListener('hashchange', handleRouting);
+
+            // Initial setup
+            generateFilterButtons(); 
+            handleRouting(); 
         });
-      }
-    });
-  </script>
+    </script>
 </body>
 </html>
