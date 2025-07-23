@@ -246,7 +246,7 @@
         }
     </style>
 </head>
-<body class="antialiased">
+<body>
 
     <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
 
@@ -401,30 +401,39 @@
                     html.classList.remove('dark');
                     html.classList.add('light'); 
                 }
-                localStorage.setItem('theme', theme); 
+                // When applyTheme is called directly, it updates the visual state.
+                // We don't save to localStorage here, as saving is managed by toggleDarkMode.
             }
 
             function toggleDarkMode() {
-                const currentTheme = localStorage.getItem('theme');
-                if (currentTheme === 'dark') {
-                    applyTheme('light');
-                } else {
-                    applyTheme('dark');
-                }
-                // When manually toggling, we want to clear any OS preference memory
-                // to prioritize the user's manual choice until they clear local storage.
-                // However, the new listener below will re-engage OS preference if it changes.
+                const currentTheme = document.documentElement.classList.contains('dark') ? 'dark' : 'light';
+                const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+                applyTheme(newTheme);
+                localStorage.setItem('theme', newTheme); // Explicitly save manual choice
             }
 
             // Media query for OS theme preference
             const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
 
-            function handleOSThemeChange(event) {
-                // This function is called when the OS theme preference changes.
-                // We should only apply the OS preference if the user hasn't explicitly set a theme via the toggle.
-                // If a theme is explicitly set in localStorage, we respect that.
+            // This function applies the OS theme IF no manual choice is saved
+            function setInitialOrOSTheme() {
                 const savedTheme = localStorage.getItem('theme');
-                if (!savedTheme) { // Only apply OS preference if no theme is manually saved
+                if (savedTheme) {
+                    applyTheme(savedTheme); // User has a manual preference
+                } else {
+                    // No manual preference, use OS preference
+                    if (prefersDarkScheme.matches) {
+                        applyTheme('dark');
+                    } else {
+                        applyTheme('light');
+                    }
+                }
+            }
+
+            // Listener for changes in OS theme preference
+            function handleOSThemeChange(event) {
+                const savedTheme = localStorage.getItem('theme');
+                if (!savedTheme) { // Only react to OS changes if no manual preference is set
                     if (event.matches) { // OS is dark
                         applyTheme('dark');
                     } else { // OS is light
@@ -432,23 +441,14 @@
                     }
                 }
             }
-
-            // Initial check for saved theme or OS preference
-            const savedTheme = localStorage.getItem('theme');
-            if (savedTheme) {
-                applyTheme(savedTheme);
-            } else {
-                // If no saved theme, apply OS preference
-                if (prefersDarkScheme.matches) {
-                    applyTheme('dark');
-                } else {
-                    applyTheme('light');
-                }
-            }
+            
+            // Set initial theme on page load
+            setInitialOrOSTheme();
 
             // Listen for changes in OS theme preference
             prefersDarkScheme.addEventListener('change', handleOSThemeChange);
             
+            // Add event listener for manual toggle button
             darkModeToggle.addEventListener('click', toggleDarkMode);
             // --- End Dark Mode Logic ---
 
