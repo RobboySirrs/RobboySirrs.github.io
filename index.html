@@ -209,6 +209,13 @@
             color: #FDE047; /* Tailwind yellow-300 for dark mode (sun is "on") */
         }
 
+        /* Hide dark mode toggle on small screens (e.g., mobile) */
+        @media (max-width: 639px) {
+            #darkModeToggle {
+                display: none !important;
+            }
+        }
+
         /* --- New styles for social icons in footer --- */
         .footer-social-links {
             display: flex;
@@ -237,12 +244,6 @@
         html.dark .footer-social-links a:hover {
             color: #ffffff; /* white on hover in dark mode */
         }
-        /* Hide dark mode toggle on small screens (e.g., mobile) */
-@media (max-width: 639px) {
-    #darkModeToggle {
-        display: none !important;
-    }
-}
     </style>
 </head>
 <body class="antialiased">
@@ -410,20 +411,44 @@
                 } else {
                     applyTheme('dark');
                 }
+                // When manually toggling, we want to clear any OS preference memory
+                // to prioritize the user's manual choice until they clear local storage.
+                // However, the new listener below will re-engage OS preference if it changes.
             }
 
-            // Check for saved theme preference on load
+            // Media query for OS theme preference
+            const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+
+            function handleOSThemeChange(event) {
+                // This function is called when the OS theme preference changes.
+                // We should only apply the OS preference if the user hasn't explicitly set a theme via the toggle.
+                // If a theme is explicitly set in localStorage, we respect that.
+                const savedTheme = localStorage.getItem('theme');
+                if (!savedTheme) { // Only apply OS preference if no theme is manually saved
+                    if (event.matches) { // OS is dark
+                        applyTheme('dark');
+                    } else { // OS is light
+                        applyTheme('light');
+                    }
+                }
+            }
+
+            // Initial check for saved theme or OS preference
             const savedTheme = localStorage.getItem('theme');
             if (savedTheme) {
                 applyTheme(savedTheme);
-            } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-                // Check for OS preference if no saved theme
-                applyTheme('dark');
             } else {
-                // Default to light if no preference
-                applyTheme('light');
+                // If no saved theme, apply OS preference
+                if (prefersDarkScheme.matches) {
+                    applyTheme('dark');
+                } else {
+                    applyTheme('light');
+                }
             }
 
+            // Listen for changes in OS theme preference
+            prefersDarkScheme.addEventListener('change', handleOSThemeChange);
+            
             darkModeToggle.addEventListener('click', toggleDarkMode);
             // --- End Dark Mode Logic ---
 
@@ -533,7 +558,6 @@
                 revealElements.forEach(el => observer.observe(el));
             }
 
-            // --- Updated handleRouting function ---
             function handleRouting() {
                 const postIdFromHash = window.location.hash.substring(1); 
                 
@@ -542,53 +566,43 @@
                     
                     if (post) {
                         const revealDate = new Date(post.revealDate);
-                        revealDate.setHours(0, 0, 0, 0); // Normalize to start of day
+                        revealDate.setHours(0, 0, 0, 0); 
 
-                        // If the post exists AND is revealed, then open it
                         if (today >= revealDate) {
                             openPost(postIdFromHash);
                         } else {
-                            // If the post is found but not yet revealed, redirect to grid
-                            window.location.hash = ''; // Clear the hash
+                            window.location.hash = ''; 
                             renderGrid('all');
                         }
                     } else {
-                        // If post ID from hash doesn't exist at all, redirect to grid
-                        window.location.hash = ''; // Clear the hash
+                        window.location.hash = ''; 
                         renderGrid('all');
                     }
                 } else {
-                    // No hash, just render the default grid
                     renderGrid('all');
                 }
             }
-            // --- End Updated handleRouting function ---
-
 
             function openPost(postId) {
                 const post = blogPostsData.find(p => p.id === postId);
-                if (post) { // This check is a safeguard, handleRouting already checks revealDate
+                if (post) { 
                     portfolioGrid.classList.add('hidden');
                     filterControls.classList.add('hidden');
                     singlePostView.classList.remove('hidden');
                     postContentArea.innerHTML = post.content; 
                     window.scrollTo({ top: 0, behavior: 'smooth' }); 
-                    // No need to set window.location.hash here, handleRouting already sets it
                 }
             }
 
             portfolioGrid.addEventListener('click', (e) => {
                 const card = e.target.closest('.card');
                 if (card) {
-                    // When clicking a card, ensure it's revealed before trying to open it
                     const post = blogPostsData.find(p => p.id === card.dataset.postId);
                     const revealDate = new Date(post.revealDate);
                     revealDate.setHours(0, 0, 0, 0);
                     if (today >= revealDate) {
                         openPost(card.dataset.postId);
                     } else {
-                        // This case should ideally not happen if renderGrid is correct,
-                        // but it's a defensive check.
                         console.warn('Attempted to open unreleased post via click.');
                     }
                 }
@@ -601,7 +615,6 @@
 
             window.addEventListener('hashchange', handleRouting);
 
-            // Initial setup
             generateFilterButtons(); 
             handleRouting(); 
         });
