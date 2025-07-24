@@ -376,8 +376,245 @@
                         </div>
                     `
                 },
-                {
+                  {
                     id: 'blog5',
                     title: 'Taming the Wild West of Unstructured Data in Logistics',
                     categories: ['logistics', 'data-management'],
-     
+                    imageUrl: 'https://placehold.co/600x400/FFD700/000000?text=Data+Workflow',
+                    summary: 'My journey in creating structured workflows from chaotic spreadsheets and emails...',
+                    revealDate: '2025-07-25',
+                    content: `
+                        <h2 class="text-3xl font-bold mb-4">Taming the Wild West of Unstructured Data in Logistics</h2>
+                        <img src="https://placehold.co/800x500/FFD700/000000?text=Unstructured+Data+Visual" alt="Data Management" class="rounded-lg mb-6 w-full object-cover">
+                        <div class="post-content">
+                            <p>In many older logistics operations, data often resides in disparate systems, email inboxes, and countless spreadsheets. This "wild west" of unstructured data leads to inefficiencies, errors, and a lack of clear insights. My project focused on bringing order to this chaos.</p>
+                        </div>
+                    `
+                }
+            ];
+
+            const portfolioGrid = document.getElementById('portfolio-grid');
+            const filterControls = document.getElementById('filter-controls');
+            const singlePostView = document.getElementById('blogtop'); // Corrected to use 'blogtop'
+            const postContentArea = document.getElementById('post-content-area');
+            const backToProjectsBtn = document.getElementById('back-to-projects-btn');
+            const darkModeToggle = document.getElementById('darkModeToggle');
+            const darkModeToggleIcon = darkModeToggle.querySelector('span');
+            const htmlEl = document.documentElement;
+            let filterButtons;
+
+            const today = new Date();
+            today.setHours(0, 0, 0, 0);
+
+            function applyTheme(theme) {
+                htmlEl.className = theme;
+                console.log('Applied theme:', theme);
+            }
+
+            function updateDarkModeToggleIcon() {
+                if (htmlEl.classList.contains('dark')) {
+                    darkModeToggleIcon.textContent = '☾'; // Moon icon for dark mode
+                    darkModeToggle.setAttribute('aria-label', 'Switch to Light Mode');
+                } else {
+                    darkModeToggleIcon.textContent = '☀'; // Sun icon for light mode
+                    darkModeToggle.setAttribute('aria-label', 'Switch to Dark Mode');
+                }
+                console.log('Updated toggle icon to:', darkModeToggleIcon.textContent);
+            }
+
+            function toggleDarkMode() {
+                const currentThemeIsDark = htmlEl.classList.contains('dark');
+                const newTheme = currentThemeIsDark ? 'light' : 'dark';
+                
+                applyTheme(newTheme);
+                localStorage.setItem('theme', newTheme); // Save explicit user choice
+                console.log('User manually toggled theme to:', newTheme);
+                updateDarkModeToggleIcon();
+            }
+
+            const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+
+            function handleOSThemeChange(event) {
+                // Only apply OS theme if no manual preference is saved
+                if (!localStorage.getItem('theme')) {
+                    applyTheme(event.matches ? 'dark' : 'light');
+                    console.log('OS theme changed and applied:', event.matches ? 'dark' : 'light');
+                    updateDarkModeToggleIcon(); // Update icon based on OS change
+                } else {
+                    console.log('OS theme changed, but manual preference exists. Not overriding.');
+                }
+            }
+            
+            // Add event listener for manual toggle button
+            darkModeToggle.addEventListener('click', toggleDarkMode);
+            // Listen for changes in OS theme preference, but only if no manual override
+            prefersDarkScheme.addEventListener('change', handleOSThemeChange);
+
+            // Initial icon update after theme is set by the head script
+            updateDarkModeToggleIcon();
+
+            function generateFilterButtons() {
+                filterControls.innerHTML = '';
+
+                const allButton = document.createElement('button');
+                allButton.dataset.filter = 'all';
+                allButton.className = 'filter-btn font-montserrat text-sm font-semibold py-2 px-5 rounded-full shadow-md transition-all duration-300 active-filter';
+                allButton.textContent = 'All Projects';
+                filterControls.appendChild(allButton);
+
+                const revealedCategories = new Set();
+                blogPostsData.forEach(post => {
+                    const revealDate = new Date(post.revealDate);
+                    revealDate.setHours(0, 0, 0, 0);
+                    if (today >= revealDate) {
+                        post.categories.forEach(cat => revealedCategories.add(cat.toLowerCase()));
+                    }
+                });
+
+                const sortedCategories = Array.from(revealedCategories).sort();
+
+                sortedCategories.forEach(category => {
+                    const button = document.createElement('button');
+                    button.dataset.filter = category;
+                    button.className = 'filter-btn font-montserrat text-sm font-semibold py-2 px-5 rounded-full shadow-md transition-all duration-300';
+                    button.textContent = category.charAt(0).toUpperCase() + category.slice(1);
+                    filterControls.appendChild(button);
+                });
+
+                filterButtons = document.querySelectorAll('.filter-btn');
+                attachFilterButtonListeners();
+            }
+
+            function attachFilterButtonListeners() {
+                filterButtons.forEach(button => {
+                    button.addEventListener('click', handleFilterButtonClick);
+                });
+            }
+
+            function handleFilterButtonClick(event) {
+                const filter = event.target.dataset.filter;
+                renderGrid(filter);
+                window.location.hash = '';
+            }
+
+            function renderGrid(filter = 'all') {
+                portfolioGrid.innerHTML = '';
+                singlePostView.classList.add('hidden');
+                portfolioGrid.classList.remove('hidden');
+                filterControls.classList.remove('hidden');
+
+                filterButtons.forEach(btn => btn.classList.remove('active-filter'));
+                const activeBtn = document.querySelector(`.filter-btn[data-filter="${filter.toLowerCase()}"]`);
+                if (activeBtn) activeBtn.classList.add('active-filter');
+
+                const filteredAndRevealedPosts = blogPostsData.filter(post => {
+                    const revealDate = new Date(post.revealDate);
+                    revealDate.setHours(0, 0, 0, 0);
+                    const isRevealed = today >= revealDate;
+                    const matchesFilter = filter === 'all' || post.categories.map(cat => cat.toLowerCase()).includes(filter.toLowerCase());
+                    return isRevealed && matchesFilter;
+                });
+
+                filteredAndRevealedPosts.forEach((post, index) => {
+                    const card = document.createElement('div');
+                    card.className = 'card rounded-lg shadow-lg overflow-hidden cursor-pointer reveal-base';
+                    card.dataset.postId = post.id;
+                    card.style.transitionDelay = `${index * 100}ms`;
+                    
+                    const displayCategories = post.categories
+                        .map(cat => cat.charAt(0).toUpperCase() + cat.slice(1))
+                        .join(' / ');
+
+                    card.innerHTML = `
+                        <img src="${post.imageUrl}" alt="${post.title}" class="w-full h-48 object-cover" onerror="this.onerror=null;this.src='https://placehold.co/600x400/cccccc/ffffff?text=Image+Not+Found';">
+                        <div class="p-6">
+                            <span class="font-montserrat text-xs font-semibold uppercase tracking-wider text-emerald-700">${displayCategories}</span>
+                            <h3 class="font-montserrat text-xl font-bold mt-2 mb-3">${post.title}</h3>
+                            <p class="text-base">${post.summary}</p>
+                        </div>
+                    `;
+                    portfolioGrid.appendChild(card);
+                });
+
+                const revealElements = document.querySelectorAll('.card.reveal-base');
+                const observer = new IntersectionObserver((entries, obs) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('reveal-in-view');
+                            obs.unobserve(entry.target);
+                        }
+                    });
+                }, { threshold: 0.1 });
+
+                revealElements.forEach(el => observer.observe(el));
+            }
+
+            function openPost(postId) {
+                const post = blogPostsData.find(p => p.id === postId);
+                if (post) {
+                    portfolioGrid.classList.add('hidden');
+                    filterControls.classList.add('hidden');
+                    singlePostView.classList.remove('hidden');
+                    postContentArea.innerHTML = post.content;
+                    
+                    // Use requestAnimationFrame to ensure scroll happens after content layout
+                    window.requestAnimationFrame(() => {
+                        if (singlePostView) {
+                            window.scrollTo({ top: singlePostView.offsetTop, behavior: 'smooth' });
+                            console.log('Scrolling to #blogtop at offset:', singlePostView.offsetTop);
+                        } else {
+                            // Fallback to top of page if #blogtop not found (shouldn't happen with correct ID)
+                            window.scrollTo({ top: 0, behavior: 'smooth' });
+                            console.log('Could not find #blogtop, scrolling to top of page.');
+                        }
+                    });
+                    
+                    window.location.hash = postId;
+                }
+            }
+            
+            function handleRouting() {
+                const postIdFromHash = window.location.hash.substring(1);
+                if (postIdFromHash) {
+                    const post = blogPostsData.find(p => p.id === postIdFromHash);
+                    if (post) {
+                        const revealDate = new Date(post.revealDate);
+                        revealDate.setHours(0, 0, 0, 0);
+                        if (today >= revealDate) {
+                            openPost(postIdFromHash);
+                        } else {
+                            window.location.hash = '';
+                            renderGrid('all');
+                        }
+                    } else {
+                        window.location.hash = '';
+                        renderGrid('all');
+                    }
+                } else {
+                    renderGrid('all');
+                }
+            }
+
+            portfolioGrid.addEventListener('click', (e) => {
+                const card = e.target.closest('.card');
+                if (card) {
+                    openPost(card.dataset.postId);
+                }
+            });
+
+            backToProjectsBtn.addEventListener('click', () => {
+                window.location.hash = '';
+                singlePostView.classList.add('hidden');
+                portfolioGrid.classList.remove('hidden');
+                filterControls.classList.remove('hidden');
+                renderGrid('all');
+            });
+            
+            window.addEventListener('hashchange', handleRouting);
+
+            generateFilterButtons();
+            handleRouting();
+        });
+    </script>
+</body>
+</html>
