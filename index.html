@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Robin Axelsson – Interactive Portfolio & Blog</title>
+    <title>Robin Axelsson – Portfolio & Blog</title>
     <meta name="description" content="Explore the projects and insights of Robin Axelsson, a multi-skilled professional in business development, process improvement, Shopify, and logistics.">
     
     <!--
@@ -366,7 +366,7 @@
                 const allButton = document.createElement('button');
                 allButton.dataset.filter = 'all';
                 allButton.className = 'filter-btn font-montserrat text-sm font-semibold py-2 px-5 rounded-full shadow-md transition-all duration-300 active-filter';
-                allButton.textContent = 'All Projects';
+                allButton.textContent = 'Alla projekt';
                 filterControls.appendChild(allButton);
 
                 const revealedCategories = new Set();
@@ -463,7 +463,7 @@
                     filterControls.classList.add('hidden');
                     singlePostView.classList.remove('hidden');
                     postContentArea.innerHTML = post.content;
-                    window.scrollTo({ top: 0, behavior: 'auto' });
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
                     window.location.hash = postId;
                 }
             }
