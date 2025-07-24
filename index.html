@@ -235,21 +235,27 @@
     <script>
         (function() {
             const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-            const savedTheme = localStorage.getItem('theme');
+            const isMobile = window.matchMedia('(max-width: 639px)').matches; // Define isMobile here
+            const savedTheme = sessionStorage.getItem('theme'); // Use sessionStorage
             let initialTheme;
 
-            if (savedTheme) {
-                initialTheme = savedTheme;
-                console.log('Initial theme from localStorage:', initialTheme);
+            if (isMobile) {
+                initialTheme = prefersDark ? 'dark' : 'light'; // Mobile always follows OS
+                console.log('Mobile: Initial theme from OS preference:', initialTheme);
             } else {
-                initialTheme = prefersDark ? 'dark' : 'light';
-                console.log('Initial theme from OS preference:', initialTheme);
+                if (savedTheme) {
+                    initialTheme = savedTheme; // PC uses saved preference from session
+                    console.log('PC: Initial theme from sessionStorage:', initialTheme);
+                } else {
+                    initialTheme = prefersDark ? 'dark' : 'light'; // PC falls back to OS if no saved session preference
+                    console.log('PC: Initial theme from OS preference (no sessionStorage):', initialTheme);
+                }
             }
             document.documentElement.className = initialTheme;
 
-            // Attempt to set the icon text content immediately
+            // Attempt to set the icon text content immediately for PC
             const toggleButton = document.getElementById('darkModeToggle');
-            if (toggleButton) {
+            if (toggleButton && !isMobile) { // Only attempt if button exists and it's not mobile
                 const iconSpan = toggleButton.querySelector('span');
                 if (iconSpan) {
                     iconSpan.textContent = (initialTheme === 'dark') ? '☾' : '☀';
@@ -376,7 +382,7 @@
                         </div>
                     `
                 },
-                  {
+                {
                     id: 'blog5',
                     title: 'Taming the Wild West of Unstructured Data in Logistics',
                     categories: ['logistics', 'data-management'],
@@ -423,35 +429,54 @@
             }
 
             function toggleDarkMode() {
+                const isMobile = window.matchMedia('(max-width: 639px)').matches;
+                if (isMobile) {
+                    // On mobile, the button is hidden, so this function shouldn't be called.
+                    // If it somehow is, we do nothing as mobile always follows OS.
+                    console.log('Attempted to toggle theme on mobile, but manual toggle is disabled.');
+                    return;
+                }
+
                 const currentThemeIsDark = htmlEl.classList.contains('dark');
                 const newTheme = currentThemeIsDark ? 'light' : 'dark';
                 
                 applyTheme(newTheme);
-                localStorage.setItem('theme', newTheme); // Save explicit user choice
+                sessionStorage.setItem('theme', newTheme); // Use sessionStorage
                 console.log('User manually toggled theme to:', newTheme);
                 updateDarkModeToggleIcon();
             }
 
             const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+            const isMobileQuery = window.matchMedia('(max-width: 639px)'); // Define isMobileQuery here
 
             function handleOSThemeChange(event) {
-                // Only apply OS theme if no manual preference is saved
-                if (!localStorage.getItem('theme')) {
-                    applyTheme(event.matches ? 'dark' : 'light');
-                    console.log('OS theme changed and applied:', event.matches ? 'dark' : 'light');
-                    updateDarkModeToggleIcon(); // Update icon based on OS change
+                const isMobile = isMobileQuery.matches;
+
+                if (isMobile) {
+                    applyTheme(event.matches ? 'dark' : 'light'); // Mobile always follows OS changes
+                    console.log('Mobile: OS theme changed and applied:', event.matches ? 'dark' : 'light');
                 } else {
-                    console.log('OS theme changed, but manual preference exists. Not overriding.');
+                    // Only apply OS theme on PC if no manual preference is saved in sessionStorage
+                    if (!sessionStorage.getItem('theme')) { // Use sessionStorage
+                        applyTheme(event.matches ? 'dark' : 'light');
+                        console.log('PC: OS theme changed and applied (no manual preference):', event.matches ? 'dark' : 'light');
+                        updateDarkModeToggleIcon();
+                    } else {
+                        console.log('PC: OS theme changed, but manual preference exists in sessionStorage. Not overriding.');
+                    }
                 }
             }
             
             // Add event listener for manual toggle button
             darkModeToggle.addEventListener('click', toggleDarkMode);
-            // Listen for changes in OS theme preference, but only if no manual override
+            // Listen for changes in OS theme preference
             prefersDarkScheme.addEventListener('change', handleOSThemeChange);
 
             // Initial icon update after theme is set by the head script
-            updateDarkModeToggleIcon();
+            // Only update icon if not on mobile (as button is hidden on mobile)
+            if (!isMobileQuery.matches) {
+                updateDarkModeToggleIcon();
+            }
 
             function generateFilterButtons() {
                 filterControls.innerHTML = '';
