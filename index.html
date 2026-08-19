@@ -194,8 +194,21 @@
         if (mecenatRes.status === 'fulfilled' && mecenatRes.value.discounts) {
           mecenatItems = mecenatRes.value.discounts.map(item => {
             const fullTitle = item.brandName ? `${item.brandName}: ${item.title}` : item.title;
+            
+            // Tvätta bort HTML-taggar från content och samla sökbar text
+            const rawContent = item.content ? item.content.replace(/<[^>]*>?/gm, '') : '';
+            const rawCondition = item.conditionHTML ? item.conditionHTML.replace(/<[^>]*>?/gm, '') : '';
+
+            const extraContent = [
+              rawContent,
+              rawCondition,
+              item.subtitle,
+              item.mainCategoryName
+            ].filter(Boolean).join(' ');
+
             return {
               title: fullTitle,
+              searchText: extraContent,
               image: item.image || PLACEHOLDER_IMG,
               url: item.url ? `https://www.mecenatalumni.com${item.url}` : '#',
               source: 'Mecenat Alumni',
@@ -223,6 +236,7 @@
 
             return {
               title: fullTitle,
+              searchText: (item.imageAlt || '') + ' ' + (item.description || ''),
               image: item.imageUrl ? `https://www.hyresgastforeningen.se${item.imageUrl}` : PLACEHOLDER_IMG,
               url: item.url ? `https://www.hyresgastforeningen.se${item.url}` : '#',
               source: 'Hyresgästföreningen',
@@ -231,50 +245,50 @@
           });
         }
 
-       let icaItems = [];
-if (icaRes.status === 'fulfilled' && icaRes.value) {
-  try {
-    const matches = icaRes.value.match(/\{"image":[\s\S]*?"component":"OfferPartnerPageNavigationBlock"[^}]*\}/g);
+        let icaItems = [];
+        if (icaRes.status === 'fulfilled' && icaRes.value) {
+          try {
+            const matches = icaRes.value.match(/\{"image":[\s\S]*?"component":"OfferPartnerPageNavigationBlock"[^}]*\}/g);
 
-    if (matches) {
-      matches.forEach(jsonStr => {
-        try {
-          const item = JSON.parse(jsonStr);
+            if (matches) {
+              matches.forEach(jsonStr => {
+                try {
+                  const item = JSON.parse(jsonStr);
 
-          const partner = item.partnerName || item.title || '';
-          const preamble = item.preamble || item.title || '';
-          const fullTitle = partner && preamble && partner !== preamble 
-            ? `${partner}: ${preamble}` 
-            : preamble;
+                  const partner = item.partnerName || item.title || '';
+                  const preamble = item.preamble || item.title || '';
+                  const fullTitle = partner && preamble && partner !== preamble 
+                    ? `${partner}: ${preamble}` 
+                    : preamble;
 
-          let imageUrl = PLACEHOLDER_IMG;
-          const imageId = item.image?.small?.id || item.image?.medium?.id || item.image?.large?.id;
-          if (imageId) {
-            // w_400 skalar ner till 400px bredd, f_auto väljer bästa formatet (t.ex. WebP), q_auto optimerar kvaliteten
-            imageUrl = `https://assets.icanet.se/w_400,c_scale,f_auto,q_auto/${imageId}`;
+                  let imageUrl = PLACEHOLDER_IMG;
+                  const imageId = item.image?.small?.id || item.image?.medium?.id || item.image?.large?.id;
+                  if (imageId) {
+                    imageUrl = `https://assets.icanet.se/w_400,c_scale,f_auto,q_auto/${imageId}`;
+                  }
+
+                  let url = item.url ? item.url.replace(/\\u002F/g, '/') : '#';
+                  if (url !== '#' && !url.startsWith('http')) {
+                    url = `https://www.ica.se${url}`;
+                  }
+
+                  icaItems.push({
+                    title: fullTitle.trim(),
+                    searchText: (item.image?.altText || '') + ' ' + (item.prefix || ''),
+                    image: imageUrl,
+                    url: url,
+                    source: 'ICA Stammis',
+                    sourceClass: 'badge-ica'
+                  });
+                } catch (e) {
+                  // Hoppa över om ett enskilt objekt misslyckas vid JSON.parse
+                }
+              });
+            }
+          } catch (err) {
+            console.error("Fel vid parsning av ICA-data:", err);
           }
-
-          let url = item.url ? item.url.replace(/\\u002F/g, '/') : '#';
-          if (url !== '#' && !url.startsWith('http')) {
-            url = `https://www.ica.se${url}`;
-          }
-
-          icaItems.push({
-            title: fullTitle.trim(),
-            image: imageUrl,
-            url: url,
-            source: 'ICA Stammis',
-            sourceClass: 'badge-ica'
-          });
-        } catch (e) {
-          // Hoppa över om ett enskilt objekt misslyckas vid JSON.parse
         }
-      });
-    }
-  } catch (err) {
-    console.error("Fel vid parsning av ICA-data:", err);
-  }
-}
 
         allDeals = [...mecenatItems, ...hyresgastItems, ...icaItems];
 
@@ -327,7 +341,11 @@ if (icaRes.status === 'fulfilled' && icaRes.value) {
 
     document.getElementById('searchInput').addEventListener('input', (e) => {
       const query = e.target.value.toLowerCase().trim();
-      const filtered = allDeals.filter(deal => deal.title.toLowerCase().includes(query));
+      const filtered = allDeals.filter(deal => {
+        const titleMatch = deal.title ? deal.title.toLowerCase().includes(query) : false;
+        const textMatch = deal.searchText ? deal.searchText.toLowerCase().includes(query) : false;
+        return titleMatch || textMatch;
+      });
       renderDeals(filtered);
     });
 
