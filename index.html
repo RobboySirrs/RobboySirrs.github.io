@@ -161,7 +161,7 @@
   <div class="container">
     <header>
       <h1>Samlade Rabatter</h1>
-      <input type="text" id="searchInput" class="search-box" placeholder="Sök rabatt eller varumärke (t.ex. Tosselilla, Bio, Elite)...">
+      <input type="text" id="searchInput" class="search-box" placeholder="Sök rabatt, källa eller varumärke (t.ex. ICA Stammis, Tosselilla, Bio)...">
       <div id="stats" class="stats">Laddar rabatter...</div>
     </header>
 
@@ -194,12 +194,13 @@
         if (mecenatRes.status === 'fulfilled' && mecenatRes.value.discounts) {
           mecenatItems = mecenatRes.value.discounts.map(item => {
             const fullTitle = item.brandName ? `${item.brandName}: ${item.title}` : item.title;
+            const sourceName = 'Mecenat Alumni';
             
-            // Tvätta bort HTML-taggar från content och samla sökbar text
             const rawContent = item.content ? item.content.replace(/<[^>]*>?/gm, '') : '';
             const rawCondition = item.conditionHTML ? item.conditionHTML.replace(/<[^>]*>?/gm, '') : '';
 
             const extraContent = [
+              sourceName,
               rawContent,
               rawCondition,
               item.subtitle,
@@ -211,7 +212,7 @@
               searchText: extraContent,
               image: item.image || PLACEHOLDER_IMG,
               url: item.url ? `https://www.mecenatalumni.com${item.url}` : '#',
-              source: 'Mecenat Alumni',
+              source: sourceName,
               sourceClass: 'badge-mecenat'
             };
           });
@@ -221,6 +222,7 @@
         if (hyresgastRes.status === 'fulfilled' && hyresgastRes.value.items) {
           hyresgastItems = hyresgastRes.value.items.map(item => {
             let brandName = '';
+            const sourceName = 'Hyresgästföreningen';
             
             if (item.url) {
               const segments = item.url.split('/').filter(Boolean);
@@ -236,10 +238,10 @@
 
             return {
               title: fullTitle,
-              searchText: (item.imageAlt || '') + ' ' + (item.description || ''),
+              searchText: `${sourceName} ${item.imageAlt || ''} ${item.description || ''}`,
               image: item.imageUrl ? `https://www.hyresgastforeningen.se${item.imageUrl}` : PLACEHOLDER_IMG,
               url: item.url ? `https://www.hyresgastforeningen.se${item.url}` : '#',
-              source: 'Hyresgästföreningen',
+              source: sourceName,
               sourceClass: 'badge-hyresgast'
             };
           });
@@ -254,6 +256,7 @@
               matches.forEach(jsonStr => {
                 try {
                   const item = JSON.parse(jsonStr);
+                  const sourceName = 'ICA Stammis';
 
                   const partner = item.partnerName || item.title || '';
                   const preamble = item.preamble || item.title || '';
@@ -274,10 +277,10 @@
 
                   icaItems.push({
                     title: fullTitle.trim(),
-                    searchText: (item.image?.altText || '') + ' ' + (item.prefix || ''),
+                    searchText: `${sourceName} ${item.image?.altText || ''} ${item.prefix || ''}`,
                     image: imageUrl,
                     url: url,
-                    source: 'ICA Stammis',
+                    source: sourceName,
                     sourceClass: 'badge-ica'
                   });
                 } catch (e) {
