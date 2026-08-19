@@ -1,645 +1,338 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sv">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Robin Axelsson – Interactive Portfolio & Blog</title>
-    <meta name="description" content="Explore the projects and insights of Robin Axelsson, a multi-skilled professional in business development, process improvement, Shopify, and logistics.">
-    
-    <!--
-    Chosen Palette: Warm Neutral & Slate
-    Application Structure Plan: The application is a single-page portfolio designed for optimal user experience. The core structure is a filterable grid of project cards that transition to a detailed article view upon selection. This allows users to easily scan all projects and then delve deeper into specific case studies without leaving the page. Key interactions include category filtering and a sophisticated, persistent light/dark mode toggle. This structure was chosen for its intuitive navigation flow (Grid -> Detail -> Grid) and the addition of the theme toggle enhances usability and user comfort, which is a critical aspect of modern web design.
-    Visualization & Content Choices: The primary content consists of project case studies. Goal: Organize & Inform. Presentation Method: An interactive card grid (built with HTML/CSS/JS) is used to organize the projects. A modal-like detail view (managed by JS show/hide logic) presents the in-depth information. Interaction: Users can click filter buttons to dynamically update the grid based on categories. Clicking a card opens the full post. Justification: This is a highly effective and standard pattern for portfolios. It allows for quick scanning of available work and provides a clear path to more detailed content on demand. Library/Method: All interactions are powered by vanilla JavaScript to keep the application lightweight and fast. Chart.js and Plotly.js are not needed as the content is text-based.
-    CONFIRMATION: NO SVG graphics used. NO Mermaid JS used.
-    -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="referrer" content="no-referrer">
+  <title>Rabattsök</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-    <script src="https://cdn.tailwindcss.com"></script>
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background-color: #f4f6f8;
+      color: #1a1a1a;
+      padding: 20px;
+    }
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
 
-    <style>
-        :root {
-            --light-bg-color: #F8F5F2;
-            --light-text-color: #333D47;
-            --light-card-bg-color: #ffffff;
-            --dark-bg-color: #0F172A;
-            --dark-text-color: #E2E8F0;
-            --dark-card-bg-color: #1E293B;
-        }
+    header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
 
-        body {
-            background-color: var(--light-bg-color);
-            color: var(--light-text-color);
-            font-family: 'Merriweather', serif;
-            transition: background-color 0.3s ease, color 0.3s ease;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-        }
+    h1 {
+      margin-bottom: 15px;
+      font-size: 2rem;
+    }
 
-        html.dark body {
-            background-color: var(--dark-bg-color);
-            color: var(--dark-text-color);
-        }
+    .search-box {
+      width: 100%;
+      max-width: 600px;
+      padding: 14px 20px;
+      font-size: 1.1rem;
+      border: 2px solid #ddd;
+      border-radius: 8px;
+      outline: none;
+      transition: border-color 0.2s;
+    }
 
-        h1, h2, h3, .font-montserrat {
-            font-family: 'Montserrat', sans-serif;
-        }
-        
-        html.light h1, html.light h2, html.light h3 {
-            color: var(--light-text-color);
-        }
+    .search-box:focus {
+      border-color: #0066cc;
+    }
 
-        html.dark h1, html.dark h2, html.dark h3 {
-            color: #ffffff;
-        }
-        
-        .card {
-            transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, color 0.3s ease;
-        }
+    .stats {
+      margin-top: 10px;
+      color: #666;
+      font-size: 0.95rem;
+    }
 
-        html.light .card {
-            background-color: var(--light-card-bg-color);
-            color: var(--light-text-color);
-        }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 20px;
+    }
 
-        html.dark .card {
-            background-color: var(--dark-card-bg-color);
-            color: var(--dark-text-color);
-        }
+    .card {
+      background: #fff;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
 
-        html.light #blogtop { /* Updated ID */
-            background-color: var(--light-card-bg-color);
-        }
-        
-        html.dark #blogtop { /* Updated ID */
-            background-color: var(--dark-card-bg-color);
-        }
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+    }
 
-        html.light #post-content-area,
-        html.light #portfolio-grid .card p {
-            color: var(--light-text-color);
-        }
-        
-        html.dark #post-content-area,
-        html.dark #portfolio-grid .card p {
-            color: #CBD5E0;
-        }
-        
-        html.light footer {
-            color: #64748B;
-        }
-        
-        html.dark footer {
-            color: #94A3B8;
-        }
-        
-        html.light .filter-btn {
-            background-color: #ffffff;
-            color: #475569;
-        }
-        html.light .filter-btn:hover {
-            background-color: #F1F5F9;
-        }
-        
-        html.dark .filter-btn {
-            background-color: #334155;
-            color: #CBD5E0;
-        }
-        html.dark .filter-btn:hover {
-            background-color: #475569;
-        }
+    .card-img-wrapper {
+      position: relative;
+      height: 180px;
+      background-color: #eee;
+    }
 
-        html.light #back-to-projects-btn {
-            background-color: #F1F5F9;
-            color: #475569;
-        }
-        html.light #back-to-projects-btn:hover {
-            background-color: #E2E8F0;
-        }
+    .card-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
 
-        html.dark #back-to-projects-btn {
-            background-color: #334155;
-            color: #CBD5E0;
-        }
-        html.dark #back-to-projects-btn:hover {
-            background-color: #475569;
-        }
-        
-        html.light .text-emerald-700 { color: #047857; }
-        html.dark .text-emerald-700 { color: #34D399; }
-        
-        html.light .download-link { background-color: #059669; color: white; }
-        html.light .download-link:hover { background-color: #047857; }
-        html.dark .download-link { background-color: #059669; color: white; }
-        html.dark .download-link:hover { background-color: #047857; }
+    .badge {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      padding: 4px 10px;
+      border-radius: 20px;
+      font-size: 0.75rem;
+      font-weight: bold;
+      color: #fff;
+      text-transform: uppercase;
+    }
 
-        .active-filter {
-            background-color: #3A6B35 !important;
-            color: #ffffff !important;
-            transform: scale(1.05);
-        }
-        html.dark .active-filter {
-            background-color: #2F4F2A !important;
-        }
+    .badge-mecenat {
+      background-color: #e63946;
+    }
 
-        .card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
-        }
-        html.dark .card:hover {
-            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.3), 0 8px 10px -6px rgb(0 0 0 / 0.3);
-        }
+    .badge-hyresgast {
+      background-color: #2a9d8f;
+    }
 
-        .post-content p { margin-bottom: 1.5rem; line-height: 1.8; }
-        .post-content h3 { font-size: 1.5rem; font-weight: 700; margin-top: 2.5rem; margin-bottom: 1rem; }
+    .badge-ica {
+      background-color: #e02828;
+    }
 
-        .reveal-base {
-            opacity: 0;
-            transform: translateY(20px);
-            transition-duration: 1s;
-            transition-property: opacity, transform;
-            transition-timing-function: cubic-bezier(0.33, 1, 0.68, 1);
-            will-change: opacity, transform;
-        }
+    .card-content {
+      padding: 15px;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+      justify-content: space-between;
+    }
 
-        .reveal-in-view {
-            opacity: 1;
-            transform: translateY(0);
-        }
+    .card-title {
+      font-size: 1rem;
+      font-weight: 600;
+      line-height: 1.4;
+      margin-bottom: 15px;
+    }
 
-        /* Dark Mode Toggle Button (Icon) Styling */
-        #darkModeToggle {
-            position: absolute;
-            top: 0;
-            left: 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 1rem;
-            background-color: transparent;
-            border: none;
-            cursor: pointer;
-            z-index: 10;
-            transition: transform 0.2s ease, color 0.3s ease;
-            font-size: 2rem;
-            line-height: 1;
-        }
+    .card-link {
+      display: inline-block;
+      text-align: center;
+      padding: 10px;
+      background-color: #0066cc;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: 500;
+      font-size: 0.9rem;
+      transition: background 0.2s;
+    }
 
-        #darkModeToggle:hover {
-            transform: scale(1.1);
-        }
+    .card-link:hover {
+      background-color: #0052a3;
+    }
 
-        #darkModeToggle span {
-            color: #64748B; /* Default icon color (slate-500 for light mode) */
-            transition: color 0.3s ease;
-        }
+    #loading {
+      text-align: center;
+      font-size: 1.2rem;
+      padding: 50px;
+      color: #666;
+    }
 
-        html.dark #darkModeToggle span {
-            color: #FDE047; /* Tailwind yellow-300 for dark mode (sun is "on") */
-        }
-
-        /* Hide dark mode toggle on small screens (e.g., mobile) */
-        @media (max-width: 639px) {
-            #darkModeToggle {
-                display: none !important;
-            }
-        }
-
-        .footer-social-links {
-            display: flex;
-            justify-content: center;
-            gap: 1.5rem;
-            margin-top: 1rem;
-            margin-bottom: 1rem;
-        }
-
-        .footer-social-links a {
-            font-size: 1.75rem;
-            transition: color 0.2s ease, transform 0.2s ease;
-        }
-
-        .footer-social-links a:hover {
-            transform: translateY(-3px) scale(1.1);
-        }
-        
-        html.light .footer-social-links a { color: #64748B; }
-        html.light .footer-social-links a:hover { color: #334155; }
-        html.dark .footer-social-links a { color: #94A3B8; }
-        html.dark .footer-social-links a:hover { color: #ffffff; }
-    </style>
-    
-    <script>
-        (function() {
-            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-            const isMobile = window.matchMedia('(max-width: 639px)').matches; // Define isMobile here
-            const savedTheme = sessionStorage.getItem('theme'); // Use sessionStorage
-            let initialTheme;
-
-            if (isMobile) {
-                initialTheme = prefersDark ? 'dark' : 'light'; // Mobile always follows OS
-                console.log('Mobile: Initial theme from OS preference:', initialTheme);
-            } else {
-                if (savedTheme) {
-                    initialTheme = savedTheme; // PC uses saved preference from session
-                    console.log('PC: Initial theme from sessionStorage:', initialTheme);
-                } else {
-                    initialTheme = prefersDark ? 'dark' : 'light'; // PC falls back to OS if no saved session preference
-                    console.log('PC: Initial theme from OS preference (no sessionStorage):', initialTheme);
-                }
-            }
-            document.documentElement.className = initialTheme;
-
-            // Attempt to set the icon text content immediately for PC
-            const toggleButton = document.getElementById('darkModeToggle');
-            if (toggleButton && !isMobile) { // Only attempt if button exists and it's not mobile
-                const iconSpan = toggleButton.querySelector('span');
-                if (iconSpan) {
-                    iconSpan.textContent = (initialTheme === 'dark') ? '☾' : '☀';
-                    toggleButton.setAttribute('aria-label', (initialTheme === 'dark') ? 'Switch to Light Mode' : 'Switch to Dark Mode');
-                    console.log('Initial toggle icon set:', iconSpan.textContent);
-                }
-            }
-        })();
-    </script>
+    .hidden {
+      display: none !important;
+    }
+  </style>
 </head>
 <body>
 
-    <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
+  <div class="container">
+    <header>
+      <h1>Samlade Rabatter</h1>
+      <input type="text" id="searchInput" class="search-box" placeholder="Sök rabatt eller varumärke (t.ex. Tosselilla, Bio, Elite)...">
+      <div id="stats" class="stats">Laddar rabatter...</div>
+    </header>
 
-        <header class="text-center mb-12 relative">
-            <button id="darkModeToggle" aria-label="Toggle Dark Mode">
-                <span></span> 
-            </button>
+    <div id="loading">Hämtar data från källorna...</div>
+    <div id="grid" class="grid hidden"></div>
+  </div>
+
+  <script>
+    const MECENAT_URL = 'https://www.mecenatalumni.com/service/falcon/v2/se/f/query?site=alumni';
+
+    const HYRESGAST_TARGET = 'https://www.hyresgastforeningen.se/api/benefitlistingblock/?benefitListingBlockId=1ab9cc507df44e629eb3bf6584c5cc80&itemsLimit=6000&randomSortOrderSeed=825241421';
+    const HYRESGAST_URL = 'https://corsproxy.io/?' + encodeURIComponent(HYRESGAST_TARGET);
+
+    const ICA_TARGET = 'https://www.ica.se/stammis/partnererbjudanden/alla-erbjudanden/';
+    const ICA_URL = 'https://corsproxy.io/?' + encodeURIComponent(ICA_TARGET);
+
+    const PLACEHOLDER_IMG = "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 24 24' fill='none' stroke='%23ccc' stroke-width='2'><rect x='3' y='3' width='18' height='18' rx='2'/><circle cx='8.5' cy='8.5' r='1.5'/><polyline points='21 15 16 10 5 21'/></svg>";
+
+    let allDeals = [];
+
+    async function loadData() {
+      try {
+        const [mecenatRes, hyresgastRes, icaRes] = await Promise.allSettled([
+          fetch(MECENAT_URL).then(res => res.json()),
+          fetch(HYRESGAST_URL).then(res => res.json()),
+          fetch(ICA_URL).then(res => res.text())
+        ]);
+
+        let mecenatItems = [];
+        if (mecenatRes.status === 'fulfilled' && mecenatRes.value.discounts) {
+          mecenatItems = mecenatRes.value.discounts.map(item => {
+            const fullTitle = item.brandName ? `${item.brandName}: ${item.title}` : item.title;
+            return {
+              title: fullTitle,
+              image: item.image || PLACEHOLDER_IMG,
+              url: item.url ? `https://www.mecenatalumni.com${item.url}` : '#',
+              source: 'Mecenat Alumni',
+              sourceClass: 'badge-mecenat'
+            };
+          });
+        }
+
+        let hyresgastItems = [];
+        if (hyresgastRes.status === 'fulfilled' && hyresgastRes.value.items) {
+          hyresgastItems = hyresgastRes.value.items.map(item => {
+            let brandName = '';
             
-            <h1 class="text-4xl md:text-5xl font-bold tracking-tight mb-3">Robin Axelsson</h1>
-            <p class="text-lg md:text-xl font-montserrat">Business Developer · Process Developer · Coder · Logistician</p>
-        </header>
-
-        <main id="main-content">
-            <div id="filter-controls" class="flex flex-wrap justify-center gap-3 mb-10">
-            </div>
-
-            <div id="portfolio-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            </div>
-
-            <div id="blogtop" class="hidden max-w-3xl mx-auto rounded-lg shadow-lg p-8 sm:p-12">
-                <button id="back-to-projects-btn" class="font-montserrat text-sm font-semibold py-2 px-4 rounded-full shadow-md transition-colors mb-8">
-                    &larr; Back to All Projects
-                </button>
-                <div id="post-content-area"></div>
-            </div>
-        </main>
-
-        <footer class="text-center mt-16">
-            &copy; 2025 Robin Axelsson · All rights reserved
-            
-            <div class="footer-social-links">
-                <a href="https://github.com/RobboySirrs/" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile">
-                    <i class="fab fa-github"></i>
-                </a>
-                <a href="https://www.linkedin.com/in/robin-axelsson/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile">
-                    <i class="fab fa-linkedin"></i>
-                </a>
-            </div>
-        </footer>
-
-    </div>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const blogPostsData = [
-                {
-                    id: 'blog1',
-                    title: 'Printing Labels Faster with Clever Ideas and JavaScript',
-                    categories: ['korvar', 'logistics', 'automation'],
-                    imageUrl: 'https://placehold.co/600x400/5e8b7e/ffffff?text=JS+Automation',
-                    summary: 'How I reduced printing times for thousands of shipping labels by combining simple UX tweaks with vanilla JavaScript...',
-                    revealDate: '2025-07-23',
-                    content: `
-                        <h2 class="text-3xl font-bold mb-4">Printing Labels Faster with Clever Ideas and JavaScript</h2>
-                        <img src="https://placehold.co/800x500/5e8b7e/ffffff?text=Label+Printing+UI" alt="Label Automation Example" class="rounded-lg mb-6 w-full object-cover">
-                        <div class="post-content">
-                            <p>In any high-volume logistics operation, time is money. One of the most repetitive and time-consuming tasks can be printing shipping labels, especially when dealing with thousands of orders daily. My solution involved a combination of user experience (UX) improvements and clever client-side scripting with vanilla JavaScript. I developed a single-page interface that allowed operators to select, batch, and print labels with minimal interaction. By leveraging asynchronous requests and manipulating the DOM directly, I eliminated unnecessary page reloads, cutting down the process time by over 70%. This not only saved countless hours but also significantly reduced user frustration and potential for errors.</p>
-                        </div>
-                    `
-                },
-                {
-                    id: 'blog2',
-                    title: 'Make/Model/Year Filter with Shopify’s Homemade API',
-                    categories: ['shopify', 'coding'],
-                    imageUrl: 'https://placehold.co/600x400/8a79a8/ffffff?text=Shopify+API',
-                    summary: 'Shopify doesn’t have a built-in vehicle filter. But I needed one. Here is how I built it...',
-                    revealDate: '2025-07-07',
-                    content: `
-                        <h2 class="text-3xl font-bold mb-4">Make/Model/Year Filter with Shopify’s Homemade API</h2>
-                        <img src="https://placehold.co/800x500/8a79a8/ffffff?text=Vehicle+Filter+UI" alt="Filter Example" class="rounded-lg mb-6 w-full object-cover">
-                        <div class="post-content">
-                            <p>A common challenge for automotive parts e-commerce stores on Shopify is the lack of a native "Year/Make/Model" filter. This is a critical feature for ensuring customers find the correct parts for their vehicles. To solve this, I engineered a custom solution.</p>
-                            <p>I utilized Shopify's tagging system and product metafields to store vehicle compatibility data. Then, I built a "homemade API" using a combination of JavaScript and Shopify's Liquid templating language. This script dynamically fetched and filtered product collections based on the user's selections without relying on a costly third-party app. The result was a seamless, fast, and intuitive filtering experience that dramatically improved the customer journey and increased conversion rates for the client.</p>
-                        </div>
-                    `
-                },
-                {
-                    id: 'blog3',
-                    title: 'Buy X Get Y Free: A Native Promo Flow in Shopify',
-                    categories: ['business', 'shopify'],
-                    imageUrl: 'https://placehold.co/600x400/a87982/ffffff?text=Shopify+Promo',
-                    summary: 'Shopify Scripts (or Functions) are powerful, but not always an option. I built a native BOGO flow...',
-                    revealDate: '2025-07-01',
-                    content: `
-                        <h2 class="text-3xl font-bold mb-4">Buy X Get Y Free: A Native Promo Flow in Shopify</h2>
-                        <img src="https://placehold.co/800x500/a87982/ffffff?text=BOGO+Promotion" alt="Promotion Example" class="rounded-lg mb-6 w-full object-cover">
-                        <div class="post-content">
-                            <p>While Shopify Plus offers powerful scripting capabilities for complex promotions, many businesses on standard plans need creative solutions for offers like "Buy X, Get Y Free" (BOGO). I was tasked with creating this functionality without access to Shopify Scripts.</p>
-                            <p>My approach involved a combination of a custom theme section and JavaScript that interacted with the cart. I created an interface where the merchant could define the BOGO rules. On the customer-facing side, JavaScript would monitor the cart's contents. When the conditions for the promotion were met, it would automatically add the free item to the cart and apply a discount code via a shareable link, creating a near-native BOGO experience. This business development initiative allowed the client to run more aggressive marketing campaigns, boosting average order value.</p>
-                        </div>
-                    `
-                },
-                {
-                    id: 'blog4',
-                    title: 'How to Calculate Safety Stock and Reorder Point',
-                    categories: ['logistics', 'business'],
-                    imageUrl: 'https://placehold.co/600x400/7aa8a2/ffffff?text=Inventory+Calc',
-                    summary: 'Reorder point (ROP) isn’t just “average sales × lead time.” That only works in a perfect world...',
-                    revealDate: '2025-07-23',
-                    content: `
-                        <h2 class="text-3xl font-bold mb-4">How to Calculate Safety Stock and Reorder Point</h2>
-                        <img src="https://placehold.co/800x500/7aa8a2/ffffff?text=Inventory+Management" alt="Inventory Management" class="rounded-lg mb-6 w-full object-cover">
-                        <div class="post-content">
-                            <p>Effective inventory management is the backbone of any successful logistics or retail operation. A common pitfall is using an oversimplified formula for the reorder point (ROP), which can lead to stockouts or costly overstocking. The simple formula of "average sales × lead time" fails to account for the real-world variability in both demand and supplier lead times.</p>
-                            <p>The correct approach involves calculating safety stock, which acts as a buffer against this uncertainty. The formula for safety stock is: <strong>Z-score &times; Standard Deviation of Lead Time Demand</strong>. The complete ROP formula is then: <strong>(Average Daily Sales &times; Average Lead Time in Days) + Safety Stock</strong>. This process development ensures that you maintain optimal stock levels, minimizing carrying costs while maximizing product availability and customer satisfaction.</p>
-                            <a href="#" download class="download-link mt-6 inline-flex items-center gap-2 bg-emerald-600 font-montserrat font-semibold py-3 px-6 rounded-lg transition-colors">
-                                <span class="w-5 h-5 flex items-center justify-center">
-                                    <span class="w-3 h-3 border-b-2 border-l-2 border-white transform rotate-[-45deg] -translate-y-1/4"></span>
-                                    <span class="w-px h-3 bg-white absolute bottom-0"></span>
-                                </span>
-                                Download Safety Stock Calculator (Excel)
-                            </a>
-                        </div>
-                    `
-                },
-                {
-                    id: 'blog5',
-                    title: 'Taming the Wild West of Unstructured Data in Logistics',
-                    categories: ['logistics', 'data-management'],
-                    imageUrl: 'https://placehold.co/600x400/FFD700/000000?text=Data+Workflow',
-                    summary: 'My journey in creating structured workflows from chaotic spreadsheets and emails...',
-                    revealDate: '2025-07-25',
-                    content: `
-                        <h2 class="text-3xl font-bold mb-4">Taming the Wild West of Unstructured Data in Logistics</h2>
-                        <img src="https://placehold.co/800x500/FFD700/000000?text=Unstructured+Data+Visual" alt="Data Management" class="rounded-lg mb-6 w-full object-cover">
-                        <div class="post-content">
-                            <p>In many older logistics operations, data often resides in disparate systems, email inboxes, and countless spreadsheets. This "wild west" of unstructured data leads to inefficiencies, errors, and a lack of clear insights. My project focused on bringing order to this chaos.</p>
-                        </div>
-                    `
-                }
-            ];
-
-            const portfolioGrid = document.getElementById('portfolio-grid');
-            const filterControls = document.getElementById('filter-controls');
-            const singlePostView = document.getElementById('blogtop'); // Corrected to use 'blogtop'
-            const postContentArea = document.getElementById('post-content-area');
-            const backToProjectsBtn = document.getElementById('back-to-projects-btn');
-            const darkModeToggle = document.getElementById('darkModeToggle');
-            const darkModeToggleIcon = darkModeToggle.querySelector('span');
-            const htmlEl = document.documentElement;
-            let filterButtons;
-
-            const today = new Date();
-            today.setHours(0, 0, 0, 0);
-
-            function applyTheme(theme) {
-                htmlEl.className = theme;
-                console.log('Applied theme:', theme);
+            if (item.url) {
+              const segments = item.url.split('/').filter(Boolean);
+              if (segments.length > 0) {
+                const slug = segments[segments.length - 1];
+                brandName = slug.split('-')
+                  .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+                  .join(' ');
+              }
             }
 
-            function updateDarkModeToggleIcon() {
-                if (htmlEl.classList.contains('dark')) {
-                    darkModeToggleIcon.textContent = '☾'; // Moon icon for dark mode
-                    darkModeToggle.setAttribute('aria-label', 'Switch to Light Mode');
-                } else {
-                    darkModeToggleIcon.textContent = '☀'; // Sun icon for light mode
-                    darkModeToggle.setAttribute('aria-label', 'Switch to Dark Mode');
-                }
-                console.log('Updated toggle icon to:', darkModeToggleIcon.textContent);
-            }
+            const fullTitle = brandName ? `${brandName}: ${item.title}` : item.title;
 
-            function toggleDarkMode() {
-                const isMobile = window.matchMedia('(max-width: 639px)').matches;
-                if (isMobile) {
-                    // On mobile, the button is hidden, so this function shouldn't be called.
-                    // If it somehow is, we do nothing as mobile always follows OS.
-                    console.log('Attempted to toggle theme on mobile, but manual toggle is disabled.');
-                    return;
-                }
+            return {
+              title: fullTitle,
+              image: item.imageUrl ? `https://www.hyresgastforeningen.se${item.imageUrl}` : PLACEHOLDER_IMG,
+              url: item.url ? `https://www.hyresgastforeningen.se${item.url}` : '#',
+              source: 'Hyresgästföreningen',
+              sourceClass: 'badge-hyresgast'
+            };
+          });
+        }
 
-                const currentThemeIsDark = htmlEl.classList.contains('dark');
-                const newTheme = currentThemeIsDark ? 'light' : 'dark';
-                
-                applyTheme(newTheme);
-                sessionStorage.setItem('theme', newTheme); // Use sessionStorage
-                console.log('User manually toggled theme to:', newTheme);
-                updateDarkModeToggleIcon();
-            }
+       let icaItems = [];
+if (icaRes.status === 'fulfilled' && icaRes.value) {
+  try {
+    const matches = icaRes.value.match(/\{"image":[\s\S]*?"component":"OfferPartnerPageNavigationBlock"[^}]*\}/g);
 
-            const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
-            const isMobileQuery = window.matchMedia('(max-width: 639px)'); // Define isMobileQuery here
+    if (matches) {
+      matches.forEach(jsonStr => {
+        try {
+          const item = JSON.parse(jsonStr);
 
-            function handleOSThemeChange(event) {
-                const isMobile = isMobileQuery.matches;
+          const partner = item.partnerName || item.title || '';
+          const preamble = item.preamble || item.title || '';
+          const fullTitle = partner && preamble && partner !== preamble 
+            ? `${partner}: ${preamble}` 
+            : preamble;
 
-                if (isMobile) {
-                    applyTheme(event.matches ? 'dark' : 'light'); // Mobile always follows OS changes
-                    console.log('Mobile: OS theme changed and applied:', event.matches ? 'dark' : 'light');
-                } else {
-                    // Only apply OS theme on PC if no manual preference is saved in sessionStorage
-                    if (!sessionStorage.getItem('theme')) { // Use sessionStorage
-                        applyTheme(event.matches ? 'dark' : 'light');
-                        console.log('PC: OS theme changed and applied (no manual preference):', event.matches ? 'dark' : 'light');
-                        updateDarkModeToggleIcon();
-                    } else {
-                        console.log('PC: OS theme changed, but manual preference exists in sessionStorage. Not overriding.');
-                    }
-                }
-            }
-            
-            // Add event listener for manual toggle button
-            darkModeToggle.addEventListener('click', toggleDarkMode);
-            // Listen for changes in OS theme preference
-            prefersDarkScheme.addEventListener('change', handleOSThemeChange);
+          let imageUrl = PLACEHOLDER_IMG;
+          const imageId = item.image?.small?.id || item.image?.medium?.id || item.image?.large?.id;
+          if (imageId) {
+            // w_400 skalar ner till 400px bredd, f_auto väljer bästa formatet (t.ex. WebP), q_auto optimerar kvaliteten
+            imageUrl = `https://assets.icanet.se/w_400,c_scale,f_auto,q_auto/${imageId}`;
+          }
 
-            // Initial icon update after theme is set by the head script
-            // Only update icon if not on mobile (as button is hidden on mobile)
-            if (!isMobileQuery.matches) {
-                updateDarkModeToggleIcon();
-            }
+          let url = item.url ? item.url.replace(/\\u002F/g, '/') : '#';
+          if (url !== '#' && !url.startsWith('http')) {
+            url = `https://www.ica.se${url}`;
+          }
 
-            function generateFilterButtons() {
-                filterControls.innerHTML = '';
+          icaItems.push({
+            title: fullTitle.trim(),
+            image: imageUrl,
+            url: url,
+            source: 'ICA Stammis',
+            sourceClass: 'badge-ica'
+          });
+        } catch (e) {
+          // Hoppa över om ett enskilt objekt misslyckas vid JSON.parse
+        }
+      });
+    }
+  } catch (err) {
+    console.error("Fel vid parsning av ICA-data:", err);
+  }
+}
 
-                const allButton = document.createElement('button');
-                allButton.dataset.filter = 'all';
-                allButton.className = 'filter-btn font-montserrat text-sm font-semibold py-2 px-5 rounded-full shadow-md transition-all duration-300 active-filter';
-                allButton.textContent = 'All Projects';
-                filterControls.appendChild(allButton);
+        allDeals = [...mecenatItems, ...hyresgastItems, ...icaItems];
 
-                const revealedCategories = new Set();
-                blogPostsData.forEach(post => {
-                    const revealDate = new Date(post.revealDate);
-                    revealDate.setHours(0, 0, 0, 0);
-                    if (today >= revealDate) {
-                        post.categories.forEach(cat => revealedCategories.add(cat.toLowerCase()));
-                    }
-                });
+        document.getElementById('loading').classList.add('hidden');
+        document.getElementById('grid').classList.remove('hidden');
 
-                const sortedCategories = Array.from(revealedCategories).sort();
+        renderDeals(allDeals);
 
-                sortedCategories.forEach(category => {
-                    const button = document.createElement('button');
-                    button.dataset.filter = category;
-                    button.className = 'filter-btn font-montserrat text-sm font-semibold py-2 px-5 rounded-full shadow-md transition-all duration-300';
-                    button.textContent = category.charAt(0).toUpperCase() + category.slice(1);
-                    filterControls.appendChild(button);
-                });
+      } catch (error) {
+        console.error('Ett fel uppstod vid hämtning:', error);
+        document.getElementById('loading').innerText = 'Kunde inte hämta alla rabatter. Se konsolen för detaljer.';
+      }
+    }
 
-                filterButtons = document.querySelectorAll('.filter-btn');
-                attachFilterButtonListeners();
-            }
+    function renderDeals(deals) {
+      const grid = document.getElementById('grid');
+      const stats = document.getElementById('stats');
+      grid.innerHTML = '';
 
-            function attachFilterButtonListeners() {
-                filterButtons.forEach(button => {
-                    button.addEventListener('click', handleFilterButtonClick);
-                });
-            }
+      stats.innerText = `Visar ${deals.length} av ${allDeals.length} rabatter`;
 
-            function handleFilterButtonClick(event) {
-                const filter = event.target.dataset.filter;
-                renderGrid(filter);
-                window.location.hash = '';
-            }
+      if (deals.length === 0) {
+        grid.innerHTML = '<p style="grid-column: 1/-1; text-align: center; color: #666;">Inga rabatter matchade din sökning.</p>';
+        return;
+      }
 
-            function renderGrid(filter = 'all') {
-                portfolioGrid.innerHTML = '';
-                singlePostView.classList.add('hidden');
-                portfolioGrid.classList.remove('hidden');
-                filterControls.classList.remove('hidden');
+      deals.forEach(deal => {
+        const card = document.createElement('div');
+        card.className = 'card';
 
-                filterButtons.forEach(btn => btn.classList.remove('active-filter'));
-                const activeBtn = document.querySelector(`.filter-btn[data-filter="${filter.toLowerCase()}"]`);
-                if (activeBtn) activeBtn.classList.add('active-filter');
+        card.innerHTML = `
+          <div class="card-img-wrapper">
+            <img class="card-img" src="${deal.image}" alt="" loading="lazy">
+            <span class="badge ${deal.sourceClass}">${deal.source}</span>
+          </div>
+          <div class="card-content">
+            <h2 class="card-title"></h2>
+            <a href="${deal.url}" target="_blank" rel="noopener" class="card-link">Läs mer</a>
+          </div>
+        `;
 
-                const filteredAndRevealedPosts = blogPostsData.filter(post => {
-                    const revealDate = new Date(post.revealDate);
-                    revealDate.setHours(0, 0, 0, 0);
-                    const isRevealed = today >= revealDate;
-                    const matchesFilter = filter === 'all' || post.categories.map(cat => cat.toLowerCase()).includes(filter.toLowerCase());
-                    return isRevealed && matchesFilter;
-                });
+        const imgEl = card.querySelector('.card-img');
+        imgEl.onerror = () => { imgEl.src = PLACEHOLDER_IMG; };
 
-                filteredAndRevealedPosts.forEach((post, index) => {
-                    const card = document.createElement('div');
-                    card.className = 'card rounded-lg shadow-lg overflow-hidden cursor-pointer reveal-base';
-                    card.dataset.postId = post.id;
-                    card.style.transitionDelay = `${index * 100}ms`;
-                    
-                    const displayCategories = post.categories
-                        .map(cat => cat.charAt(0).toUpperCase() + cat.slice(1))
-                        .join(' / ');
+        card.querySelector('.card-title').textContent = deal.title;
 
-                    card.innerHTML = `
-                        <img src="${post.imageUrl}" alt="${post.title}" class="w-full h-48 object-cover" onerror="this.onerror=null;this.src='https://placehold.co/600x400/cccccc/ffffff?text=Image+Not+Found';">
-                        <div class="p-6">
-                            <span class="font-montserrat text-xs font-semibold uppercase tracking-wider text-emerald-700">${displayCategories}</span>
-                            <h3 class="font-montserrat text-xl font-bold mt-2 mb-3">${post.title}</h3>
-                            <p class="text-base">${post.summary}</p>
-                        </div>
-                    `;
-                    portfolioGrid.appendChild(card);
-                });
+        grid.appendChild(card);
+      });
+    }
 
-                const revealElements = document.querySelectorAll('.card.reveal-base');
-                const observer = new IntersectionObserver((entries, obs) => {
-                    entries.forEach(entry => {
-                        if (entry.isIntersecting) {
-                            entry.target.classList.add('reveal-in-view');
-                            obs.unobserve(entry.target);
-                        }
-                    });
-                }, { threshold: 0.1 });
+    document.getElementById('searchInput').addEventListener('input', (e) => {
+      const query = e.target.value.toLowerCase().trim();
+      const filtered = allDeals.filter(deal => deal.title.toLowerCase().includes(query));
+      renderDeals(filtered);
+    });
 
-                revealElements.forEach(el => observer.observe(el));
-            }
+    loadData();
+  </script>
 
-            function openPost(postId) {
-                const post = blogPostsData.find(p => p.id === postId);
-                if (post) {
-                    portfolioGrid.classList.add('hidden');
-                    filterControls.classList.add('hidden');
-                    singlePostView.classList.remove('hidden');
-                    postContentArea.innerHTML = post.content;
-                    
-                    // Use requestAnimationFrame to ensure scroll happens after content layout
-                    window.requestAnimationFrame(() => {
-                        if (singlePostView) {
-                            window.scrollTo({ top: singlePostView.offsetTop, behavior: 'smooth' });
-                            console.log('Scrolling to #blogtop at offset:', singlePostView.offsetTop);
-                        } else {
-                            // Fallback to top of page if #blogtop not found (shouldn't happen with correct ID)
-                            window.scrollTo({ top: 0, behavior: 'smooth' });
-                            console.log('Could not find #blogtop, scrolling to top of page.');
-                        }
-                    });
-                    
-                    window.location.hash = postId;
-                }
-            }
-            
-            function handleRouting() {
-                const postIdFromHash = window.location.hash.substring(1);
-                if (postIdFromHash) {
-                    const post = blogPostsData.find(p => p.id === postIdFromHash);
-                    if (post) {
-                        const revealDate = new Date(post.revealDate);
-                        revealDate.setHours(0, 0, 0, 0);
-                        if (today >= revealDate) {
-                            openPost(postIdFromHash);
-                        } else {
-                            window.location.hash = '';
-                            renderGrid('all');
-                        }
-                    } else {
-                        window.location.hash = '';
-                        renderGrid('all');
-                    }
-                } else {
-                    renderGrid('all');
-                }
-            }
-
-            portfolioGrid.addEventListener('click', (e) => {
-                const card = e.target.closest('.card');
-                if (card) {
-                    openPost(card.dataset.postId);
-                }
-            });
-
-            backToProjectsBtn.addEventListener('click', () => {
-                window.location.hash = '';
-                singlePostView.classList.add('hidden');
-                portfolioGrid.classList.remove('hidden');
-                filterControls.classList.remove('hidden');
-                renderGrid('all');
-            });
-            
-            window.addEventListener('hashchange', handleRouting);
-
-            generateFilterButtons();
-            handleRouting();
-        });
-    </script>
 </body>
 </html>
