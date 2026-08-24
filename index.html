@@ -465,8 +465,9 @@
 
       deals.forEach(deal => {
        // Logga om det är en HGF-deal
-   
-        console.log('HGF Deal:', deal);
+   if (deal.source === "Hyresgästföreningen") {
+        console.log("HGF Deal:", deal);
+    }
     
 
         const card = document.createElement('div');
