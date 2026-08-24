@@ -154,7 +154,7 @@
   <div class="container">
     <header>
       <h1>Samlade Rabatter</h1>
-      <input type="text" id="searchInput" class="search-box" placeholder="Sök rabatt, källa eller varumärke (t.ex. skor, ICA, coop, resa)..." autocomplete="off">
+      <input type="text" id="searchInput" class="search-box" placeholder="Sök rabatt, källa eller varumärke (t.ex. skor, ICA, coop, resa)..." autocomplete="off" autofocus>
       <div id="stats" class="stats">Laddar rabatter...</div>
     </header>
 
@@ -533,20 +533,23 @@
           return queryWords.every(word => deal.searchText.includes(word));
         });
 
-        // Safe regex för exakt ord-matchning
+        // Safe regex för exakt ord-matchning av sökfrasen
         const safeQuery = rawQuery.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
         const exactWordRegex = new RegExp(`\\b${safeQuery}\\b`, 'i');
 
-        // Funktion för att poängsätta relevans (högre poäng = hamnar högre upp)
         function getRelevanceScore(deal) {
           const title = deal.title.toLowerCase();
 
-          // Kollar om dealen matchar ett varumärke i BRAND_KEYWORDS
           let exactBrandMatch = false;
           let includesBrandMatch = false;
 
           for (const [brand, keywords] of Object.entries(BRAND_KEYWORDS)) {
-            if (title.includes(brand)) {
+            // Skapa ett regex för varumärket så att "mer" inte matchar i "lekmer"
+            const safeBrand = brand.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+            const brandRegex = new RegExp(`(?:^|\\s|\\b)${safeBrand}(?:$|\\s|\\b)`, 'i');
+
+            // Bara om titeln faktiskt innehåller varumärket som ett eget ord
+            if (brandRegex.test(title)) {
               if (exactWordRegex.test(brand) || exactWordRegex.test(keywords)) {
                 exactBrandMatch = true;
                 break;
@@ -557,7 +560,7 @@
             }
           }
 
-          // Steg 1: Exakt ord i BRAND_KEYWORDS
+          // Steg 1: Exakt ord i matchat BRAND_KEYWORDS
           if (exactBrandMatch) return 4;
 
           // Steg 2: Exakt ord i titeln
