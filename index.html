@@ -518,46 +518,63 @@
       clearTimeout(searchTimeout);
 
       searchTimeout = setTimeout(() => {
-        const query = e.target.value.toLowerCase().trim();
+        const rawQuery = e.target.value.toLowerCase().trim();
 
-        if (!query) {
+        if (!rawQuery) {
           renderDeals(allDeals);
           return;
         }
 
-        // 1. Filtrera fram alla träffar
+        const queryWords = rawQuery.split(/\s+/);
+
+        // 1. Filtrera fram alla kort där sökorden finns med
         const filtered = allDeals.filter(deal => {
-          return deal.searchText && deal.searchText.includes(query);
+          if (!deal.searchText) return false;
+          return queryWords.every(word => deal.searchText.includes(word));
         });
 
-        // 2. Sortera så att prioriterade varumärken och titelträffar hamnar överst
-        filtered.sort((a, b) => {
-          const titleA = a.title.toLowerCase();
-          const titleB = b.title.toLowerCase();
+        // Safe regex för exakt ord-matchning
+        const safeQuery = rawQuery.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+        const exactWordRegex = new RegExp(`\\b${safeQuery}\\b`, 'i');
 
-          // Kollar om dealen matchar ett varumärke i BRAND_KEYWORDS där nyckelordet ingår
-          const isBrandMatchA = Object.entries(BRAND_KEYWORDS).some(([brand, keywords]) => 
-            titleA.includes(brand) && (brand.includes(query) || keywords.includes(query))
-          );
-          const isBrandMatchB = Object.entries(BRAND_KEYWORDS).some(([brand, keywords]) => 
-            titleB.includes(brand) && (brand.includes(query) || keywords.includes(query))
-          );
+        // Funktion för att poängsätta relevans (högre poäng = hamnar högre upp)
+        function getRelevanceScore(deal) {
+          const title = deal.title.toLowerCase();
 
-          if (isBrandMatchA && !isBrandMatchB) return -1;
-          if (!isBrandMatchA && isBrandMatchB) return 1;
+          // Kollar om dealen matchar ett varumärke i BRAND_KEYWORDS
+          let exactBrandMatch = false;
+          let includesBrandMatch = false;
 
-          // Om båda eller ingen var brand match, prioritera direkt träff i titeln
-          const inTitleA = titleA.includes(query);
-          const inTitleB = titleB.includes(query);
+          for (const [brand, keywords] of Object.entries(BRAND_KEYWORDS)) {
+            if (title.includes(brand)) {
+              if (exactWordRegex.test(brand) || exactWordRegex.test(keywords)) {
+                exactBrandMatch = true;
+                break;
+              }
+              if (brand.includes(rawQuery) || keywords.includes(rawQuery)) {
+                includesBrandMatch = true;
+              }
+            }
+          }
 
-          if (inTitleA && !inTitleB) return -1;
-          if (!inTitleA && inTitleB) return 1;
+          // Steg 1: Exakt ord i BRAND_KEYWORDS
+          if (exactBrandMatch) return 4;
 
-          return 0;
-        });
+          // Steg 2: Exakt ord i titeln
+          if (exactWordRegex.test(title)) return 3;
+
+          // Steg 3: Del av ord (.includes) i varumärke eller titel
+          if (includesBrandMatch || title.includes(rawQuery)) return 2;
+
+          // Steg 4: Finns bara i beskrivning/brödtext
+          return 1;
+        }
+
+        // 2. Sortera baserat på poäng
+        filtered.sort((a, b) => getRelevanceScore(b) - getRelevanceScore(a));
 
         renderDeals(filtered);
-      }, 300);
+      }, 450);
     });
 
     loadData();
