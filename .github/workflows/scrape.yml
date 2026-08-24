@@ -2,9 +2,10 @@ name: Scrape Offers Data
 
 on:
   schedule:
-    # Körs automatiskt kl 06:00 och 18:00 UTC varje dag
-    - cron: '0 6,18 * * *'
-  workflow_dispatch: # Tillåter att du kör den manuellt från GitHub
+    # Körs varje måndag kl 06:00 UTC (08:00 svensk tid)
+    - cron: '0 6 * * 1'
+  workflow_dispatch:
+  
 
 jobs:
   build:
