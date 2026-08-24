@@ -314,7 +314,9 @@
       }
 
       deals.forEach(deal => {
-        console.log(`Företag/Titel: ${deal.title} | Info: ${deal.searchText}`);
+        if (deal.source === 'Coop') {
+    console.log(`Företag/Titel: ${deal.title} | Info: ${deal.searchText}`);
+  }
         const card = document.createElement('div');
         card.className = 'card';
 
