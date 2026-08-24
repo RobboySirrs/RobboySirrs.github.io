@@ -112,6 +112,10 @@
       background-color: #e02828;
     }
 
+    .badge-coop {
+      background-color: #008744;
+    }
+
     .card-content {
       padding: 15px;
       display: flex;
@@ -161,7 +165,7 @@
   <div class="container">
     <header>
       <h1>Samlade Rabatter</h1>
-      <input type="text" id="searchInput" class="search-box" placeholder="Sök rabatt, källa eller varumärke (t.ex. ICA Stammis, Tosselilla, Bio)...">
+      <input type="text" id="searchInput" class="search-box" placeholder="Sök rabatt, källa eller varumärke (t.ex. ICA Stammis, Coop, Tosselilla, Bio)...">
       <div id="stats" class="stats">Laddar rabatter...</div>
     </header>
 
@@ -173,6 +177,25 @@
     const PLACEHOLDER_IMG = "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 24 24' fill='none' stroke='%23ccc' stroke-width='2'><rect x='3' y='3' width='18' height='18' rx='2'/><circle cx='8.5' cy='8.5' r='1.5'/><polyline points='21 15 16 10 5 21'/></svg>";
 
     let allDeals = [];
+
+    // Seedad slumptalsgenerator (Linear Congruential Generator)
+    function seededRandom(seed) {
+      return function() {
+        seed = (seed * 9301 + 49297) % 233280;
+        return seed / 233280;
+      };
+    }
+
+    // Fisher-Yates shuffle med fast seed
+    function shuffleArray(array, seed = 42) {
+      const rng = seededRandom(seed);
+      const shuffled = [...array];
+      for (let i = shuffled.length - 1; i > 0; i--) {
+        const j = Math.floor(rng() * (i + 1));
+        [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+      }
+      return shuffled;
+    }
 
     async function loadData() {
       try {
@@ -240,10 +263,32 @@
           });
         }
 
-        // 3. ICA Stammis (Färdigrensad array från Node-skriptet)
+        // 3. ICA Stammis
         let icaItems = Array.isArray(data.ica) ? data.ica : [];
 
-        allDeals = [...mecenatItems, ...hyresgastItems, ...icaItems];
+        // 4. Coop Medlem
+        let coopItems = [];
+        if (Array.isArray(data.coop)) {
+          coopItems = data.coop.map(item => {
+            const sourceName = 'Coop';
+            const fullTitle = item.brandName ? `${item.brandName}: ${item.title}` : item.title;
+
+            return {
+              title: fullTitle,
+              searchText: `${sourceName} ${item.description || ''} ${item.brandName || ''}`,
+              image: item.imageUrl || item.image || PLACEHOLDER_IMG,
+              url: item.url || '#',
+              source: sourceName,
+              sourceClass: 'badge-coop'
+            };
+          });
+        }
+
+        // Slå ihop alla listor
+        const combinedDeals = [...mecenatItems, ...hyresgastItems, ...icaItems, ...coopItems];
+
+        // Blanda listan deterministiskt med nyckel (seed = 42)
+        allDeals = shuffleArray(combinedDeals, 42);
 
         document.getElementById('loading').classList.add('hidden');
         document.getElementById('grid').classList.remove('hidden');
