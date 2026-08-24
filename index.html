@@ -100,21 +100,10 @@
       text-transform: uppercase;
     }
 
-    .badge-mecenat {
-      background-color: #e63946;
-    }
-
-    .badge-hyresgast {
-      background-color: #2a9d8f;
-    }
-
-    .badge-ica {
-      background-color: #e02828;
-    }
-
-    .badge-coop {
-      background-color: #008744;
-    }
+    .badge-mecenat { background-color: #e63946; }
+    .badge-hyresgast { background-color: #2a9d8f; }
+    .badge-ica { background-color: #e02828; }
+    .badge-coop { background-color: #008744; }
 
     .card-content {
       padding: 15px;
@@ -165,8 +154,7 @@
   <div class="container">
     <header>
       <h1>Samlade Rabatter</h1>
-      <input type="text" id="searchInput" class="search-box" list="suggestions" placeholder="Sök rabatt, källa eller varumärke (t.ex. ICA Stammis, Coop, Tosselilla, Bio)..." autocomplete="off">
-      <datalist id="suggestions"></datalist>
+      <input type="text" id="searchInput" class="search-box" placeholder="Sök rabatt, källa eller varumärke (t.ex. skor, ICA, coop, resa)..." autocomplete="off">
       <div id="stats" class="stats">Laddar rabatter...</div>
     </header>
 
@@ -178,7 +166,6 @@
     const PLACEHOLDER_IMG = "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 24 24' fill='none' stroke='%23ccc' stroke-width='2'><rect x='3' y='3' width='18' height='18' rx='2'/><circle cx='8.5' cy='8.5' r='1.5'/><polyline points='21 15 16 10 5 21'/></svg>";
 
     const BRAND_KEYWORDS = {
-      // --- RESOR, TRANSPORT & HYRBIL ---
       'europcar': 'hyrbil hyra bil fordon transport biluthyrning',
       'hertz': 'hyrbil hyra bil fordon transport biluthyrning',
       'avis': 'hyrbil hyra bil fordon transport biluthyrning',
@@ -209,8 +196,6 @@
       'tallink silja': 'färja båt kryssning finland estland semester',
       'viking line': 'färja båt kryssning åland finland semester',
       'destination gotland': 'färja båt gotland visby resa semester',
-
-      // --- HOTELL & BOENDE ---
       'strawberry': 'hotell boende övernattning rum nordics',
       'scandic': 'hotell boende övernattning rum hotellfrukost',
       'booking.com': 'hotell boende övernattning rum semester lägenhet',
@@ -221,8 +206,6 @@
       'radisson': 'hotell boende övernattning rum business',
       'airbnb': 'boende stuga lägenhet hyra hus',
       'sembo': 'resa hotell legoland semester boende hyra stuga',
-
-      // --- DRIVMEDEL, LADNING & BILVÅRD ---
       'circle k': 'bensin drivmedel tanka tvätta bil tvätt laddning elbil',
       'okq8': 'bensin drivmedel tanka tvätta bil tvätt släp',
       'preem': 'bensin drivmedel tanka tvätta bil tvätt diesel',
@@ -236,14 +219,11 @@
       'skruvat': 'bildelar reservdelar bildäck tillbehör',
       'autodoc': 'bildelar reservdelar bildäck tillbehör',
       'riddermark bil': 'köpa bil begagnad bil bilhandlare',
-
-      // --- OPTIK, HÄLSA & APOTEK ---
       'smarteyes': 'glasögon linser optiker synundersökning bågar solglasögon',
       'synoptik': 'glasögon linser optiker synundersökning bågar',
       'synsam': 'glasögon linser optiker synundersökning abonnemang',
       'specsavers': 'glasögon linser optiker synundersökning billiga glasögon',
       'lensway': 'linser glasögon optiker kontaktlinser',
-      'lendo': 'linser glasögon optiker kontaktlinser',
       'apotek hjärtat': 'apotek medicin hälsa hudvård värktabletter',
       'kronans apotek': 'apotek medicin hälsa hudvård värktabletter',
       'apoteket': 'apotek medicin hälsa hudvård recept',
@@ -254,8 +234,6 @@
       'doz': 'apotek medicin hälsa hudvård recept',
       'doz apotek': 'apotek medicin hälsa hudvård recept',
       'vaccinova': 'vaccin vaccinera fästing tbe resa hälsokontroll',
-
-      // --- STREAMING, TV & BÖCKER ---
       'viaplay': 'film serier streaming tv underhållning bio sport',
       'netflix': 'film serier streaming tv underhållning',
       'hbomax': 'film serier streaming tv max',
@@ -267,13 +245,8 @@
       'audible': 'ljudböcker engelska böcker lyssna',
       'adlibris': 'böcker kurslitteratur läsning pocket',
       'bokus': 'böcker kurslitteratur läsning pocket',
-      'vi': 'tidning magasin prenumeration läsning',
-      'vi läser': 'tidning magasin böcker prenumeration läsning',
       'readly': 'tidningar magasin prenumeration digitalt',
       'tv4 play': 'tv4 streaming tv serier film sport',
-      'trippel': 'streaming viaplay storytel podme underhållning',
-
-      // --- NÖJE, KULTUR & UPPLEVELSER ---
       'live it': 'upplevelse present presentkort äventyr spa',
       'greatdays': 'upplevelse present presentkort äventyr',
       'tivoli': 'nöjespark köpenhamn karuseller nöje resekampanj',
@@ -281,28 +254,11 @@
       'gröna lund': 'nöjespark stockholm karuseller nöje konsert',
       'kolmården': 'djurpark safari zoo boende nöje',
       'skara sommarland': 'vattenland nöjespark karuseller bad',
-      'tusenfryd': 'nöjespark oslo karuseller nöje resekampanj',
-      'junibacken': 'barn museum astrid lindgren upplevelse stockholm',
-      'alfons': 'barn kultur upplevelse teater familj museum',
-      'astrid lindgrens värld': 'barn teater upplevelse vimmerby park',
       'filmstaden': 'bio biobiljett film biobesök popcorn',
       'biose': 'bio biobiljett film oberoende biografer',
-      'a star night': 'konsert show musik underhållning 80-tal',
       'restaurangpremien': 'mat äta ute krog middag lunch',
       'restaurangguiden': 'restaurang presentkort äta ute mat krog',
-      'midnattsloppet': 'löpning lopp träning springa motion',
-      'dramaten': 'teater teaterbiljett kultur pjäser stockholm',
-      'boras djurpark': 'djurpark zoo borås utflykt barn familj',
-      'tomteland': 'sagolandet tomteland barn park upplevelse tomten',
-      'malmo stadsteater': 'teater pjäser kultur malmö scen',
-      'nordens ark': 'djurpark zoo utflykt djur natur',
       'tosselilla': 'sommarland vattenland karuseller tivoli skåne',
-      'vastmanlands teater': 'teater pjäser kultur västerås',
-      'orebro teater': 'teater pjäser kultur örebro',
-      'leksand sommarland': 'sommarland vattenland camping leksand dalarna',
-      'svenska ishockey forbundet': 'hockey ishockey landslag biljetter sport tre kronor',
-
-      // --- MODE, HEM & HYPERMARKET ---
       'ellos': 'kläder mode inredning hem textil skor',
       'hm': 'kläder mode barnkläder dam herr barn skor',
       'zalando': 'kläder mode skor väskor online',
@@ -319,48 +275,6 @@
       'interflora': 'blommor blombud bud skicka blommor present',
       'matsmart': 'mat billig mat svinn rädda mat skafferi',
       'inkclub': 'bläck patroner toner papper kontor skrivare',
-
-      // --- JURIDIK & EKONOMI ---
-      'medmera bank': 'lån ekonomi ränta bank medlemslån privatlån',
-      'ica banken': 'bank kort lån ekonomi bolån',
-      'sbab': 'bolån spara ränta ekonomi bank',
-      'klarna': 'betala delbetala shopping ekonomi faktura',
-      'familjens jurist': 'juridik avtal testamente samboavtal rådgivning',
-      'lexly': 'juridik avtal testamente jurist online',
-      'ef education': 'språkresa studier utland utbildning',
-
-      // --- HYRESGÄSTFÖRENINGEN & HEMMAMILJÖ ---
-      'bokvar': 'försäkring hemförsäkring trygghet hyresgäst boende',
-      'flugger': 'färg tapet måla renovera inredning väggfärg',
-      'flügger': 'färg tapet måla renovera inredning väggfärg',
-      'homemaid': 'städa flyttstäd städhjälp hemstäd rengöring',
-      'fonus': 'begravning jurist ombud kista begravningsbyrå',
-      'ssf': 'stöldskyddsstöldskyddsföreningen larm lås säkerhet trygghet',
-      'stoldskyddsforeningen': 'stöldskyddsstöldskyddsföreningen larm lås säkerhet',
-      'stålhästen': 'cykel elcykel tillbehör cykla pendla',
-      'stalhasten': 'cykel elcykel tillbehör cykla pendla',
-      'jonna': 'elcykel cykel begagnad rekondad abonnemang',
-      'dammsugarpåsar': 'dammsugarpåsar dammsugare städ tillbehör hem',
-      'dammsugarpasar': 'dammsugarpåsar dammsugare städ tillbehör hem',
-      'smf': 'flytta flyttfirma transport bärhjälp',
-      'dibz': 'bostad bostadskö lägenhet köpoäng hyresrätt',
-      'gjensidige': 'försäkring bilförsäkring hemförsäkring trygghet',
-      'hemfixarna': 'hantverkare teknikhjälp montering reparation hemma',
-      'besikta': 'besiktning bilbesiktning bil fordon',
-
-      // --- RESOR, CAMPING OCH UTFLYKTER ---
-      'first camp': 'camping stuga stugby husvagn tält semester',
-      'hyr stugor i salen formanligt': 'stuga sälen skidåkning fjällen hyra boende',
-      'kneippbyn': 'sommarland gotland visby stuga boende semester',
-      'laponia': 'kryssning båttur skärgård luleå bottenviken',
-      'kayakomat': 'kajak sup kanot hyra vatten aktivitet',
-      'hotell hoga kusten': 'hotell vandring outdoor höga kusten natur',
-      'sala silvergruva': 'gruva upplevelse utflykt äventyr historia',
-      'stromma': 'sightseeing båttur buss upplevelse guided tour',
-      'arboga rederi': 'båttur kanal kryssning hjälmare kanal',
-      'gotakanal': 'göta kanal båttur kryssning upplevelse',
-
-      // --- BREDBAND, TRÄNING & TELEKOM ---
       'telenor': 'internet bredband wifi fiber fast bredband mobil abonnemang tv',
       'tele2': 'internet bredband wifi fiber fast bredband mobil abonnemang tv',
       'bredband2': 'internet bredband wifi fiber fast bredband router',
@@ -388,41 +302,6 @@
     }
 
     let allDeals = [];
-    let searchKeywordsList = [];
-
-    function buildSuggestionsIndex(deals) {
-      const wordsSet = new Set();
-
-      Object.keys(BRAND_KEYWORDS).forEach(brand => wordsSet.add(brand));
-
-      deals.forEach(deal => {
-        if (deal.source) wordsSet.add(deal.source);
-        if (deal.title) {
-          const brandMatch = deal.title.split(':')[0].trim();
-          if (brandMatch && brandMatch.length < 30) wordsSet.add(brandMatch);
-        }
-      });
-
-      searchKeywordsList = Array.from(wordsSet).sort();
-    }
-
-    function updateSuggestions(query) {
-      const datalist = document.getElementById('suggestions');
-      datalist.innerHTML = '';
-
-      if (!query || query.length < 1) return;
-
-      const lowerQuery = query.toLowerCase();
-      const matches = searchKeywordsList.filter(item => 
-        item.toLowerCase().includes(lowerQuery)
-      ).slice(0, 8);
-
-      matches.forEach(match => {
-        const option = document.createElement('option');
-        option.value = match;
-        datalist.appendChild(option);
-      });
-    }
 
     function seededRandom(seed) {
       return function() {
@@ -576,8 +455,6 @@
 
         allDeals = shuffleArray(combinedDeals, 42);
 
-        buildSuggestionsIndex(allDeals);
-
         document.getElementById('loading').classList.add('hidden');
         document.getElementById('grid').classList.remove('hidden');
 
@@ -628,21 +505,16 @@
     let searchTimeout;
 
     document.getElementById('searchInput').addEventListener('input', (e) => {
-      const currentValue = e.target.value;
-
-      updateSuggestions(currentValue);
-
       clearTimeout(searchTimeout);
 
       searchTimeout = setTimeout(() => {
-        const query = currentValue.toLowerCase().trim();
+        const query = e.target.value.toLowerCase().trim();
 
         if (!query) {
           renderDeals(allDeals);
           return;
         }
 
-        // Använd enkel .includes() istället för \b i regex
         const filtered = allDeals.filter(deal => {
           return deal.searchText && deal.searchText.includes(query);
         });
