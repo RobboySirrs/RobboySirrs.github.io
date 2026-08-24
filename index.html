@@ -165,34 +165,26 @@
       <div id="stats" class="stats">Laddar rabatter...</div>
     </header>
 
-    <div id="loading">Hämtar data från källorna...</div>
+    <div id="loading">Hämtar data...</div>
     <div id="grid" class="grid hidden"></div>
   </div>
 
   <script>
-    const MECENAT_URL = 'https://www.mecenatalumni.com/service/falcon/v2/se/f/query?site=alumni';
-
-    const HYRESGAST_TARGET = 'https://www.hyresgastforeningen.se/api/benefitlistingblock/?benefitListingBlockId=1ab9cc507df44e629eb3bf6584c5cc80&itemsLimit=6000&randomSortOrderSeed=825241421';
-    const HYRESGAST_URL = 'https://corsproxy.io/?' + encodeURIComponent(HYRESGAST_TARGET);
-
-    const ICA_TARGET = 'https://www.ica.se/stammis/partnererbjudanden/alla-erbjudanden/';
-    const ICA_URL = 'https://corsproxy.io/?' + encodeURIComponent(ICA_TARGET);
-
     const PLACEHOLDER_IMG = "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 24 24' fill='none' stroke='%23ccc' stroke-width='2'><rect x='3' y='3' width='18' height='18' rx='2'/><circle cx='8.5' cy='8.5' r='1.5'/><polyline points='21 15 16 10 5 21'/></svg>";
 
     let allDeals = [];
 
     async function loadData() {
       try {
-        const [mecenatRes, hyresgastRes, icaRes] = await Promise.allSettled([
-          fetch(MECENAT_URL).then(res => res.json()),
-          fetch(HYRESGAST_URL).then(res => res.json()),
-          fetch(ICA_URL).then(res => res.text())
-        ]);
+        const res = await fetch('./data.json');
+        if (!res.ok) throw new Error(`Kunde inte ladda data.json (Status ${res.status})`);
+        
+        const data = await res.json();
 
+        // 1. Mecenat Alumni
         let mecenatItems = [];
-        if (mecenatRes.status === 'fulfilled' && mecenatRes.value.discounts) {
-          mecenatItems = mecenatRes.value.discounts.map(item => {
+        if (data.mecenat && data.mecenat.discounts) {
+          mecenatItems = data.mecenat.discounts.map(item => {
             const fullTitle = item.brandName ? `${item.brandName}: ${item.title}` : item.title;
             const sourceName = 'Mecenat Alumni';
             
@@ -218,9 +210,10 @@
           });
         }
 
+        // 2. Hyresgästföreningen
         let hyresgastItems = [];
-        if (hyresgastRes.status === 'fulfilled' && hyresgastRes.value.items) {
-          hyresgastItems = hyresgastRes.value.items.map(item => {
+        if (data.hyresgast && data.hyresgast.items) {
+          hyresgastItems = data.hyresgast.items.map(item => {
             let brandName = '';
             const sourceName = 'Hyresgästföreningen';
             
@@ -247,51 +240,8 @@
           });
         }
 
-        let icaItems = [];
-        if (icaRes.status === 'fulfilled' && icaRes.value) {
-          try {
-            const matches = icaRes.value.match(/\{"image":[\s\S]*?"component":"OfferPartnerPageNavigationBlock"[^}]*\}/g);
-
-            if (matches) {
-              matches.forEach(jsonStr => {
-                try {
-                  const item = JSON.parse(jsonStr);
-                  const sourceName = 'ICA Stammis';
-
-                  const partner = item.partnerName || item.title || '';
-                  const preamble = item.preamble || item.title || '';
-                  const fullTitle = partner && preamble && partner !== preamble 
-                    ? `${partner}: ${preamble}` 
-                    : preamble;
-
-                  let imageUrl = PLACEHOLDER_IMG;
-                  const imageId = item.image?.small?.id || item.image?.medium?.id || item.image?.large?.id;
-                  if (imageId) {
-                    imageUrl = `https://assets.icanet.se/w_400,c_scale,f_auto,q_auto/${imageId}`;
-                  }
-
-                  let url = item.url ? item.url.replace(/\\u002F/g, '/') : '#';
-                  if (url !== '#' && !url.startsWith('http')) {
-                    url = `https://www.ica.se${url}`;
-                  }
-
-                  icaItems.push({
-                    title: fullTitle.trim(),
-                    searchText: `${sourceName} ${item.image?.altText || ''} ${item.prefix || ''}`,
-                    image: imageUrl,
-                    url: url,
-                    source: sourceName,
-                    sourceClass: 'badge-ica'
-                  });
-                } catch (e) {
-                  // Hoppa över om ett enskilt objekt misslyckas vid JSON.parse
-                }
-              });
-            }
-          } catch (err) {
-            console.error("Fel vid parsning av ICA-data:", err);
-          }
-        }
+        // 3. ICA Stammis (Färdigrensad array från Node-skriptet)
+        let icaItems = Array.isArray(data.ica) ? data.ica : [];
 
         allDeals = [...mecenatItems, ...hyresgastItems, ...icaItems];
 
@@ -301,8 +251,8 @@
         renderDeals(allDeals);
 
       } catch (error) {
-        console.error('Ett fel uppstod vid hämtning:', error);
-        document.getElementById('loading').innerText = 'Kunde inte hämta alla rabatter. Se konsolen för detaljer.';
+        console.error('Ett fel uppstod vid läsning av data.json:', error);
+        document.getElementById('loading').innerText = 'Kunde inte läsa data.json. Se konsolen för detaljer.';
       }
     }
 
@@ -324,7 +274,7 @@
 
         card.innerHTML = `
           <div class="card-img-wrapper">
-            <img class="card-img" src="${deal.image}" alt="" loading="lazy">
+            <img class="card-img" src="${deal.image || PLACEHOLDER_IMG}" alt="" loading="lazy">
             <span class="badge ${deal.sourceClass}">${deal.source}</span>
           </div>
           <div class="card-content">
