@@ -3,7 +3,7 @@ name: Weekly Offer Scraper
 on:
   schedule:
     - cron: '0 6 * * 1' # Körs varje måndag kl 08:00 (svensk tid)
-  workflow_dispatch: # Gör att du kan starta skrapan manuellt från GitHub
+  workflow_dispatch:
 
 jobs:
   scrape:
@@ -11,12 +11,12 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Setup Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v5
         with:
-          node-version: '24'
+          node-version: '22'
 
       - name: Install dependencies
         run: npm install
