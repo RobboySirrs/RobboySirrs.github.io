@@ -176,6 +176,152 @@
   <script>
     const PLACEHOLDER_IMG = "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 24 24' fill='none' stroke='%23ccc' stroke-width='2'><rect x='3' y='3' width='18' height='18' rx='2'/><circle cx='8.5' cy='8.5' r='1.5'/><polyline points='21 15 16 10 5 21'/></svg>";
 
+    const BRAND_KEYWORDS = {
+      // --- RESOR, TRANSPORT & HYRBIL ---
+      'europcar': 'hyrbil hyra bil fordon transport biluthyrning',
+      'hertz': 'hyrbil hyra bil fordon transport biluthyrning',
+      'avis': 'hyrbil hyra bil fordon transport biluthyrning',
+      'sixt': 'hyrbil hyra bil fordon transport biluthyrning',
+      'budget': 'hyrbil hyra bil fordon transport biluthyrning',
+      'mabi': 'hyrbil hyra bil fordon transport biluthyrning',
+      'sunfleet': 'bilpool hyrbil delabil delad bil',
+      'kinto': 'bilpool hyrbil delabil delad bil',
+      'sj': 'tåg resa tågbiljett semestra pendla tågresa',
+      'vy': 'tåg buss resa pendla tågbiljett',
+      'snälltåget': 'tåg nattåg resa tågbiljett skidresa',
+      'mtrx': 'tåg resa tågbiljett pendla göteborg stockholm',
+      'flixbus': 'buss resa billig buss linjebuss expressbuss',
+      'bus4you': 'buss resa komfort expressbuss',
+      'flygbussarna': 'buss flygplats transport flyg pendla',
+      'cabonline': 'taxi bil resa transport cab',
+      'taxi stockholm': 'taxi bil resa transport',
+      'uber': 'taxi resa bil transport ride',
+      'bolt': 'taxi elsparkcykel sparkcykel resa transport',
+      'ving': 'resa hotell charter flyg semester solresa',
+      'apollo': 'resa hotell charter flyg semester solresa',
+      'tui': 'resa hotell charter flyg semester solresa',
+      'trip x': 'resa paketresa hotell flyg semester',
+      'hurtigruten': 'resa kryssning norge båt havsresa semester',
+      'stena line': 'färja båt resa tyskland danmark polen semester',
+      'tt line': 'färja båt resa tyskland polen semester',
+      'tallink silja': 'färja båt kryssning finland estland semester',
+      'viking line': 'färja båt kryssning åland finland semester',
+      'destination gotland': 'färja båt gotland visby resa semester',
+
+      // --- HOTELL & BOENDE ---
+      'strawberry': 'hotell boende övernattning rum nordics',
+      'scandic': 'hotell boende övernattning rum hotellfrukost',
+      'booking.com': 'hotell boende övernattning rum semester lägenhet',
+      'hotels.com': 'hotell boende övernattning rum hotellnatt',
+      'hotellpremien': 'hotell boende övernattning rum weekend',
+      'elite hotels': 'hotell boende övernattning rum spa',
+      'best western': 'hotell boende övernattning rum',
+      'radisson': 'hotell boende övernattning rum business',
+      'airbnb': 'boende stuga lägenhet hyra hus',
+      'sembo': 'resa hotell legoland semester boende hyra stuga',
+
+      // --- DRIVMEDEL, LADNING & BILVÅRD ---
+      'circle k': 'bensin drivmedel tanka tvätta bil tvätt laddning elbil',
+      'okq8': 'bensin drivmedel tanka tvätta bil tvätt släp',
+      'preem': 'bensin drivmedel tanka tvätta bil tvätt diesel',
+      'shell': 'bensin drivmedel tanka tvätta bil tvätt',
+      'st1': 'bensin drivmedel tanka bil',
+      'ingo': 'bensin drivmedel tanka billig bensin',
+      'ionity': 'elbil laddning snabbladdning ladda bil',
+      'mer': 'elbil laddning ladda stolpe bil',
+      'chargefinder': 'elbil laddning snabbladdning elbilsladdare',
+      'mekonomen': 'bilverkstad bildelar reservdelar bilservice däck',
+      'skruvat': 'bildelar reservdelar bildäck tillbehör',
+      'autodoc': 'bildelar reservdelar bildäck tillbehör',
+      'riddermark bil': 'köpa bil begagnad bil bilhandlare',
+
+      // --- OPTIK, HÄLSA & APOTEK ---
+      'smarteyes': 'glasögon linser optiker synundersökning bågar solglasögon',
+      'synoptik': 'glasögon linser optiker synundersökning bågar',
+      'synsam': 'glasögon linser optiker synundersökning abonnemang',
+      'specsavers': 'glasögon linser optiker synundersökning billiga glasögon',
+      'lensway': 'linser glasögon optiker kontaktlinser',
+      'lendo': 'linser glasögon optiker kontaktlinser',
+      'apotek hjärtat': 'apotek medicin hälsa hudvård värktabletter',
+      'kronans apotek': 'apotek medicin hälsa hudvård värktabletter',
+      'apoteket': 'apotek medicin hälsa hudvård recept',
+      'apotea': 'nätapotek apotek medicin hälsa hudvård',
+      'doctolib': 'läkare vård hälsa nätdoktor',
+      'kry': 'nätdoktor läkare vård recept kry',
+      'doktor.se': 'nätdoktor läkare vård recept',
+
+      // --- STREAMING, TV & BÖCKER ---
+      'viaplay': 'film serier streaming tv underhållning bio sport',
+      'netflix': 'film serier streaming tv underhållning',
+      'hbomax': 'film serier streaming tv max',
+      'max': 'film serier streaming tv hbo',
+      'disney': 'film serier streaming tv barnfilmer marvel',
+      'storytel': 'ljudböcker e-böcker böcker lyssna läsa',
+      'bookbeat': 'ljudböcker e-böcker böcker lyssna läsa',
+      'nextory': 'ljudböcker e-böcker böcker lyssna läsa',
+      'audible': 'ljudböcker engelska böcker lyssna',
+      'adlibris': 'böcker kurslitteratur läsning pocket',
+      'bokus': 'böcker kurslitteratur läsning pocket',
+      'vi': 'tidning magasin prenumeration läsning',
+      'vi läser': 'tidning magasin böcker prenumeration läsning',
+      'readly': 'tidningar magasin prenumeration digitalt',
+
+      // --- NÖJE, KULTUR & UPPLEVELSER ---
+      'live it': 'upplevelse present presentkort äventyr spa',
+      'greatdays': 'upplevelse present presentkort äventyr',
+      'tivoli': 'nöjespark köpenhamn karuseller nöje resekampanj',
+      'liseberg': 'nöjespark göteborg karuseller nöje konsert',
+      'gröna lund': 'nöjespark stockholm karuseller nöje konsert',
+      'kolmården': 'djurpark safari zoo boende nöje',
+      'skara sommarland': 'vattenland nöjespark karuseller bad',
+      'tusenfryd': 'nöjespark oslo karuseller nöje resekampanj',
+      'junibacken': 'barn museum astrid lindgren upplevelse stockholm',
+      'alfons': 'barn kultur upplevelse teater familj museum',
+      'astrid lindgrens värld': 'barn teater upplevelse vimmerby park',
+      'filmstaden': 'bio biobiljett film biobesök popcorn',
+      'a star night': 'konsert show musik underhållning 80-tal',
+      'restaurangpremien': 'mat äta ute krog middag lunch',
+      'stromma': 'sightseeing båttur buss upplevelse guided tour',
+
+      // --- MODE, HEM & HYPERMARKET ---
+      'ellos': 'kläder mode inredning hem textil skor',
+      'hm': 'kläder mode barnkläder dam herr barn',
+      'zalando': 'kläder mode skor väskor online',
+      'boozt': 'kläder mode märke märkeskläder skor',
+      'åhléns': 'inredning skönhet mode hem parfymer',
+      'ikea': 'möbler inredning hem kök belysning',
+      'mio': 'möbler inredning soffa säng hem',
+      'jysk': 'möbler sängar täcken inredning hem',
+      'cervera': 'kök matlagning glas porslin inredning',
+      'electrolux': 'vitvaror hushåll maskiner dammsugare kök',
+      'geggamoja': 'barnkläder kläder barn baby mössor',
+      'polarn o. pyret': 'barnkläder ytterkläder baby skalplagg',
+      'euroflorist': 'blommor blombud bud skicka blommor present',
+      'interflora': 'blommor blombud bud skicka blommor present',
+
+      // --- JURIDIK & EKONOMI ---
+      'medmera bank': 'lån ekonomi ränta bank medlemslån privatlån',
+      'ica banken': 'bank kort lån ekonomi bolån',
+      'sbab': 'bolån spara ränta ekonomi bank',
+      'klarna': 'betala delbetala shopping ekonomi faktura',
+      'familjens jurist': 'juridik avtal testamente samboavtal rådgivning',
+      'lexly': 'juridik avtal testamente jurist online',
+      'ef education': 'språkresa studier utland utbildning'
+    };
+
+    function getExtraKeywords(title = '') {
+      const lower = title.toLowerCase();
+      let extra = [];
+
+      for (const [brand, keywords] of Object.entries(BRAND_KEYWORDS)) {
+        if (lower.includes(brand)) {
+          extra.push(keywords);
+        }
+      }
+
+      return extra.join(' ');
+    }
+
     let allDeals = [];
 
     // Seedad slumptalsgenerator (Linear Congruential Generator)
@@ -213,13 +359,15 @@
             
             const rawContent = item.content ? item.content.replace(/<[^>]*>?/gm, '') : '';
             const rawCondition = item.conditionHTML ? item.conditionHTML.replace(/<[^>]*>?/gm, '') : '';
+            const extraKeywords = getExtraKeywords(fullTitle);
 
             const extraContent = [
               sourceName,
               rawContent,
               rawCondition,
               item.subtitle,
-              item.mainCategoryName
+              item.mainCategoryName,
+              extraKeywords
             ].filter(Boolean).join(' ');
 
             return {
@@ -251,10 +399,11 @@
             }
 
             const fullTitle = brandName ? `${brandName}: ${item.title}` : item.title;
+            const extraKeywords = getExtraKeywords(fullTitle);
 
             return {
               title: fullTitle,
-              searchText: `${sourceName} ${item.imageAlt || ''} ${item.description || ''}`,
+              searchText: `${sourceName} ${item.imageAlt || ''} ${item.description || ''} ${extraKeywords}`,
               image: item.imageUrl ? `https://www.hyresgastforeningen.se${item.imageUrl}` : PLACEHOLDER_IMG,
               url: item.url ? `https://www.hyresgastforeningen.se${item.url}` : '#',
               source: sourceName,
@@ -272,10 +421,11 @@
           coopItems = data.coop.map(item => {
             const sourceName = 'Coop';
             const fullTitle = item.brandName ? `${item.brandName}: ${item.title}` : item.title;
+            const extraKeywords = getExtraKeywords(fullTitle);
 
             return {
               title: fullTitle,
-              searchText: `${sourceName} ${item.description || ''} ${item.brandName || ''}`,
+              searchText: `${sourceName} ${item.description || ''} ${item.brandName || ''} ${extraKeywords}`.trim(),
               image: item.imageUrl || item.image || PLACEHOLDER_IMG,
               url: item.url || '#',
               source: sourceName,
@@ -314,9 +464,8 @@
       }
 
       deals.forEach(deal => {
-        if (deal.source === 'Coop') {
-    console.log(`Företag/Titel: ${deal.title} | Info: ${deal.searchText}`);
-  }
+       
+
         const card = document.createElement('div');
         card.className = 'card';
 
