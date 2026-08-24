@@ -1,0 +1,33 @@
+name: Scrape Offers Data
+
+on:
+  schedule:
+    # Körs automatiskt kl 06:00 och 18:00 UTC varje dag
+    - cron: '0 6,18 * * *'
+  workflow_dispatch: # Tillåter att du kör den manuellt från GitHub
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write # Ger boten tillåtelse att spara/pusha data.json
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Run Scraper Script
+        run: node fetch-data.js
+
+      - name: Commit and Push updated data.json
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add data.json
+          git diff --quiet && git diff --staged --quiet || (git commit -m "Auto-update data.json" && git push)
+          
