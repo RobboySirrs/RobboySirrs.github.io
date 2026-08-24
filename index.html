@@ -304,17 +304,17 @@
 
       // --- MODE, HEM & HYPERMARKET ---
       'ellos': 'kläder mode inredning hem textil skor',
-      'hm': 'kläder mode barnkläder dam herr barn',
+      'hm': 'kläder mode barnkläder dam herr barn skor',
       'zalando': 'kläder mode skor väskor online',
       'boozt': 'kläder mode märke märkeskläder skor',
-      'åhléns': 'inredning skönhet mode hem parfymer',
+      'åhléns': 'inredning skönhet mode hem parfymer skor',
       'ikea': 'möbler inredning hem kök belysning',
       'mio': 'möbler inredning soffa säng hem',
       'jysk': 'möbler sängar täcken inredning hem',
       'cervera': 'kök matlagning glas porslin inredning',
       'electrolux': 'vitvaror hushåll maskiner dammsugare kök',
-      'geggamoja': 'barnkläder kläder barn baby mössor',
-      'polarn o. pyret': 'barnkläder ytterkläder baby skalplagg',
+      'geggamoja': 'barnkläder kläder barn baby mössor skor',
+      'polarn o. pyret': 'barnkläder ytterkläder baby skalplagg skor',
       'euroflorist': 'blommor blombud bud skicka blommor present',
       'interflora': 'blommor blombud bud skicka blommor present',
       'matsmart': 'mat billig mat svinn rädda mat skafferi',
@@ -390,17 +390,14 @@
     let allDeals = [];
     let searchKeywordsList = [];
 
-    // Bygg upp en unikt sorterad lista av sökord för autokomplettering
     function buildSuggestionsIndex(deals) {
       const wordsSet = new Set();
 
-      // Lägg till källor och varumärken
       Object.keys(BRAND_KEYWORDS).forEach(brand => wordsSet.add(brand));
 
       deals.forEach(deal => {
         if (deal.source) wordsSet.add(deal.source);
         if (deal.title) {
-          // Extrahera varumärkesnamn från titlar som t.ex. "ICA Stammis: Erbjudande"
           const brandMatch = deal.title.split(':')[0].trim();
           if (brandMatch && brandMatch.length < 30) wordsSet.add(brandMatch);
         }
@@ -418,7 +415,7 @@
       const lowerQuery = query.toLowerCase();
       const matches = searchKeywordsList.filter(item => 
         item.toLowerCase().includes(lowerQuery)
-      ).slice(0, 8); // Begränsa till max 8 förslag åt gången
+      ).slice(0, 8);
 
       matches.forEach(match => {
         const option = document.createElement('option');
@@ -427,7 +424,6 @@
       });
     }
 
-    // Seedad slumptalsgenerator (Linear Congruential Generator)
     function seededRandom(seed) {
       return function() {
         seed = (seed * 9301 + 49297) % 233280;
@@ -435,7 +431,6 @@
       };
     }
 
-    // Fisher-Yates shuffle med fast seed
     function shuffleArray(array, seed = 42) {
       const rng = seededRandom(seed);
       const shuffled = [...array];
@@ -464,18 +459,19 @@
             const rawCondition = item.conditionHTML ? item.conditionHTML.replace(/<[^>]*>?/gm, '') : '';
             const extraKeywords = getExtraKeywords(fullTitle);
 
-            const extraContent = [
+            const searchIndex = [
+              fullTitle,
               sourceName,
               rawContent,
               rawCondition,
               item.subtitle,
               item.mainCategoryName,
               extraKeywords
-            ].filter(Boolean).join(' ');
+            ].filter(Boolean).join(' ').toLowerCase();
 
             return {
               title: fullTitle,
-              searchText: extraContent,
+              searchText: searchIndex,
               image: item.image || PLACEHOLDER_IMG,
               url: item.url ? `https://www.mecenatalumni.com${item.url}` : '#',
               source: sourceName,
@@ -504,9 +500,17 @@
             const fullTitle = brandName ? `${brandName}: ${item.title}` : item.title;
             const extraKeywords = getExtraKeywords(fullTitle);
 
+            const searchIndex = [
+              fullTitle,
+              sourceName,
+              item.imageAlt,
+              item.description,
+              extraKeywords
+            ].filter(Boolean).join(' ').toLowerCase();
+
             return {
               title: fullTitle,
-              searchText: `${sourceName} ${item.imageAlt || ''} ${item.description || ''} ${extraKeywords}`,
+              searchText: searchIndex,
               image: item.imageUrl ? `https://www.hyresgastforeningen.se${item.imageUrl}` : PLACEHOLDER_IMG,
               url: item.url ? `https://www.hyresgastforeningen.se${item.url}` : '#',
               source: sourceName,
@@ -516,7 +520,30 @@
         }
 
         // 3. ICA Stammis
-        let icaItems = Array.isArray(data.ica) ? data.ica : [];
+        let icaItems = [];
+        if (Array.isArray(data.ica)) {
+          icaItems = data.ica.map(item => {
+            const sourceName = 'ICA Stammis';
+            const fullTitle = item.title || item.name || '';
+            const extraKeywords = getExtraKeywords(fullTitle);
+
+            const searchIndex = [
+              fullTitle,
+              sourceName,
+              item.description,
+              item.searchText,
+              extraKeywords
+            ].filter(Boolean).join(' ').toLowerCase();
+
+            return {
+              ...item,
+              title: fullTitle,
+              searchText: searchIndex,
+              source: sourceName,
+              sourceClass: 'badge-ica'
+            };
+          });
+        }
 
         // 4. Coop Medlem
         let coopItems = [];
@@ -526,9 +553,17 @@
             const fullTitle = item.brandName ? `${item.brandName}: ${item.title}` : item.title;
             const extraKeywords = getExtraKeywords(fullTitle);
 
+            const searchIndex = [
+              fullTitle,
+              sourceName,
+              item.description,
+              item.brandName,
+              extraKeywords
+            ].filter(Boolean).join(' ').toLowerCase();
+
             return {
               title: fullTitle,
-              searchText: `${sourceName} ${item.description || ''} ${item.brandName || ''} ${extraKeywords}`.trim(),
+              searchText: searchIndex,
               image: item.imageUrl || item.image || PLACEHOLDER_IMG,
               url: item.url || '#',
               source: sourceName,
@@ -537,13 +572,10 @@
           });
         }
 
-        // Slå ihop alla listor
         const combinedDeals = [...mecenatItems, ...hyresgastItems, ...icaItems, ...coopItems];
 
-        // Blanda listan deterministiskt med nyckel (seed = 42)
         allDeals = shuffleArray(combinedDeals, 42);
 
-        // Bygg index för sökförslag
         buildSuggestionsIndex(allDeals);
 
         document.getElementById('loading').classList.add('hidden');
@@ -598,31 +630,21 @@
     document.getElementById('searchInput').addEventListener('input', (e) => {
       const currentValue = e.target.value;
 
-      // Uppdatera sökförslagen direkt vid knapptryck
       updateSuggestions(currentValue);
 
-      // Avbryt tidigare väntande sökning för kortfiltreringen
       clearTimeout(searchTimeout);
 
-      // Vänta 300 ms efter senaste knapptryckningen innan kortfiltet körs
       searchTimeout = setTimeout(() => {
         const query = currentValue.toLowerCase().trim();
 
-        // Om sökfältet är tomt, visa alla direkt
         if (!query) {
           renderDeals(allDeals);
           return;
         }
 
-        // Escapa specialtecken (t.ex. +, ?, ()) så att regex inte kraschar
-        const escapedQuery = query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-        const regex = new RegExp(`\\b${escapedQuery}\\b`, 'i');
-
+        // Använd enkel .includes() istället för \b i regex
         const filtered = allDeals.filter(deal => {
-          const titleMatch = deal.title ? regex.test(deal.title) : false;
-          const textMatch = deal.searchText ? regex.test(deal.searchText) : false;
-
-          return titleMatch || textMatch;
+          return deal.searchText && deal.searchText.includes(query);
         });
 
         renderDeals(filtered);
