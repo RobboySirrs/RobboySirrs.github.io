@@ -1,4 +1,5 @@
 const fs = require('fs');
+const puppeteer = require('puppeteer');
 
 const BROWSER_HEADERS = {
   'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36',
@@ -58,6 +59,78 @@ function parseIcaHtml(html) {
   return icaItems;
 }
 
+async function fetchCoopDeals() {
+  console.log('Startar Puppeteer för Coop partnererbjudanden...');
+  const browser = await puppeteer.launch({
+    headless: 'new',
+    args: ['--no-sandbox', '--disable-setuid-sandbox']
+  });
+
+  try {
+    const page = await browser.newPage();
+    await page.setUserAgent(BROWSER_HEADERS['User-Agent']);
+
+    await page.goto('https://www.coop.se/medlem/partnererbjudanden/', { waitUntil: 'networkidle2' });
+    await page.waitForSelector('a.o_e3019J', { timeout: 10000 }).catch(() => {});
+
+    const rawDeals = await page.evaluate((placeholder) => {
+      const cards = document.querySelectorAll('a.o_e3019J');
+      const sourceName = 'Coop Medlem';
+      
+      return Array.from(cards).map(card => {
+        const titleEl = card.querySelector('h3.qCtytrLV');
+        const textEl = card.querySelector('.T9KSX3ng');
+        const href = card.getAttribute('href');
+
+        const imgDiv = card.querySelector('.cjGGRnc3');
+        let imageUrl = placeholder;
+        if (imgDiv) {
+          const bgStyle = imgDiv.style.backgroundImage;
+          const match = bgStyle.match(/url\(['"]?(.*?)['"]?\)/);
+          if (match && match[1]) {
+            imageUrl = match[1].startsWith('//') ? `https:${match[1]}` : match[1];
+          }
+        }
+
+        const rawText = textEl ? textEl.innerText.trim() : '';
+        const lines = rawText.split('\n').map(l => l.trim()).filter(Boolean);
+
+        const discountLine = lines.find(line => 
+          (/%|rabatt/i.test(line)) && !/bonuspoäng|poäng/i.test(line)
+        ) || null;
+
+        const partnerTitle = titleEl ? titleEl.innerText.trim() : '';
+        const fullTitle = partnerTitle && discountLine 
+          ? `${partnerTitle}: ${discountLine}` 
+          : (partnerTitle || discountLine || '');
+
+        let url = href ? href.trim() : '#';
+        if (url !== '#' && !url.startsWith('http')) {
+          url = `https://www.coop.se${url}`;
+        }
+
+        return {
+          title: fullTitle,
+          searchText: `${sourceName} ${partnerTitle} ${discountLine || ''}`,
+          image: imageUrl,
+          url: url,
+          source: sourceName,
+          sourceClass: 'badge-coop',
+          discount: discountLine
+        };
+      });
+    }, PLACEHOLDER_IMG);
+
+    await browser.close();
+    
+    return rawDeals.filter(deal => deal.discount !== null && deal.title !== '');
+  } catch (err) {
+    console.error('Coop fel vid Puppeteer-hämtning:', err.message);
+    await browser.close();
+    return [];
+  }
+}
+
 async function run() {
   console.log('Startar hämtning av erbjudanden...');
 
@@ -68,6 +141,7 @@ async function run() {
   let mecenatData = null;
   let hyresgastData = null;
   let icaItems = [];
+  let coopItems = [];
 
   // 1. Mecenat Alumni
   try {
@@ -85,7 +159,7 @@ async function run() {
     console.error('Hyresgästföreningen fel:', err.message);
   }
 
-  // 3. ICA (Hämta HTML och kör din parsning)
+  // 3. ICA (Hämta HTML och kör parsning)
   try {
     const res = await fetch(icaUrl, { headers: BROWSER_HEADERS });
     if (res.ok) {
@@ -97,17 +171,25 @@ async function run() {
     console.error('ICA fel:', err.message);
   }
 
+  // 4. Coop (Kör Puppeteer)
+  try {
+    coopItems = await fetchCoopDeals();
+    console.log(`Hittade ${coopItems.length} Coop-erbjudanden med rabatt!`);
+  } catch (err) {
+    console.error('Coop fel:', err.message);
+  }
+
   // Spara helt färdig parsad JSON
   const finalData = {
     updatedAt: new Date().toISOString(),
     mecenat: mecenatData,
     hyresgast: hyresgastData,
-    ica: icaItems
+    ica: icaItems,
+    coop: coopItems
   };
 
   fs.writeFileSync('data.json', JSON.stringify(finalData, null, 2));
-  console.log('data.json uppdaterad!');
+  console.log('data.json uppdaterad med alla källor!');
 }
 
 run();
-          
