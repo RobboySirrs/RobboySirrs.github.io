@@ -1,8 +1,0 @@
-{
-  "name": "rabatt-scraper",
-  "version": "1.0.0",
-  "main": "fetch-data.js",
-  "dependencies": {
-    "puppeteer": "^22.0.0"
-  }
-}
