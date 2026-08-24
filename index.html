@@ -578,15 +578,36 @@
       });
     }
 
-    document.getElementById('searchInput').addEventListener('input', (e) => {
-      const query = e.target.value.toLowerCase().trim();
-      const filtered = allDeals.filter(deal => {
-        const titleMatch = deal.title ? deal.title.toLowerCase().includes(query) : false;
-        const textMatch = deal.searchText ? deal.searchText.toLowerCase().includes(query) : false;
-        return titleMatch || textMatch;
-      });
-      renderDeals(filtered);
+   let searchTimeout;
+
+document.getElementById('searchInput').addEventListener('input', (e) => {
+  // Avbryt tidigare väntande sökning
+  clearTimeout(searchTimeout);
+
+  // Vänta 300 ms efter senaste knapptryckningen innan sökningen körs
+  searchTimeout = setTimeout(() => {
+    const query = e.target.value.toLowerCase().trim();
+
+    // Om sökfältet är tomt, visa alla direkt
+    if (!query) {
+      renderDeals(allDeals);
+      return;
+    }
+
+    // Escapa specialtecken (t.ex. +, ?, ()) så att regex inte kraschar
+    const escapedQuery = query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    const regex = new RegExp(`\\b${escapedQuery}\\b`, 'i');
+
+    const filtered = allDeals.filter(deal => {
+      const titleMatch = deal.title ? regex.test(deal.title) : false;
+      const textMatch = deal.searchText ? regex.test(deal.searchText) : false;
+
+      return titleMatch || textMatch;
     });
+
+    renderDeals(filtered);
+  }, 300); // 300 ms fördröjning
+});
 
     loadData();
   </script>
