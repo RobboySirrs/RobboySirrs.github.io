@@ -294,17 +294,22 @@
     };
 
     function getExtraKeywords(title = '') {
-      const lower = title.toLowerCase();
-      let extra = [];
+  const lowerTitle = title.toLowerCase();
+  let extra = [];
 
-      for (const [brand, keywords] of Object.entries(BRAND_KEYWORDS)) {
-        if (lower.includes(brand)) {
-          extra.push(keywords);
-        }
-      }
+  // Jämför BARA titeln mot själva varumärkesnamnet (brand), INTE mot sökorden (keywords)
+  for (const [brand, keywords] of Object.entries(BRAND_KEYWORDS)) {
+    // Escapa specialtecken och kräva att varumärket matchas som ett eget ord
+    const safeBrand = brand.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    const regex = new RegExp(`(?:^|\\s|\\b)${safeBrand}(?:$|\\s|\\b)`, 'i');
 
-      return extra.join(' ');
+    if (regex.test(lowerTitle)) {
+      extra.push(keywords);
     }
+  }
+
+  return extra.join(' ');
+}
 
     let allDeals = [];
 
