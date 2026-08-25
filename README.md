@@ -2,6 +2,10 @@
 
 En snabb, lightweight webbapplikation och Progressive Web App (PWA) för att enkelt söka, filtrera och sortera rabattkoder och erbjudanden från olika källor.
 
+![PWA Ready](https://img.shields.io/badge/PWA-Ready-success?style=flat-square)
+![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-yellow?style=flat-square)
+![License](https://img.shields.io/badge/License-MIT-blue?style=flat-square)
+
 ---
 
 ## ✨ Funktioner
