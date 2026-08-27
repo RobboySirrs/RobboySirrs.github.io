@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-27T19:18:21.543Z",
+  "updatedAt": "2026-08-27T19:27:39.223Z",
   "mecenat": {
     "discountHits": 951,
     "totalHits": 1987,
@@ -61786,5 +61786,6 @@
       "source": "ICA Stammis",
       "sourceClass": "badge-ica"
     }
-  ]
+  ],
+  "coop": []
 }
