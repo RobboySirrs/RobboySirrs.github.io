@@ -59,61 +59,80 @@ function parseIcaHtml(html) {
   return icaItems;
 }
 
-function parseCoopHtml(html) {
-  if (!html) return [];
-  const coopItems = [];
+async function fetchCoopDeals() {
+  console.log('Startar Puppeteer för Coop partnererbjudanden...');
+  const browser = await puppeteer.launch({
+    headless: 'new',
+    args: ['--no-sandbox', '--disable-setuid-sandbox']
+  });
+
   try {
-    const match = html.match(/<script id="__NEXT_DATA__" type="application\/json">(.*?)<\/script>/);
-    if (match && match[1]) {
-      const data = JSON.parse(match[1]);
-      const offers = data?.props?.pageProps?.offers || [];
+    const page = await browser.newPage();
+    await page.setUserAgent(BROWSER_HEADERS['User-Agent']);
+
+    await page.goto('https://www.coop.se/medlem/partnererbjudanden/', { waitUntil: 'networkidle2' });
+    await page.waitForSelector('a.o_e3019J', { timeout: 10000 }).catch(() => {});
+
+    const rawDeals = await page.evaluate((placeholder) => {
+      const cards = document.querySelectorAll('a.o_e3019J');
+      const sourceName = 'Coop Medlem';
       
-      offers.forEach(item => {
-        coopItems.push({
-          title: item.title || item.heading || '',
-          source: 'Coop Erbjudanden',
-          image: item.imageUrl || PLACEHOLDER_IMG,
-          url: item.url ? `https://www.coop.se${item.url}` : '#'
-        });
+      return Array.from(cards).map(card => {
+        const titleEl = card.querySelector('h3.qCtytrLV');
+        const textEl = card.querySelector('.T9KSX3ng');
+        const href = card.getAttribute('href');
+
+        const imgDiv = card.querySelector('.cjGGRnc3');
+        let imageUrl = placeholder;
+        if (imgDiv) {
+          const bgStyle = imgDiv.style.backgroundImage;
+          const match = bgStyle.match(/url\(['"]?(.*?)['"]?\)/);
+          if (match && match[1]) {
+            imageUrl = match[1].startsWith('//') ? `https:${match[1]}` : match[1];
+          }
+        }
+
+        const rawText = textEl ? textEl.innerText.trim() : '';
+        const lines = rawText.split('\n').map(l => l.trim()).filter(Boolean);
+
+        const discountLine = lines.find(line => 
+          (/%|rabatt/i.test(line)) && !/bonuspoäng|poäng/i.test(line)
+        ) || null;
+
+        const partnerTitle = titleEl ? titleEl.innerText.trim() : '';
+        const fullTitle = partnerTitle && discountLine 
+          ? `${partnerTitle}: ${discountLine}` 
+          : (partnerTitle || discountLine || '');
+
+        let url = href ? href.trim() : '#';
+        if (url !== '#' && !url.startsWith('http')) {
+          url = `https://www.coop.se${url}`;
+        }
+
+        return {
+          title: fullTitle,
+          searchText: `${sourceName} ${partnerTitle} ${discountLine || ''}`,
+          image: imageUrl,
+          url: url,
+          source: sourceName,
+          sourceClass: 'badge-coop',
+          discount: discountLine
+        };
       });
-    }
-  } catch (err) {
-    console.error("Fel vid parsing av Coop HTML:", err);
-  }
-  return coopItems;
-}
+    }, PLACEHOLDER_IMG);
 
-async function fetchCoopData() {
-  const coopUrl = 'https://www.coop.se/handla/erbjudanden/';
-  let browser = null;
-  let page = null;
-
-  try {
-    console.log('[Steg 4/4] Startar Puppeteer för Coop...');
-    browser = await puppeteer.launch({ 
-      headless: false,
-      args: ['--no-sandbox', '--disable-setuid-sandbox'] 
-    });
-
-    page = await browser.newPage();
-    await page.setExtraHTTPHeaders(BROWSER_HEADERS);
-    await page.goto(coopUrl, { waitUntil: 'domcontentloaded', timeout: 30000 });
+    await browser.close();
     
-    const html = await page.content();
-    const coopItems = parseCoopHtml(html);
-    console.log(`[Coop] Hittade ${coopItems.length} erbjudanden!`);
-    return coopItems;
-
+    return rawDeals.filter(deal => deal.discount !== null && deal.title !== '');
   } catch (err) {
-    console.error('[Coop] Fel vid hämtning med Puppeteer:', err.message);
+    console.error('Coop fel vid Puppeteer-hämtning:', err.message);
+    await browser.close();
     return [];
-  } finally {
-    if (browser) await browser.close();
   }
 }
 
 async function run() {
-  console.log('=== Startar hämtning av erbjudanden ===');
+  console.log('Startar hämtning av erbjudanden...');
 
   const mecenatUrl = 'https://www.mecenatalumni.com/service/falcon/v2/se/f/query?site=alumni';
   const hyresgastUrl = 'https://www.hyresgastforeningen.se/api/benefitlistingblock/?benefitListingBlockId=1ab9cc507df44e629eb3bf6584c5cc80&itemsLimit=6000&randomSortOrderSeed=825241421';
@@ -125,31 +144,22 @@ async function run() {
   let coopItems = [];
 
   // 1. Mecenat Alumni
-  console.log('[Steg 1/4] Påbörjar anrop till Mecenat...');
   try {
     const res = await fetch(mecenatUrl, { headers: BROWSER_HEADERS });
-    if (res.ok) {
-      mecenatData = await res.json();
-      console.log('[Mecenat] Hämtning lyckades!');
-    }
+    if (res.ok) mecenatData = await res.json();
   } catch (err) {
     console.error('Mecenat fel:', err.message);
   }
 
   // 2. Hyresgästföreningen
-  console.log('[Steg 2/4] Påbörjar anrop till Hyresgästföreningen...');
   try {
     const res = await fetch(hyresgastUrl, { headers: BROWSER_HEADERS });
-    if (res.ok) {
-      hyresgastData = await res.json();
-      console.log('[Hyresgästföreningen] Hämtning lyckades!');
-    }
+    if (res.ok) hyresgastData = await res.json();
   } catch (err) {
     console.error('Hyresgästföreningen fel:', err.message);
   }
 
-  // 3. ICA
-  console.log('[Steg 3/4] Påbörjar anrop till ICA...');
+  // 3. ICA (Hämta HTML och kör parsning)
   try {
     const res = await fetch(icaUrl, { headers: BROWSER_HEADERS });
     if (res.ok) {
@@ -161,25 +171,25 @@ async function run() {
     console.error('ICA fel:', err.message);
   }
 
-  // 4. Coop (Puppeteer)
-  coopItems = await fetchCoopData();
-
-  // Spara allt till JSON
-  console.log('[Slutsteg] Sparar finalData till fil...');
+  // 4. Coop (Kör Puppeteer)
   try {
-    const finalData = {
-      updatedAt: new Date().toISOString(),
-      mecenat: mecenatData,
-      hyresgast: hyresgastData,
-      ica: icaItems,
-      coop: coopItems
-    };
-
-    fs.writeFileSync('data.json', JSON.stringify(finalData, null, 2));
-    console.log('data.json uppdaterad!');
+    coopItems = await fetchCoopDeals();
+    console.log(`Hittade ${coopItems.length} Coop-erbjudanden med rabatt!`);
   } catch (err) {
-    console.error('Kritiskt fel vid skrivning av data.json:', err.message);
+    console.error('Coop fel:', err.message);
   }
+
+  // Spara helt färdig parsad JSON
+  const finalData = {
+    updatedAt: new Date().toISOString(),
+    mecenat: mecenatData,
+    hyresgast: hyresgastData,
+    ica: icaItems,
+    coop: coopItems
+  };
+
+  fs.writeFileSync('data.json', JSON.stringify(finalData, null, 2));
+  console.log('data.json uppdaterad med alla källor!');
 }
 
 run();
