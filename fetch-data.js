@@ -9,13 +9,17 @@ const BROWSER_HEADERS = {
 const PLACEHOLDER_IMG = "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 24 24' fill='none' stroke='%23ccc' stroke-width='2'><rect x='3' y='3' width='18' height='18' rx='2'/><circle cx='8.5' cy='8.5' r='1.5'/><polyline points='21 15 16 10 5 21'/></svg>";
 
 function parseIcaHtml(html) {
-  if (!html) return [];
+  if (!html) {
+    console.log('[ICA Parse] Ingen HTML skickades till parsningen.');
+    return [];
+  }
   
   const icaItems = [];
   try {
     const matches = html.match(/\{"image":[\s\S]*?"component":"OfferPartnerPageNavigationBlock"[^}]*\}/g);
 
     if (matches) {
+      console.log(`[ICA Parse] Hittade ${matches.length} matcher i HTML-koden.`);
       matches.forEach(jsonStr => {
         try {
           const item = JSON.parse(jsonStr);
@@ -47,9 +51,11 @@ function parseIcaHtml(html) {
             sourceClass: 'badge-ica'
           });
         } catch (e) {
-          // Hoppa över trasiga objekt
+          console.error('[ICA Parse] Fel vid JSON.parse av ett objekt:', e.message);
         }
       });
+    } else {
+      console.log('[ICA Parse] Inga matcher hittades mot regex i HTML-koden.');
     }
   } catch (err) {
     console.error("Fel vid parsning av ICA-data:", err);
@@ -59,7 +65,7 @@ function parseIcaHtml(html) {
 }
 
 async function run() {
-  console.log('Startar hämtning av erbjudanden...');
+  console.log('=== Startar hämtning av erbjudanden ===');
 
   const mecenatUrl = 'https://www.mecenatalumni.com/service/falcon/v2/se/f/query?site=alumni';
   const hyresgastUrl = 'https://www.hyresgastforeningen.se/api/benefitlistingblock/?benefitListingBlockId=1ab9cc507df44e629eb3bf6584c5cc80&itemsLimit=6000&randomSortOrderSeed=825241421';
@@ -70,44 +76,67 @@ async function run() {
   let icaItems = [];
 
   // 1. Mecenat Alumni
+  console.log('[Steg 1/3] Påbörjar anrop till Mecenat...');
   try {
     const res = await fetch(mecenatUrl, { headers: BROWSER_HEADERS });
-    if (res.ok) mecenatData = await res.json();
+    console.log(`[Mecenat] HTTP Status: ${res.status} ${res.statusText}`);
+    if (res.ok) {
+      mecenatData = await res.json();
+      console.log('[Mecenat] Datan hämtades och tolkades som JSON.');
+    } else {
+      console.error(`[Mecenat] Misslyckades med statuskod: ${res.status}`);
+    }
   } catch (err) {
     console.error('Mecenat fel:', err.message);
   }
 
   // 2. Hyresgästföreningen
+  console.log('[Steg 2/3] Påbörjar anrop till Hyresgästföreningen...');
   try {
     const res = await fetch(hyresgastUrl, { headers: BROWSER_HEADERS });
-    if (res.ok) hyresgastData = await res.json();
+    console.log(`[Hyresgästföreningen] HTTP Status: ${res.status} ${res.statusText}`);
+    if (res.ok) {
+      hyresgastData = await res.json();
+      console.log('[Hyresgästföreningen] Datan hämtades och tolkades som JSON.');
+    } else {
+      console.error(`[Hyresgästföreningen] Misslyckades med statuskod: ${res.status}`);
+    }
   } catch (err) {
     console.error('Hyresgästföreningen fel:', err.message);
   }
 
   // 3. ICA (Hämta HTML och kör din parsning)
+  console.log('[Steg 3/3] Påbörjar anrop till ICA...');
   try {
     const res = await fetch(icaUrl, { headers: BROWSER_HEADERS });
+    console.log(`[ICA] HTTP Status: ${res.status} ${res.statusText}`);
     if (res.ok) {
       const html = await res.text();
+      console.log(`[ICA] HTML hämtad (${html.length} tecken). Påbörjar parsning...`);
       icaItems = parseIcaHtml(html);
       console.log(`Hittade ${icaItems.length} ICA-erbjudanden!`);
+    } else {
+      console.error(`[ICA] Misslyckades med statuskod: ${res.status}`);
     }
   } catch (err) {
     console.error('ICA fel:', err.message);
   }
 
   // Spara helt färdig parsad JSON
-  const finalData = {
-    updatedAt: new Date().toISOString(),
-    mecenat: mecenatData,
-    hyresgast: hyresgastData,
-    ica: icaItems
-  };
+  console.log('[Slutsteg] Sammanställer finalData och sparar till fil...');
+  try {
+    const finalData = {
+      updatedAt: new Date().toISOString(),
+      mecenat: mecenatData,
+      hyresgast: hyresgastData,
+      ica: icaItems
+    };
 
-  fs.writeFileSync('data.json', JSON.stringify(finalData, null, 2));
-  console.log('data.json uppdaterad!');
+    fs.writeFileSync('data.json', JSON.stringify(finalData, null, 2));
+    console.log('data.json uppdaterad!');
+  } catch (err) {
+    console.error('Kritiskt fel vid skrivning av data.json:', err.message);
+  }
 }
 
 run();
-          
