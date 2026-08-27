@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-27T19:27:39.223Z",
+  "updatedAt": "2026-08-27T19:32:06.438Z",
   "mecenat": {
     "discountHits": 951,
     "totalHits": 1987,
@@ -61787,5 +61787,294 @@
       "sourceClass": "badge-ica"
     }
   ],
-  "coop": []
+  "coop": [
+    {
+      "title": "Hurtigruten: 10% extra Coop-rabatt.",
+      "searchText": "Coop Medlem Hurtigruten 10% extra Coop-rabatt.",
+      "image": "https://res.cloudinary.com/coopsverige/image/upload/f_auto,ar_1:1,c_fill,q_auto,h_720/v1787727040/%C3%96vrigt/partnererbjudande/dyd10nhwcdpyovyqqjh9.jpg",
+      "url": "https://www.coop.se/medlem/partnererbjudanden/hurtigruten/",
+      "source": "Coop Medlem",
+      "sourceClass": "badge-coop",
+      "discount": "10% extra Coop-rabatt."
+    },
+    {
+      "title": "Synoptik: 25% rabatt i både butik och online.",
+      "searchText": "Coop Medlem Synoptik 25% rabatt i både butik och online.",
+      "image": "https://res.cloudinary.com/coopsverige/image/upload/f_auto,ar_1:1,c_fill,q_auto,h_720/v1775564651/DIGITALT/Partner/2026/Moduler/teaser-synoptik_ygjeco.png",
+      "url": "https://www.coop.se/medlem/partnererbjudanden/synoptik/",
+      "source": "Coop Medlem",
+      "sourceClass": "badge-coop",
+      "discount": "25% rabatt i både butik och online."
+    },
+    {
+      "title": "Viaplay: 50% rabatt",
+      "searchText": "Coop Medlem Viaplay 50% rabatt",
+      "image": "https://res.cloudinary.com/coopsverige/image/upload/f_auto,ar_1:1,c_fill,q_auto,h_720/v1775564661/DIGITALT/Partner/2026/Moduler/teaser-viaplay_qqsel6.png",
+      "url": "https://www.coop.se/medlem/partnererbjudanden/viaplay/",
+      "source": "Coop Medlem",
+      "sourceClass": "badge-coop",
+      "discount": "50% rabatt"
+    },
+    {
+      "title": "A Star Night – 80-tals hits: 25% rabatt.",
+      "searchText": "Coop Medlem A Star Night – 80-tals hits 25% rabatt.",
+      "image": "https://res.cloudinary.com/coopsverige/image/upload/f_auto,ar_1:1,c_fill,q_auto,h_720/v1778595392/%C3%96vrigt/partnererbjudande/r3b8b4tkqhtrm9arqbbq.jpg",
+      "url": "https://www.coop.se/medlem/partnererbjudanden/a-star-night/",
+      "source": "Coop Medlem",
+      "sourceClass": "badge-coop",
+      "discount": "25% rabatt."
+    },
+    {
+      "title": "Alfons Åbergs Kulturhus: 25% rabatt.",
+      "searchText": "Coop Medlem Alfons Åbergs Kulturhus 25% rabatt.",
+      "image": "https://res.cloudinary.com/coopsverige/image/upload/f_auto,ar_1:1,c_fill,q_auto,h_720/v1775558940/DIGITALT/Partner/2026/Moduler/teaser-alfons-aberg_z3nohx.png",
+      "url": "https://www.coop.se/medlem/partnererbjudanden/alfons-aberg/",
+      "source": "Coop Medlem",
+      "sourceClass": "badge-coop",
+      "discount": "25% rabatt."
+    },
+    {
+      "title": "Cabonline - Taxi: Upp till 15% rabatt.",
+      "searchText": "Coop Medlem Cabonline - Taxi Upp till 15% rabatt.",
+      "image": "https://res.cloudinary.com/coopsverige/image/upload/f_auto,ar_1:1,c_fill,q_auto,h_720/v1776344116/%C3%96vrigt/partnererbjudande/iq8b2njp6k6gi00bwx39.jpg",
+      "url": "https://www.coop.se/medlem/partnererbjudanden/cabonline/",
+      "source": "Coop Medlem",
+      "sourceClass": "badge-coop",
+      "discount": "Upp till 15% rabatt."
+    },
+    {
+      "title": "EF Education: Upp till 20 000 kr rabatt.",
+      "searchText": "Coop Medlem EF Education Upp till 20 000 kr rabatt.",
+      "image": "https://res.cloudinary.com/coopsverige/image/upload/f_auto,ar_1:1,c_fill,q_auto,h_720/v1775558958/DIGITALT/Partner/2026/Moduler/teaser-ef-educations_nva6zr.png",
+      "url": "https://www.coop.se/medlem/partnererbjudanden/efeducation/",
+      "source": "Coop Medlem",
+      "sourceClass": "badge-coop",
+      "discount": "Upp till 20 000 kr rabatt."
+    },
+    {
+      "title": "Electrolux: 20% rabatt på utvalda produkter.",
+      "searchText": "Coop Medlem Electrolux 20% rabatt på utvalda produkter.",
+      "image": "https://res.cloudinary.com/coopsverige/image/upload/f_auto,ar_1:1,c_fill,q_auto,h_720/v1775558962/DIGITALT/Partner/2026/Moduler/teaser-electrolux_emoepu.png",
+      "url": "https://www.coop.se/medlem/partnererbjudanden/electrolux/",
+      "source": "Coop Medlem",
+      "sourceClass": "badge-coop",
+      "discount": "20% rabatt på utvalda produkter."
+    },
+    {
+      "title": "Ellos: 10% rabatt på köpet.",
+      "searchText": "Coop Medlem Ellos 10% rabatt på köpet.",
+      "image": "https://res.cloudinary.com/coopsverige/image/upload/f_auto,ar_1:1,c_fill,q_auto,h_720/v1775558965/DIGITALT/Partner/2026/Moduler/teaser-ellos_qdruqb.png",
+      "url": "https://www.coop.se/medlem/partnererbjudanden/ellos/",
+      "source": "Coop Medlem",
+      "sourceClass": "badge-coop",
+      "discount": "10% rabatt på köpet."
+    },
+    {
+      "title": "Europcar: Upp till 15% rabatt.",
+      "searchText": "Coop Medlem Europcar Upp till 15% rabatt.",
+      "image": "https://res.cloudinary.com/coopsverige/image/upload/f_auto,ar_1:1,c_fill,q_auto,h_720/v1776345671/%C3%96vrigt/partnererbjudande/r8dffu9yu54cvzp2zdv0.jpg",
+      "url": "https://www.coop.se/medlem/partnererbjudanden/europcar/",
+      "source": "Coop Medlem",
+      "sourceClass": "badge-coop",
+      "discount": "Upp till 15% rabatt."
+    },
+    {
+      "title": "Euroflorist: 10% rabatt.",
+      "searchText": "Coop Medlem Euroflorist 10% rabatt.",
+      "image": "https://res.cloudinary.com/coopsverige/image/upload/f_auto,ar_1:1,c_fill,q_auto,h_720/v1775558968/DIGITALT/Partner/2026/Moduler/teaser-euroflorist_n1zaqp.png",
+      "url": "https://www.coop.se/medlem/partnererbjudanden/Euroflorist/",
+      "source": "Coop Medlem",
+      "sourceClass": "badge-coop",
+      "discount": "10% rabatt."
+    },
+    {
+      "title": "Familjens Jurist: Upp till 25% rabatt på digitala juridiska dokument.",
+      "searchText": "Coop Medlem Familjens Jurist Upp till 25% rabatt på digitala juridiska dokument.",
+      "image": "https://res.cloudinary.com/coopsverige/image/upload/f_auto,ar_1:1,c_fill,q_auto,h_720/v1775558971/DIGITALT/Partner/2026/Moduler/teaser-familjens-jurist_ps4aye.png",
+      "url": "https://www.coop.se/medlem/partnererbjudanden/familjens-jurist/",
+      "source": "Coop Medlem",
+      "sourceClass": "badge-coop",
+      "discount": "Upp till 25% rabatt på digitala juridiska dokument."
+    },
+    {
+      "title": "Geggamoja: 15% rabatt.",
+      "searchText": "Coop Medlem Geggamoja 15% rabatt.",
+      "image": "https://res.cloudinary.com/coopsverige/image/upload/f_auto,ar_1:1,c_fill,q_auto,h_720/v1775558978/DIGITALT/Partner/2026/Moduler/teaser-geggamoja_fcqpt1.png",
+      "url": "https://www.coop.se/medlem/partnererbjudanden/geggamoja/",
+      "source": "Coop Medlem",
+      "sourceClass": "badge-coop",
+      "discount": "15% rabatt."
+    },
+    {
+      "title": "Hotellpremien: Upp till 40% rabatt.",
+      "searchText": "Coop Medlem Hotellpremien Upp till 40% rabatt.",
+      "image": "https://res.cloudinary.com/coopsverige/image/upload/f_auto,ar_1:1,c_fill,q_auto,h_720/v1775558986/DIGITALT/Partner/2026/Moduler/teaser-hotellpremien_zos1zs.png",
+      "url": "https://hotellpremien.se/",
+      "source": "Coop Medlem",
+      "sourceClass": "badge-coop",
+      "discount": "Upp till 40% rabatt."
+    },
+    {
+      "title": "Hurtigruten: 10% extra Coop-rabatt.",
+      "searchText": "Coop Medlem Hurtigruten 10% extra Coop-rabatt.",
+      "image": "https://res.cloudinary.com/coopsverige/image/upload/f_auto,ar_1:1,c_fill,q_auto,h_720/v1787727040/%C3%96vrigt/partnererbjudande/dyd10nhwcdpyovyqqjh9.jpg",
+      "url": "https://www.coop.se/medlem/partnererbjudanden/hurtigruten/",
+      "source": "Coop Medlem",
+      "sourceClass": "badge-coop",
+      "discount": "10% extra Coop-rabatt."
+    },
+    {
+      "title": "Junibacken: 20% rabatt.",
+      "searchText": "Coop Medlem Junibacken 20% rabatt.",
+      "image": "https://res.cloudinary.com/coopsverige/image/upload/f_auto,ar_1:1,c_fill,q_auto,h_720/v1775558997/DIGITALT/Partner/2026/Moduler/teaser-junibacken_vacet8.png",
+      "url": "https://www.coop.se/medlem/partnererbjudanden/junibacken/",
+      "source": "Coop Medlem",
+      "sourceClass": "badge-coop",
+      "discount": "20% rabatt."
+    },
+    {
+      "title": "Live it: Upp till 15% rabatt.",
+      "searchText": "Coop Medlem Live it Upp till 15% rabatt.",
+      "image": "https://res.cloudinary.com/coopsverige/image/upload/f_auto,ar_1:1,c_fill,q_auto,h_720/v1775559008/DIGITALT/Partner/2026/Moduler/teaser-liveit_gbj5tj.png",
+      "url": "https://www.coop.se/medlem/partnererbjudanden/live-it/",
+      "source": "Coop Medlem",
+      "sourceClass": "badge-coop",
+      "discount": "Upp till 15% rabatt."
+    },
+    {
+      "title": "MedMera Bank: Medlemslån och få 1 % ränterabatt.*",
+      "searchText": "Coop Medlem MedMera Bank Medlemslån och få 1 % ränterabatt.*",
+      "image": "https://res.cloudinary.com/coopsverige/image/upload/f_auto,ar_1:1,c_fill,q_auto,h_720/v1775564623/DIGITALT/Partner/2026/Moduler/teaser-medmera_udmkku.png",
+      "url": "https://www.coop.se/bank-och-betalkort/lana-pengar/medlemslan/",
+      "source": "Coop Medlem",
+      "sourceClass": "badge-coop",
+      "discount": "Medlemslån och få 1 % ränterabatt.*"
+    },
+    {
+      "title": "Restaurangpremien: Upp till 50% rabatt.",
+      "searchText": "Coop Medlem Restaurangpremien Upp till 50% rabatt.",
+      "image": "https://res.cloudinary.com/coopsverige/image/upload/f_auto,ar_1:1,c_fill,q_auto,h_720/v1775564637/DIGITALT/Partner/2026/Moduler/teaser-restaurangpremien_jc4jt9.png",
+      "url": "https://www.coop.se/medlem/partnererbjudanden/restaurangpremien/",
+      "source": "Coop Medlem",
+      "sourceClass": "badge-coop",
+      "discount": "Upp till 50% rabatt."
+    },
+    {
+      "title": "Sembo: Upp till 40% på utvalt boende & entré till LEGOLAND®",
+      "searchText": "Coop Medlem Sembo Upp till 40% på utvalt boende & entré till LEGOLAND®",
+      "image": "https://res.cloudinary.com/coopsverige/image/upload/f_auto,ar_1:1,c_fill,q_auto,h_720/v1776345931/%C3%96vrigt/partnererbjudande/tgbw6pt26yi9bissr0dr.jpg",
+      "url": "https://www.coop.se/medlem/partnererbjudanden/sembo/",
+      "source": "Coop Medlem",
+      "sourceClass": "badge-coop",
+      "discount": "Upp till 40% på utvalt boende & entré till LEGOLAND®"
+    },
+    {
+      "title": "SJ: 5 % rabatt.",
+      "searchText": "Coop Medlem SJ 5 % rabatt.",
+      "image": "https://res.cloudinary.com/coopsverige/image/upload/f_auto,ar_1:1,c_fill,q_auto,h_720/v1779370446/%C3%96vrigt/partnererbjudande/zxleb614fc3vkwyskhau.jpg",
+      "url": "https://www.coop.se/medlem/partnererbjudanden/sj/",
+      "source": "Coop Medlem",
+      "sourceClass": "badge-coop",
+      "discount": "5 % rabatt."
+    },
+    {
+      "title": "Smarteyes: 25% rabatt i valfri butik.",
+      "searchText": "Coop Medlem Smarteyes 25% rabatt i valfri butik.",
+      "image": "https://res.cloudinary.com/coopsverige/image/upload/f_auto,ar_1:1,c_fill,q_auto,h_720/v1775564645/DIGITALT/Partner/2026/Moduler/teaser-smarteyes_unkjyr.png",
+      "url": "https://www.coop.se/medlem/partnererbjudanden/Smarteyes/",
+      "source": "Coop Medlem",
+      "sourceClass": "badge-coop",
+      "discount": "25% rabatt i valfri butik."
+    },
+    {
+      "title": "Stena Line: 10% rabatt.",
+      "searchText": "Coop Medlem Stena Line 10% rabatt.",
+      "image": "https://res.cloudinary.com/coopsverige/image/upload/f_auto,ar_1:1,c_fill,q_auto,h_720/v1775564646/DIGITALT/Partner/2026/Moduler/teaser-stena-line_mm9qb5.png",
+      "url": "https://www.coop.se/medlem/partnererbjudanden/stenaline/",
+      "source": "Coop Medlem",
+      "sourceClass": "badge-coop",
+      "discount": "10% rabatt."
+    },
+    {
+      "title": "Stromma: 20% rabatt.",
+      "searchText": "Coop Medlem Stromma 20% rabatt.",
+      "image": "https://res.cloudinary.com/coopsverige/image/upload/f_auto,ar_1:1,c_fill,q_auto,h_720/v1775564648/DIGITALT/Partner/2026/Moduler/teaser-stromma_noygeh.png",
+      "url": "https://www.coop.se/medlem/partnererbjudanden/stromma/",
+      "source": "Coop Medlem",
+      "sourceClass": "badge-coop",
+      "discount": "20% rabatt."
+    },
+    {
+      "title": "Synoptik: 25% rabatt i både butik och online.",
+      "searchText": "Coop Medlem Synoptik 25% rabatt i både butik och online.",
+      "image": "https://res.cloudinary.com/coopsverige/image/upload/f_auto,ar_1:1,c_fill,q_auto,h_720/v1775564651/DIGITALT/Partner/2026/Moduler/teaser-synoptik_ygjeco.png",
+      "url": "https://www.coop.se/medlem/partnererbjudanden/synoptik/",
+      "source": "Coop Medlem",
+      "sourceClass": "badge-coop",
+      "discount": "25% rabatt i både butik och online."
+    },
+    {
+      "title": "Tallink Silja Line: Upp till 30% rabatt.",
+      "searchText": "Coop Medlem Tallink Silja Line Upp till 30% rabatt.",
+      "image": "https://res.cloudinary.com/coopsverige/image/upload/f_auto,ar_1:1,c_fill,q_auto,h_720/v1775564652/DIGITALT/Partner/2026/Moduler/teaser-tallink-silja_hsipnn.png",
+      "url": "https://www.coop.se/medlem/partnererbjudanden/Tallink-Silja/",
+      "source": "Coop Medlem",
+      "sourceClass": "badge-coop",
+      "discount": "Upp till 30% rabatt."
+    },
+    {
+      "title": "Tivoli i Köpenhamn: Upp till 20% rabatt.",
+      "searchText": "Coop Medlem Tivoli i Köpenhamn Upp till 20% rabatt.",
+      "image": "https://res.cloudinary.com/coopsverige/image/upload/f_auto,ar_1:1,c_fill,q_auto,h_720/v1775564655/DIGITALT/Partner/2026/Moduler/teaser-tivoli_zjxq3z.png",
+      "url": "https://www.coop.se/medlem/partnererbjudanden/tivoli/",
+      "source": "Coop Medlem",
+      "sourceClass": "badge-coop",
+      "discount": "Upp till 20% rabatt."
+    },
+    {
+      "title": "TT Line: Upp till 40% rabatt.",
+      "searchText": "Coop Medlem TT Line Upp till 40% rabatt.",
+      "image": "https://res.cloudinary.com/coopsverige/image/upload/f_auto,ar_1:1,c_fill,q_auto,h_720/v1775564656/DIGITALT/Partner/2026/Moduler/teaser-TT-line_fawdwo.png",
+      "url": "https://www.coop.se/medlem/partnererbjudanden/ttline/",
+      "source": "Coop Medlem",
+      "sourceClass": "badge-coop",
+      "discount": "Upp till 40% rabatt."
+    },
+    {
+      "title": "TusenFryd i Oslo: Upp till 37% Rabatt.",
+      "searchText": "Coop Medlem TusenFryd i Oslo Upp till 37% Rabatt.",
+      "image": "https://res.cloudinary.com/coopsverige/image/upload/f_auto,ar_1:1,c_fill,q_auto,h_720/v1775818430/DIGITALT/Partner/2026/Moduler/teaser-tusenfryd_rdtte6.png",
+      "url": "https://www.coop.se/medlem/partnererbjudanden/tusenfryd/",
+      "source": "Coop Medlem",
+      "sourceClass": "badge-coop",
+      "discount": "Upp till 37% Rabatt."
+    },
+    {
+      "title": "Vi: Rabatt på prenumeration.",
+      "searchText": "Coop Medlem Vi Rabatt på prenumeration.",
+      "image": "https://res.cloudinary.com/coopsverige/image/upload/f_auto,ar_1:1,c_fill,q_auto,h_720/v1775820026/DIGITALT/Partner/2026/Moduler/teaser-vitidningen_ksfl91.png",
+      "url": "https://www.coop.se/medlem/partnererbjudanden/tidningen-vi-prenumeration/",
+      "source": "Coop Medlem",
+      "sourceClass": "badge-coop",
+      "discount": "Rabatt på prenumeration."
+    },
+    {
+      "title": "Vi Läser: Rabatt på prenumeration.",
+      "searchText": "Coop Medlem Vi Läser Rabatt på prenumeration.",
+      "image": "https://res.cloudinary.com/coopsverige/image/upload/f_auto,ar_1:1,c_fill,q_auto,h_720/v1775820207/DIGITALT/Partner/2026/Moduler/teaser-vilasertidningen_d1lyuz.png",
+      "url": "https://www.coop.se/medlem/partnererbjudanden/tidningen-vi-laser-prenumeration/",
+      "source": "Coop Medlem",
+      "sourceClass": "badge-coop",
+      "discount": "Rabatt på prenumeration."
+    },
+    {
+      "title": "Viaplay: 50% rabatt",
+      "searchText": "Coop Medlem Viaplay 50% rabatt",
+      "image": "https://res.cloudinary.com/coopsverige/image/upload/f_auto,ar_1:1,c_fill,q_auto,h_720/v1775564661/DIGITALT/Partner/2026/Moduler/teaser-viaplay_qqsel6.png",
+      "url": "https://www.coop.se/medlem/partnererbjudanden/viaplay/",
+      "source": "Coop Medlem",
+      "sourceClass": "badge-coop",
+      "discount": "50% rabatt"
+    }
+  ]
 }
