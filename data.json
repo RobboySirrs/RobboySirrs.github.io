@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-27T04:33:18.930Z",
+  "updatedAt": "2026-08-27T19:11:43.094Z",
   "mecenat": {
     "discountHits": 951,
     "totalHits": 1987,
@@ -3050,39 +3050,6 @@
         "clickoutButtonText": "to_discount"
       },
       {
-        "id": "1094ad7e-717d-40a0-86c2-4a1ba76f3cd6",
-        "type": 2,
-        "title": "Prova gratis i 14 dagar – därefter 20 % alumnirabatt",
-        "subtitle": "Kurser, lektioner och övningar",
-        "image": "https://img.meccdn.com/media/image1_666_231212132953446481.jpg",
-        "imageAlt": "Prova gratis 14 dagar – därefter 20 % alumnirabatt",
-        "brandLogo": "https://img.meccdn.com/media/logo_666_231212132953430854.jpg",
-        "brandLogoAlt": "Eddler",
-        "brandName": "Eddler",
-        "brandPagePath": "/se/eddler",
-        "brandId": "032ea5e0-86fd-4952-91fd-9c574a6357fc",
-        "validFrom": "2026-08-15T22:00:00Z",
-        "validTo": "2026-09-06T21:59:59Z",
-        "url": "/se/eddler/prova-gratis-i-14-dagar-darefter-20-procent-alumnirabatt",
-        "conditionDescription": "",
-        "conditionURL": "",
-        "conditionHTML": "<p>Gäller t.o.m. 6/9.</p><p>Kan ej kombineras med andra rabatter.</p><p>Ange din unika rabattkod vid betalning.</p>",
-        "isCampaign": true,
-        "partnerURL": "https://eddler.se/",
-        "content": "<p>Ska du skriva Högskoleprovet? Eddler har all hjälp du behöver för de kvantitativa delarna. Som alumn kan du just nu testa Eddler gratis i 14 dagar – därefter får du 20 % rabatt. Passa på!</p><p>På Eddler lär du dig genom pedagogiska videor som är enkla att följa, mängder av interaktiva tester och fördjupande texter. Du slipper fastna – alla övningar, tester och prov innehåller fullständiga förklaringar och användbara tips. Eddler erbjuder heltäckande onlinekurser med lektioner i matematik för högstadiet, gymnasiets alla matematikkurser, högskoleprovet samt Fysik 1 och Fysik 2. Bakom Eddler står legitimerade gymnasielärare i matematik och fysik som brinner för att göra ämnena begripliga och engagerande.</p><p>Med Eddler Premium får du som prenumerant tillgång till samtliga kurser, lektioner och övningar.</p>",
-        "category": "E-50",
-        "mainCategoryName": "Böcker",
-        "metaTitle": "",
-        "metaDescription": "",
-        "subcategories": [
-          "E-50"
-        ],
-        "campaignOnly": false,
-        "showCountdown": false,
-        "sortOrder": 0,
-        "clickoutButtonText": "to_discount"
-      },
-      {
         "id": "06ac6285-fe09-40a9-9b8f-838e9c5ee82a",
         "type": 2,
         "title": "30 % alumnirabatt hos IDUN Minerals",
@@ -3563,6 +3530,39 @@
           "F-50",
           "F-60",
           "F-90"
+        ],
+        "campaignOnly": false,
+        "showCountdown": false,
+        "sortOrder": 0,
+        "clickoutButtonText": "to_discount"
+      },
+      {
+        "id": "1094ad7e-717d-40a0-86c2-4a1ba76f3cd6",
+        "type": 2,
+        "title": "Prova gratis i 14 dagar – därefter 20 % alumnirabatt",
+        "subtitle": "Kurser, lektioner och övningar",
+        "image": "https://img.meccdn.com/media/image1_666_231212132953446481.jpg",
+        "imageAlt": "Prova gratis 14 dagar – därefter 20 % alumnirabatt",
+        "brandLogo": "https://img.meccdn.com/media/logo_666_231212132953430854.jpg",
+        "brandLogoAlt": "Eddler",
+        "brandName": "Eddler",
+        "brandPagePath": "/se/eddler",
+        "brandId": "032ea5e0-86fd-4952-91fd-9c574a6357fc",
+        "validFrom": "2026-08-15T22:00:00Z",
+        "validTo": "2026-09-01T21:59:59Z",
+        "url": "/se/eddler/prova-gratis-i-14-dagar-darefter-20-procent-alumnirabatt",
+        "conditionDescription": "",
+        "conditionURL": "",
+        "conditionHTML": "<p>Gäller t.o.m. 1/9.</p><p>Kan ej kombineras med andra rabatter.</p><p>Ange din unika rabattkod vid betalning.</p>",
+        "isCampaign": true,
+        "partnerURL": "https://eddler.se/",
+        "content": "<p>Ska du skriva Högskoleprovet? Eddler har all hjälp du behöver för de kvantitativa delarna. Som alumn kan du just nu testa Eddler gratis i 14 dagar – därefter får du 20 % rabatt. Passa på!</p><p>På Eddler lär du dig genom pedagogiska videor som är enkla att följa, mängder av interaktiva tester och fördjupande texter. Du slipper fastna – alla övningar, tester och prov innehåller fullständiga förklaringar och användbara tips. Eddler erbjuder heltäckande onlinekurser med lektioner i matematik för högstadiet, gymnasiets alla matematikkurser, högskoleprovet samt Fysik 1 och Fysik 2. Bakom Eddler står legitimerade gymnasielärare i matematik och fysik som brinner för att göra ämnena begripliga och engagerande.</p><p>Med Eddler Premium får du som prenumerant tillgång till samtliga kurser, lektioner och övningar.</p>",
+        "category": "E-50",
+        "mainCategoryName": "Böcker",
+        "metaTitle": "",
+        "metaDescription": "",
+        "subcategories": [
+          "E-50"
         ],
         "campaignOnly": false,
         "showCountdown": false,
@@ -11991,41 +11991,6 @@
         "clickoutButtonText": "to_discount"
       },
       {
-        "id": "c31c1175-79c0-4b69-adec-672e69d3db23",
-        "type": 2,
-        "title": "15 % alumnirabatt hos Jack & Jones",
-        "subtitle": "Gäller endast online",
-        "image": "https://img.meccdn.com/media/c239e6f6-4ec3-41ff-8fd0-95d8336575cd.jpg",
-        "imageAlt": "15 % alumnirabatt hos Jack & Jones",
-        "brandLogo": "https://img.meccdn.com/media/logo_196_230413141405657189.png",
-        "brandLogoAlt": "Jack & Jones",
-        "brandName": "Jack & Jones",
-        "brandPagePath": "/se/jack-och-jones",
-        "brandId": "251978dc-1c7a-484c-a9f7-3e838101f1ab",
-        "validFrom": "2023-04-12T22:00:00Z",
-        "validTo": "2099-04-12T22:00:00Z",
-        "url": "/se/jack-och-jones/15-procent-alumnirabatt-hos-jack-och-jones",
-        "conditionDescription": "",
-        "conditionURL": "",
-        "conditionHTML": "<p>Erbjudandet gäller endast online.</p>\r\n<p>Rabattkoden kan inte bytas mot kontanter.</p>\r\n<p>Rabatten kan inte tillämpas på beställningar som redan har lagts.</p>\r\n<p>Vissa produkter kan uteslutas från rabatten.</p>",
-        "isCampaign": false,
-        "partnerURL": "https://www.jackjones.com/sv-se",
-        "content": "Hos Jack & Jones kan du fynda det bästa inom jeans och jeanskläder. Dessutom erbjuder de produkter inom skrädderi, urbana sportkläder, skor och accessoarer. Som Mecenat alumn får du 15 % rabatt när du handlar online.",
-        "category": "D-10",
-        "mainCategoryName": "Kläder & Skönhet",
-        "metaTitle": "",
-        "metaDescription": "",
-        "subcategories": [
-          "D-10",
-          "D-20",
-          "D-30"
-        ],
-        "campaignOnly": false,
-        "showCountdown": false,
-        "sortOrder": 2,
-        "clickoutButtonText": "to_discount"
-      },
-      {
         "id": "dbaaf695-151a-4bc1-bd0d-3eff37ef1af3",
         "type": 2,
         "title": "500 kr rabatt vid köp och installation",
@@ -19541,6 +19506,41 @@
         "campaignOnly": false,
         "showCountdown": false,
         "sortOrder": 30,
+        "clickoutButtonText": "to_discount"
+      },
+      {
+        "id": "c31c1175-79c0-4b69-adec-672e69d3db23",
+        "type": 2,
+        "title": "15 % alumnirabatt hos Jack & Jones",
+        "subtitle": "Gäller endast online",
+        "image": "https://img.meccdn.com/media/c239e6f6-4ec3-41ff-8fd0-95d8336575cd.jpg",
+        "imageAlt": "15 % alumnirabatt hos Jack & Jones",
+        "brandLogo": "https://img.meccdn.com/media/logo_196_230413141405657189.png",
+        "brandLogoAlt": "Jack & Jones",
+        "brandName": "Jack & Jones",
+        "brandPagePath": "/se/jack-och-jones",
+        "brandId": "251978dc-1c7a-484c-a9f7-3e838101f1ab",
+        "validFrom": "2023-04-12T22:00:00Z",
+        "validTo": "2099-12-31T22:59:59Z",
+        "url": "/se/jack-och-jones/15-procent-alumnirabatt-hos-jack-och-jones",
+        "conditionDescription": "",
+        "conditionURL": "",
+        "conditionHTML": "<p>Gäller endast online på varor till fullpris.</p><p>Rabattkoden kan inte bytas mot kontanter.</p><p>Rabatten kan inte tillämpas på beställningar som redan har lagts.</p><p>Vissa produkter kan uteslutas från rabatten.</p>",
+        "isCampaign": false,
+        "partnerURL": "https://www.jackjones.com/sv-se",
+        "content": "Hos Jack & Jones kan du fynda det bästa inom jeans och jeanskläder. Dessutom erbjuder de produkter inom skrädderi, urbana sportkläder, skor och accessoarer. Som Mecenat alumn får du 15 % rabatt när du handlar online.",
+        "category": "D-10",
+        "mainCategoryName": "Kläder & Skönhet",
+        "metaTitle": "",
+        "metaDescription": "",
+        "subcategories": [
+          "D-10",
+          "D-20",
+          "D-30"
+        ],
+        "campaignOnly": false,
+        "showCountdown": false,
+        "sortOrder": 2,
         "clickoutButtonText": "to_discount"
       },
       {
@@ -39467,34 +39467,6 @@
         "webpage": "markslojd.com"
       },
       {
-        "id": "b7ac380c-4882-4aa7-92bb-6b157e582926",
-        "type": 1,
-        "name": "Jack & Jones",
-        "title": "Alumnirabatt hos {brandName}",
-        "validFrom": "2023-04-12T22:00:00Z",
-        "validTo": "2099-04-12T22:00:00Z",
-        "url": "/se/jack-och-jones",
-        "logo": "https://img.meccdn.com/media/logo_196_230413141405657189.png",
-        "logoAlt": "Jack & Jones",
-        "brandId": "251978dc-1c7a-484c-a9f7-3e838101f1ab",
-        "descriptionHeader": "Rabatt hos Jack & Jones",
-        "description": "Välkommen till brothers of denim! Jack & Jones grundades för att vara det bästa denimmärket för män globalt och har alltid varit fokuserat på innovation, design, kvaliteter och trender. Jeans och jeanskläder är Jack & Jones kärnverksamhet; produktutbudet täcker dock även skrädderi, urbana sportkläder, skor och accessoarer.\r\n\r\nAnvänd din unika rabattkod för Jack & Jones och gör livet efter studierna lite rikare",
-        "facts": " ",
-        "image": "https://img.meccdn.com/media/b8ddbd7b-a1cc-4230-8b97-0e061e90eb2d.jpg",
-        "imageAlt": "Jack & Jones",
-        "category": "D-10",
-        "subcategories": [
-          "D-10",
-          "D-20",
-          "D-30"
-        ],
-        "_hide": false,
-        "key": "",
-        "discounts": [
-          "c31c1175-79c0-4b69-adec-672e69d3db23"
-        ]
-      },
-      {
         "id": "42750078-4ca1-4e78-9c4a-d604231d159a",
         "type": 1,
         "name": "Libresse",
@@ -43563,35 +43535,6 @@
         "webpage": "jbl.se"
       },
       {
-        "id": "76033669-43aa-469f-98f2-aac717f237e2",
-        "type": 1,
-        "name": "Huel",
-        "title": "Alumnirabatt hos {brandName}",
-        "validFrom": "2022-10-18T22:00:00Z",
-        "validTo": "2099-10-18T22:00:00Z",
-        "url": "/se/huel",
-        "logo": "https://img.meccdn.com/media/logo_196_221019165901176240.png",
-        "logoAlt": "Huel",
-        "brandId": "21b44919-0c80-4bfd-b1f4-40bfbd4c4297",
-        "descriptionHeader": "Rabatt hos Huel",
-        "description": "Huel har som mål att revolutionera matvärlden med praktisk, prisvärd och miljövänlig kost. De erbjuder ett utbud av pulver, varma måltider och färdigblandade drycker och även bars. Perfekt för studenter med hektiska liv som letar efter god, välbalanserad och näringsmässigt komplett mat för att kunna leva hälsosamt och samtidigt spara pengar. Börja spara pengar och njut av riktigt god växtbaserad mat som innehåller all näring du behöver i en enda måltid. \r\n\r\nAnvänd din unika rabattkod för Huel och gör livet efter studierna lite rikare.",
-        "facts": " ",
-        "image": "https://img.meccdn.com/media/image1_196_221019153406555770.png",
-        "imageAlt": "Huel",
-        "category": "B-60",
-        "subcategories": [
-          "H-10",
-          "B-60"
-        ],
-        "_hide": false,
-        "key": "",
-        "discounts": [
-          "de8ac2b6-6f4b-469a-862b-aed187fddb5b",
-          "f70e1ae2-ac48-4aa2-bf91-ecdfdf68a347"
-        ],
-        "webpage": "huel.com"
-      },
-      {
         "id": "1e789617-3690-4c8c-824f-bd15ba71d32c",
         "type": 1,
         "name": "Sellpy",
@@ -45565,38 +45508,6 @@
         "webpage": "haglofs.com"
       },
       {
-        "id": "f4935193-82b0-42f4-90e2-e7b4e0d9743c",
-        "type": 1,
-        "name": "Nordic Nest",
-        "title": "Alumnirabatt hos {brandName}",
-        "validFrom": "2022-06-07T22:00:00Z",
-        "validTo": "2099-06-01T22:00:00Z",
-        "url": "/se/nordic-nest",
-        "logo": "https://img.meccdn.com/media/logo_155_190613103716853867.jpg",
-        "logoAlt": "Nordic Nest",
-        "brandId": "f4878126-ae2a-4c19-b61c-e676a29771c5",
-        "descriptionHeader": "Rabatt hos Nordic Nest",
-        "description": "Hos Nordic Nest finner du ett unikt urval av skandinavisk design och inredning för hela hemmet. Med varumärken som House Doctor, Iittala, Bloomingville, Marimekko och Ferm Living.\r\n\r\nAnvänd din unika rabattkod för Nordic Nest och gör livet efter studierna lite rikare.",
-        "facts": " ",
-        "image": "https://img.meccdn.com/media/image1_196_220602144734976893.png",
-        "imageAlt": "Nordic Nest",
-        "category": "A-10",
-        "subcategories": [
-          "A-10",
-          "A-20"
-        ],
-        "_hide": false,
-        "key": "",
-        "discounts": [
-          "c6d31196-ab23-4c2a-aa99-4b753eaef468",
-          "a9993ec8-2f97-4640-85d1-21e4bd52e550",
-          "148ca3eb-3f53-4e39-8718-52af0f0720eb",
-          "e2f9222c-9380-4ea5-abb5-ff90bfd46ea5",
-          "9f942f7a-3640-4cef-9110-5c2e9c5b2963"
-        ],
-        "webpage": "nordicnest.se"
-      },
-      {
         "id": "d7e7b157-273f-448e-9a4f-8fca6adf9ac9",
         "type": 1,
         "name": "Bik Bok",
@@ -45834,43 +45745,6 @@
           "c3daa0fd-5109-44c8-8dd6-03c2609a0996",
           "6449d6e8-b2be-4cfc-b856-01f9e4237309"
         ]
-      },
-      {
-        "id": "bb171da6-d0c8-4ffb-b529-63369f122f29",
-        "type": 1,
-        "name": "Adlibris",
-        "title": "Alumnirabatt hos {brandName}",
-        "validFrom": "2020-01-14T23:00:00Z",
-        "validTo": "2098-12-31T23:00:00Z",
-        "url": "/se/adlibris",
-        "logo": "https://img.meccdn.com/media/logo_184_241110181936913777.png",
-        "logoAlt": "Adlibris",
-        "brandId": "22107bdf-812e-457a-8011-c0b32f223c39",
-        "descriptionHeader": "Rabatt hos Adlibris",
-        "description": "Över 18 miljoner boktitlar och mycket annat till riktigt låga priser! Hos Adlibris kan du fynda bland nyheter och bästsäljare, inspireras av personalens boktips och läslistor eller fynda i någon av deras kampanjer. Välkommen in och hitta din nästa läsupplevelse.\r\n\r\nFör att ta del av rabatten använder du koden som visas när du klickar dig vidare, då dras din rabatt av i kassan.\r\n\r\nHåll också utkik efter exklusiva erbjudanden under hela året, enbart för dig som är Mecenat alumn. \r\n\r\nAnvänd din unika rabattkod för Adlibris och gör livet efter studierna lite rikare.",
-        "facts": " ",
-        "image": "https://img.meccdn.com/media/image1_184_241110181944595195.jpg",
-        "imageAlt": "Adlibris",
-        "category": "E-20",
-        "subcategories": [
-          "E-10",
-          "E-20",
-          "E-40",
-          "C-60",
-          "A-10",
-          "C-70",
-          "E-60",
-          "A-30"
-        ],
-        "metaText": "<h2 style=\"font-weight: bold; font-size: 22px; padding-bottom: 10px;\"><strong>Fynda böcker hos Adlibris&nbsp;</strong></h2><p>Här hittar du deckare &amp; kriminalromaner, skräck- &amp; spökhistorier, dramatik &amp; fantasi och mycket mer! Från senaste bästsäljare till älskade klassiker – fynda din nästa bok med rabattkod hos Adlibris.&nbsp;&nbsp;</p><h2 style=\"font-weight: bold; font-size: 22px; padding-bottom: 10px;\"><strong>Få boktips&nbsp;</strong></h2><p>Hos Adlibris får du mängder av boktips och rekommendationer varje gång du handlar. Få spännande lästips till semestern, upptäck något nytt med engagerande faktaböcker eller browsa igenom personalens favoriter för att hitta något oförväntat. Låt dig inspireras av Adlibris breda sortiment och köp böcker till bästa priset med alumnirabatt. &nbsp; &nbsp;&nbsp;</p><h2 style=\"font-weight: bold; font-size: 22px; padding-bottom: 10px;\"><strong>Köp allt inom garn &amp; konstmaterial</strong></h2><p>Hitta all tänkbar konstmaterial, från målarfärg &amp; penslar till smyckestillverkning, och kom igång med ditt nya kreativa projekt snabbt och enkelt med Adlibris. Köp garn till bästa kvalitet samt alla andra tillbehör till dina stickningsprojekt.&nbsp;&nbsp;</p><h2 style=\"font-weight: bold; font-size: 22px; padding-bottom: 10px;\"><strong>Barnpyssel &amp; leksaker</strong></h2><p>Med alumnirabatt hos Adlibris kan du fynda något för hela familjen. Hitta barnens favoritleksaker – allt från LEGO, dockor och mjukisdjur till åkfordon och cyklar. Aktivera barnen med interaktiva leksaker och experimentlådor eller inspirera deras kreativitet med barnpyssel.</p>",
-        "_hide": false,
-        "key": "",
-        "discounts": [
-          "ccefedfb-877a-4378-818c-d8790893577f",
-          "bd6c081f-f413-49e3-b863-5b89d5ea613e",
-          "ac08efcf-319d-4e8d-ab1d-be328002bd79"
-        ],
-        "webpage": "adlibris.com"
       },
       {
         "id": "592eae54-d4e6-43d7-9c88-1fc0d6d7b18e",
@@ -46657,6 +46531,131 @@
           "d04d64da-e66d-484b-999f-abfab261df2f"
         ],
         "webpage": "samsung.com"
+      },
+      {
+        "id": "bb171da6-d0c8-4ffb-b529-63369f122f29",
+        "type": 1,
+        "name": "Adlibris",
+        "title": "Alumnirabatt hos {brandName}",
+        "validFrom": "2020-01-14T23:00:00Z",
+        "validTo": "2098-12-31T23:00:00Z",
+        "url": "/se/adlibris",
+        "logo": "https://img.meccdn.com/media/logo_184_241110181936913777.png",
+        "logoAlt": "Adlibris",
+        "brandId": "22107bdf-812e-457a-8011-c0b32f223c39",
+        "descriptionHeader": "Rabatt hos Adlibris",
+        "description": "Över 18 miljoner boktitlar och mycket annat till riktigt låga priser! Hos Adlibris kan du fynda bland nyheter och bästsäljare, inspireras av personalens boktips och läslistor eller fynda i någon av deras kampanjer. Välkommen in och hitta din nästa läsupplevelse.\r\n\r\nFör att ta del av rabatten använder du koden som visas när du klickar dig vidare, då dras din rabatt av i kassan.\r\n\r\nHåll också utkik efter exklusiva erbjudanden under hela året, enbart för dig som är Mecenat alumn. \r\n\r\nAnvänd din unika rabattkod för Adlibris och gör livet efter studierna lite rikare.",
+        "facts": " ",
+        "image": "https://img.meccdn.com/media/image1_184_241110181944595195.jpg",
+        "imageAlt": "Adlibris",
+        "category": "E-20",
+        "subcategories": [
+          "E-10",
+          "E-20",
+          "E-40",
+          "C-60",
+          "A-10",
+          "C-70",
+          "E-60",
+          "A-30"
+        ],
+        "metaText": "<h2 style=\"font-weight: bold; font-size: 22px; padding-bottom: 10px;\"><strong>Fynda böcker hos Adlibris&nbsp;</strong></h2><p>Här hittar du deckare &amp; kriminalromaner, skräck- &amp; spökhistorier, dramatik &amp; fantasi och mycket mer! Från senaste bästsäljare till älskade klassiker – fynda din nästa bok med rabattkod hos Adlibris.&nbsp;&nbsp;</p><h2 style=\"font-weight: bold; font-size: 22px; padding-bottom: 10px;\"><strong>Få boktips&nbsp;</strong></h2><p>Hos Adlibris får du mängder av boktips och rekommendationer varje gång du handlar. Få spännande lästips till semestern, upptäck något nytt med engagerande faktaböcker eller browsa igenom personalens favoriter för att hitta något oförväntat. Låt dig inspireras av Adlibris breda sortiment och köp böcker till bästa priset med alumnirabatt. &nbsp; &nbsp;&nbsp;</p><h2 style=\"font-weight: bold; font-size: 22px; padding-bottom: 10px;\"><strong>Köp allt inom garn &amp; konstmaterial</strong></h2><p>Hitta all tänkbar konstmaterial, från målarfärg &amp; penslar till smyckestillverkning, och kom igång med ditt nya kreativa projekt snabbt och enkelt med Adlibris. Köp garn till bästa kvalitet samt alla andra tillbehör till dina stickningsprojekt.&nbsp;&nbsp;</p><h2 style=\"font-weight: bold; font-size: 22px; padding-bottom: 10px;\"><strong>Barnpyssel &amp; leksaker</strong></h2><p>Med alumnirabatt hos Adlibris kan du fynda något för hela familjen. Hitta barnens favoritleksaker – allt från LEGO, dockor och mjukisdjur till åkfordon och cyklar. Aktivera barnen med interaktiva leksaker och experimentlådor eller inspirera deras kreativitet med barnpyssel.</p>",
+        "_hide": false,
+        "key": "",
+        "discounts": [
+          "ccefedfb-877a-4378-818c-d8790893577f",
+          "bd6c081f-f413-49e3-b863-5b89d5ea613e",
+          "ac08efcf-319d-4e8d-ab1d-be328002bd79",
+          "70c2397d-a138-4600-9aee-54f7a300c435"
+        ],
+        "webpage": "adlibris.com"
+      },
+      {
+        "id": "76033669-43aa-469f-98f2-aac717f237e2",
+        "type": 1,
+        "name": "Huel",
+        "title": "Alumnirabatt hos {brandName}",
+        "validFrom": "2022-10-18T22:00:00Z",
+        "validTo": "2099-10-18T22:00:00Z",
+        "url": "/se/huel",
+        "logo": "https://img.meccdn.com/media/logo_196_221019165901176240.png",
+        "logoAlt": "Huel",
+        "brandId": "21b44919-0c80-4bfd-b1f4-40bfbd4c4297",
+        "descriptionHeader": "Rabatt hos Huel",
+        "description": "Huel har som mål att revolutionera matvärlden med praktisk, prisvärd och miljövänlig kost. De erbjuder ett utbud av pulver, varma måltider och färdigblandade drycker och även bars. Perfekt för studenter med hektiska liv som letar efter god, välbalanserad och näringsmässigt komplett mat för att kunna leva hälsosamt och samtidigt spara pengar. Börja spara pengar och njut av riktigt god växtbaserad mat som innehåller all näring du behöver i en enda måltid. \r\n\r\nAnvänd din unika rabattkod för Huel och gör livet efter studierna lite rikare.",
+        "facts": " ",
+        "image": "https://img.meccdn.com/media/image1_196_221019153406555770.png",
+        "imageAlt": "Huel",
+        "category": "B-60",
+        "subcategories": [
+          "H-10",
+          "B-60"
+        ],
+        "_hide": false,
+        "key": "",
+        "discounts": [
+          "de8ac2b6-6f4b-469a-862b-aed187fddb5b",
+          "f70e1ae2-ac48-4aa2-bf91-ecdfdf68a347"
+        ],
+        "webpage": "huel.com"
+      },
+      {
+        "id": "f4935193-82b0-42f4-90e2-e7b4e0d9743c",
+        "type": 1,
+        "name": "Nordic Nest",
+        "title": "Alumnirabatt hos {brandName}",
+        "validFrom": "2022-06-07T22:00:00Z",
+        "validTo": "2099-06-01T22:00:00Z",
+        "url": "/se/nordic-nest",
+        "logo": "https://img.meccdn.com/media/logo_155_190613103716853867.jpg",
+        "logoAlt": "Nordic Nest",
+        "brandId": "f4878126-ae2a-4c19-b61c-e676a29771c5",
+        "descriptionHeader": "Rabatt hos Nordic Nest",
+        "description": "Hos Nordic Nest finner du ett unikt urval av skandinavisk design och inredning för hela hemmet. Med varumärken som House Doctor, Iittala, Bloomingville, Marimekko och Ferm Living.\r\n\r\nAnvänd din unika rabattkod för Nordic Nest och gör livet efter studierna lite rikare.",
+        "facts": " ",
+        "image": "https://img.meccdn.com/media/image1_196_220602144734976893.png",
+        "imageAlt": "Nordic Nest",
+        "category": "A-10",
+        "subcategories": [
+          "A-10",
+          "A-20"
+        ],
+        "_hide": false,
+        "key": "",
+        "discounts": [
+          "6dbfb88d-f247-4bef-a559-9bf41c76a5af",
+          "e2f9222c-9380-4ea5-abb5-ff90bfd46ea5",
+          "9f942f7a-3640-4cef-9110-5c2e9c5b2963"
+        ],
+        "webpage": "nordicnest.se"
+      },
+      {
+        "id": "b7ac380c-4882-4aa7-92bb-6b157e582926",
+        "type": 1,
+        "name": "Jack & Jones",
+        "title": "Alumnirabatt hos {brandName}",
+        "validFrom": "2023-04-12T22:00:00Z",
+        "validTo": "2099-12-31T22:59:59Z",
+        "url": "/se/jack-och-jones",
+        "logo": "https://img.meccdn.com/media/logo_196_230413141405657189.png",
+        "logoAlt": "Jack & Jones",
+        "brandId": "251978dc-1c7a-484c-a9f7-3e838101f1ab",
+        "descriptionHeader": "Rabatt hos Jack & Jones",
+        "description": "Välkommen till brothers of denim! Jack & Jones grundades för att vara det bästa denimmärket för män globalt och har alltid varit fokuserat på innovation, design, kvaliteter och trender. Jeans och jeanskläder är Jack & Jones kärnverksamhet; produktutbudet täcker dock även skrädderi, urbana sportkläder, skor och accessoarer.\r\n\r\nAnvänd din unika rabattkod för Jack & Jones och gör livet efter studierna lite rikare",
+        "facts": " ",
+        "image": "https://img.meccdn.com/media/b8ddbd7b-a1cc-4230-8b97-0e061e90eb2d.jpg",
+        "imageAlt": "Jack & Jones",
+        "category": "D-10",
+        "subcategories": [
+          "D-10",
+          "D-20",
+          "D-30"
+        ],
+        "_hide": false,
+        "key": "",
+        "discounts": [
+          "c31c1175-79c0-4b69-adec-672e69d3db23"
+        ]
       },
       {
         "id": "a96b5f52-404e-4f30-a1d2-3f1e18f2e846",
@@ -58286,33 +58285,6 @@
         "webpage": "filteroptix.com"
       },
       {
-        "id": "93be3320-ac14-4f9e-ba18-6aa79b52ac54",
-        "type": 1,
-        "name": "Eddler",
-        "title": "Alumnirabatt hos {brandName}",
-        "validFrom": "2025-07-30T22:00:00Z",
-        "validTo": "2099-07-31T21:59:59Z",
-        "url": "/se/eddler",
-        "logo": "https://img.meccdn.com/media/logo_666_231212132953430854.jpg",
-        "logoAlt": "Eddler",
-        "brandId": "032ea5e0-86fd-4952-91fd-9c574a6357fc",
-        "descriptionHeader": "Rabatt hos Eddler",
-        "description": "<p>Pluggar du gymnasiematte eller inför högskoleprovet? Använd Eddler för att göra matten lättare att förstå och nå dina mål. På Eddler lär du dig genom pedagogiska videor som är enkla att följa, mängder av interaktiva tester och fördjupande texter. Du slipper fastna – alla övningar, tester och prov innehåller fullständiga förklaringar och användbara tips. <br><br>Eddler erbjuder heltäckande onlinekurser med lektioner i matematik för högstadiet, gymnasiets alla matematikkurser, högskoleprovet samt Fysik 1 och Fysik 2. Bakom Eddler står legitimerade gymnasielärare i matematik och fysik som brinner för att göra ämnena begripliga och engagerande. Med Eddler Premium får du som prenumerant tillgång till samtliga kurser, lektioner och övningar. Testa idag! </p><p>Använd din unika rabattkod för Eddler och gör livet efter studierna lite rikare.</p>",
-        "image": "https://img.meccdn.com/media/image1_666_231212132953446481.jpg",
-        "imageAlt": "Rabatt hos Eddler",
-        "category": "E-50",
-        "subcategories": [
-          "E-50"
-        ],
-        "_hide": false,
-        "key": "",
-        "discounts": [
-          "1094ad7e-717d-40a0-86c2-4a1ba76f3cd6",
-          "0f345553-20f4-4556-b741-132150db16db"
-        ],
-        "webpage": "eddler.se"
-      },
-      {
         "id": "a8c3fa8f-7691-4644-9d37-ea4a3edbf86b",
         "type": 1,
         "name": "Happy Golfer",
@@ -58703,36 +58675,6 @@
         "key": "",
         "discounts": [],
         "webpage": "santamariaworld.com"
-      },
-      {
-        "id": "c40b489f-435f-4730-9d3a-bdf8f89c7b3c",
-        "type": 1,
-        "name": "Zoégas",
-        "title": "",
-        "validFrom": "2026-08-16T22:00:00Z",
-        "validTo": "2099-12-31T23:59:59Z",
-        "url": "/se/zoegas",
-        "logo": "https://img.meccdn.com/atlas/logo_zoegas_1785746682863340704.png",
-        "logoAlt": "logotype Zoégas",
-        "brandId": "9cfdd1b4-b4ce-4395-b710-3b70ca373236",
-        "descriptionHeader": "Rabatt hos Zoégas",
-        "description": "<p>Sedan 1886 har Zoégas rostat kaffe i Helsingborg. Upptäck fylliga smaker, noggrant utvalda bönor och passionen bakom varje kopp Zoégas kaffe.</p>",
-        "image": "https://img.meccdn.com/atlas/bp-image_temp-f3a0d708-0829-4cf0-8e7e-7289dad6aee2_1785748369270112439.jfif",
-        "category": "H-10",
-        "subcategories": [
-          "H-20",
-          "H-30",
-          "H-40",
-          "A-70",
-          "B-70"
-        ],
-        "_hide": false,
-        "key": "",
-        "discounts": [
-          "586f12b4-5274-4af4-a5d8-585077c338e2",
-          "8dd8987b-5813-4f6b-84a9-ec595e9ef05a"
-        ],
-        "webpage": "zoegas.se"
       },
       {
         "id": "ce664650-b37a-40ec-ad03-951d2fcf6fe2",
@@ -59840,6 +59782,64 @@
           "f341d997-ce88-44ee-b4a7-c4ae7b8cce60"
         ],
         "webpage": "bockitlist.se"
+      },
+      {
+        "id": "93be3320-ac14-4f9e-ba18-6aa79b52ac54",
+        "type": 1,
+        "name": "Eddler",
+        "title": "Alumnirabatt hos {brandName}",
+        "validFrom": "2025-07-30T22:00:00Z",
+        "validTo": "2099-07-31T21:59:59Z",
+        "url": "/se/eddler",
+        "logo": "https://img.meccdn.com/media/logo_666_231212132953430854.jpg",
+        "logoAlt": "Eddler",
+        "brandId": "032ea5e0-86fd-4952-91fd-9c574a6357fc",
+        "descriptionHeader": "Rabatt hos Eddler",
+        "description": "<p>Pluggar du gymnasiematte eller inför högskoleprovet? Använd Eddler för att göra matten lättare att förstå och nå dina mål. På Eddler lär du dig genom pedagogiska videor som är enkla att följa, mängder av interaktiva tester och fördjupande texter. Du slipper fastna – alla övningar, tester och prov innehåller fullständiga förklaringar och användbara tips. <br><br>Eddler erbjuder heltäckande onlinekurser med lektioner i matematik för högstadiet, gymnasiets alla matematikkurser, högskoleprovet samt Fysik 1 och Fysik 2. Bakom Eddler står legitimerade gymnasielärare i matematik och fysik som brinner för att göra ämnena begripliga och engagerande. Med Eddler Premium får du som prenumerant tillgång till samtliga kurser, lektioner och övningar. Testa idag! </p><p>Använd din unika rabattkod för Eddler och gör livet efter studierna lite rikare.</p>",
+        "image": "https://img.meccdn.com/media/image1_666_231212132953446481.jpg",
+        "imageAlt": "Rabatt hos Eddler",
+        "category": "E-50",
+        "subcategories": [
+          "E-50"
+        ],
+        "_hide": false,
+        "key": "",
+        "discounts": [
+          "1094ad7e-717d-40a0-86c2-4a1ba76f3cd6",
+          "799a793e-8e0d-486d-b8d8-bf111bb8c0f7",
+          "0f345553-20f4-4556-b741-132150db16db"
+        ],
+        "webpage": "eddler.se"
+      },
+      {
+        "id": "c40b489f-435f-4730-9d3a-bdf8f89c7b3c",
+        "type": 1,
+        "name": "Zoégas",
+        "title": "",
+        "validFrom": "2026-08-16T22:00:00Z",
+        "validTo": "2099-12-31T23:59:59Z",
+        "url": "/se/zoegas",
+        "logo": "https://img.meccdn.com/atlas/logo_zoegas_1785746682863340704.png",
+        "logoAlt": "logotype Zoégas",
+        "brandId": "9cfdd1b4-b4ce-4395-b710-3b70ca373236",
+        "descriptionHeader": "Rabatt hos Zoégas",
+        "description": "<p>Sedan 1886 har Zoégas rostat kaffe i Helsingborg. Upptäck fylliga smaker, noggrant utvalda bönor och passionen bakom varje kopp Zoégas kaffe.</p>",
+        "image": "https://img.meccdn.com/atlas/bp-image_temp-f3a0d708-0829-4cf0-8e7e-7289dad6aee2_1785748369270112439.jfif",
+        "category": "H-10",
+        "subcategories": [
+          "H-20",
+          "H-30",
+          "H-40",
+          "A-70",
+          "B-70"
+        ],
+        "_hide": false,
+        "key": "",
+        "discounts": [
+          "586f12b4-5274-4af4-a5d8-585077c338e2",
+          "8dd8987b-5813-4f6b-84a9-ec595e9ef05a"
+        ],
+        "webpage": "zoegas.se"
       }
     ],
     "categories": [
@@ -61785,296 +61785,6 @@
       "url": "https://www.ica.se/stammis/partnererbjudanden/alla-erbjudanden/vikingline/",
       "source": "ICA Stammis",
       "sourceClass": "badge-ica"
-    }
-  ],
-  "coop": [
-    {
-      "title": "Hurtigruten: 10% extra Coop-rabatt.",
-      "searchText": "Coop Medlem Hurtigruten 10% extra Coop-rabatt.",
-      "image": "https://res.cloudinary.com/coopsverige/image/upload/f_auto,ar_1:1,c_fill,q_auto,h_720/v1787727040/%C3%96vrigt/partnererbjudande/dyd10nhwcdpyovyqqjh9.jpg",
-      "url": "https://www.coop.se/medlem/partnererbjudanden/hurtigruten/",
-      "source": "Coop Medlem",
-      "sourceClass": "badge-coop",
-      "discount": "10% extra Coop-rabatt."
-    },
-    {
-      "title": "Synoptik: 25% rabatt i både butik och online.",
-      "searchText": "Coop Medlem Synoptik 25% rabatt i både butik och online.",
-      "image": "https://res.cloudinary.com/coopsverige/image/upload/f_auto,ar_1:1,c_fill,q_auto,h_720/v1775564651/DIGITALT/Partner/2026/Moduler/teaser-synoptik_ygjeco.png",
-      "url": "https://www.coop.se/medlem/partnererbjudanden/synoptik/",
-      "source": "Coop Medlem",
-      "sourceClass": "badge-coop",
-      "discount": "25% rabatt i både butik och online."
-    },
-    {
-      "title": "Viaplay: 50% rabatt",
-      "searchText": "Coop Medlem Viaplay 50% rabatt",
-      "image": "https://res.cloudinary.com/coopsverige/image/upload/f_auto,ar_1:1,c_fill,q_auto,h_720/v1775564661/DIGITALT/Partner/2026/Moduler/teaser-viaplay_qqsel6.png",
-      "url": "https://www.coop.se/medlem/partnererbjudanden/viaplay/",
-      "source": "Coop Medlem",
-      "sourceClass": "badge-coop",
-      "discount": "50% rabatt"
-    },
-    {
-      "title": "A Star Night – 80-tals hits: 25% rabatt.",
-      "searchText": "Coop Medlem A Star Night – 80-tals hits 25% rabatt.",
-      "image": "https://res.cloudinary.com/coopsverige/image/upload/f_auto,ar_1:1,c_fill,q_auto,h_720/v1778595392/%C3%96vrigt/partnererbjudande/r3b8b4tkqhtrm9arqbbq.jpg",
-      "url": "https://www.coop.se/medlem/partnererbjudanden/a-star-night/",
-      "source": "Coop Medlem",
-      "sourceClass": "badge-coop",
-      "discount": "25% rabatt."
-    },
-    {
-      "title": "Alfons Åbergs Kulturhus: 25% rabatt.",
-      "searchText": "Coop Medlem Alfons Åbergs Kulturhus 25% rabatt.",
-      "image": "https://res.cloudinary.com/coopsverige/image/upload/f_auto,ar_1:1,c_fill,q_auto,h_720/v1775558940/DIGITALT/Partner/2026/Moduler/teaser-alfons-aberg_z3nohx.png",
-      "url": "https://www.coop.se/medlem/partnererbjudanden/alfons-aberg/",
-      "source": "Coop Medlem",
-      "sourceClass": "badge-coop",
-      "discount": "25% rabatt."
-    },
-    {
-      "title": "Cabonline - Taxi: Upp till 15% rabatt.",
-      "searchText": "Coop Medlem Cabonline - Taxi Upp till 15% rabatt.",
-      "image": "https://res.cloudinary.com/coopsverige/image/upload/f_auto,ar_1:1,c_fill,q_auto,h_720/v1776344116/%C3%96vrigt/partnererbjudande/iq8b2njp6k6gi00bwx39.jpg",
-      "url": "https://www.coop.se/medlem/partnererbjudanden/cabonline/",
-      "source": "Coop Medlem",
-      "sourceClass": "badge-coop",
-      "discount": "Upp till 15% rabatt."
-    },
-    {
-      "title": "EF Education: Upp till 20 000 kr rabatt.",
-      "searchText": "Coop Medlem EF Education Upp till 20 000 kr rabatt.",
-      "image": "https://res.cloudinary.com/coopsverige/image/upload/f_auto,ar_1:1,c_fill,q_auto,h_720/v1775558958/DIGITALT/Partner/2026/Moduler/teaser-ef-educations_nva6zr.png",
-      "url": "https://www.coop.se/medlem/partnererbjudanden/efeducation/",
-      "source": "Coop Medlem",
-      "sourceClass": "badge-coop",
-      "discount": "Upp till 20 000 kr rabatt."
-    },
-    {
-      "title": "Electrolux: 20% rabatt på utvalda produkter.",
-      "searchText": "Coop Medlem Electrolux 20% rabatt på utvalda produkter.",
-      "image": "https://res.cloudinary.com/coopsverige/image/upload/f_auto,ar_1:1,c_fill,q_auto,h_720/v1775558962/DIGITALT/Partner/2026/Moduler/teaser-electrolux_emoepu.png",
-      "url": "https://www.coop.se/medlem/partnererbjudanden/electrolux/",
-      "source": "Coop Medlem",
-      "sourceClass": "badge-coop",
-      "discount": "20% rabatt på utvalda produkter."
-    },
-    {
-      "title": "Ellos: 10% rabatt på köpet.",
-      "searchText": "Coop Medlem Ellos 10% rabatt på köpet.",
-      "image": "https://res.cloudinary.com/coopsverige/image/upload/f_auto,ar_1:1,c_fill,q_auto,h_720/v1775558965/DIGITALT/Partner/2026/Moduler/teaser-ellos_qdruqb.png",
-      "url": "https://www.coop.se/medlem/partnererbjudanden/ellos/",
-      "source": "Coop Medlem",
-      "sourceClass": "badge-coop",
-      "discount": "10% rabatt på köpet."
-    },
-    {
-      "title": "Europcar: Upp till 15% rabatt.",
-      "searchText": "Coop Medlem Europcar Upp till 15% rabatt.",
-      "image": "https://res.cloudinary.com/coopsverige/image/upload/f_auto,ar_1:1,c_fill,q_auto,h_720/v1776345671/%C3%96vrigt/partnererbjudande/r8dffu9yu54cvzp2zdv0.jpg",
-      "url": "https://www.coop.se/medlem/partnererbjudanden/europcar/",
-      "source": "Coop Medlem",
-      "sourceClass": "badge-coop",
-      "discount": "Upp till 15% rabatt."
-    },
-    {
-      "title": "Euroflorist: 10% rabatt.",
-      "searchText": "Coop Medlem Euroflorist 10% rabatt.",
-      "image": "https://res.cloudinary.com/coopsverige/image/upload/f_auto,ar_1:1,c_fill,q_auto,h_720/v1775558968/DIGITALT/Partner/2026/Moduler/teaser-euroflorist_n1zaqp.png",
-      "url": "https://www.coop.se/medlem/partnererbjudanden/Euroflorist/",
-      "source": "Coop Medlem",
-      "sourceClass": "badge-coop",
-      "discount": "10% rabatt."
-    },
-    {
-      "title": "Familjens Jurist: Upp till 25% rabatt på digitala juridiska dokument.",
-      "searchText": "Coop Medlem Familjens Jurist Upp till 25% rabatt på digitala juridiska dokument.",
-      "image": "https://res.cloudinary.com/coopsverige/image/upload/f_auto,ar_1:1,c_fill,q_auto,h_720/v1775558971/DIGITALT/Partner/2026/Moduler/teaser-familjens-jurist_ps4aye.png",
-      "url": "https://www.coop.se/medlem/partnererbjudanden/familjens-jurist/",
-      "source": "Coop Medlem",
-      "sourceClass": "badge-coop",
-      "discount": "Upp till 25% rabatt på digitala juridiska dokument."
-    },
-    {
-      "title": "Geggamoja: 15% rabatt.",
-      "searchText": "Coop Medlem Geggamoja 15% rabatt.",
-      "image": "https://res.cloudinary.com/coopsverige/image/upload/f_auto,ar_1:1,c_fill,q_auto,h_720/v1775558978/DIGITALT/Partner/2026/Moduler/teaser-geggamoja_fcqpt1.png",
-      "url": "https://www.coop.se/medlem/partnererbjudanden/geggamoja/",
-      "source": "Coop Medlem",
-      "sourceClass": "badge-coop",
-      "discount": "15% rabatt."
-    },
-    {
-      "title": "Hotellpremien: Upp till 40% rabatt.",
-      "searchText": "Coop Medlem Hotellpremien Upp till 40% rabatt.",
-      "image": "https://res.cloudinary.com/coopsverige/image/upload/f_auto,ar_1:1,c_fill,q_auto,h_720/v1775558986/DIGITALT/Partner/2026/Moduler/teaser-hotellpremien_zos1zs.png",
-      "url": "https://hotellpremien.se/",
-      "source": "Coop Medlem",
-      "sourceClass": "badge-coop",
-      "discount": "Upp till 40% rabatt."
-    },
-    {
-      "title": "Hurtigruten: 10% extra Coop-rabatt.",
-      "searchText": "Coop Medlem Hurtigruten 10% extra Coop-rabatt.",
-      "image": "https://res.cloudinary.com/coopsverige/image/upload/f_auto,ar_1:1,c_fill,q_auto,h_720/v1787727040/%C3%96vrigt/partnererbjudande/dyd10nhwcdpyovyqqjh9.jpg",
-      "url": "https://www.coop.se/medlem/partnererbjudanden/hurtigruten/",
-      "source": "Coop Medlem",
-      "sourceClass": "badge-coop",
-      "discount": "10% extra Coop-rabatt."
-    },
-    {
-      "title": "Junibacken: 20% rabatt.",
-      "searchText": "Coop Medlem Junibacken 20% rabatt.",
-      "image": "https://res.cloudinary.com/coopsverige/image/upload/f_auto,ar_1:1,c_fill,q_auto,h_720/v1775558997/DIGITALT/Partner/2026/Moduler/teaser-junibacken_vacet8.png",
-      "url": "https://www.coop.se/medlem/partnererbjudanden/junibacken/",
-      "source": "Coop Medlem",
-      "sourceClass": "badge-coop",
-      "discount": "20% rabatt."
-    },
-    {
-      "title": "Live it: Upp till 15% rabatt.",
-      "searchText": "Coop Medlem Live it Upp till 15% rabatt.",
-      "image": "https://res.cloudinary.com/coopsverige/image/upload/f_auto,ar_1:1,c_fill,q_auto,h_720/v1775559008/DIGITALT/Partner/2026/Moduler/teaser-liveit_gbj5tj.png",
-      "url": "https://www.coop.se/medlem/partnererbjudanden/live-it/",
-      "source": "Coop Medlem",
-      "sourceClass": "badge-coop",
-      "discount": "Upp till 15% rabatt."
-    },
-    {
-      "title": "MedMera Bank: Medlemslån och få 1 % ränterabatt.*",
-      "searchText": "Coop Medlem MedMera Bank Medlemslån och få 1 % ränterabatt.*",
-      "image": "https://res.cloudinary.com/coopsverige/image/upload/f_auto,ar_1:1,c_fill,q_auto,h_720/v1775564623/DIGITALT/Partner/2026/Moduler/teaser-medmera_udmkku.png",
-      "url": "https://www.coop.se/bank-och-betalkort/lana-pengar/medlemslan/",
-      "source": "Coop Medlem",
-      "sourceClass": "badge-coop",
-      "discount": "Medlemslån och få 1 % ränterabatt.*"
-    },
-    {
-      "title": "Restaurangpremien: Upp till 50% rabatt.",
-      "searchText": "Coop Medlem Restaurangpremien Upp till 50% rabatt.",
-      "image": "https://res.cloudinary.com/coopsverige/image/upload/f_auto,ar_1:1,c_fill,q_auto,h_720/v1775564637/DIGITALT/Partner/2026/Moduler/teaser-restaurangpremien_jc4jt9.png",
-      "url": "https://www.coop.se/medlem/partnererbjudanden/restaurangpremien/",
-      "source": "Coop Medlem",
-      "sourceClass": "badge-coop",
-      "discount": "Upp till 50% rabatt."
-    },
-    {
-      "title": "Sembo: Upp till 40% på utvalt boende & entré till LEGOLAND®",
-      "searchText": "Coop Medlem Sembo Upp till 40% på utvalt boende & entré till LEGOLAND®",
-      "image": "https://res.cloudinary.com/coopsverige/image/upload/f_auto,ar_1:1,c_fill,q_auto,h_720/v1776345931/%C3%96vrigt/partnererbjudande/tgbw6pt26yi9bissr0dr.jpg",
-      "url": "https://www.coop.se/medlem/partnererbjudanden/sembo/",
-      "source": "Coop Medlem",
-      "sourceClass": "badge-coop",
-      "discount": "Upp till 40% på utvalt boende & entré till LEGOLAND®"
-    },
-    {
-      "title": "SJ: 5 % rabatt.",
-      "searchText": "Coop Medlem SJ 5 % rabatt.",
-      "image": "https://res.cloudinary.com/coopsverige/image/upload/f_auto,ar_1:1,c_fill,q_auto,h_720/v1779370446/%C3%96vrigt/partnererbjudande/zxleb614fc3vkwyskhau.jpg",
-      "url": "https://www.coop.se/medlem/partnererbjudanden/sj/",
-      "source": "Coop Medlem",
-      "sourceClass": "badge-coop",
-      "discount": "5 % rabatt."
-    },
-    {
-      "title": "Smarteyes: 25% rabatt i valfri butik.",
-      "searchText": "Coop Medlem Smarteyes 25% rabatt i valfri butik.",
-      "image": "https://res.cloudinary.com/coopsverige/image/upload/f_auto,ar_1:1,c_fill,q_auto,h_720/v1775564645/DIGITALT/Partner/2026/Moduler/teaser-smarteyes_unkjyr.png",
-      "url": "https://www.coop.se/medlem/partnererbjudanden/Smarteyes/",
-      "source": "Coop Medlem",
-      "sourceClass": "badge-coop",
-      "discount": "25% rabatt i valfri butik."
-    },
-    {
-      "title": "Stena Line: 10% rabatt.",
-      "searchText": "Coop Medlem Stena Line 10% rabatt.",
-      "image": "https://res.cloudinary.com/coopsverige/image/upload/f_auto,ar_1:1,c_fill,q_auto,h_720/v1775564646/DIGITALT/Partner/2026/Moduler/teaser-stena-line_mm9qb5.png",
-      "url": "https://www.coop.se/medlem/partnererbjudanden/stenaline/",
-      "source": "Coop Medlem",
-      "sourceClass": "badge-coop",
-      "discount": "10% rabatt."
-    },
-    {
-      "title": "Stromma: 20% rabatt.",
-      "searchText": "Coop Medlem Stromma 20% rabatt.",
-      "image": "https://res.cloudinary.com/coopsverige/image/upload/f_auto,ar_1:1,c_fill,q_auto,h_720/v1775564648/DIGITALT/Partner/2026/Moduler/teaser-stromma_noygeh.png",
-      "url": "https://www.coop.se/medlem/partnererbjudanden/stromma/",
-      "source": "Coop Medlem",
-      "sourceClass": "badge-coop",
-      "discount": "20% rabatt."
-    },
-    {
-      "title": "Synoptik: 25% rabatt i både butik och online.",
-      "searchText": "Coop Medlem Synoptik 25% rabatt i både butik och online.",
-      "image": "https://res.cloudinary.com/coopsverige/image/upload/f_auto,ar_1:1,c_fill,q_auto,h_720/v1775564651/DIGITALT/Partner/2026/Moduler/teaser-synoptik_ygjeco.png",
-      "url": "https://www.coop.se/medlem/partnererbjudanden/synoptik/",
-      "source": "Coop Medlem",
-      "sourceClass": "badge-coop",
-      "discount": "25% rabatt i både butik och online."
-    },
-    {
-      "title": "Tallink Silja Line: Upp till 30% rabatt.",
-      "searchText": "Coop Medlem Tallink Silja Line Upp till 30% rabatt.",
-      "image": "https://res.cloudinary.com/coopsverige/image/upload/f_auto,ar_1:1,c_fill,q_auto,h_720/v1775564652/DIGITALT/Partner/2026/Moduler/teaser-tallink-silja_hsipnn.png",
-      "url": "https://www.coop.se/medlem/partnererbjudanden/Tallink-Silja/",
-      "source": "Coop Medlem",
-      "sourceClass": "badge-coop",
-      "discount": "Upp till 30% rabatt."
-    },
-    {
-      "title": "Tivoli i Köpenhamn: Upp till 20% rabatt.",
-      "searchText": "Coop Medlem Tivoli i Köpenhamn Upp till 20% rabatt.",
-      "image": "https://res.cloudinary.com/coopsverige/image/upload/f_auto,ar_1:1,c_fill,q_auto,h_720/v1775564655/DIGITALT/Partner/2026/Moduler/teaser-tivoli_zjxq3z.png",
-      "url": "https://www.coop.se/medlem/partnererbjudanden/tivoli/",
-      "source": "Coop Medlem",
-      "sourceClass": "badge-coop",
-      "discount": "Upp till 20% rabatt."
-    },
-    {
-      "title": "TT Line: Upp till 40% rabatt.",
-      "searchText": "Coop Medlem TT Line Upp till 40% rabatt.",
-      "image": "https://res.cloudinary.com/coopsverige/image/upload/f_auto,ar_1:1,c_fill,q_auto,h_720/v1775564656/DIGITALT/Partner/2026/Moduler/teaser-TT-line_fawdwo.png",
-      "url": "https://www.coop.se/medlem/partnererbjudanden/ttline/",
-      "source": "Coop Medlem",
-      "sourceClass": "badge-coop",
-      "discount": "Upp till 40% rabatt."
-    },
-    {
-      "title": "TusenFryd i Oslo: Upp till 37% Rabatt.",
-      "searchText": "Coop Medlem TusenFryd i Oslo Upp till 37% Rabatt.",
-      "image": "https://res.cloudinary.com/coopsverige/image/upload/f_auto,ar_1:1,c_fill,q_auto,h_720/v1775818430/DIGITALT/Partner/2026/Moduler/teaser-tusenfryd_rdtte6.png",
-      "url": "https://www.coop.se/medlem/partnererbjudanden/tusenfryd/",
-      "source": "Coop Medlem",
-      "sourceClass": "badge-coop",
-      "discount": "Upp till 37% Rabatt."
-    },
-    {
-      "title": "Vi: Rabatt på prenumeration.",
-      "searchText": "Coop Medlem Vi Rabatt på prenumeration.",
-      "image": "https://res.cloudinary.com/coopsverige/image/upload/f_auto,ar_1:1,c_fill,q_auto,h_720/v1775820026/DIGITALT/Partner/2026/Moduler/teaser-vitidningen_ksfl91.png",
-      "url": "https://www.coop.se/medlem/partnererbjudanden/tidningen-vi-prenumeration/",
-      "source": "Coop Medlem",
-      "sourceClass": "badge-coop",
-      "discount": "Rabatt på prenumeration."
-    },
-    {
-      "title": "Vi Läser: Rabatt på prenumeration.",
-      "searchText": "Coop Medlem Vi Läser Rabatt på prenumeration.",
-      "image": "https://res.cloudinary.com/coopsverige/image/upload/f_auto,ar_1:1,c_fill,q_auto,h_720/v1775820207/DIGITALT/Partner/2026/Moduler/teaser-vilasertidningen_d1lyuz.png",
-      "url": "https://www.coop.se/medlem/partnererbjudanden/tidningen-vi-laser-prenumeration/",
-      "source": "Coop Medlem",
-      "sourceClass": "badge-coop",
-      "discount": "Rabatt på prenumeration."
-    },
-    {
-      "title": "Viaplay: 50% rabatt",
-      "searchText": "Coop Medlem Viaplay 50% rabatt",
-      "image": "https://res.cloudinary.com/coopsverige/image/upload/f_auto,ar_1:1,c_fill,q_auto,h_720/v1775564661/DIGITALT/Partner/2026/Moduler/teaser-viaplay_qqsel6.png",
-      "url": "https://www.coop.se/medlem/partnererbjudanden/viaplay/",
-      "source": "Coop Medlem",
-      "sourceClass": "badge-coop",
-      "discount": "50% rabatt"
     }
   ]
 }
