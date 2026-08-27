@@ -61,73 +61,81 @@ function parseIcaHtml(html) {
 
 async function fetchCoopDeals() {
   console.log('Startar Puppeteer för Coop partnererbjudanden...');
-  const browser = await puppeteer.launch({
-    headless: 'new',
-    args: ['--no-sandbox', '--disable-setuid-sandbox']
-  });
+  let browser = null;
 
   try {
+    browser = await puppeteer.launch({
+      headless: 'new',
+      args: ['--no-sandbox', '--disable-setuid-sandbox']
+    });
+
     const page = await browser.newPage();
     await page.setUserAgent(BROWSER_HEADERS['User-Agent']);
 
-    await page.goto('https://www.coop.se/medlem/partnererbjudanden/', { waitUntil: 'networkidle2' });
+    await page.goto('https://www.coop.se/medlem/partnererbjudanden/', { waitUntil: 'networkidle2', timeout: 30000 });
     await page.waitForSelector('a.o_e3019J', { timeout: 10000 }).catch(() => {});
 
     const rawDeals = await page.evaluate((placeholder) => {
-      const cards = document.querySelectorAll('a.o_e3019J');
-      const sourceName = 'Coop Medlem';
-      
-      return Array.from(cards).map(card => {
-        const titleEl = card.querySelector('h3.qCtytrLV');
-        const textEl = card.querySelector('.T9KSX3ng');
-        const href = card.getAttribute('href');
+      try {
+        const cards = document.querySelectorAll('a.o_e3019J');
+        const sourceName = 'Coop Medlem';
+        
+        return Array.from(cards).map(card => {
+          const titleEl = card.querySelector('h3.qCtytrLV');
+          const textEl = card.querySelector('.T9KSX3ng');
+          const href = card.getAttribute('href');
 
-        const imgDiv = card.querySelector('.cjGGRnc3');
-        let imageUrl = placeholder;
-        if (imgDiv) {
-          const bgStyle = imgDiv.style.backgroundImage;
-          const match = bgStyle.match(/url\(['"]?(.*?)['"]?\)/);
-          if (match && match[1]) {
-            imageUrl = match[1].startsWith('//') ? `https:${match[1]}` : match[1];
+          const imgDiv = card.querySelector('.cjGGRnc3');
+          let imageUrl = placeholder;
+          if (imgDiv) {
+            const bgStyle = imgDiv.style?.backgroundImage || '';
+            const match = bgStyle.match(/url\(['"]?(.*?)['"]?\)/);
+            if (match && match[1]) {
+              imageUrl = match[1].startsWith('//') ? `https:${match[1]}` : match[1];
+            }
           }
-        }
 
-        const rawText = textEl ? textEl.innerText.trim() : '';
-        const lines = rawText.split('\n').map(l => l.trim()).filter(Boolean);
+          const rawText = textEl ? textEl.innerText.trim() : '';
+          const lines = rawText.split('\n').map(l => l.trim()).filter(Boolean);
 
-        const discountLine = lines.find(line => 
-          (/%|rabatt/i.test(line)) && !/bonuspoäng|poäng/i.test(line)
-        ) || null;
+          const discountLine = lines.find(line => 
+            (/%|rabatt/i.test(line)) && !/bonuspoäng|poäng/i.test(line)
+          ) || null;
 
-        const partnerTitle = titleEl ? titleEl.innerText.trim() : '';
-        const fullTitle = partnerTitle && discountLine 
-          ? `${partnerTitle}: ${discountLine}` 
-          : (partnerTitle || discountLine || '');
+          const partnerTitle = titleEl ? titleEl.innerText.trim() : '';
+          const fullTitle = partnerTitle && discountLine 
+            ? `${partnerTitle}: ${discountLine}` 
+            : (partnerTitle || discountLine || '');
 
-        let url = href ? href.trim() : '#';
-        if (url !== '#' && !url.startsWith('http')) {
-          url = `https://www.coop.se${url}`;
-        }
+          let url = href ? href.trim() : '#';
+          if (url !== '#' && !url.startsWith('http')) {
+            url = `https://www.coop.se${url}`;
+          }
 
-        return {
-          title: fullTitle,
-          searchText: `${sourceName} ${partnerTitle} ${discountLine || ''}`,
-          image: imageUrl,
-          url: url,
-          source: sourceName,
-          sourceClass: 'badge-coop',
-          discount: discountLine
-        };
-      });
+          return {
+            title: fullTitle,
+            searchText: `${sourceName} ${partnerTitle} ${discountLine || ''}`,
+            image: imageUrl,
+            url: url,
+            source: sourceName,
+            sourceClass: 'badge-coop',
+            discount: discountLine
+          };
+        });
+      } catch (e) {
+        return [];
+      }
     }, PLACEHOLDER_IMG);
 
-    await browser.close();
-    
     return rawDeals.filter(deal => deal.discount !== null && deal.title !== '');
+
   } catch (err) {
     console.error('Coop fel vid Puppeteer-hämtning:', err.message);
-    await browser.close();
     return [];
+  } finally {
+    if (browser) {
+      await browser.close();
+    }
   }
 }
 
@@ -180,16 +188,20 @@ async function run() {
   }
 
   // Spara helt färdig parsad JSON
-  const finalData = {
-    updatedAt: new Date().toISOString(),
-    mecenat: mecenatData,
-    hyresgast: hyresgastData,
-    ica: icaItems,
-    coop: coopItems
-  };
+  try {
+    const finalData = {
+      updatedAt: new Date().toISOString(),
+      mecenat: mecenatData,
+      hyresgast: hyresgastData,
+      ica: icaItems,
+      coop: coopItems
+    };
 
-  fs.writeFileSync('data.json', JSON.stringify(finalData, null, 2));
-  console.log('data.json uppdaterad med alla källor!');
+    fs.writeFileSync('data.json', JSON.stringify(finalData, null, 2));
+    console.log('data.json uppdaterad med alla källor!');
+  } catch (err) {
+    console.error('Fel vid skrivning till data.json:', err.message);
+  }
 }
 
 run();
