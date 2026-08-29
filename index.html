@@ -27,6 +27,8 @@
       --img-bg: #eeeeee;
       --primary: #0066cc;
       --primary-hover: #0052a3;
+      --skeleton-base: #e2e8f0;
+      --skeleton-highlight: #f1f5f9;
     }
 
     /* 2. Automatisk Dark Mode utifrån enhetens inställningar */
@@ -43,6 +45,8 @@
         --img-bg: #334155;
         --primary: #3b82f6;
         --primary-hover: #2563eb;
+        --skeleton-base: #334155;
+        --skeleton-highlight: #475569;
       }
     }
 
@@ -180,17 +184,65 @@
       background-color: var(--primary-hover);
     }
 
-    #loading {
-      text-align: center;
-      font-size: 1.2rem;
-      padding: 50px;
-      color: var(--text-muted);
+    /* Skeleton Placeholder Styles */
+    .skeleton-card {
+      pointer-events: none;
+    }
+
+    .skeleton-box {
+      background: linear-gradient(
+        90deg,
+        var(--skeleton-base) 25%,
+        var(--skeleton-highlight) 50%,
+        var(--skeleton-base) 75%
+      );
+      background-size: 200% 100%;
+      animation: skeleton-loading 1.5s infinite;
+      border-radius: 4px;
+    }
+
+    .skeleton-img {
+      width: 100%;
+      height: 180px;
+      border-radius: 0;
+    }
+
+    .skeleton-badge {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      width: 60px;
+      height: 20px;
+      border-radius: 20px;
+    }
+
+    .skeleton-title-1 {
+      width: 90%;
+      height: 16px;
+      margin-bottom: 8px;
+    }
+
+    .skeleton-title-2 {
+      width: 60%;
+      height: 16px;
+      margin-bottom: 25px;
+    }
+
+    .skeleton-btn {
+      width: 100%;
+      height: 38px;
+      border-radius: 6px;
+    }
+
+    @keyframes skeleton-loading {
+      0% { background-position: 200% 0; }
+      100% { background-position: -200% 0; }
     }
 
     .hidden {
       display: none !important;
     }
-</style>
+  </style>
 </head>
 <body>
 
@@ -201,8 +253,7 @@
       <div id="stats" class="stats">Laddar rabatter...</div>
     </header>
 
-    <div id="loading">Hämtar data...</div>
-    <div id="grid" class="grid hidden"></div>
+    <div id="grid" class="grid"></div>
   </div>
 
   <script>
@@ -337,22 +388,20 @@
     };
 
     function getExtraKeywords(title = '') {
-  const lowerTitle = title.toLowerCase();
-  let extra = [];
+      const lowerTitle = title.toLowerCase();
+      let extra = [];
 
-  // Jämför BARA titeln mot själva varumärkesnamnet (brand), INTE mot sökorden (keywords)
-  for (const [brand, keywords] of Object.entries(BRAND_KEYWORDS)) {
-    // Escapa specialtecken och kräva att varumärket matchas som ett eget ord
-    const safeBrand = brand.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-    const regex = new RegExp(`(?:^|\\s|\\b)${safeBrand}(?:$|\\s|\\b)`, 'i');
+      for (const [brand, keywords] of Object.entries(BRAND_KEYWORDS)) {
+        const safeBrand = brand.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+        const regex = new RegExp(`(?:^|\\s|\\b)${safeBrand}(?:$|\\s|\\b)`, 'i');
 
-    if (regex.test(lowerTitle)) {
-      extra.push(keywords);
+        if (regex.test(lowerTitle)) {
+          extra.push(keywords);
+        }
+      }
+
+      return extra.join(' ');
     }
-  }
-
-  return extra.join(' ');
-}
 
     let allDeals = [];
 
@@ -373,7 +422,33 @@
       return shuffled;
     }
 
+    function showSkeletonPlaceholders(count = 8) {
+      const grid = document.getElementById('grid');
+      grid.innerHTML = '';
+      
+      for (let i = 0; i < count; i++) {
+        const skeletonCard = document.createElement('div');
+        skeletonCard.className = 'card skeleton-card';
+        skeletonCard.innerHTML = `
+          <div class="card-img-wrapper">
+            <div class="skeleton-box skeleton-img"></div>
+            <div class="skeleton-box skeleton-badge"></div>
+          </div>
+          <div class="card-content">
+            <div>
+              <div class="skeleton-box skeleton-title-1"></div>
+              <div class="skeleton-box skeleton-title-2"></div>
+            </div>
+            <div class="skeleton-box skeleton-btn"></div>
+          </div>
+        `;
+        grid.appendChild(skeletonCard);
+      }
+    }
+
     async function loadData() {
+      showSkeletonPlaceholders(8);
+
       try {
         const res = await fetch('./data.json');
         if (!res.ok) throw new Error(`Kunde inte ladda data.json (Status ${res.status})`);
@@ -489,149 +564,4 @@
               fullTitle,
               sourceName,
               item.description,
-              item.brandName,
-              extraKeywords
-            ].filter(Boolean).join(' ').toLowerCase();
-
-            return {
-              title: fullTitle,
-              searchText: searchIndex,
-              image: item.imageUrl || item.image || PLACEHOLDER_IMG,
-              url: item.url || '#',
-              source: sourceName,
-              sourceClass: 'badge-coop'
-            };
-          });
-        }
-
-        const combinedDeals = [...mecenatItems, ...hyresgastItems, ...icaItems, ...coopItems];
-
-        allDeals = shuffleArray(combinedDeals, 42);
-
-        document.getElementById('loading').classList.add('hidden');
-        document.getElementById('grid').classList.remove('hidden');
-
-        renderDeals(allDeals);
-
-      } catch (error) {
-        console.error('Ett fel uppstod vid läsning av data.json:', error);
-        document.getElementById('loading').innerText = 'Kunde inte läsa data.json. Se konsolen för detaljer.';
-      }
-    }
-
-    function renderDeals(deals) {
-      const grid = document.getElementById('grid');
-      const stats = document.getElementById('stats');
-      grid.innerHTML = '';
-
-      stats.innerText = `Visar ${deals.length} av ${allDeals.length} rabatter`;
-
-      if (deals.length === 0) {
-        grid.innerHTML = '<p style="grid-column: 1/-1; text-align: center; color: #666;">Inga rabatter matchade din sökning.</p>';
-        return;
-      }
-
-      deals.forEach(deal => {
-        const card = document.createElement('div');
-        card.className = 'card';
-
-        card.innerHTML = `
-          <div class="card-img-wrapper">
-            <img class="card-img" src="${deal.image || PLACEHOLDER_IMG}" alt="" loading="lazy">
-            <span class="badge ${deal.sourceClass}">${deal.source}</span>
-          </div>
-          <div class="card-content">
-            <h2 class="card-title"></h2>
-            <a href="${deal.url}" target="_blank" rel="noopener" class="card-link">Läs mer</a>
-          </div>
-        `;
-
-        const imgEl = card.querySelector('.card-img');
-        imgEl.onerror = () => { imgEl.src = PLACEHOLDER_IMG; };
-
-        card.querySelector('.card-title').textContent = deal.title;
-
-        grid.appendChild(card);
-      });
-    }
-
-    let searchTimeout;
-
-   document.getElementById('searchInput').addEventListener('input', (e) => {
-      clearTimeout(searchTimeout);
-
-      searchTimeout = setTimeout(() => {
-        const rawQuery = e.target.value.toLowerCase().trim();
-
-        if (!rawQuery) {
-          renderDeals(allDeals);
-          return;
-        }
-
-        const queryWords = rawQuery.split(/\s+/);
-
-        // 1. Filtrera fram alla kort där sökorden finns med
-        const filtered = allDeals.filter(deal => {
-          if (!deal.searchText) return false;
-          return queryWords.every(word => deal.searchText.includes(word));
-        });
-
-        // Safe regex för exakt ord-matchning av sökfrasen
-        const safeQuery = rawQuery.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-        const exactWordRegex = new RegExp(`\\b${safeQuery}\\b`, 'i');
-
-        function getRelevanceScore(deal) {
-          const title = deal.title.toLowerCase();
-
-          let exactBrandMatch = false;
-          let includesBrandMatch = false;
-
-          for (const [brand, keywords] of Object.entries(BRAND_KEYWORDS)) {
-            // Skapa ett regex för varumärket så att "mer" inte matchar i "lekmer"
-            const safeBrand = brand.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-            const brandRegex = new RegExp(`(?:^|\\s|\\b)${safeBrand}(?:$|\\s|\\b)`, 'i');
-
-            // Bara om titeln faktiskt innehåller varumärket som ett eget ord
-            if (brandRegex.test(title)) {
-              if (exactWordRegex.test(brand) || exactWordRegex.test(keywords)) {
-                exactBrandMatch = true;
-                break;
-              }
-              if (brand.includes(rawQuery) || keywords.includes(rawQuery)) {
-                includesBrandMatch = true;
-              }
-            }
-          }
-
-          // Steg 1: Exakt ord i matchat BRAND_KEYWORDS
-          if (exactBrandMatch) return 4;
-
-          // Steg 2: Exakt ord i titeln
-          if (exactWordRegex.test(title)) return 3;
-
-          // Steg 3: Del av ord (.includes) i varumärke eller titel
-          if (includesBrandMatch || title.includes(rawQuery)) return 2;
-
-          // Steg 4: Finns bara i beskrivning/brödtext
-          return 1;
-        }
-
-        // 2. Sortera baserat på poäng
-        filtered.sort((a, b) => getRelevanceScore(b) - getRelevanceScore(a));
-
-        renderDeals(filtered);
-      }, 450);
-    });
-
-    loadData();
-    // Registrera Service Worker för PWA
-if ('serviceWorker' in navigator) {
-  window.addEventListener('load', () => {
-    navigator.serviceWorker.register('./sw.js')
-      .catch(err => console.log('SW registration failed: ', err));
-  });
-}
-  </script>
-
-</body>
-</html>
+   
