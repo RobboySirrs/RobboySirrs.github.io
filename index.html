@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="sv">
 <head>
  
@@ -564,4 +564,81 @@
               fullTitle,
               sourceName,
               item.description,
+             item.brandName,
+              extraKeywords
+            ].filter(Boolean).join(' ').toLowerCase();
+
+            return {
+              title: fullTitle,
+              searchText: searchIndex,
+              image: item.imageUrl || item.image || PLACEHOLDER_IMG,
+              url: item.url || '#',
+              source: sourceName,
+              sourceClass: 'badge-coop'
+            };
+          });
+        }
+
+        const combinedDeals = [...mecenatItems, ...hyresgastItems, ...icaItems, ...coopItems];
+
+        allDeals = shuffleArray(combinedDeals, 42);
+
+        renderDeals(allDeals);
+
+      } catch (error) {
+        console.error('Ett fel uppstod vid läsning av data.json:', error);
+        document.getElementById('grid').innerHTML = '<p style="grid-column: 1/-1; text-align: center; color: #666;">Kunde inte läsa data.json. Se konsolen för detaljer.</p>';
+      }
+    }
+
+    function renderDeals(deals) {
+      const grid = document.getElementById('grid');
+      const stats = document.getElementById('stats');
+      grid.innerHTML = '';
+
+      stats.innerText = `Visar ${deals.length} av ${allDeals.length} rabatter`;
+
+      if (deals.length === 0) {
+        grid.innerHTML = '<p style="grid-column: 1/-1; text-align: center; color: #666;">Inga rabatter matchade din sökning.</p>';
+        return;
+      }
+
+      deals.forEach(deal => {
+        const card = document.createElement('div');
+        card.className = 'card';
+
+        card.innerHTML = `
+          <div class="card-img-wrapper">
+            <img class="card-img" src="${deal.image || PLACEHOLDER_IMG}" alt="" loading="lazy">
+            <span class="badge ${deal.sourceClass}">${deal.source}</span>
+          </div>
+          <div class="card-content">
+            <h2 class="card-title">${deal.title}</h2>
+            <a href="${deal.url}" target="_blank" rel="noopener noreferrer" class="card-link">Visa rabatt</a>
+          </div>
+        `;
+        grid.appendChild(card);
+      });
+    }
+
+    document.getElementById('searchInput').addEventListener('input', (e) => {
+      const query = e.target.value.toLowerCase().trim();
+      const terms = query.split(/\s+/).filter(Boolean);
+
+      if (terms.length === 0) {
+        renderDeals(allDeals);
+        return;
+      }
+
+      const filtered = allDeals.filter(deal => {
+        return terms.every(term => deal.searchText.includes(term));
+      });
+
+      renderDeals(filtered);
+    });
+
+    loadData();
+  </script>
+</body>
+</html>
    
