@@ -449,6 +449,10 @@
     async function loadData() {
       showSkeletonPlaceholders(8);
 
+     // Fördröjning på 1.5 sekunder för att visa skeleton-animationen
+      await new Promise(resolve => setTimeout(resolve, 1500));
+     
+
       try {
         const res = await fetch('./data.json');
         if (!res.ok) throw new Error(`Kunde inte ladda data.json (Status ${res.status})`);
