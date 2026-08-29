@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026-08-27T19:38:58.285Z",
+  "updatedAt": "2026-08-29T16:15:00.340Z",
   "mecenat": {
-    "discountHits": 951,
-    "totalHits": 1987,
+    "discountHits": 948,
+    "totalHits": 1981,
     "localHits": 0,
-    "brandPageHits": 970,
+    "brandPageHits": 967,
     "categoryHits": 66,
     "discounts": [
       {
@@ -540,40 +540,6 @@
         "clickoutButtonText": "to_discount"
       },
       {
-        "id": "2ac9c6c5-84c7-4a54-93d4-2ad11245b229",
-        "type": 2,
-        "title": "Upp till 73 % alumnirabatt på prylar för hemmet",
-        "subtitle": "Så länge lagret räcker",
-        "image": "https://img.meccdn.com/media/e9a246fa-dc44-462a-a9ca-44a6496b3927.png",
-        "imageAlt": "Upp till 73 % alumnirabatt på prylar för nya lyan",
-        "brandLogo": "https://img.meccdn.com/media/14f0cc91-8d64-48a7-a46c-6765766ae2bb.jpg",
-        "brandLogoAlt": "Fyndfabriken logotype",
-        "brandName": "Fyndfabriken",
-        "brandPagePath": "/se/fyndfabriken",
-        "brandId": "2aeda659-9dbd-4684-962c-62bce9af559d",
-        "validFrom": "2026-08-07T22:00:00Z",
-        "validTo": "2026-08-28T21:59:59Z",
-        "url": "/se/fyndfabriken/upp-till-73-procent-alumnirabatt-pa-prylar-for-hemmet",
-        "conditionDescription": "",
-        "conditionURL": "",
-        "conditionHTML": "<p>Gäller t.o.m. 28/8 eller så långt lagret räcker.</p><p>Gäller på utvalda produkter.</p>",
-        "isCampaign": true,
-        "partnerURL": "https://fyndfabriken.awardit.com/startpaket?codelock_code=4cc6be2ea8a72a5156b6&source=alumni&utm_source=start&utm_medium=start",
-        "content": "<p>Hos Fyndfabriken hittar du startpaket med glas, porslin, täcken, handdukar och mycket mer som behövs i ditt hem - just nu med upp till 73 % alumnirabatt!</p>",
-        "category": "A-10",
-        "mainCategoryName": "Hem & Ekonomi",
-        "metaTitle": "",
-        "metaDescription": "",
-        "subcategories": [
-          "A-10",
-          "C-70"
-        ],
-        "campaignOnly": false,
-        "showCountdown": false,
-        "sortOrder": 0,
-        "clickoutButtonText": "to_discount"
-      },
-      {
         "id": "e0f320fc-3dd7-4110-92c5-5f91e5ec6360",
         "type": 2,
         "title": "Obegränsad surf från 299 kr/mån i 12 mån",
@@ -671,40 +637,6 @@
         "campaignOnly": false,
         "showCountdown": false,
         "sortOrder": 0,
-        "clickoutButtonText": "to_discount"
-      },
-      {
-        "id": "47083ec5-e207-4b8f-9cdb-e6a9ee977e6f",
-        "type": 2,
-        "title": "20 % alumnirabatt vid köp av minst 2 varor",
-        "subtitle": "Gäller både online och i butik",
-        "image": "https://img.meccdn.com/media/49824dc3-eedc-434b-9294-522c38563879.jfif",
-        "imageAlt": "20 % alumnirabatt vid köp av minst 2 varor hos MQ Marqet",
-        "brandLogo": "https://img.meccdn.com/media/logo_134_200825155145870979.jpg",
-        "brandLogoAlt": "MQ Marqet",
-        "brandName": "MQ Marqet",
-        "brandPagePath": "/se/mq-marqet",
-        "brandId": "4789b3de-1a58-46fa-9f07-34427be3c0b5",
-        "validFrom": "2026-08-23T22:00:00Z",
-        "validTo": "2026-08-27T21:59:59Z",
-        "url": "/se/mq-marqet/20-procent-alumnirabatt-vid-kop-av-minst-2-varor",
-        "conditionDescription": "",
-        "conditionURL": "",
-        "conditionHTML": "<p>Gäller både online och i butik t.o.m. 27/8.</p><p>Gäller vid köp av minst 2 varor från Stockh lm, Stockh lm Studio, Bläck, Dobber och Bondelid.</p><p>Kan ej kombineras med andra erbjudanden eller rabatter.</p><p>Gäller ej MQ Second hand.</p><p>Vid köp online dras rabatten i kassan med hjälp av din rabattkod.</p><p>Vid köp i butik visar du upp ditt medlemskap.</p>",
-        "isCampaign": true,
-        "partnerURL": "https://www.mq.se/?utm_source=mecenat&utm_medium=omnibus&utm_campaign=mecenat_omnibus_alumni",
-        "content": "<p>Passa på att uppdatera garderoben! Just nu får du 20 % alumnirabatt på ett helt köp när du handlar minst 2 varor från Stockh lm, Stockh lm Studio, Bläck, Dobber och Bondelid hos MQ. Gäller både online och i butik.</p>",
-        "category": "D-10",
-        "mainCategoryName": "Kläder & Skönhet",
-        "metaTitle": "",
-        "metaDescription": "",
-        "subcategories": [
-          "D-10",
-          "D-20"
-        ],
-        "campaignOnly": false,
-        "showCountdown": false,
-        "sortOrder": 84,
         "clickoutButtonText": "to_discount"
       },
       {
@@ -875,39 +807,6 @@
         "campaignOnly": false,
         "showCountdown": false,
         "sortOrder": 0,
-        "clickoutButtonText": "to_discount"
-      },
-      {
-        "id": "02007814-398d-48d6-b5a1-4775b8b8fdaa",
-        "type": 2,
-        "title": "Upp till 50 % + 5 % extra alumnirabatt",
-        "subtitle": "Gäller på redan nedsatta priser",
-        "image": "https://img.meccdn.com/media/0f133fa5-6d6d-4c89-9fd9-c45dc59165de.jpg",
-        "imageAlt": "Upp till 50 % + 5 % extra alumnirabatt",
-        "brandLogo": "https://img.meccdn.com/media/e3dcbdcb-070b-463a-ad6a-8c2c78b37714.png",
-        "brandLogoAlt": "NA-KD",
-        "brandName": "NA-KD",
-        "brandPagePath": "/se/na-kd",
-        "brandId": "5449a903-5693-4735-ac09-08367e0d1ea0",
-        "validFrom": "2026-08-10T22:00:00Z",
-        "validTo": "2026-08-27T21:59:59Z",
-        "url": "/se/na-kd/upp-till-50-procent-5-procent-extra-alumnirabatt",
-        "conditionDescription": "",
-        "conditionURL": "",
-        "conditionHTML": "<p>Gäller t.o.m. 27/8.<br><br>Gäller på redan nedsatta priser.</p><p>Gäller på utvalda plagg.</p>",
-        "isCampaign": true,
-        "partnerURL": "https://www.na-kd.com/sv/specialpriser",
-        "content": "<p>Ge din garderob ett lyft med NA-KD:s trendiga mode! Just nu kan du fynda med upp till 50 % rabatt hos NA-KD, och som alumn får du dessutom 5 % extra rabatt på redan nedsatta (röda) priser. Ta chansen att shoppa hem nya favoriter till ännu bättre priser!</p>",
-        "category": "D-10",
-        "mainCategoryName": "Kläder & Skönhet",
-        "metaTitle": "",
-        "metaDescription": "",
-        "subcategories": [
-          "D-10"
-        ],
-        "campaignOnly": false,
-        "showCountdown": false,
-        "sortOrder": 44,
         "clickoutButtonText": "to_discount"
       },
       {
@@ -1325,39 +1224,37 @@
         "clickoutButtonText": "to_discount"
       },
       {
-        "id": "fa65701b-b4c6-42e2-a710-63b9ed170dae",
+        "id": "b5377c98-df95-46c7-9348-cac36e9b80e6",
         "type": 2,
-        "title": "Prova Nextory gratis i 70 dagar",
-        "subtitle": "Gäller nya och återkommande kunder",
-        "image": "https://img.meccdn.com/media/3d58726c-a986-4496-b397-5b55c3c70a9d.jfif",
-        "imageAlt": "Prova Nextory fritt i 70 dagar",
-        "brandLogo": "https://img.meccdn.com/media/logo_114_211006090909198591.png",
-        "brandLogoAlt": "Nextory",
-        "brandName": "Nextory",
-        "brandPagePath": "",
-        "brandId": "431903d7-8f3c-41d8-86b1-caa0035b6fe7",
-        "validFrom": "2026-08-20T22:00:00Z",
-        "validTo": "2026-09-20T21:59:59Z",
-        "url": "/se/nextory/prova-nextory-gratis-i-70-dagar",
+        "title": "20 % alumnirabatt hos Nikon",
+        "subtitle": "Gäller även på redan nedsatta priser",
+        "image": "https://img.meccdn.com/media/8137f6a7-7a72-443b-93c5-39922b12f315.png",
+        "imageAlt": "20 % alumnirabatt hos Nikon",
+        "brandLogo": "https://img.meccdn.com/media/logo_196_240903112803178866.jpg",
+        "brandLogoAlt": "Nikon",
+        "brandName": "Nikon",
+        "brandPagePath": "/se/nikon",
+        "brandId": "7047ce1b-5686-49f3-a482-f5077411a0f7",
+        "validFrom": "2026-08-27T22:00:00Z",
+        "validTo": "2026-09-28T21:59:59Z",
+        "url": "/se/nikon/20-procent-alumnirabatt-hos-nikon",
         "conditionDescription": "",
         "conditionURL": "",
-        "conditionHTML": "<p>Gäller t.o.m. 20/9.</p><p>Gäller för nya och tidigare kunder som inte haft Nextory under de senaste 6 månaderna.</p><p>Läs och lyssna upp till 20 timmar under provperioden.</p><p>Pris efter provperioden: från 139 kr/mån.</p><p>Ingen bindningstid, avsluta när du vill.&nbsp;</p>",
+        "conditionHTML": "<p>Gäller t.o.m. 28/9.</p><p>Rabatten gäller endast för Mecenat alumner, är icke överlåtbar och kan inte bytas mot kontanter.</p><p>Endast 1 rabattkod gäller per beställning.</p><p>Rabatten kan inte kombineras med en kampanj som inkluderar en gratisprodukt.</p><p>20 % rabatt gäller på alla produkter i Nikon Store (www.nikon.se).</p><p>Rabattkoder kan användas på rabatterade produkter - vissa undantag kan dock förekomma.</p><p>Förhandsbokningar och tredjepartstillbehör omfattas inte av erbjudandet.</p><p>Erbjudandet löses in vid köptillfället genom att ange en unik kod genererad via Mecenat.</p><p>Produkterna ingår så länge lagret räcker. Nikon ansvarar inte för återförsäljares oförmåga att leverera kampanjprodukter.<br><br>Om omständigheter utanför arrangörens kontroll gör kampanjen ogenomförbar, förbehåller sig arrangören rätten att ändra eller avsluta kampanjen.</p>",
         "isCampaign": true,
-        "partnerURL": "https://nextory.com/se/collab/partner/mecenat_b2s_al_26",
-        "content": "<p>Få 70 dagars fri tillgång till Nextorys bibliotek med ljudböcker och e-böcker. Exklusivt erbjudande för Mecenat alumner! Passa på - erbjudandet gäller endast denna vecka. Njut av över 1,4 miljoner e-böcker och ljudböcker helt gratis.</p><p>Börja lyssna och läsa idag!</p>",
-        "category": "E-40",
-        "mainCategoryName": "Böcker",
+        "partnerURL": "https://www.nikon.se",
+        "content": "<p>Uppgradera din utrustning och spara stort på kameror, objektiv och tillbehör från Nikon - just nu med 20 % alumnirabatt! Det bästa? Rabatten kan även kombineras med andra erbjudanden!</p><p>Dessutom ingår fri frakt och smidiga returer på alla köp. Ta chansen att höja din fotografering till nya nivåer med Nikon!</p>",
+        "category": "F-70",
+        "mainCategoryName": "Teknik & Mobil",
         "metaTitle": "",
         "metaDescription": "",
         "subcategories": [
-          "E-70",
-          "E-20",
-          "E-40",
-          "C-60"
+          "F-70",
+          "F-60"
         ],
         "campaignOnly": false,
         "showCountdown": false,
-        "sortOrder": 30,
+        "sortOrder": 2,
         "clickoutButtonText": "to_discount"
       },
       {
@@ -1459,6 +1356,39 @@
         "campaignOnly": false,
         "showCountdown": false,
         "sortOrder": 21914,
+        "clickoutButtonText": "to_discount"
+      },
+      {
+        "id": "742654b8-bfd4-4748-b163-132610561858",
+        "type": 2,
+        "title": "1 000 kr i alumnirabatt på försommarresor",
+        "subtitle": "Solklart semesterläge!",
+        "image": "https://img.meccdn.com/media/812e2189-27dc-4a3a-883f-6b7db5357f79.jfif",
+        "imageAlt": "1 000 kr i alumnirabatt på försommarresor",
+        "brandLogo": "https://img.meccdn.com/media/logo_158_180620142259658514.png",
+        "brandLogoAlt": "Apollo",
+        "brandName": "Apollo",
+        "brandPagePath": "/se/apollo",
+        "brandId": "805cb934-9c42-4251-98dd-0135cba3cfb4",
+        "validFrom": "2026-08-28T22:00:00Z",
+        "validTo": "2026-09-15T21:59:59Z",
+        "url": "/se/apollo/1-000-kr-i-alumnirabatt-pa-forsommarresor",
+        "conditionDescription": "",
+        "conditionURL": "",
+        "conditionHTML": "<p>Gäller t.o.m. 15/9.</p><p>Rabatten gäller per bokning när du bokar en ny paketresa med flyg och hotell i kombination på apollo.se eller i appen Mitt Apollo med aktuell kampanjkod.</p><p>Gäller avreseperiod 1/4 - 6/6 2027.</p><p>Kan inte kombineras med andra erbjudanden eller rabatter.</p>",
+        "isCampaign": true,
+        "partnerURL": "https://www.apollo.se/erbjudanden/kampanjer/studentrabatt/alumni?utm_source=alumni&utm_medium=referral&utm_campaign=summer_s27",
+        "content": "<p>Tillbaka till vardagen, men hjärtat längtar efter lata stranddagar och varma kvällar? Säkra en solig vecka med sand mellan tårna och ljudet av vågor från det turkosa Medelhavet.</p><p>Just nu får du som Mecenat alumn 1 000 kr i boka-tidigt-rabatt på alla paketresor med avresa under försommaren 2027. Och du, det lönar sig att vara ute i god tid – de mest eftertraktade resorna bokas först.</p>",
+        "category": "G-30",
+        "mainCategoryName": "Resor",
+        "metaTitle": "",
+        "metaDescription": "",
+        "subcategories": [
+          "G-30"
+        ],
+        "campaignOnly": false,
+        "showCountdown": false,
+        "sortOrder": 86,
         "clickoutButtonText": "to_discount"
       },
       {
@@ -2798,6 +2728,42 @@
         "clickoutButtonText": "to_discount"
       },
       {
+        "id": "fa65701b-b4c6-42e2-a710-63b9ed170dae",
+        "type": 2,
+        "title": "Prova Nextory gratis i 70 dagar",
+        "subtitle": "Gäller nya och återkommande kunder",
+        "image": "https://img.meccdn.com/media/3d58726c-a986-4496-b397-5b55c3c70a9d.jfif",
+        "imageAlt": "Prova Nextory fritt i 70 dagar",
+        "brandLogo": "https://img.meccdn.com/media/logo_114_211006090909198591.png",
+        "brandLogoAlt": "Nextory",
+        "brandName": "Nextory",
+        "brandPagePath": "/se/nextory",
+        "brandId": "431903d7-8f3c-41d8-86b1-caa0035b6fe7",
+        "validFrom": "2026-08-20T22:00:00Z",
+        "validTo": "2026-09-30T21:59:59Z",
+        "url": "/se/nextory/prova-nextory-gratis-i-70-dagar",
+        "conditionDescription": "",
+        "conditionURL": "",
+        "conditionHTML": "<p>Gäller t.o.m. 30/9.</p><p>Gäller för nya och tidigare kunder som inte haft Nextory under de senaste 6 månaderna.</p><p>Läs och lyssna upp till 20 timmar under provperioden.</p><p>Pris efter provperioden: från 139 kr/mån.</p><p>Ingen bindningstid, avsluta när du vill.&nbsp;</p>",
+        "isCampaign": true,
+        "partnerURL": "https://nextory.com/se/collab/partner/mecenat_b2s_al_26",
+        "content": "<p>Få 70 dagars fri tillgång till Nextorys bibliotek med ljudböcker och e-böcker. Exklusivt erbjudande för Mecenat alumner! Njut av över 1,4 miljoner e-böcker och ljudböcker helt gratis.</p><p>Börja lyssna och läsa idag!</p>",
+        "category": "E-40",
+        "mainCategoryName": "Böcker",
+        "metaTitle": "",
+        "metaDescription": "",
+        "subcategories": [
+          "E-70",
+          "E-20",
+          "E-40",
+          "C-60"
+        ],
+        "campaignOnly": false,
+        "showCountdown": false,
+        "sortOrder": 30,
+        "clickoutButtonText": "to_discount"
+      },
+      {
         "id": "f706505f-9a0b-4325-870e-5ec4473c8dde",
         "type": 2,
         "title": "30 % alumnirabatt hos Heey!",
@@ -3320,6 +3286,39 @@
           "B-60",
           "C-70",
           "D-50"
+        ],
+        "campaignOnly": false,
+        "showCountdown": false,
+        "sortOrder": 0,
+        "clickoutButtonText": "to_discount"
+      },
+      {
+        "id": "7fce571b-e13f-48ff-8905-2066b34aabb0",
+        "type": 2,
+        "title": "25 % alumnirabatt på flytthjälp och flyttstädning",
+        "subtitle": "Flytta smartare",
+        "image": "https://img.meccdn.com/media/d6442f4d-2395-4cf1-b3b9-0b0bb5343035.png",
+        "imageAlt": "25 % studentrabatt på flytthjälp och flyttstädning",
+        "brandLogo": "https://img.meccdn.com/media/logo_666_250311070051369345.jpg",
+        "brandLogoAlt": "Redrental",
+        "brandName": "Redrental",
+        "brandPagePath": "",
+        "brandId": "8d9a754e-7b04-4f35-a949-b50cc7c8ff22",
+        "validFrom": "2026-08-28T22:00:00Z",
+        "validTo": "2026-09-30T21:59:59Z",
+        "url": "/se/redrental/25-procent-alumnirabatt-pa-flytthjalp-och-flyttstadning",
+        "conditionDescription": "",
+        "conditionURL": "",
+        "conditionHTML": "<p>Gäller t.o.m. 30/9.</p><p>Kan inte kombineras med andra erbjudanden.</p><p>Gäller bokningar som genomförs senast 30 september.</p>",
+        "isCampaign": true,
+        "partnerURL": "https://www.redrental.se/",
+        "content": "<p>Flytta smartare - med RedrentalService! Just nu får du 25 % alumnirabatt på flytthjälp och flyttstädning.</p><p>Ny lägenhet, nytt jobb eller bara dags för nästa kapitel? Redrental gör flytten enklare. Som Mecenat alumn får du ett förmånligt erbjudande på flytthjälp och flyttstädning hos Redrentalservice.</p><p>Redrental tar hand om det tunga, transporten och städningen – så att du kan lägga tiden på annat. Hela flytten på ett ställe – enkelt och smidigt.</p>",
+        "category": "A-70",
+        "mainCategoryName": "Hem & Ekonomi",
+        "metaTitle": "",
+        "metaDescription": "",
+        "subcategories": [
+          "A-70"
         ],
         "campaignOnly": false,
         "showCountdown": false,
@@ -5992,39 +5991,6 @@
         "clickoutButtonText": "to_discount"
       },
       {
-        "id": "256b405b-a5b5-455e-b086-4837d4d7cfd8",
-        "type": 2,
-        "title": "500 kr alumnirabatt hos Länna Möbler",
-        "subtitle": "Gäller vid köp över 5 000 kr",
-        "image": "https://img.meccdn.com/media/c884caad-59f5-409d-99c8-d70421a57ef4.jpg",
-        "imageAlt": "500 kr alumnirabatt hos Länna Möbler ",
-        "brandLogo": "https://img.meccdn.com/media/6d06c5c0-b4cf-4c0d-b79c-a121847026d6.png",
-        "brandLogoAlt": "Länna",
-        "brandName": "Länna Möbler",
-        "brandPagePath": "/se/lanna-mobler",
-        "brandId": "21f4a8f7-ec39-46e5-9c65-cebde0b0e403",
-        "validFrom": "2026-02-08T23:00:00Z",
-        "validTo": "2026-12-31T22:59:59Z",
-        "url": "/se/lanna-mobler/500-kr-alumnirabatt-hos-lanna-mobler",
-        "conditionDescription": "",
-        "conditionURL": "",
-        "conditionHTML": "<p>Gäller endast online. </p><p>Gäller vid köp över 5 000 kr. </p><p>Gäller även på rea.</p>",
-        "isCampaign": false,
-        "partnerURL": "https://www.lannamobler.com/",
-        "content": "<p>Upptäck ett brett sortiment av skandinavisk och tidlös design hos Länna Möbler. Produkterna förenar enkelhet, funktionalitet och estetik, från eleganta möbler till vackra heminredningsdetaljer. Som alumn får du 500 kr rabatt vid köp över 5 000 kr. Hitta allt som behövs för att skapa en stilren och harmonisk atmosfär i hemmet.</p>",
-        "category": "A-20",
-        "mainCategoryName": "Hem & Ekonomi",
-        "metaTitle": "",
-        "metaDescription": "",
-        "subcategories": [
-          "A-20"
-        ],
-        "campaignOnly": false,
-        "showCountdown": false,
-        "sortOrder": 23739,
-        "clickoutButtonText": "to_discount"
-      },
-      {
         "id": "258c8c19-232f-4803-a7cd-fd1e896e4c77",
         "type": 2,
         "title": "50 kr alumnirabatt vid köp över 229 kr",
@@ -7318,39 +7284,6 @@
         "campaignOnly": false,
         "showCountdown": false,
         "sortOrder": 0,
-        "clickoutButtonText": "to_discount"
-      },
-      {
-        "id": "445e97ca-9b78-4008-83df-9c09bcbc0b04",
-        "type": 2,
-        "title": "10 % alumnirabatt på ditt köp",
-        "subtitle": "Gäller även produkter märkta med Outlet",
-        "image": "https://img.meccdn.com/media/image1_196_230425164627703990.jpg",
-        "imageAlt": "10 % alumnirabattrabatt på ditt köp",
-        "brandLogo": "https://img.meccdn.com/media/logo_196_220920091010012330.jpg",
-        "brandLogoAlt": "Outnorth",
-        "brandName": "Outnorth",
-        "brandPagePath": "/se/outnorth",
-        "brandId": "1f0d29ce-38a0-4f76-8b7b-92c5ddd4d01c",
-        "validFrom": "2023-04-30T22:00:00Z",
-        "validTo": "2026-08-31T21:59:59Z",
-        "url": "/se/outnorth/10-procent-alumnirabatt-pa-ditt-kop",
-        "conditionDescription": "",
-        "conditionURL": "",
-        "conditionHTML": "<p>Gäller på ordinarie priser och produkter märkta med ”Outlet”.</p><p>Gäller ej Fjällräven, Hilleberg, Norrøna, Swarovski, elektronik.</p><p>Gäller ej produkter märkta med ”Outnorth price\".</p><p>Går ej att kombinera med andra erbjudanden eller&nbsp;rabattkoder.</p>",
-        "isCampaign": false,
-        "partnerURL": "https://www.outnorth.com/se/?utm_source=mecenat.se&utm_medium=affiliate",
-        "content": "Outnorth.se är friluftsbutiken med kläder, skor och utrustning för stora och små äventyr. Som Mecenat alumn får du 10 % rabatt på ditt köp – även på produkter märkta med \"Outlet\". Klicka dig in och hitta allt du behöver för livet utomhus!",
-        "category": "D-10",
-        "mainCategoryName": "Kläder & Skönhet",
-        "metaTitle": "",
-        "metaDescription": "",
-        "subcategories": [
-          "D-10"
-        ],
-        "campaignOnly": false,
-        "showCountdown": false,
-        "sortOrder": 30,
         "clickoutButtonText": "to_discount"
       },
       {
@@ -9003,39 +8936,6 @@
         "clickoutButtonText": "to_discount"
       },
       {
-        "id": "72085451-38ca-4038-b622-3d15cd273032",
-        "type": 2,
-        "title": "20 % alumnirabatt på Vasaloppets skidlopp",
-        "subtitle": "Datum: 26 februari – 7 mars",
-        "image": "https://img.meccdn.com/media/image1_196_241217103744281468.jpg",
-        "imageAlt": "20 % alumnirabatt på Vasaloppets skidlopp",
-        "brandLogo": "https://img.meccdn.com/media/logo_196_241217115516259342.jpg",
-        "brandLogoAlt": "",
-        "brandName": "Vasaloppet",
-        "brandPagePath": "/se/vasaloppet",
-        "brandId": "0e503699-d733-499b-b423-0cfa309538fe",
-        "validFrom": "2026-03-27T23:00:00Z",
-        "validTo": "2027-02-26T22:59:59Z",
-        "url": "/se/vasaloppet/20-procent-alumnirabatt-pa-vasaloppets-skidlopp",
-        "conditionDescription": "",
-        "conditionURL": "",
-        "conditionHTML": "<p>Vasaloppets vintervecka 2027 arrangeras 26 februari – 7 mars.</p><p>Gäller endast individuella lopp.</p>",
-        "isCampaign": false,
-        "partnerURL": "https://www.vasaloppet.se/",
-        "content": "<p>Välkommen till Vasaloppet och världens äldsta och största långlopp på skidor. Vasaloppets vintervecka 2027 arrangeras 26 februari – 7 mars och erbjuder 14 spännande skidlopp som alla går i mål under den klassiska målportalen i Mora. Välj mellan distanser från 90 km till 10 km. Åk på natten eller dagen, i klassisk stil eller skejta, tillsammans med vännerna eller på egen hand. Det finns en utmaning för alla! Som alumn får du 20 % rabatt på Vasaloppets individuella skidlopp, även på huvudloppet den 7 mars. Boka din plats idag!</p>",
-        "category": "B-70",
-        "mainCategoryName": "Hälsa",
-        "metaTitle": "",
-        "metaDescription": "",
-        "subcategories": [
-          "B-70"
-        ],
-        "campaignOnly": false,
-        "showCountdown": false,
-        "sortOrder": 1,
-        "clickoutButtonText": "to_discount"
-      },
-      {
         "id": "744a8b27-ccbb-44f1-ae0e-a5c5f019ac11",
         "type": 2,
         "title": "10 % rabatt på posters",
@@ -9883,39 +9783,6 @@
         "campaignOnly": false,
         "showCountdown": false,
         "sortOrder": 0,
-        "clickoutButtonText": "to_discount"
-      },
-      {
-        "id": "880f3801-6793-48b7-a0a7-8f21d0d3f32c",
-        "type": 2,
-        "title": "Bolåneerbjudande hos SEB",
-        "subtitle": "Gäller när du blir bolånekund",
-        "image": "https://img.meccdn.com/media/996c6317-7c35-4c96-ad70-7fd4f87c2dca.jfif",
-        "imageAlt": "Bolåneerbjudande hos SEB",
-        "brandLogo": "https://img.meccdn.com/media/logo_196_221013142328005388.jpg",
-        "brandLogoAlt": "",
-        "brandName": "SEB",
-        "brandPagePath": "/se/seb",
-        "brandId": "b8320ce5-805e-4479-9c77-ccc2fcd11d64",
-        "validFrom": "2026-05-06T22:00:00Z",
-        "validTo": "2026-08-31T21:59:59Z",
-        "url": "/se/seb/bolaneerbjudande-hos-seb",
-        "conditionDescription": "",
-        "conditionURL": "",
-        "conditionHTML": "<p>Gäller när du blir bolånekund hos SEB t.o.m. 31/8.</p>",
-        "isCampaign": false,
-        "partnerURL": "https://seb.se/kunderbjudanden/forsta-bolanet-mecenat?cmpid=mecenat_loan-bolan_x_x_x",
-        "content": "<p>Dags att ta första bolånet? Ingen panik. SEB hjälper dig genom alla steg, från lånelöfte och budgivning till kontraktsskrivning och inflytt.</p><p>Just nu får du som alumn ett extra bra erbjudande när du väljer att ta ditt första bolån hos SEB. Då får du även flera förmånliga rabatter på bland annat banktjänster, försäkringar och juridiska tjänster. Låter det intressant? Klicka dig vidare för att ta del av erbjudandet!</p>",
-        "category": "A-40",
-        "mainCategoryName": "Hem & Ekonomi",
-        "metaTitle": "",
-        "metaDescription": "",
-        "subcategories": [
-          "A-40"
-        ],
-        "campaignOnly": false,
-        "showCountdown": false,
-        "sortOrder": 21304,
         "clickoutButtonText": "to_discount"
       },
       {
@@ -11652,41 +11519,6 @@
         "clickoutButtonText": "to_discount"
       },
       {
-        "id": "ba806064-41cb-4a55-b118-ffb9cb7085b9",
-        "type": 2,
-        "title": "5 % alumnirabatt hos Boohoo",
-        "subtitle": "Gäller även på rea",
-        "image": "https://img.meccdn.com/media/55480bf7-4454-4016-97da-5f333a39f7cd.jpg",
-        "imageAlt": "5 % alumnirabatt hos Boohoo",
-        "brandLogo": "https://img.meccdn.com/media/logo_196_241024142527077722.png",
-        "brandLogoAlt": "Boohoo",
-        "brandName": "Boohoo",
-        "brandPagePath": "/se/boohoo",
-        "brandId": "bf8e25cd-f5f5-4463-a49f-bb6b1b6a889c",
-        "validFrom": "2024-08-20T06:58:02Z",
-        "validTo": "2099-08-19T22:00:00Z",
-        "url": "/se/boohoo/5-procent-alumnirabatt-hos-boohoo",
-        "conditionDescription": "",
-        "conditionURL": "",
-        "conditionHTML": "Gäller även på rea.",
-        "isCampaign": false,
-        "partnerURL": "https://se.boohoo.com/",
-        "content": "Inspireras av Boohoo:s stora utbud av trendiga plagg och accessoarer. Som Mecenat alumn får du alltid 5 % rabatt på ditt köp – även på redan nedsatta produkter. Hitta säsongens snyggaste look idag!",
-        "category": "D-10",
-        "mainCategoryName": "Kläder & Skönhet",
-        "metaTitle": "",
-        "metaDescription": "",
-        "subcategories": [
-          "D-10",
-          "D-20",
-          "D-30"
-        ],
-        "campaignOnly": false,
-        "showCountdown": false,
-        "sortOrder": 8,
-        "clickoutButtonText": "to_discount"
-      },
-      {
         "id": "bce69c9e-d7d4-4b29-a886-dfc879d01095",
         "type": 2,
         "title": "6 % rabatt på Nintendo eShop presentkort",
@@ -11750,39 +11582,6 @@
         "campaignOnly": false,
         "showCountdown": false,
         "sortOrder": 9,
-        "clickoutButtonText": "to_discount"
-      },
-      {
-        "id": "be534958-a9dc-4905-aa0e-db77e342a02a",
-        "type": 2,
-        "title": "500 kr alumnirabatt hos Sunweb",
-        "subtitle": "Gäller även på rea och Sista Minuten-resor",
-        "image": "https://img.meccdn.com/media/image1_196_241114161259851935.jpg",
-        "imageAlt": "500 kr alumnirabatt hos Sunweb",
-        "brandLogo": "https://img.meccdn.com/media/logo_196_220705163459782631.jpg",
-        "brandLogoAlt": "Sunweb",
-        "brandName": "Sunweb",
-        "brandPagePath": "/se/sunweb",
-        "brandId": "183a65f4-2f1f-42d5-9bb0-6342675dddf9",
-        "validFrom": "2024-11-13T23:00:00Z",
-        "validTo": "2026-12-31T22:59:59Z",
-        "url": "/se/sunweb/500-kr-alumnirabatt-hos-sunweb",
-        "conditionDescription": "",
-        "conditionURL": "",
-        "conditionHTML": "<p>Med rabattkoden får du 500 kr extra rabatt per bokning när du bokar en paketresa med avresa innan 31/12-2027.</p><p>Rabatten gäller även på redan nedsatta priser. Boka senast 31/12-2026.</p><p>Kampanjkoden anges bokningens andra steg och kan inte läggas till retroaktivt.</p>",
-        "isCampaign": false,
-        "partnerURL": "https://www.sunweb.se/solresor",
-        "content": "<p>Njut av en välförtjänt semester med 500 kr alumnirabatt hos Sunweb - gäller även på rea och Sista Minuten-resor. Välj bland allt från soliga sommarresor på Greklands öarna till värmande tillflyktsorter på Kanarieöarna i vinter. Lägsta prisgaranti och ombokningsgaranti ingår alltid när du bokar.</p>",
-        "category": "G-40",
-        "mainCategoryName": "Resor",
-        "metaTitle": "",
-        "metaDescription": "",
-        "subcategories": [
-          "G-40"
-        ],
-        "campaignOnly": false,
-        "showCountdown": false,
-        "sortOrder": 22,
         "clickoutButtonText": "to_discount"
       },
       {
@@ -17706,39 +17505,6 @@
         "clickoutButtonText": "to_discount"
       },
       {
-        "id": "d3f2b283-9a8b-4278-9bd1-bbf122790e2b",
-        "type": 2,
-        "title": "30 % alumnirabatt på din första matkasse",
-        "subtitle": "därefter upp till 20 % rabatt på dina nästa 3 matkassar",
-        "image": "https://img.meccdn.com/media/63f34bd6-24fb-4d9e-86b1-e152b6db3e94.jfif",
-        "imageAlt": "30 % alumnirabatt på din första matkasse",
-        "brandLogo": "https://img.meccdn.com/media/logo_160_220929213518375562.jpg",
-        "brandLogoAlt": "Linas Matkasse",
-        "brandName": "Linas Matkasse",
-        "brandPagePath": "/se/linas-matkasse",
-        "brandId": "b98f95a3-4e2d-4f08-8119-87e7ba04b230",
-        "validFrom": "2025-07-13T22:00:00Z",
-        "validTo": "2026-12-31T22:59:59Z",
-        "url": "/se/linas-matkasse/30-procent-alumnirabatt-pa-din-forsta-matkasse",
-        "conditionDescription": "",
-        "conditionURL": "",
-        "conditionHTML": "<p>30 % alumnirabatt på din första&nbsp;matkasse, därefter upp till 20 % rabatt på dina nästa 3 matkassar.</p><p>Gäller endast nya kunder.</p><p>Rabatten gäller endast matkassen, ej matvarubutiken.</p><p>Kan ej kombineras med andra erbjudanden.</p><p>Ingen bindningstid. Pausa eller avsluta när du vill.</p>",
-        "isCampaign": false,
-        "partnerURL": "https://www.linasmatkasse.se/",
-        "content": "<p>Lär dig laga enkel och sund mat med Linas – Matkassen med Sveriges bredaste utbud av rätter! Som alumn får du 30 % rabatt på din första matkasse, därefter upp till 20 % rabatt på dina nästa 3 matkassar. Dessutom kan du pausa matkassen när du vill. Beställ valfri matkasse redan idag!</p>",
-        "category": "H-10",
-        "mainCategoryName": "Mat",
-        "metaTitle": "",
-        "metaDescription": "",
-        "subcategories": [
-          "H-10"
-        ],
-        "campaignOnly": false,
-        "showCountdown": false,
-        "sortOrder": 0,
-        "clickoutButtonText": "to_discount"
-      },
-      {
         "id": "bf418c4c-8377-4286-9877-70fc7691f3b4",
         "type": 2,
         "title": "500 kr alumnirabatt på hjulvinkelkontroll",
@@ -19541,6 +19307,273 @@
         "campaignOnly": false,
         "showCountdown": false,
         "sortOrder": 2,
+        "clickoutButtonText": "to_discount"
+      },
+      {
+        "id": "188091a1-2006-4a1b-8816-3c82c30a0d9f",
+        "type": 2,
+        "title": "20 % alumnirabatt på Vasaloppets löplopp",
+        "subtitle": "Datum: 20-21 augusti",
+        "image": "https://img.meccdn.com/media/image1_196_241217102019382983.jpg",
+        "imageAlt": "20 % alumnirabatt på Vasaloppets löplopp",
+        "brandLogo": "https://img.meccdn.com/media/logo_196_241217115516259342.jpg",
+        "brandLogoAlt": "",
+        "brandName": "Vasaloppet",
+        "brandPagePath": "/se/vasaloppet",
+        "brandId": "0e503699-d733-499b-b423-0cfa309538fe",
+        "validFrom": "2026-08-27T22:00:00Z",
+        "validTo": "2027-08-21T21:59:59Z",
+        "url": "/se/vasaloppet/20-procent-alumnirabatt-pa-vasaloppets-loplopp",
+        "conditionDescription": "",
+        "conditionURL": "",
+        "conditionHTML": "<p>Vasaloppets löplopp 2027 äger rum 20-21 augusti.</p><p>Gäller endast individuella lopp.</p>",
+        "isCampaign": false,
+        "partnerURL": "https://www.vasaloppet.se/",
+        "content": "<p>Fredag och lördag, 20-21 augusti 2027 står löpning på programmet. På fredagskvällen smygs det i gång med Trailvasan 10 som både startar och går i mål i Vasaloppsmålet i Mora. Och på lördagen är det sen dags för ”ultralöparnas julafton” när Ultravasan 90, Ultravasan 45, Trailvasan 30 och Vasastafetten ska avgöras. Som alumn får du 20 % rabatt på Vasaloppets individuella löplopp. Anmäl dig redan idag!</p>",
+        "category": "B-70",
+        "mainCategoryName": "Hälsa",
+        "metaTitle": "",
+        "metaDescription": "",
+        "subcategories": [
+          "C-60"
+        ],
+        "campaignOnly": false,
+        "showCountdown": false,
+        "sortOrder": 3,
+        "clickoutButtonText": "to_discount"
+      },
+      {
+        "id": "228bd27e-eb92-4b3f-ba35-4909a2510fae",
+        "type": 2,
+        "title": "20 % alumnirabatt på Vasaloppets cykellopp",
+        "subtitle": "Datum: 13-14 augusti",
+        "image": "https://img.meccdn.com/media/image1_196_241217101522664316.jpg",
+        "imageAlt": "20 % alumnirabatt på Vasaloppets cykellopp",
+        "brandLogo": "https://img.meccdn.com/media/logo_196_241217115516259342.jpg",
+        "brandLogoAlt": "",
+        "brandName": "Vasaloppet",
+        "brandPagePath": "/se/vasaloppet",
+        "brandId": "0e503699-d733-499b-b423-0cfa309538fe",
+        "validFrom": "2026-08-27T22:00:00Z",
+        "validTo": "2027-08-14T21:59:59Z",
+        "url": "/se/vasaloppet/20-procent-alumnirabatt-pa-vasaloppets-cykellopp",
+        "conditionDescription": "",
+        "conditionURL": "",
+        "conditionHTML": "<p>Cykelvasan 2027 äger rum 13-14 augusti.</p><p>Gäller endast individuella lopp.</p>",
+        "isCampaign": false,
+        "partnerURL": "https://www.vasaloppet.se/",
+        "content": "<p>Cykelvasan 2027 äger rum 13-14 augusti. I Cykelvasan kan du välja lopp med distanser på mellan 32 km och 92 km. Antingen tävlar du mot andra tillsammans med eliten i tv-sända Cykelvasan 90 eller så väljer du att enbart utmana dig själv och kanske vännerna i Cykelvasan Öppet Spår, Cykelvasan 45 eller Cykelvasan 30. Som alumn får du 20 % rabatt på Vasaloppets cykellopp. Anmäl dig redan idag!</p>",
+        "category": "B-70",
+        "mainCategoryName": "Hälsa",
+        "metaTitle": "",
+        "metaDescription": "",
+        "subcategories": [
+          "B-70",
+          "C-60"
+        ],
+        "campaignOnly": false,
+        "showCountdown": false,
+        "sortOrder": 2,
+        "clickoutButtonText": "to_discount"
+      },
+      {
+        "id": "72085451-38ca-4038-b622-3d15cd273032",
+        "type": 2,
+        "title": "20 % alumnirabatt på Vasaloppets skidlopp",
+        "subtitle": "Datum: 26 februari - 7 mars",
+        "image": "https://img.meccdn.com/media/image1_196_241217103744281468.jpg",
+        "imageAlt": "20 % alumnirabatt på Vasaloppets skidlopp",
+        "brandLogo": "https://img.meccdn.com/media/logo_196_241217115516259342.jpg",
+        "brandLogoAlt": "",
+        "brandName": "Vasaloppet",
+        "brandPagePath": "/se/vasaloppet",
+        "brandId": "0e503699-d733-499b-b423-0cfa309538fe",
+        "validFrom": "2026-03-27T23:00:00Z",
+        "validTo": "2027-02-26T22:59:59Z",
+        "url": "/se/vasaloppet/20-procent-alumnirabatt-pa-vasaloppets-skidlopp",
+        "conditionDescription": "",
+        "conditionURL": "",
+        "conditionHTML": "<p>Vasaloppets vintervecka 2027 arrangeras 26 februari - 7 mars.</p><p>Gäller endast individuella lopp.</p>",
+        "isCampaign": false,
+        "partnerURL": "https://www.vasaloppet.se/",
+        "content": "<p>Välkommen till Vasaloppet och världens äldsta och största långlopp på skidor. Vasaloppets vintervecka 2027 arrangeras 26 februari - 7 mars och erbjuder 14 spännande skidlopp som alla går i mål under den klassiska målportalen i Mora. Välj mellan distanser från 90 km till 10 km. Åk på natten eller dagen, i klassisk stil eller skejta, tillsammans med vännerna eller på egen hand. Det finns en utmaning för alla! Som alumn får du 20 % rabatt på Vasaloppets individuella skidlopp, även på huvudloppet den 7 mars. Boka din plats idag!</p>",
+        "category": "B-70",
+        "mainCategoryName": "Hälsa",
+        "metaTitle": "",
+        "metaDescription": "",
+        "subcategories": [
+          "B-70"
+        ],
+        "campaignOnly": false,
+        "showCountdown": false,
+        "sortOrder": 1,
+        "clickoutButtonText": "to_discount"
+      },
+      {
+        "id": "be534958-a9dc-4905-aa0e-db77e342a02a",
+        "type": 2,
+        "title": "500 kr alumnirabatt hos Sunweb",
+        "subtitle": "Gäller även på rea och Sista Minuten-resor",
+        "image": "https://img.meccdn.com/media/image1_196_241114161259851935.jpg",
+        "imageAlt": "500 kr alumnirabatt hos Sunweb",
+        "brandLogo": "https://img.meccdn.com/media/logo_196_220705163459782631.jpg",
+        "brandLogoAlt": "Sunweb",
+        "brandName": "Sunweb",
+        "brandPagePath": "/se/sunweb",
+        "brandId": "183a65f4-2f1f-42d5-9bb0-6342675dddf9",
+        "validFrom": "2024-11-13T23:00:00Z",
+        "validTo": "2026-12-31T22:59:59Z",
+        "url": "/se/sunweb/500-kr-alumnirabatt-hos-sunweb",
+        "conditionDescription": "",
+        "conditionURL": "",
+        "conditionHTML": "<p>Med rabattkoden får du 500 kr extra rabatt per bokning när du bokar en paketresa med avresa innan 31/12-2027.</p><p>Rabatten gäller även på redan nedsatta priser. Boka senast 31/12-2026.</p><p>Kampanjkoden anges i bokningens andra steg och kan inte läggas till retroaktivt.</p>",
+        "isCampaign": false,
+        "partnerURL": "https://www.sunweb.se/solresor",
+        "content": "<p>Njut av en välförtjänt semester med 500 kr alumnirabatt hos Sunweb - gäller även på rea och Sista Minuten-resor. Välj bland allt från soliga sommarresor på Greklands öarna till värmande tillflyktsorter på Kanarieöarna i vinter. Lägsta prisgaranti och ombokningsgaranti ingår alltid när du bokar.</p>",
+        "category": "G-40",
+        "mainCategoryName": "Resor",
+        "metaTitle": "",
+        "metaDescription": "",
+        "subcategories": [
+          "G-40"
+        ],
+        "campaignOnly": false,
+        "showCountdown": false,
+        "sortOrder": 22,
+        "clickoutButtonText": "to_discount"
+      },
+      {
+        "id": "3020cd4e-b62f-40b9-b24f-22a63a1fd648",
+        "type": 2,
+        "title": "15 % alumnirabatt hos Boohoo",
+        "subtitle": "Gäller även på rea",
+        "image": "https://img.meccdn.com/media/a1066fb2-783c-40ce-95ab-e7fa1f343037.jfif",
+        "imageAlt": "15 % alumnirabatt hos Boohoo",
+        "brandLogo": "https://img.meccdn.com/media/logo_196_241024142527077722.png",
+        "brandLogoAlt": "Boohoo",
+        "brandName": "Boohoo",
+        "brandPagePath": "/se/boohoo",
+        "brandId": "bf8e25cd-f5f5-4463-a49f-bb6b1b6a889c",
+        "validFrom": "2026-08-27T22:00:00Z",
+        "validTo": "2099-08-19T22:00:00Z",
+        "url": "/se/boohoo/15-procent-alumnirabatt-hos-boohoo",
+        "conditionDescription": "",
+        "conditionURL": "",
+        "conditionHTML": "Gäller även på rea.",
+        "isCampaign": false,
+        "partnerURL": "https://se.boohoo.com/",
+        "content": "<p>Inspireras av Boohoo:s stora utbud av trendiga plagg och accessoarer. Som Mecenat alumn får du alltid 15 % rabatt på ditt köp – även på redan nedsatta produkter. Hitta säsongens snyggaste look idag!</p>",
+        "category": "D-10",
+        "mainCategoryName": "Kläder & Skönhet",
+        "metaTitle": "",
+        "metaDescription": "",
+        "subcategories": [
+          "D-10",
+          "D-20",
+          "D-30"
+        ],
+        "campaignOnly": false,
+        "showCountdown": false,
+        "sortOrder": 8,
+        "clickoutButtonText": "to_discount"
+      },
+      {
+        "id": "445e97ca-9b78-4008-83df-9c09bcbc0b04",
+        "type": 2,
+        "title": "10 % alumnirabatt på ditt köp",
+        "subtitle": "Gäller även produkter märkta med Outlet",
+        "image": "https://img.meccdn.com/media/image1_196_230425164627703990.jpg",
+        "imageAlt": "10 % alumnirabattrabatt på ditt köp",
+        "brandLogo": "https://img.meccdn.com/media/logo_196_220920091010012330.jpg",
+        "brandLogoAlt": "Outnorth",
+        "brandName": "Outnorth",
+        "brandPagePath": "/se/outnorth",
+        "brandId": "1f0d29ce-38a0-4f76-8b7b-92c5ddd4d01c",
+        "validFrom": "2023-04-30T22:00:00Z",
+        "validTo": "2026-09-30T21:59:59Z",
+        "url": "/se/outnorth/10-procent-alumnirabatt-pa-ditt-kop",
+        "conditionDescription": "",
+        "conditionURL": "",
+        "conditionHTML": "<p>Gäller på ordinarie priser och produkter märkta med ”Outlet”.</p><p>Gäller ej Fjällräven, Hilleberg, Norrøna, Swarovski, elektronik.</p><p>Gäller ej produkter märkta med ”Outnorth price\".</p><p>Går ej att kombinera med andra erbjudanden eller&nbsp;rabattkoder.</p>",
+        "isCampaign": false,
+        "partnerURL": "https://www.outnorth.com/se/?utm_source=mecenat.se&utm_medium=affiliate",
+        "content": "Outnorth.se är friluftsbutiken med kläder, skor och utrustning för stora och små äventyr. Som Mecenat alumn får du 10 % rabatt på ditt köp – även på produkter märkta med \"Outlet\". Klicka dig in och hitta allt du behöver för livet utomhus!",
+        "category": "D-10",
+        "mainCategoryName": "Kläder & Skönhet",
+        "metaTitle": "",
+        "metaDescription": "",
+        "subcategories": [
+          "D-10"
+        ],
+        "campaignOnly": false,
+        "showCountdown": false,
+        "sortOrder": 30,
+        "clickoutButtonText": "to_discount"
+      },
+      {
+        "id": "d3f2b283-9a8b-4278-9bd1-bbf122790e2b",
+        "type": 2,
+        "title": "30 % alumnirabatt på din första matkasse",
+        "subtitle": "därefter upp till 20 % rabatt på dina nästa 3 matkassar",
+        "image": "https://img.meccdn.com/media/63f34bd6-24fb-4d9e-86b1-e152b6db3e94.jfif",
+        "imageAlt": "30 % alumnirabatt på din första matkasse",
+        "brandLogo": "https://img.meccdn.com/media/b444055c-e49d-4724-8a59-6f6d1e0d72e8.png",
+        "brandLogoAlt": "Linas Matkasse",
+        "brandName": "Linas Matkasse",
+        "brandPagePath": "/se/linas-matkasse",
+        "brandId": "b98f95a3-4e2d-4f08-8119-87e7ba04b230",
+        "validFrom": "2025-07-13T22:00:00Z",
+        "validTo": "2026-12-31T22:59:59Z",
+        "url": "/se/linas-matkasse/30-procent-alumnirabatt-pa-din-forsta-matkasse",
+        "conditionDescription": "",
+        "conditionURL": "",
+        "conditionHTML": "<p>30 % alumnirabatt på din första&nbsp;matkasse, därefter upp till 20 % rabatt på dina nästa 3 matkassar.</p><p>Gäller endast nya kunder.</p><p>Rabatten gäller endast matkassen, ej matvarubutiken.</p><p>Kan ej kombineras med andra erbjudanden.</p><p>Ingen bindningstid. Pausa eller avsluta när du vill.</p>",
+        "isCampaign": false,
+        "partnerURL": "https://www.linasmatkasse.se/",
+        "content": "<p>Lär dig laga enkel och sund mat med Linas – Matkassen med Sveriges bredaste utbud av rätter! Som alumn får du 30 % rabatt på din första matkasse, därefter upp till 20 % rabatt på dina nästa 3 matkassar. Dessutom kan du pausa matkassen när du vill. Beställ valfri matkasse redan idag!</p>",
+        "category": "H-10",
+        "mainCategoryName": "Mat",
+        "metaTitle": "",
+        "metaDescription": "",
+        "subcategories": [
+          "H-10"
+        ],
+        "campaignOnly": false,
+        "showCountdown": false,
+        "sortOrder": 0,
+        "clickoutButtonText": "to_discount"
+      },
+      {
+        "id": "880f3801-6793-48b7-a0a7-8f21d0d3f32c",
+        "type": 2,
+        "title": "Alumniunikt bolåneerbjudande hos SEB",
+        "subtitle": "Gäller när du blir bolånekund",
+        "image": "https://img.meccdn.com/media/996c6317-7c35-4c96-ad70-7fd4f87c2dca.jfif",
+        "imageAlt": "Bolåneerbjudande hos SEB",
+        "brandLogo": "https://img.meccdn.com/media/logo_196_221013142328005388.jpg",
+        "brandLogoAlt": "",
+        "brandName": "SEB",
+        "brandPagePath": "/se/seb",
+        "brandId": "b8320ce5-805e-4479-9c77-ccc2fcd11d64",
+        "validFrom": "2026-05-06T22:00:00Z",
+        "validTo": "2026-08-31T21:59:59Z",
+        "url": "/se/seb/alumniunikt-bolaneerbjudande-hos-seb",
+        "conditionDescription": "",
+        "conditionURL": "",
+        "conditionHTML": "<p>Gäller när du blir bolånekund hos SEB t.o.m. 31/8.</p>",
+        "isCampaign": false,
+        "partnerURL": "https://seb.se/kunderbjudanden/forsta-bolanet-mecenat?cmpid=mecenat_loan-bolan_x_x_x",
+        "content": "<p>Dags att ta första bolånet? Ingen panik. SEB hjälper dig genom alla steg, från lånelöfte och budgivning till kontraktsskrivning och inflytt.</p><p>Just nu får du som alumn ett extra bra erbjudande när du väljer att ta ditt första bolån hos SEB. Då får du även flera förmånliga rabatter på bland annat banktjänster, försäkringar och juridiska tjänster. Låter det intressant? Klicka dig vidare för att ta del av erbjudandet!</p>",
+        "category": "A-40",
+        "mainCategoryName": "Hem & Ekonomi",
+        "metaTitle": "",
+        "metaDescription": "",
+        "subcategories": [
+          "A-40"
+        ],
+        "campaignOnly": false,
+        "showCountdown": false,
+        "sortOrder": 21304,
         "clickoutButtonText": "to_discount"
       },
       {
@@ -21995,39 +22028,6 @@
         "clickoutButtonText": "to_discount"
       },
       {
-        "id": "1bb79d9e-1a05-4a3f-8806-870fb91d5fd3",
-        "type": 2,
-        "title": "20 % alumnirabatt hos Travelpro",
-        "subtitle": "Gäller på ordinarie priser",
-        "image": "https://img.meccdn.com/media/ff86b7a8-cfd7-4e64-9622-99182ed85e15.jpg",
-        "imageAlt": "20 % alumnirabatt hos Travelpro",
-        "brandLogo": "https://img.meccdn.com/media/logo_666_250903120033668595.jpg",
-        "brandLogoAlt": "Travelpro",
-        "brandName": "Travelpro",
-        "brandPagePath": "/se/travelpro",
-        "brandId": "6f8cf19b-db3a-49e6-8b9e-253b28c7d6fc",
-        "validFrom": "2025-09-01T22:00:00Z",
-        "validTo": "2026-09-01T22:00:00Z",
-        "url": "/se/travelpro/20-procent-alumnirabatt-hos-travelpro",
-        "conditionDescription": "",
-        "conditionURL": "",
-        "conditionHTML": "<p>Rabatten gäller på ordinarie priser och kan inte kombineras med andra rabatter eller rabattkoder.</p><p>Gäller på giltiga köp endast.</p>",
-        "isCampaign": false,
-        "partnerURL": "https://eu.travelpro.com/sv/collections/exclusive-20-off-for-students",
-        "content": "<p>Travelpro® hjälper dig att resa smartare. Varumärket grundades av en pilot som blev skaparen av den ursprungliga Rollaboard®-resväskan. Sedan dess har Travelpro varit ett självklart val för erfarna resenärer. Med lätt och hållbart bagage blir varje resa enklare – oavsett om det gäller weekendresor, återträffar eller affärsresor. Som alumn kan du dessutom ta del av 20 % rabatt och göra resan ännu enklare!</p><p>De stilfulla och funktionella ryggsäckarna är byggda för att hålla länge och följa med långt in i karriären. Travelpro levererar pålitlig utrustning som förenklar livet i rörelse, oavsett om det handlar om att gå till jobbet, hinna med ett flyg eller upptäcka en ny stad.</p><p>Stilfulla och funktionella ryggsäckar är byggda för att hålla längre än en vanlig studentväska och följer med nyutexaminerade långt in i karriären. Travelpro levererar pålitlig utrustning som förenklar livet i rörelse, oavsett om det handlar om att gå till föreläsningen, hinna med ett flyg eller upptäcka en ny stad.</p>",
-        "category": "G-80",
-        "mainCategoryName": "Resor",
-        "metaTitle": "",
-        "metaDescription": "",
-        "subcategories": [
-          "G-80"
-        ],
-        "campaignOnly": false,
-        "showCountdown": false,
-        "sortOrder": 0,
-        "clickoutButtonText": "to_discount"
-      },
-      {
         "id": "1f934539-bb30-4f70-9712-7990693bea51",
         "type": 2,
         "title": "15 % alumnirabatt hos Beard Monkey",
@@ -22124,39 +22124,6 @@
         "metaDescription": "",
         "subcategories": [
           "F-30"
-        ],
-        "campaignOnly": false,
-        "showCountdown": false,
-        "sortOrder": 0,
-        "clickoutButtonText": "to_discount"
-      },
-      {
-        "id": "25a77590-9f37-4f62-8fe1-a4e06a0055ff",
-        "type": 2,
-        "title": "20 % alumnirabatt på Countryside Hotels ",
-        "subtitle": "",
-        "image": "https://img.meccdn.com/media/image1_666_240827120017018808.jpg",
-        "imageAlt": "20 % alumnirabatt på Countryside Hotels",
-        "brandLogo": "https://img.meccdn.com/media/logo_666_240827120015767099.jpg",
-        "brandLogoAlt": "Countryside Hotels",
-        "brandName": "Countryside Hotels",
-        "brandPagePath": "/se/countryside-hotels",
-        "brandId": "f42d71cc-50fe-4063-97b0-3dd5079791d1",
-        "validFrom": "2026-02-15T23:00:00Z",
-        "validTo": "2026-08-27T21:59:59Z",
-        "url": "/se/countryside-hotels/20-procent-alumnirabatt-pa-countryside-hotels-",
-        "conditionDescription": "",
-        "conditionURL": "",
-        "conditionHTML": "<p>Gäller i mån av plats, och kan ej kombineras med andra erbjudanden eller rabatter. </p><p>Dryck till middagen ingår ej. </p><p>Toftaholm Herrgård, Storsätra Fjällhotell och Bjertorp Slott deltar ej.</p>",
-        "isCampaign": false,
-        "partnerURL": "https://www.countrysidehotels.se/erbjudanden/mecenat/",
-        "content": "Countryside Hotels är en sammanslutning av ca 37 hotell från Skåne i söder till Dalarna i norr. Hotellen är en samling anrika slott, pampiga herrgårdar, charmiga värdshus, snygga designhotell och gemytliga pensionat och gästgiverier.\n\nI höst kan du njuta av en slottsvistelse eller slappna av på en pampig herrgård – Countryside Hotels erbjuder 37 unika boenden runt om i landet.\n\nVill du vara aktiv eller bara njuta av de vackra miljöerna och lugnet? Vilket hotell du än väljer kan du vara säker på att hamna i natursköna omgivningar med restauranger där lokala traditioner möter modern matlagningskonst.\n\nErbjudandet gäller endast för hotellpaketet Countryside Break, som innehåller övernattning, 3-rätters middag samt frukost.",
-        "category": "G-40",
-        "mainCategoryName": "Resor",
-        "metaTitle": "",
-        "metaDescription": "",
-        "subcategories": [
-          "G-40"
         ],
         "campaignOnly": false,
         "showCountdown": false,
@@ -22944,39 +22911,6 @@
         "metaDescription": "",
         "subcategories": [
           "B-30"
-        ],
-        "campaignOnly": false,
-        "showCountdown": false,
-        "sortOrder": 0,
-        "clickoutButtonText": "to_discount"
-      },
-      {
-        "id": "4a3e4993-7baa-43a9-924a-76fe8f2584d5",
-        "type": 2,
-        "title": "20 % alumnirabatt på Afterskistore.se",
-        "subtitle": "",
-        "image": "https://img.meccdn.com/media/image1_666_250919070027841640.jpg",
-        "imageAlt": "20 % alumnirabatt på Afterskistore.se",
-        "brandLogo": "https://img.meccdn.com/media/logo_666_250919070027621763.jpg",
-        "brandLogoAlt": "Afterskistore.se",
-        "brandName": "Afterskistore.se",
-        "brandPagePath": "/se/afterskistorese",
-        "brandId": "cb88d751-78ed-4475-89f0-0bf7eeade58b",
-        "validFrom": "2025-09-17T22:00:00Z",
-        "validTo": "2026-09-30T21:59:59Z",
-        "url": "/se/afterskistorese/20-procent-alumnirabatt-pa-afterskistorese",
-        "conditionDescription": "",
-        "conditionURL": "",
-        "conditionHTML": "<p>Kan ej kombineras med andra rabatter.</p>",
-        "isCampaign": false,
-        "partnerURL": "https://www.afterskistore.se",
-        "content": "<p>Afterski Team Sweden är svenskarnas egna landslag på skidresan! Där handlar det inte om medaljer – utan om minnen, skratt och maxad gemenskap. När du drar på dig deras landslagsutrustning på skidresan är du aldrig ensam – plötsligt har du mängder av nya lagkompisar att festa, sjunga och åka skidor med. Som alumn får du dessutom 20 % rabatt på ditt köp hos afterskistore.se. ”Sveriges skönaste landslag” syns i backen och på afterskin. Kort sagt: Afterski Team´s utrustning är din biljett till ”Gemenskap i världsklass” och en skidresa du aldrig glömmer!</p>",
-        "category": "D-10",
-        "mainCategoryName": "Kläder & Skönhet",
-        "metaTitle": "",
-        "metaDescription": "",
-        "subcategories": [
-          "D-10"
         ],
         "campaignOnly": false,
         "showCountdown": false,
@@ -23954,39 +23888,6 @@
         "metaDescription": "",
         "subcategories": [
           "D-10"
-        ],
-        "campaignOnly": false,
-        "showCountdown": false,
-        "sortOrder": 0,
-        "clickoutButtonText": "to_discount"
-      },
-      {
-        "id": "6a6848d6-f697-418e-9356-98e87d403032",
-        "type": 2,
-        "title": "20 % alumnirabatt på träningsredskap hos VirtuFit",
-        "subtitle": "Gäller på ordinarie priser",
-        "image": "https://img.meccdn.com/media/image1_666_250828070048314347.jpg",
-        "imageAlt": "20 % alumnirabatt på träningsredskap hos VirtuFit",
-        "brandLogo": "https://img.meccdn.com/media/logo_666_250828070048111220.jpg",
-        "brandLogoAlt": "VirtuFit",
-        "brandName": "VirtuFit",
-        "brandPagePath": "/se/virtufit",
-        "brandId": "513f6c53-0c05-4254-b9ed-1ef1047b4783",
-        "validFrom": "2025-08-26T22:00:00Z",
-        "validTo": "2026-08-27T21:59:59Z",
-        "url": "/se/virtufit/20-procent-alumnirabatt-pa-traningsredskap-hos-virtufit",
-        "conditionDescription": "",
-        "conditionURL": "",
-        "conditionHTML": "<p>Rabatten gäller på ordinarie priser. <br><br>Fri frakt vid köp över 499 kr. <br><br>Snabb leverans normalt inom 1-3 arbetsdagar.</p>",
-        "isCampaign": false,
-        "partnerURL": "https://www.virtufit.se",
-        "content": "<p>Virtufit erbjuder ett brett sortiment av redskap och träningsutrustning till konkurrenskraftiga priser utan att tumma på kvalitet. Produkterna är designade i Holland och har genomgått omfattande tester och optimering för att säkerställa bästa funktion och ergonomi. Som ett resultat uppfyller VirtuFit europeiska kvalitetskrav EN 957-1 och EN 957-5 för fitnessutrustning. Handla hem det du behöver för din träning idag med 20 % alumnirabatt på träningsredskap hos VirtuFit.</p>",
-        "category": "B-40",
-        "mainCategoryName": "Hälsa",
-        "metaTitle": "",
-        "metaDescription": "",
-        "subcategories": [
-          "B-40"
         ],
         "campaignOnly": false,
         "showCountdown": false,
@@ -25575,40 +25476,6 @@
           "A-20",
           "B-70",
           "B-50"
-        ],
-        "campaignOnly": false,
-        "showCountdown": false,
-        "sortOrder": 0,
-        "clickoutButtonText": "to_discount"
-      },
-      {
-        "id": "af8ad258-c968-4392-a513-c095f500334a",
-        "type": 2,
-        "title": "30 % alumnirabatt på onlinekurser",
-        "subtitle": "Utveckla ditt självledarskap",
-        "image": "https://img.meccdn.com/atlas/d-image_st-rk-sj-lvf-rtroendet-30-rabatt-p-onlinekurs_1772615455094484686.png",
-        "imageAlt": "30 % alumnirabatt på onlinekurser hos Fearless Minds",
-        "brandLogo": "https://img.meccdn.com/atlas/logo_fearless-minds_1772614735185582476.png",
-        "brandLogoAlt": "",
-        "brandName": "Fearless Minds",
-        "brandPagePath": "/se/fearless-minds",
-        "brandId": "521c3210-5677-486e-89b7-2eba849c1b6b",
-        "validFrom": "2026-03-03T23:00:00Z",
-        "validTo": "2099-12-31T22:59:59Z",
-        "url": "/se/fearless-minds/30-procent-alumnirabatt-pa-onlinekurser",
-        "conditionDescription": "",
-        "conditionURL": "",
-        "conditionHTML": "<p>Du kan känna dig helt trygg – är du inte nöjd efter kursen så kan du få alla pengar tillbaka inom 30 dagar.</p>",
-        "isCampaign": false,
-        "partnerURL": "http://fearlessminds.se/kurser",
-        "content": "<p>Fearless Minds hjälper dig att utveckla ditt självledarskap och maximera din prestation. Med stöd av forskning inom psykologi och neurovetenskap får du kraftfulla verktyg för att hantera stress, stärka ditt självförtroende och bygga ett hållbart, modigt mindset. Fearless MInds har hyllats av bolag såsom Google och de har jobbat med ett flertal välkända bolag bl.a. H&amp;M, AstraZeneca och Norrsken. Som alumn får du 30 % rabatt på onlinekurser hos Fearless Minds. Utveckla ditt självledarskap idag!</p><p></p>",
-        "category": "E-50",
-        "mainCategoryName": "Böcker",
-        "metaTitle": "",
-        "metaDescription": "",
-        "subcategories": [
-          "A-70",
-          "B-70"
         ],
         "campaignOnly": false,
         "showCountdown": false,
@@ -29869,40 +29736,6 @@
         "clickoutButtonText": "to_discount"
       },
       {
-        "id": "92f25604-ce78-48b7-b2fb-a1b137223749",
-        "type": 2,
-        "title": "15 % alumnirabatt hos Grandpa",
-        "subtitle": "",
-        "image": "https://img.meccdn.com/media/9235417f-751d-43e7-9c7e-e200d1f01ed2.png",
-        "imageAlt": "15 % alumnirabatt hos Grandpa",
-        "brandLogo": "https://img.meccdn.com/media/c5b8d8c0-6f01-4fd9-869f-2dd03a890f43.png",
-        "brandLogoAlt": "Grandpa Logotype",
-        "brandName": "Grandpa",
-        "brandPagePath": "/se/grandpa",
-        "brandId": "0f9aeefa-dbab-49b2-97cb-b41085fb4e9e",
-        "validFrom": "2025-07-29T22:00:00Z",
-        "validTo": "2027-06-30T21:59:59Z",
-        "url": "/se/grandpa/15-procent-alumnirabatt-hos-grandpa",
-        "conditionDescription": "",
-        "conditionURL": "",
-        "conditionHTML": "<p>Kan ej kombineras med andra rabatter.</p>",
-        "isCampaign": false,
-        "partnerURL": "https://www.grandpastore.com",
-        "content": "<p>Grandpa - Good People, Good Products, Good Impact. </p><p>Tidlöst mode &amp; livsstil med omtanke.</p><p>Som student får du 15 % rabatt på allt till ordinarie pris hos Grandpa. Passa på!</p>",
-        "category": "D-10",
-        "mainCategoryName": "Kläder & Skönhet",
-        "metaTitle": "",
-        "metaDescription": "",
-        "subcategories": [
-          "D-10",
-          "A-10"
-        ],
-        "campaignOnly": false,
-        "showCountdown": false,
-        "sortOrder": 0,
-        "clickoutButtonText": "to_discount"
-      },
-      {
         "id": "5b06aa6f-8a9b-4d2c-b6de-e9b267ae3701",
         "type": 2,
         "title": "15 % alumnirabatt hos Planet Nusa",
@@ -31044,43 +30877,6 @@
         "clickoutButtonText": "to_discount"
       },
       {
-        "id": "2f7b7065-2c46-408c-bdf0-3ee680389fbf",
-        "type": 2,
-        "title": "10 % alumnirabatt på psykologbesök",
-        "subtitle": "Gäller ordinarie priser",
-        "image": "https://img.meccdn.com/atlas/d-image_10-rabatt-p-psykologbes-k-hos-din-psykolog_1785931059427318203.png",
-        "imageAlt": "10 % alumnirabatt hos Din Psykolog",
-        "brandLogo": "https://img.meccdn.com/atlas/logo_din-psykolog_1785929799661577941.png",
-        "brandLogoAlt": "",
-        "brandName": "Din Psykolog",
-        "brandPagePath": "/se/din-psykolog",
-        "brandId": "476860c8-c2f3-4454-9beb-f82c6a400166",
-        "validFrom": "2026-08-04T22:00:00Z",
-        "validTo": "2099-12-31T22:59:59Z",
-        "url": "/se/din-psykolog/10-procent-alumnirabatt-pa-psykologbesok",
-        "conditionDescription": "",
-        "conditionURL": "",
-        "conditionHTML": "<p>Kan ej kombineras med andra rabatter eller kampanjer.</p><p>Erbjudandet gäller Din Psykologs privata tjänst och kan användas för att boka tid hos en av våra legitimerad behandlare.</p>",
-        "isCampaign": false,
-        "partnerURL": "https://dinpsykolog.se/privat/",
-        "content": "<p>10 % alumnirabatt på Psykologbesök hos Din Psykolog! Din Psykolog kombinerar mänsklig expertis med smart teknik för att göra psykologisk behandling mer tillgänglig, personlig och effektiv!</p><p>Livet kan ibland kännas överväldigande, oavsett om det handlar om stress, ångest eller att stå inför svåra livsval. Därför erbjuder Din Psykolog evidensbaserad behandling online, så att det blir enkelt att få stöd av en legitimerad behandlare, var man än befinner sig.</p><p>Din Psykologs behandlare hjälper människor att förstå sina utmaningar och hitta verktyg för att må bättre, både på kort och lång sikt. De digitala samtalen ger flexibilitet att prioritera sitt mående, även när studier, arbete och vardag tar mycket tid och energi.</p>",
-        "category": "B-30",
-        "mainCategoryName": "Hälsa",
-        "metaTitle": "",
-        "metaDescription": "",
-        "subcategories": [
-          "F-40",
-          "B-70",
-          "B-60",
-          "B-40",
-          "A-70"
-        ],
-        "campaignOnly": false,
-        "showCountdown": false,
-        "sortOrder": 0,
-        "clickoutButtonText": "to_discount"
-      },
-      {
         "id": "7f2516cf-eabb-4805-8d3e-965dc1cf86b4",
         "type": 2,
         "title": "15 % alumnirabatt hos Råm",
@@ -31115,72 +30911,6 @@
         "campaignOnly": false,
         "showCountdown": false,
         "sortOrder": 0,
-        "clickoutButtonText": "to_discount"
-      },
-      {
-        "id": "7f894730-f25f-42ce-847a-ab1b27f503a9",
-        "type": 2,
-        "title": "10 % alumnirabatt på laptops och surfplattor",
-        "subtitle": "Alltid med minst 2 års garanti",
-        "image": "https://img.meccdn.com/media/image1_666_241029070042046473.jpg",
-        "imageAlt": "10 % alumnirabatt på laptops och surfplattor",
-        "brandLogo": "https://img.meccdn.com/media/f1a8d640-6ce2-4999-a617-432a22d7ea94.png",
-        "brandLogoAlt": "ReuseIT",
-        "brandName": "Reuseit",
-        "brandPagePath": "/se/reuseit",
-        "brandId": "7a5c497f-90ed-483c-8747-3ba26a15705d",
-        "validFrom": "2024-10-27T23:00:00Z",
-        "validTo": "2027-02-11T22:59:59Z",
-        "url": "/se/reuseit/10-procent-alumnirabatt-pa-laptops-och-surfplattor",
-        "conditionDescription": "",
-        "conditionURL": "",
-        "conditionHTML": "<p>Gäller ej på premiumsegmentet.</p>",
-        "isCampaign": false,
-        "partnerURL": "https://reuseit.se/sv",
-        "content": "<p>Reuseit Sweden är ett företag som specialiserar sig på återförsäljning av begagnad och renoverad teknik som smartphones, surfplattor, laptops och andra digitala enheter. Som alumn får du dessutom 10 % rabatt på laptops och surfplattor hos Reuseit. </p><p>Genom att erbjuda hållbara alternativ till ny elektronik gör Reuseit det möjligt att få högkvalitativa produkter till ett lägre pris, samtidigt som de bidrar till en grönare framtid. Alla enheter genomgår en noggrann process för att säkerställa att de fungerar som nya, vilket gör att kunder kan känna sig trygga med sina köp. Med Mecenatrabatten gör Reuseit det ännu mer prisvärt att välja återanvänd elektronik – perfekt för dig som vill spara pengar och samtidigt minska din miljöpåverkan.</p>",
-        "category": "F-30",
-        "mainCategoryName": "Teknik & Mobil",
-        "metaTitle": "",
-        "metaDescription": "",
-        "subcategories": [
-          "F-30"
-        ],
-        "campaignOnly": false,
-        "showCountdown": false,
-        "sortOrder": 0,
-        "clickoutButtonText": "to_discount"
-      },
-      {
-        "id": "4cbcaceb-4a1a-401c-b729-6f4c8f79c881",
-        "type": 2,
-        "title": "200 kr rabatt på mobiler och premium-sortimentet",
-        "subtitle": "Alltid med minst 2 års garanti",
-        "image": "https://img.meccdn.com/media/image1_133_250313162837744582.jpg",
-        "imageAlt": "200 kr rabatt på mobiler och premium-sortimentet hos Reuseit",
-        "brandLogo": "https://img.meccdn.com/media/f1a8d640-6ce2-4999-a617-432a22d7ea94.png",
-        "brandLogoAlt": "ReuseIT",
-        "brandName": "Reuseit",
-        "brandPagePath": "/se/reuseit",
-        "brandId": "7a5c497f-90ed-483c-8747-3ba26a15705d",
-        "validFrom": "2025-03-13T14:27:35Z",
-        "validTo": "2027-02-11T22:59:59Z",
-        "url": "/se/reuseit/200-kr-rabatt-pa-mobiler-och-premium-sortimentet",
-        "conditionDescription": "",
-        "conditionURL": "",
-        "conditionHTML": "",
-        "isCampaign": false,
-        "partnerURL": "https://reuseit.se/redo-for-studierna/",
-        "content": "<p>Som alumn får du 200 kr rabatt på alla mobiler och deras premium-sortiment. Alltid med minst 12 månaders garanti. Hitta den perfekta enheten för vardagen och säkra ditt fynd idag!</p>",
-        "category": "F-30",
-        "mainCategoryName": "Teknik & Mobil",
-        "metaTitle": "",
-        "metaDescription": "",
-        "subcategories": [
-          "F-30"
-        ],
-        "campaignOnly": false,
-        "showCountdown": false,
-        "sortOrder": 30756,
         "clickoutButtonText": "to_discount"
       },
       {
@@ -31237,39 +30967,6 @@
         "isCampaign": false,
         "partnerURL": "https://sotypicalme.se/?utm_source=mecenat-alumni&utm_medium=referral&utm_campaign=se-mecenat-alumni",
         "content": "<p>På So Typical Me är de övertygade om att den bästa och mest användbara kalendern eller anteckningsboken är den du har skapat själv. Därför har de skapat ett smidigt designverktyg fyllt med kreativa lösningar, så att du kan designa en personlig kalender eller anteckningsbok som är helt anpassad efter dina behov. Dessutom får du som alumn 20 % rabatt på ditt köp.</p>",
-        "category": "E-70",
-        "mainCategoryName": "Böcker",
-        "metaTitle": "",
-        "metaDescription": "",
-        "subcategories": [
-          "E-70"
-        ],
-        "campaignOnly": false,
-        "showCountdown": false,
-        "sortOrder": 0,
-        "clickoutButtonText": "to_discount"
-      },
-      {
-        "id": "68009e6f-7b7e-4212-8c33-6ead9956c3d1",
-        "type": 2,
-        "title": "15 % alumnirabatt hos Personlig Almanacka",
-        "subtitle": "",
-        "image": "https://img.meccdn.com/media/e69f70a3-fe88-4385-a11a-5afbe8c937d9.png",
-        "imageAlt": "15 % alumnirabatt hos Personlig Almanacka",
-        "brandLogo": "https://img.meccdn.com/media/383bbe98-e06e-4e85-bcaf-2aaf15798d67.png",
-        "brandLogoAlt": "Personlig Almanacka",
-        "brandName": "Personlig Almanacka",
-        "brandPagePath": "/se/personlig-almanacka",
-        "brandId": "fdcee07d-ccb9-4dcf-83ba-46ab51d7f9c3",
-        "validFrom": "2026-01-16T23:00:00Z",
-        "validTo": "2027-01-16T22:59:59Z",
-        "url": "/se/personlig-almanacka/15-procent-alumnirabatt-hos-personlig-almanacka",
-        "conditionDescription": "",
-        "conditionURL": "",
-        "conditionHTML": "<p>Går ej att kombinera med andra erbjudanden eller rabatter. </p>",
-        "isCampaign": false,
-        "partnerURL": "https://personligalmanacka.se/",
-        "content": "<p>Designa en egen almanacka, kalender eller anteckningsbok som passar ditt liv perfekt. Som alumn får du 15 % rabatt hos Perosnlig Almanacka, så passa på att ta kontroll över vardagen och dina personliga mål med en högkvalitativ och unik almanacka.</p>",
         "category": "E-70",
         "mainCategoryName": "Böcker",
         "metaTitle": "",
@@ -32345,43 +32042,6 @@
         "clickoutButtonText": "to_discount"
       },
       {
-        "id": "dfa753c5-d5f3-471f-99c3-55c4856f8860",
-        "type": 2,
-        "title": "30 % alumnirabatt hos Midbec Tapeter",
-        "subtitle": "Gäller på ordinarie priser",
-        "image": "https://img.meccdn.com/atlas/d-image_30-rabatt-hos-midbec-tapeter_1786952250149745314.jfif",
-        "imageAlt": "30 % alumnirabatt hos Midbec Tapeter",
-        "brandLogo": "https://img.meccdn.com/media/bb5540cd-244a-43f6-80a6-4de3e7cad3c0.png",
-        "brandLogoAlt": "Logotype Midbec Tapeter",
-        "brandName": "Midbec Tapeter",
-        "brandPagePath": "/se/midbec-tapeter",
-        "brandId": "b7ff0312-323a-440e-b34f-a6877379f311",
-        "validFrom": "2026-08-16T22:00:00Z",
-        "validTo": "2099-12-31T22:59:59Z",
-        "url": "/se/midbec-tapeter/30-procent-alumnirabatt-hos-midbec-tapeter",
-        "conditionDescription": "",
-        "conditionURL": "",
-        "conditionHTML": "<p>Gäller på midbectapeter.se.</p><p>Gäller 1 gång/person.</p><p>Kan ej kombineras med andra rabatter och erbjudanden.</p>",
-        "isCampaign": false,
-        "partnerURL": "https://midbectapeter.com/tapeter/",
-        "content": "<p>Som Mecenat alumn får du 30 % rabatt hos Midbec Tapeter! Hos Midbec Tapeter hittar du tapeter i olika stilar och uttryck som ger dina väggar liv och ditt hem personlighet. </p><p>Med tapeter från Midbec skapar du ett hem att älska och kan känna att du kommer hem, var och hur du än bor.</p>",
-        "category": "A-10",
-        "mainCategoryName": "Hem & Ekonomi",
-        "metaTitle": "",
-        "metaDescription": "",
-        "subcategories": [
-          "A-20",
-          "A-50",
-          "A-70",
-          "A-40",
-          "C-60"
-        ],
-        "campaignOnly": false,
-        "showCountdown": false,
-        "sortOrder": 0,
-        "clickoutButtonText": "to_discount"
-      },
-      {
         "id": "33136621-8249-4c05-a40f-b96fdb5247ff",
         "type": 2,
         "title": "15 % alumnirabatt hos ALL I AM Beauty",
@@ -32614,6 +32274,245 @@
         "metaDescription": "",
         "subcategories": [
           "E-60"
+        ],
+        "campaignOnly": false,
+        "showCountdown": false,
+        "sortOrder": 0,
+        "clickoutButtonText": "to_discount"
+      },
+      {
+        "id": "7f894730-f25f-42ce-847a-ab1b27f503a9",
+        "type": 2,
+        "title": "10 % alumnirabatt på laptops och surfplattor",
+        "subtitle": "Alltid med minst 2 års garanti",
+        "image": "https://img.meccdn.com/media/fbf5b7ac-e9bc-432c-b545-3ab03980fff6.jfif",
+        "imageAlt": "10 % alumnirabatt på laptops och surfplattor",
+        "brandLogo": "https://img.meccdn.com/media/f1a8d640-6ce2-4999-a617-432a22d7ea94.png",
+        "brandLogoAlt": "ReuseIT",
+        "brandName": "Reuseit",
+        "brandPagePath": "/se/reuseit",
+        "brandId": "7a5c497f-90ed-483c-8747-3ba26a15705d",
+        "validFrom": "2024-10-27T23:00:00Z",
+        "validTo": "2027-02-11T22:59:59Z",
+        "url": "/se/reuseit/10-procent-alumnirabatt-pa-laptops-och-surfplattor",
+        "conditionDescription": "",
+        "conditionURL": "",
+        "conditionHTML": "<p>Gäller ej på premiumsegmentet.</p>",
+        "isCampaign": false,
+        "partnerURL": "https://reuseit.se/sv",
+        "content": "<p>Reuseit Sweden är ett företag som specialiserar sig på återförsäljning av begagnad och renoverad teknik som smartphones, surfplattor, laptops och andra digitala enheter. Som alumn får du dessutom 10 % rabatt på laptops och surfplattor hos Reuseit. </p><p>Genom att erbjuda hållbara alternativ till ny elektronik gör Reuseit det möjligt att få högkvalitativa produkter till ett lägre pris, samtidigt som de bidrar till en grönare framtid. Alla enheter genomgår en noggrann process för att säkerställa att de fungerar som nya, vilket gör att kunder kan känna sig trygga med sina köp. Med Mecenatrabatten gör Reuseit det ännu mer prisvärt att välja återanvänd elektronik – perfekt för dig som vill spara pengar och samtidigt minska din miljöpåverkan.</p>",
+        "category": "F-30",
+        "mainCategoryName": "Teknik & Mobil",
+        "metaTitle": "",
+        "metaDescription": "",
+        "subcategories": [
+          "F-30"
+        ],
+        "campaignOnly": false,
+        "showCountdown": false,
+        "sortOrder": 0,
+        "clickoutButtonText": "to_discount"
+      },
+      {
+        "id": "4cbcaceb-4a1a-401c-b729-6f4c8f79c881",
+        "type": 2,
+        "title": "200 kr rabatt på mobiler och premium-sortimentet",
+        "subtitle": "Alltid med minst 2 års garanti",
+        "image": "https://img.meccdn.com/media/9250d631-7342-4db9-a400-fd243ddfbdb5.jfif",
+        "imageAlt": "200 kr rabatt på mobiler och premium-sortimentet hos Reuseit",
+        "brandLogo": "https://img.meccdn.com/media/f1a8d640-6ce2-4999-a617-432a22d7ea94.png",
+        "brandLogoAlt": "ReuseIT",
+        "brandName": "Reuseit",
+        "brandPagePath": "/se/reuseit",
+        "brandId": "7a5c497f-90ed-483c-8747-3ba26a15705d",
+        "validFrom": "2025-03-13T14:27:35Z",
+        "validTo": "2027-02-11T22:59:59Z",
+        "url": "/se/reuseit/200-kr-rabatt-pa-mobiler-och-premium-sortimentet",
+        "conditionDescription": "",
+        "conditionURL": "",
+        "conditionHTML": "",
+        "isCampaign": false,
+        "partnerURL": "https://reuseit.se/redo-for-studierna/",
+        "content": "<p>Som alumn får du 200 kr rabatt på alla mobiler och deras premium-sortiment. Alltid med minst 12 månaders garanti. Hitta den perfekta enheten för vardagen och säkra ditt fynd idag!</p>",
+        "category": "F-30",
+        "mainCategoryName": "Teknik & Mobil",
+        "metaTitle": "",
+        "metaDescription": "",
+        "subcategories": [
+          "F-30"
+        ],
+        "campaignOnly": false,
+        "showCountdown": false,
+        "sortOrder": 30756,
+        "clickoutButtonText": "to_discount"
+      },
+      {
+        "id": "dfa753c5-d5f3-471f-99c3-55c4856f8860",
+        "type": 2,
+        "title": "30 % alumnirabatt hos Midbec Tapeter",
+        "subtitle": "Gäller på ordinarie priser",
+        "image": "https://img.meccdn.com/atlas/d-image_30-rabatt-hos-midbec-tapeter_1786952250149745314.jfif",
+        "imageAlt": "30 % alumnirabatt hos Midbec Tapeter",
+        "brandLogo": "https://img.meccdn.com/media/bb5540cd-244a-43f6-80a6-4de3e7cad3c0.png",
+        "brandLogoAlt": "Logotype Midbec Tapeter",
+        "brandName": "Midbec Tapeter",
+        "brandPagePath": "/se/midbec-tapeter",
+        "brandId": "b7ff0312-323a-440e-b34f-a6877379f311",
+        "validFrom": "2026-08-16T22:00:00Z",
+        "validTo": "2099-12-31T22:59:59Z",
+        "url": "/se/midbec-tapeter/30-procent-alumnirabatt-hos-midbec-tapeter",
+        "conditionDescription": "",
+        "conditionURL": "",
+        "conditionHTML": "<p>Gäller på midbectapeter.se.</p><p>Gäller 1 gång/person.</p><p>Kan ej kombineras med andra rabatter och erbjudanden.</p><p>Gäller på midbectapeter.com.</p>",
+        "isCampaign": false,
+        "partnerURL": "https://midbectapeter.com/tapeter/",
+        "content": "<p>Som Mecenat alumn får du 30 % rabatt hos Midbec Tapeter! Hos Midbec Tapeter hittar du tapeter i olika stilar och uttryck som ger dina väggar liv och ditt hem personlighet. </p><p>Med tapeter från Midbec skapar du ett hem att älska och kan känna att du kommer hem, var och hur du än bor.</p>",
+        "category": "A-10",
+        "mainCategoryName": "Hem & Ekonomi",
+        "metaTitle": "",
+        "metaDescription": "",
+        "subcategories": [
+          "A-20",
+          "A-50",
+          "A-70",
+          "A-40",
+          "C-60"
+        ],
+        "campaignOnly": false,
+        "showCountdown": false,
+        "sortOrder": 0,
+        "clickoutButtonText": "to_discount"
+      },
+      {
+        "id": "68009e6f-7b7e-4212-8c33-6ead9956c3d1",
+        "type": 2,
+        "title": "15 % alumnirabatt hos Personlig Almanacka",
+        "subtitle": "",
+        "image": "https://img.meccdn.com/media/e69f70a3-fe88-4385-a11a-5afbe8c937d9.png",
+        "imageAlt": "15 % alumnirabatt hos Personlig Almanacka",
+        "brandLogo": "https://img.meccdn.com/media/383bbe98-e06e-4e85-bcaf-2aaf15798d67.png",
+        "brandLogoAlt": "Personlig Almanacka",
+        "brandName": "Personlig Almanacka",
+        "brandPagePath": "/se/personlig-almanacka",
+        "brandId": "fdcee07d-ccb9-4dcf-83ba-46ab51d7f9c3",
+        "validFrom": "2026-01-16T23:00:00Z",
+        "validTo": "2027-01-31T22:59:59Z",
+        "url": "/se/personlig-almanacka/15-procent-alumnirabatt-hos-personlig-almanacka",
+        "conditionDescription": "",
+        "conditionURL": "",
+        "conditionHTML": "<p>Går ej att kombinera med andra erbjudanden eller rabatter. </p>",
+        "isCampaign": false,
+        "partnerURL": "https://personligalmanacka.se/",
+        "content": "<p>Designa en egen almanacka, kalender eller anteckningsbok som passar ditt liv perfekt. Som alumn får du 15 % rabatt hos Perosnlig Almanacka, så passa på att ta kontroll över vardagen och dina personliga mål med en högkvalitativ och unik almanacka.</p>",
+        "category": "E-70",
+        "mainCategoryName": "Böcker",
+        "metaTitle": "",
+        "metaDescription": "",
+        "subcategories": [
+          "E-70"
+        ],
+        "campaignOnly": false,
+        "showCountdown": false,
+        "sortOrder": 0,
+        "clickoutButtonText": "to_discount"
+      },
+      {
+        "id": "1bb79d9e-1a05-4a3f-8806-870fb91d5fd3",
+        "type": 2,
+        "title": "20 % alumnirabatt hos Travelpro",
+        "subtitle": "Gäller på ordinarie priser",
+        "image": "https://img.meccdn.com/media/ff86b7a8-cfd7-4e64-9622-99182ed85e15.jpg",
+        "imageAlt": "20 % alumnirabatt hos Travelpro",
+        "brandLogo": "https://img.meccdn.com/media/logo_666_250903120033668595.jpg",
+        "brandLogoAlt": "Travelpro",
+        "brandName": "Travelpro",
+        "brandPagePath": "/se/travelpro",
+        "brandId": "6f8cf19b-db3a-49e6-8b9e-253b28c7d6fc",
+        "validFrom": "2025-09-01T22:00:00Z",
+        "validTo": "2027-09-01T21:59:59Z",
+        "url": "/se/travelpro/20-procent-alumnirabatt-hos-travelpro",
+        "conditionDescription": "",
+        "conditionURL": "",
+        "conditionHTML": "<p>Rabatten gäller på ordinarie priser och kan inte kombineras med andra rabatter eller rabattkoder.</p><p>Gäller på giltiga köp endast.</p>",
+        "isCampaign": false,
+        "partnerURL": "https://eu.travelpro.com/sv/collections/exclusive-20-off-for-students",
+        "content": "<p>Travelpro® hjälper dig att resa smartare. Varumärket grundades av en pilot som blev skaparen av den ursprungliga Rollaboard®-resväskan. Sedan dess har Travelpro varit ett självklart val för erfarna resenärer. Med lätt och hållbart bagage blir varje resa enklare – oavsett om det gäller weekendresor, återträffar eller affärsresor. Som alumn kan du dessutom ta del av 20 % rabatt och göra resan ännu enklare!</p><p>De stilfulla och funktionella ryggsäckarna är byggda för att hålla länge och följa med långt in i karriären. Travelpro levererar pålitlig utrustning som förenklar livet i rörelse, oavsett om det handlar om att gå till jobbet, hinna med ett flyg eller upptäcka en ny stad.</p><p>Stilfulla och funktionella ryggsäckar är byggda för att hålla längre än en vanlig studentväska och följer med nyutexaminerade långt in i karriären. Travelpro levererar pålitlig utrustning som förenklar livet i rörelse, oavsett om det handlar om att gå till föreläsningen, hinna med ett flyg eller upptäcka en ny stad.</p>",
+        "category": "G-80",
+        "mainCategoryName": "Resor",
+        "metaTitle": "",
+        "metaDescription": "",
+        "subcategories": [
+          "G-80"
+        ],
+        "campaignOnly": false,
+        "showCountdown": false,
+        "sortOrder": 0,
+        "clickoutButtonText": "to_discount"
+      },
+      {
+        "id": "4a3e4993-7baa-43a9-924a-76fe8f2584d5",
+        "type": 2,
+        "title": "20 % alumnirabatt på Afterskistore.se",
+        "subtitle": "",
+        "image": "https://img.meccdn.com/media/image1_666_250919070027841640.jpg",
+        "imageAlt": "20 % alumnirabatt på Afterskistore.se",
+        "brandLogo": "https://img.meccdn.com/media/logo_666_250919070027621763.jpg",
+        "brandLogoAlt": "Afterskistore.se",
+        "brandName": "Afterskistore.se",
+        "brandPagePath": "/se/afterskistorese",
+        "brandId": "cb88d751-78ed-4475-89f0-0bf7eeade58b",
+        "validFrom": "2025-09-17T22:00:00Z",
+        "validTo": "2027-04-30T21:59:59Z",
+        "url": "/se/afterskistorese/20-procent-alumnirabatt-pa-afterskistorese",
+        "conditionDescription": "",
+        "conditionURL": "",
+        "conditionHTML": "<p>Kan ej kombineras med andra rabatter.</p>",
+        "isCampaign": false,
+        "partnerURL": "https://www.afterskistore.se",
+        "content": "<p>Afterski Team Sweden är svenskarnas egna landslag på skidresan! Där handlar det inte om medaljer – utan om minnen, skratt och maxad gemenskap. När du drar på dig deras landslagsutrustning på skidresan är du aldrig ensam – plötsligt har du mängder av nya lagkompisar att festa, sjunga och åka skidor med. Som alumn får du dessutom 20 % rabatt på ditt köp hos afterskistore.se. ”Sveriges skönaste landslag” syns i backen och på afterskin. Kort sagt: Afterski Team´s utrustning är din biljett till ”Gemenskap i världsklass” och en skidresa du aldrig glömmer!</p>",
+        "category": "D-10",
+        "mainCategoryName": "Kläder & Skönhet",
+        "metaTitle": "",
+        "metaDescription": "",
+        "subcategories": [
+          "D-10"
+        ],
+        "campaignOnly": false,
+        "showCountdown": false,
+        "sortOrder": 0,
+        "clickoutButtonText": "to_discount"
+      },
+      {
+        "id": "2f7b7065-2c46-408c-bdf0-3ee680389fbf",
+        "type": 2,
+        "title": "10 % alumnirabatt på psykologbesök",
+        "subtitle": "Gäller ditt första psykologbesök ",
+        "image": "https://img.meccdn.com/atlas/d-image_10-rabatt-p-psykologbes-k-hos-din-psykolog_1785931059427318203.png",
+        "imageAlt": "10 % alumnirabatt hos Din Psykolog",
+        "brandLogo": "https://img.meccdn.com/atlas/logo_din-psykolog_1785929799661577941.png",
+        "brandLogoAlt": "",
+        "brandName": "Din Psykolog",
+        "brandPagePath": "/se/din-psykolog",
+        "brandId": "476860c8-c2f3-4454-9beb-f82c6a400166",
+        "validFrom": "2026-08-04T22:00:00Z",
+        "validTo": "2099-12-31T22:59:59Z",
+        "url": "/se/din-psykolog/10-procent-alumnirabatt-pa-psykologbesok",
+        "conditionDescription": "",
+        "conditionURL": "",
+        "conditionHTML": "<p>Gäller ditt första psykologbesök.</p><p>Kan ej kombineras med andra rabatter eller kampanjer.</p><p>Erbjudandet gäller Din Psykologs privata tjänst och kan användas för att boka tid hos en av våra legitimerad behandlare.</p>",
+        "isCampaign": false,
+        "partnerURL": "https://dinpsykolog.se/privat/",
+        "content": "<p>10 % alumnirabatt på första psykologbesöket hos Din Psykolog! Din Psykolog kombinerar mänsklig expertis med smart teknik för att göra psykologisk behandling mer tillgänglig, personlig och effektiv!</p><p>Livet kan ibland kännas överväldigande, oavsett om det handlar om stress, ångest eller att stå inför svåra livsval. Därför erbjuder Din Psykolog evidensbaserad behandling online, så att det blir enkelt att få stöd av en legitimerad behandlare, var man än befinner sig.</p><p>Din Psykologs behandlare hjälper människor att förstå sina utmaningar och hitta verktyg för att må bättre, både på kort och lång sikt. De digitala samtalen ger flexibilitet att prioritera sitt mående, även när studier, arbete och vardag tar mycket tid och energi.</p>",
+        "category": "B-30",
+        "mainCategoryName": "Hälsa",
+        "metaTitle": "",
+        "metaDescription": "",
+        "subcategories": [
+          "F-40",
+          "B-70",
+          "B-60",
+          "B-40",
+          "A-70"
         ],
         "campaignOnly": false,
         "showCountdown": false,
@@ -34255,31 +34154,6 @@
         "webpage": "drmartens.com"
       },
       {
-        "id": "67c6a249-4c2e-4e30-af63-f77e010a0236",
-        "type": 1,
-        "name": "SanDisk",
-        "title": "Alumnirabatt hos {brandName}",
-        "validFrom": "2021-03-22T23:00:00Z",
-        "validTo": "2097-12-31T23:00:00Z",
-        "url": "/se/sandisk",
-        "logo": "https://img.meccdn.com/media/logo_114_210323165620448022.jpg",
-        "logoAlt": "SanDisk",
-        "brandId": "206e36e4-7e3c-4027-9727-40f0e3dcd49a",
-        "descriptionHeader": "Rabatt hos SanDisk",
-        "description": "SanDisk har alla interna eller externa hårddiskar som du behöver. Hos SanDisk får du som Mecenat alumn 10 % rabatt på USB Flash drives, minneskort, MP3-spelare, SSDs och bärbara hårddiskar. Lagra, streama och hantera din data stilfullt och säkert.\r\n\r\nAnvänd din unika rabattkod hos SanDisk och gör livet efter studierna lite rikare.",
-        "facts": " ",
-        "image": "https://img.meccdn.com/media/image1_114_210323165631673715.png",
-        "imageAlt": "SanDisk",
-        "category": "F-40",
-        "subcategories": [
-          "F-40"
-        ],
-        "_hide": false,
-        "key": "",
-        "discounts": [],
-        "webpage": "westerndigital.com"
-      },
-      {
         "id": "67c5e14f-19fb-4dae-a0f1-6678baa0371f",
         "type": 1,
         "name": "LH Cosmetics",
@@ -35854,33 +35728,6 @@
         "webpage": "skistar.com"
       },
       {
-        "id": "fceb4e82-cebe-4cee-9da0-ada830632791",
-        "type": 1,
-        "name": "Lamp24",
-        "title": "Alumnirabatt hos {brandName}",
-        "validFrom": "2022-10-18T22:00:00Z",
-        "validTo": "2099-10-18T22:00:00Z",
-        "url": "/se/lamp24",
-        "logo": "https://img.meccdn.com/media/logo_196_221019163931378712.jpg",
-        "logoAlt": "Lamp24",
-        "brandId": "55bf57a9-f379-49ac-a8ee-66bcdf168dc7",
-        "descriptionHeader": "Rabatt hos Lamp24",
-        "description": "Lamp24.se är Europas största online shop för lampor och belysning! Varje person, vare sig privatperson eller företag, behöver den passande belysningen. Oavsett om det är för hem, arbetskontor eller konferensrummet. \r\n\r\nLampor och ljus måste uppfylla olika behov i de olika rummen. Kraven för ett personligt belysningskoncept varierar, det kan handla om rätt ljusstyrka, bra design, en elegant och autentisk design, en professionell eller fascinerande ljuseffekt. Lika unika som kraven är, så är Lamp24.se sortimentet. Kunder kan enkelt beställa från ett sortiment av ungefär 40 000 lampor online. \r\n\r\nAnvänd din unika rabattkod för Lamp24 och gör livet efter studierna lite rikare.",
-        "facts": " ",
-        "image": "https://img.meccdn.com/media/image1_196_221019163924190881.jpg",
-        "imageAlt": "Lamp24",
-        "category": "A-10",
-        "subcategories": [
-          "A-10"
-        ],
-        "_hide": false,
-        "key": "",
-        "discounts": [
-          "05d522cb-2e10-47c4-8edb-d6fa91a3a9b0"
-        ],
-        "webpage": "lamp24.se"
-      },
-      {
         "id": "13b7ecc6-b6fb-4af1-a302-c0c48b9f9d65",
         "type": 1,
         "name": "Daniel Wellington",
@@ -36043,32 +35890,6 @@
           "13b0c6c1-adb1-4e8a-afa0-044c6616a53b"
         ],
         "webpage": "bosch-home.se"
-      },
-      {
-        "id": "32c49582-540c-4aad-b6b8-92a39e236057",
-        "type": 1,
-        "name": "Vätternrundan",
-        "title": "Alumnirabatt hos {brandName}",
-        "validFrom": "2023-12-13T23:00:00Z",
-        "validTo": "2099-12-13T23:00:00Z",
-        "url": "/se/vatternrundan",
-        "logo": "https://img.meccdn.com/media/logo_196_231214105100417695.jpg",
-        "brandId": "bdba3138-660b-43ae-a752-6cda97c29ee7",
-        "descriptionHeader": "Rabatt hos Vätternrundan",
-        "description": "<p>I juni varje år förvandlas den medelstora svenska staden Motala till ett internationellt mecka för cyklister från hela världen. Ja, Cykelveckan i Motala ska upplevas på plats – och helst från en cykelsadel. Anmäl dig till något av våra fyra landsvägslopp och se själv! Varför inte avsluta veckan med den lika vackra som utmanande svenska klassikern Vätternrundan 315 kilometer?</p><p>Cykelveckan 2026 – då går loppen<br>6 juni - Tjejvättern 100 km<br>6 juni - Halvvättern 150 km<br>6 juni - Vätternrundan 100 km – loppet där du kan cykla elcykel<br>12-13 juni - Vätternrundan 315 km</p>",
-        "facts": " ",
-        "image": "https://img.meccdn.com/media/image1_196_231214105051183312.png",
-        "imageAlt": "Vätternrundan",
-        "category": "C-60",
-        "subcategories": [
-          "C-60"
-        ],
-        "_hide": false,
-        "key": "",
-        "discounts": [
-          "13d39a21-2042-4d80-9461-72dba87e287a"
-        ],
-        "webpage": "vatternrundan.se"
       },
       {
         "id": "eaf00a6f-3a02-43ee-8e46-eeb2c9cc1baa",
@@ -36269,34 +36090,6 @@
         ]
       },
       {
-        "id": "59ccc4b5-2cc2-425c-bfaf-0aac1079dedb",
-        "type": 1,
-        "name": "Länna Möbler",
-        "title": "Alumnirabatt hos {brandName}",
-        "validFrom": "2022-11-02T23:00:00Z",
-        "validTo": "2099-11-02T23:00:00Z",
-        "url": "/se/lanna-mobler",
-        "logo": "https://img.meccdn.com/media/6d06c5c0-b4cf-4c0d-b79c-a121847026d6.png",
-        "logoAlt": "Länna",
-        "brandId": "21f4a8f7-ec39-46e5-9c65-cebde0b0e403",
-        "descriptionHeader": "Rabatt hos Länna Möbler",
-        "description": "<p>Nordiska Galleriet är Skandinaviens ledande auktoritet på designmöbler i över ett sekel. Varje möbel är ett konstverk, ett personligt uttryck och ett sätt att göra ett statement i världen. Genom handplockade möbler från banbrytande formgivare erbjuds en tidlös kollektion av originalprodukter. Länna Möbler fungerar som en mötesplats för modern design som inspirerar och hjälper dig att uttrycka din designidentitet till fullo. Utforska deras inspirerande samling online eller i någon av deras butiker och upptäck möbler som är kuraterade för att avnjutas under många generationer framöver.  </p><p>Använd din unika rabattkod för Länna Möbler och gör studentlivet lite rikare.</p>",
-        "facts": " ",
-        "image": "https://img.meccdn.com/media/image1_196_221103094040760799.jpg",
-        "imageAlt": "Rabatt hos Länna Möbler",
-        "category": "A-20",
-        "subcategories": [
-          "A-10",
-          "A-20"
-        ],
-        "faq": "<p></p>",
-        "_hide": false,
-        "key": "",
-        "discounts": [
-          "256b405b-a5b5-455e-b086-4837d4d7cfd8"
-        ]
-      },
-      {
         "id": "aa287123-9921-479e-a6f8-f30fdec0bf7d",
         "type": 1,
         "name": "SE Mattor",
@@ -36491,37 +36284,6 @@
           "2c850bed-737c-4e88-ad71-896748e405a2"
         ],
         "webpage": "akademibokhandeln.se"
-      },
-      {
-        "id": "95bee8f1-0904-400e-a19b-f609a2185431",
-        "type": 1,
-        "name": "If",
-        "title": "Alumnirabatt hos {brandName}",
-        "validFrom": "2024-07-31T22:00:00Z",
-        "validTo": "2099-07-02T22:00:00Z",
-        "url": "/se/if",
-        "logo": "https://img.meccdn.com/media/logo_160_250324174145387060.jpg",
-        "logoAlt": "If",
-        "brandId": "d9f86d34-fb02-4a30-88f9-43450f16290e",
-        "descriptionHeader": "Rabatt hos If",
-        "description": "<p>If är Nordens ledande försäkringsbolag. De har över 7 000 medarbetare som arbetar för att ge deras kunder marknadens bästa försäkringslösningar för både privatpersoner och företag. Om olyckan är framme finns If vid din sida för att ge snabb och professionell skadehantering. De får in 1,4 miljoner skador varje år och hanterar över hälften av dem inom 24 timmar. Nio av tio kunder som haft en skada ger If toppbetyg för vår skadehantering.</p>",
-        "facts": " ",
-        "image": "https://img.meccdn.com/media/image1_196_240703162402341557.jpg",
-        "imageAlt": "If",
-        "category": "A-50",
-        "subcategories": [
-          "A-50",
-          "A-40"
-        ],
-        "_hide": false,
-        "key": "",
-        "discounts": [
-          "2dc48f68-3615-4e6c-bfe7-896f0c406ef2",
-          "aef6c495-a964-477b-8030-07a41cc3de0b",
-          "f39d3451-99fe-48f6-b2e0-574ad14da89a",
-          "d4745b2e-446f-40eb-b85c-48a6af068280"
-        ],
-        "webpage": "if.se"
       },
       {
         "id": "9507f288-f33c-471a-ac7f-17aedb396f4b",
@@ -38232,32 +37994,6 @@
         "webpage": "uspoloassn.se"
       },
       {
-        "id": "b5fb9e66-2294-4890-8bcf-041baa5eb448",
-        "type": 1,
-        "name": "SEB",
-        "title": "Studentrabatt hos {brandName}",
-        "validFrom": "2026-05-06T22:00:00Z",
-        "validTo": "2099-12-31T22:59:59Z",
-        "url": "/se/seb",
-        "logo": "https://img.meccdn.com/media/logo_196_221013142328005388.jpg",
-        "brandId": "b8320ce5-805e-4479-9c77-ccc2fcd11d64",
-        "descriptionHeader": "Alumnierbjudande hos SEB",
-        "description": "<p>Dags att ta första bolånet? Ingen panik. SEB hjälper dig genom alla steg, från lånelöfte och budgivning till kontraktsskrivning och inflytt.</p><p>Just nu får du som alumn ett extra bra erbjudande när du väljer att ta ditt första bolån hos SEB. Då får du även flera förmånliga rabatter på bland annat banktjänster, försäkringar och juridiska tjänster. Låter det intressant? Klicka dig vidare för att ta del av erbjudandet!</p><p>Använd ditt unika erbjudande för SEB och gör livet efter studierna lite rikare.</p>",
-        "facts": " ",
-        "image": "https://img.meccdn.com/media/image1_160_240301161058071855.jpg",
-        "imageAlt": "Alumnierbjudande hos SEB",
-        "category": "A-40",
-        "subcategories": [
-          "A-40"
-        ],
-        "_hide": false,
-        "key": "",
-        "discounts": [
-          "880f3801-6793-48b7-a0a7-8f21d0d3f32c"
-        ],
-        "webpage": "seb.se"
-      },
-      {
         "id": "d3c2a3e8-76fe-4174-b97d-d6e3bedb88fa",
         "type": 1,
         "name": "ECCO",
@@ -39232,38 +38968,6 @@
         "webpage": "risskov.se"
       },
       {
-        "id": "ebb5bbe4-955d-447e-a8cd-cef41b3381db",
-        "type": 1,
-        "name": "Boohoo",
-        "title": "Alumnirabatt hos {brandName}",
-        "validFrom": "2024-08-19T22:00:00Z",
-        "validTo": "2099-08-19T22:00:00Z",
-        "url": "/se/boohoo",
-        "logo": "https://img.meccdn.com/media/logo_196_241024142527077722.png",
-        "logoAlt": "Boohoo",
-        "brandId": "bf8e25cd-f5f5-4463-a49f-bb6b1b6a889c",
-        "descriptionHeader": "Alumnirabatt hos Boohoo",
-        "description": "Med en daglig uppdatering på 100 nya produkter i sortimentet varje dag är Boohoo en perfekt onlinebutik för alla modeälskare. \r\n\r\nBoohoo uppmuntrar den individuella stilen och vill att mode ska vara roligt och lättillgängligt för alla!\r\n\r\nDu kan nu betala med klarna.\r\n\r\nAnvänd din unika alumnirabatt hos Boohoo och gör livet efter studierna lite rikare.",
-        "facts": " ",
-        "image": "https://img.meccdn.com/media/6d93afa3-9690-4141-b863-7b4e7c385a50.jpg",
-        "imageAlt": "Rabatt hos Boohoo",
-        "category": "D-10",
-        "subcategories": [
-          "D-10",
-          "D-20",
-          "D-30"
-        ],
-        "_hide": false,
-        "key": "",
-        "discounts": [
-          "7b38c267-eb39-4197-a187-03a7a53949b0",
-          "7771e9db-0bde-4b2d-b259-04e5ba9d66c2",
-          "f1d44508-b028-4466-b279-39993f9a0ffc",
-          "dc788790-bbdb-471f-afd0-dfad102e3dfd",
-          "ba806064-41cb-4a55-b118-ffb9cb7085b9"
-        ]
-      },
-      {
         "id": "0d8711d0-cbfb-4889-b74e-517560a0fe87",
         "type": 1,
         "name": "Voi",
@@ -39493,35 +39197,6 @@
           "c8d92ac4-b34f-4890-9491-4c5d0f7954dc"
         ],
         "webpage": "shop.libresse.se"
-      },
-      {
-        "id": "81863919-444f-4628-91df-972bcb07d655",
-        "type": 1,
-        "name": "Vasaloppet",
-        "title": "Alumnirabatt hos {brandName}",
-        "validFrom": "2024-12-17T23:00:00Z",
-        "validTo": "2099-12-16T23:00:00Z",
-        "url": "/se/vasaloppet",
-        "logo": "https://img.meccdn.com/media/logo_196_241217115516259342.jpg",
-        "brandId": "0e503699-d733-499b-b423-0cfa309538fe",
-        "descriptionHeader": "Rabatt hos Vasaloppet",
-        "description": "Vasaloppet är världens största långlopp på skidor. Första loppet arrangerades 1922 och den klassiska 90 km långa sträckan mellan Berga by i Sälen till Mora var länge det enda loppet. Vasaloppets vintervecka med längdskidåkning och Vasaloppets sommarvecka med mountainbikecykling och löpning lockar årligen nära 100 000 anmälda deltagare. Sedan starten 1922 har över 1,8 miljoner deltagare passerat målportalen i Mora. Vasaloppet är en ideell verksamhet som ägs av IFK Mora och Sälens IF. En motor för folkhälsa och föreningsliv, i fäders spår för framtids segrar!\r\n\r\nAnvänd din unika rabattkod för Vasaloppet och gör livet efter studierna lite rikare.",
-        "facts": " ",
-        "image": "https://img.meccdn.com/media/image1_196_241217103005941423.jpg",
-        "imageAlt": "Vasaloppet",
-        "category": "B-70",
-        "subcategories": [
-          "B-70",
-          "C-60"
-        ],
-        "_hide": false,
-        "key": "",
-        "discounts": [
-          "72085451-38ca-4038-b622-3d15cd273032",
-          "c8de529b-2c5b-4ee1-af97-dce207474729",
-          "67e80b08-9cf6-456f-b8f9-0b772ccdef81"
-        ],
-        "webpage": "vasaloppet.se"
       },
       {
         "id": "c24e951f-4e76-40f5-a8ef-ad3a80578509",
@@ -41933,38 +41608,6 @@
         "webpage": "holdit.com"
       },
       {
-        "id": "6916121f-7d29-4fb7-9058-5bd7d72624a5",
-        "type": 1,
-        "name": "Sunweb",
-        "title": "Alumnirabatt hos {brandName}",
-        "validFrom": "2022-06-30T22:00:00Z",
-        "validTo": "2099-06-30T22:00:00Z",
-        "url": "/se/sunweb",
-        "logo": "https://img.meccdn.com/media/logo_196_220705163459782631.jpg",
-        "logoAlt": "Sunweb",
-        "brandId": "183a65f4-2f1f-42d5-9bb0-6342675dddf9",
-        "descriptionHeader": "Rabatt hos Sunweb",
-        "description": "Sunweb är din researrangör online, med fokus på att erbjuda skräddarsydda paketresor året runt. De ser det som deras främsta uppgift att ge dig oförglömliga semesterminnen, stunder att minnas för resten av livet.\r\n\r\nBoka en smartare charter – Sunweb kallar det Schmarter och det handlar om att ge mer flexibilitet för att göra din resa speciell, just för dig. De är stolta över att kunna erbjuda ett stort utbud av resmål och boenden till marknadens bästa priser, för att du ska få mer semester för pengarna.\r\n\r\nAnvänd din unika rabattkod hos Sunweb och gör livet efter studierna lite rikare.",
-        "facts": " ",
-        "image": "https://img.meccdn.com/media/image1_196_241114161201119135.jpg",
-        "imageAlt": "Sunweb",
-        "category": "G-40",
-        "subcategories": [
-          "G-40",
-          "G-30"
-        ],
-        "_hide": false,
-        "key": "",
-        "discounts": [
-          "eed99a9e-ea4c-4a79-8c4d-0b23296f2307",
-          "76a9b5a9-f483-4ec4-99ec-1c27d3720ead",
-          "1786e000-e509-48e4-939b-99125291c924",
-          "11fd7de8-6bf5-4e28-81be-a7c2ce82d4db",
-          "be534958-a9dc-4905-aa0e-db77e342a02a"
-        ],
-        "webpage": "sunweb.se"
-      },
-      {
         "id": "4e621a44-77bc-4f4c-8d61-7f5c2a6ebfb8",
         "type": 1,
         "name": "Edblad",
@@ -44063,36 +43706,6 @@
         "webpage": "hp.com"
       },
       {
-        "id": "03129bba-64e7-4f01-8c94-37587d899718",
-        "type": 1,
-        "name": "Nelly.com",
-        "title": "Alumnirabatt hos {brandName}",
-        "validFrom": "2017-03-16T23:00:00Z",
-        "validTo": "2098-12-31T23:00:00Z",
-        "url": "/se/nellycom",
-        "logo": "https://img.meccdn.com/media/logo_133_180326163006884214.png",
-        "logoAlt": "Nelly.com",
-        "brandId": "cd8147ca-3144-4577-9dad-37499550ef6f",
-        "descriptionHeader": "Rabatt på Nelly.com",
-        "description": "Nelly.com är Skandinaviens ledande nätshop för kläder, märkesunderkläder, badmode, hudvård, makeup, accessoarer och nätets snyggaste sportmode.\r\n\r\nAlumnirabatten kan inte kombineras med redan rabatterade varor.\r\n\r\nAnvänd din unika rabattkod för Nelly och gör livet efter studierna lite rikare.",
-        "facts": " ",
-        "image": "https://img.meccdn.com/media/10f05df9-e0af-4563-a1a7-cd089d25d748.png",
-        "imageAlt": "Nelly.com",
-        "category": "D-10",
-        "subcategories": [
-          "D-10",
-          "D-20",
-          "D-30"
-        ],
-        "_hide": false,
-        "key": "",
-        "discounts": [
-          "483a73fd-9121-4f2a-96aa-bad0ffb2f682",
-          "0dcbef51-662a-42ef-977f-6af8a9cd7cf1"
-        ],
-        "webpage": "nelly.com"
-      },
-      {
         "id": "5f2cda65-206b-452d-88dc-feb2884c21e8",
         "type": 1,
         "name": "Filmstaden",
@@ -44150,36 +43763,6 @@
           "9df431e5-18eb-41db-9765-52752e8ed491"
         ],
         "webpage": "aimn.se"
-      },
-      {
-        "id": "48473f8e-5eaa-4ef0-9f25-e1e6775f3fdf",
-        "type": 1,
-        "name": "Outnorth",
-        "title": "Alumnirabatt hos {brandName}",
-        "validFrom": "2022-09-19T22:00:00Z",
-        "validTo": "2099-09-19T22:00:00Z",
-        "url": "/se/outnorth",
-        "logo": "https://img.meccdn.com/media/logo_196_220920091010012330.jpg",
-        "logoAlt": "Outnorth",
-        "brandId": "1f0d29ce-38a0-4f76-8b7b-92c5ddd4d01c",
-        "descriptionHeader": "Rabatt hos Outnorth",
-        "description": "Outnorth.se är en friluftsbutik med massor av kläder, skor och utrustning för all din hiking, vandring, camping, cykling, paddling, löpning, skidåkning och mycket mer. \r\n\r\nAnvänd din unika rabattkod hos Outnorth och gör livet efter studierna lite rikare.",
-        "facts": " ",
-        "image": "https://img.meccdn.com/media/image1_196_220920090948872910.jpg",
-        "imageAlt": "Outnorth",
-        "category": "D-10",
-        "subcategories": [
-          "D-10",
-          "D-30",
-          "B-40"
-        ],
-        "_hide": false,
-        "key": "",
-        "discounts": [
-          "ecd39c5a-3b28-4bd5-bc68-2f239f2a1a6c",
-          "445e97ca-9b78-4008-83df-9c09bcbc0b04"
-        ],
-        "webpage": "outnorth.com"
       },
       {
         "id": "0e05eeb6-6d82-4eab-beb1-33458ce2de43",
@@ -44353,37 +43936,6 @@
           "331678b2-9b5f-49d5-8379-a5e9e0cab251"
         ],
         "webpage": "bengt-martins.se"
-      },
-      {
-        "id": "2cafaec1-3870-4b22-a556-82f414a5476a",
-        "type": 1,
-        "name": "Nextory",
-        "title": "Alumnirabatt hos {brandName}",
-        "validFrom": "2018-03-12T09:26:00Z",
-        "validTo": "2098-12-31T23:00:00Z",
-        "url": "/se/nextory",
-        "logo": "https://img.meccdn.com/media/logo_114_211006090909198591.png",
-        "logoAlt": "Nextory",
-        "brandId": "431903d7-8f3c-41d8-86b1-caa0035b6fe7",
-        "descriptionHeader": "Rabatt hos Nextory",
-        "description": "Hos Nextory hittar du hundratusentals e-böcker och ljudböcker. Du hittar allt ifrån klassiker till de senaste nyheterna och aktuella topplistetitlarna. Läs och lyssna i din mobil och surfplatta.\r\n\r\n• Välj bland marknadens största utbud av e-böcker och tusentals ljudböcker, inklusive de senaste topplistetitlarna, direkt i din surfplatta eller mobil.\r\n• Brett sortiment av titlar; skönlitteratur, deckare, barnböcker, erotik, facklitteratur m.m.\r\n• Läs och lyssna när du vill, var du vill, även i offline läge",
-        "facts": " ",
-        "image": "https://img.meccdn.com/media/338d4f12-cd94-46bd-8b49-b30f479cec1e.png",
-        "imageAlt": "Nextory",
-        "category": "E-40",
-        "subcategories": [
-          "E-70",
-          "E-20",
-          "E-40",
-          "C-60"
-        ],
-        "_hide": false,
-        "key": "",
-        "discounts": [
-          "fa65701b-b4c6-42e2-a710-63b9ed170dae",
-          "daaf7c36-509b-4b9f-b617-8f0b020feb1a"
-        ],
-        "webpage": "nextory.com"
       },
       {
         "id": "8d246503-4513-4ae0-b91c-4a96a585523a",
@@ -44680,32 +44232,6 @@
         "webpage": "sandqvist.com"
       },
       {
-        "id": "2cb5063a-dc97-4657-8e77-20a303823edc",
-        "type": 1,
-        "name": "Linas Matkasse",
-        "title": "Alumnirabatt hos {brandName}",
-        "validFrom": "2022-08-16T07:59:08Z",
-        "validTo": "2099-08-15T22:00:00Z",
-        "url": "/se/linas-matkasse",
-        "logo": "https://img.meccdn.com/media/logo_160_220929213518375562.jpg",
-        "logoAlt": "Linas Matkasse",
-        "brandId": "b98f95a3-4e2d-4f08-8119-87e7ba04b230",
-        "descriptionHeader": "Rabatt hos Linas Matkasse",
-        "description": "Matkassen med Sveriges bredaste utbud av rätter. Idag kan du välja att anpassa din matkasse helt efter dina önskemål. Vegan, glutenfritt eller enbart fisk? Gör det enkelt och välj en av deras populära färdigkomponerade matkassar som Linas express, Barnfamilj eller Klassiskt och inspirerande. \r\n\r\nAlla recept är framtagna av deras kockar som noggrant näringsberäknar och planerar för minimalt matsvinn. Du kan pausa matkassen när du vill. \r\n\r\nAnvänd din unika rabattkod för Linas Matkasse och gör livet efter studierna lite rikare.",
-        "facts": " ",
-        "image": "https://img.meccdn.com/media/03318d38-8854-404c-880b-f94ac6d1496c.jfif",
-        "imageAlt": "Linas Matkasse",
-        "category": "H-10",
-        "subcategories": [
-          "H-10"
-        ],
-        "_hide": false,
-        "key": "",
-        "discounts": [
-          "d3f2b283-9a8b-4278-9bd1-bbf122790e2b"
-        ]
-      },
-      {
         "id": "a11871a5-9e95-4714-8667-b90b77f2b76f",
         "type": 1,
         "name": "Sportshopen",
@@ -44852,32 +44378,6 @@
           "1b8335b1-845a-4c03-85a8-c3b97b133372",
           "cd12f838-7592-4120-8358-429d8324c46b"
         ]
-      },
-      {
-        "id": "c5c534ca-9ad0-4843-bf15-2e70ad586994",
-        "type": 1,
-        "name": "Vy bus4you",
-        "title": "Alumnirabatt hos {brandName}",
-        "validFrom": "2021-04-13T22:00:00Z",
-        "validTo": "2098-12-31T23:00:00Z",
-        "url": "/se/vy-bus4you",
-        "logo": "https://img.meccdn.com/media/93195f69-e149-4a83-bb12-dca50d3eb411.png",
-        "brandId": "a23e5edb-09f0-4ce1-b4d3-fc21bc750710",
-        "descriptionHeader": "Rabatt hos Vy bus4you",
-        "description": "<p>Vy bus4you erbjuder premiumkomfort till rätt pris. Det är en resa där komfort, punktlighet och hållbarhet går hand i hand utformad för att ge dig en stund av avkoppling. Med Vy bus4you reser du i stora, bekväma fåtöljer med extra benutrymme och fällbara säten oavsett om du väljer vår prisvärda ekonomiklass eller vår extra bekväma plusklass med tillgång till singelsäten.</p><p>Ombord finns WiFi och eluttag vid varje plats, perfekt för att streama, plugga eller jobba på vägen. Deras förare kör dig punktligt och tryggt till populära destinationer som Stockholm, Göteborg, Malmö, Oslo, Köpenhamn, Jönköping, Linköping och till flygplatser som Arlanda, Landvetter och Kastrup.</p><p>Vy bus4you erbjuder ett hållbart och medvetet val där komfort, punktlighet och omtänksam service står i fokus. Deras förare ser till att du känner dig trygg och välkommen hela vägen. Våra moderna bussar är ett hållbart alternativ till bil och flyg, utan att kompromissa med komfort eller flexibilitet. Välkommen ombord på en resa där du får mer än du betalar för – i både kvalitet, omtanke och upplevelse.</p>",
-        "facts": " ",
-        "image": "https://img.meccdn.com/media/image1_196_230412153141314764.png",
-        "imageAlt": "Vy bus4you",
-        "category": "G-60",
-        "subcategories": [
-          "G-60"
-        ],
-        "_hide": false,
-        "key": "",
-        "discounts": [
-          "4251aa02-0641-4a98-b249-891a50d20271"
-        ],
-        "webpage": "nettbuss.se"
       },
       {
         "id": "fd1a7cc8-3ad9-4a54-934b-3e2386dfc987",
@@ -46495,82 +45995,6 @@
         "webpage": "boulebar.se"
       },
       {
-        "id": "8b7c4274-ea7b-4c62-8786-84c5fada3bfa",
-        "type": 1,
-        "name": "Samsung",
-        "title": "Alumnirabatt hos {brandName}",
-        "validFrom": "2020-01-29T23:00:00Z",
-        "validTo": "2098-12-31T23:00:00Z",
-        "url": "/se/samsung",
-        "logo": "https://img.meccdn.com/media/logo_114_200127110226966859.png",
-        "logoAlt": "Samsung",
-        "brandId": "d9afd611-af0e-4027-8f84-081185e3c2da",
-        "descriptionHeader": "Rabatt hos Samsung",
-        "description": "Samsung följer en enkel företagsfilosofi: att använda sin talang och teknik för att skapa överlägsna produkter och tjänster som bidrar till ett bättre globalt samhälle. För att uppnå detta värdesätter Samsung sina medarbetare och sin teknik. \r\n\r\nSjälvklart vill dem på Samsung också ge dig som Mecenat alumn extra bra priser på det du behöver. Därför får du upp till 50 % rabatt på TV, ljud, mobiler, klockor, monitorer m.m. när du handlar i Samsung Partner Portal!\r\n\r\nAnvänd din unika rabatt hos Samsung och gör livet efter studierna lite rikare.",
-        "facts": " ",
-        "image": "https://img.meccdn.com/media/image1_114_200127110400878025.png",
-        "imageAlt": "Samsung",
-        "category": "F-30",
-        "subcategories": [
-          "F-20",
-          "F-60",
-          "F-30",
-          "F-50",
-          "F-10",
-          "F-90",
-          "C-20",
-          "F-100"
-        ],
-        "metaText": "<p><strong>Samsung TV&nbsp;</strong></p>\r\n<p>Är du ute efter den nyaste Neo QLED TV:n med överlägsen bildkvalitet? Eller The Frame kanske är mer din stil, som visar digital konst hela dygnet runt. Samsung har TV:n för just dig, handla nu med din Samsung rabattkod!&nbsp;</p>\r\n<p><strong>Samsung Galaxy</strong> </p>\r\n<p>I Samsungs Partner Portal kan du hitta den rätta mobilen för just dig till fantastiska priser! Med Samsungs inbytesprogram kan du även spara mer pengar – byt bara in din gamla telefon (vilket märke som helst) och få pengarna avdraget från nya telefonen!&nbsp;</p>\r\n<p><strong>Samsung tillbehör</strong></p>\r\n<p>Samsungs alla produkter fungerar utmärkt var för sig – men varför inte skapa dig ett smidigare liv med fler av Samsungs galaxyprodukter! I Partner Portalen finner du Galaxy Buds, Galaxy Watch eller en Galaxy Book till bästa priset med din rabattkod.&nbsp;&nbsp;</p>\r\n<p><strong>Samsung och hållbarhet</strong></p>\r\n<p>Samsung prioriterar jorden – de rör sig mot en cirkulär ekonomi med bevarandestrategier i fokus. De strävar till en bättre framtid med hållbarhetsstrategier och innovation i grunden till hela företaget. Med Samsung får du alltid miljömedvetna produkter.</p>",
-        "_hide": false,
-        "key": "",
-        "discounts": [
-          "56ba3ecf-f2a8-4deb-ab50-59754072866d",
-          "9af6f403-1344-4906-b9a2-1cae48f98121",
-          "f873303b-d53a-4c30-92e2-c355962f809a",
-          "d04d64da-e66d-484b-999f-abfab261df2f"
-        ],
-        "webpage": "samsung.com"
-      },
-      {
-        "id": "bb171da6-d0c8-4ffb-b529-63369f122f29",
-        "type": 1,
-        "name": "Adlibris",
-        "title": "Alumnirabatt hos {brandName}",
-        "validFrom": "2020-01-14T23:00:00Z",
-        "validTo": "2098-12-31T23:00:00Z",
-        "url": "/se/adlibris",
-        "logo": "https://img.meccdn.com/media/logo_184_241110181936913777.png",
-        "logoAlt": "Adlibris",
-        "brandId": "22107bdf-812e-457a-8011-c0b32f223c39",
-        "descriptionHeader": "Rabatt hos Adlibris",
-        "description": "Över 18 miljoner boktitlar och mycket annat till riktigt låga priser! Hos Adlibris kan du fynda bland nyheter och bästsäljare, inspireras av personalens boktips och läslistor eller fynda i någon av deras kampanjer. Välkommen in och hitta din nästa läsupplevelse.\r\n\r\nFör att ta del av rabatten använder du koden som visas när du klickar dig vidare, då dras din rabatt av i kassan.\r\n\r\nHåll också utkik efter exklusiva erbjudanden under hela året, enbart för dig som är Mecenat alumn. \r\n\r\nAnvänd din unika rabattkod för Adlibris och gör livet efter studierna lite rikare.",
-        "facts": " ",
-        "image": "https://img.meccdn.com/media/image1_184_241110181944595195.jpg",
-        "imageAlt": "Adlibris",
-        "category": "E-20",
-        "subcategories": [
-          "E-10",
-          "E-20",
-          "E-40",
-          "C-60",
-          "A-10",
-          "C-70",
-          "E-60",
-          "A-30"
-        ],
-        "metaText": "<h2 style=\"font-weight: bold; font-size: 22px; padding-bottom: 10px;\"><strong>Fynda böcker hos Adlibris&nbsp;</strong></h2><p>Här hittar du deckare &amp; kriminalromaner, skräck- &amp; spökhistorier, dramatik &amp; fantasi och mycket mer! Från senaste bästsäljare till älskade klassiker – fynda din nästa bok med rabattkod hos Adlibris.&nbsp;&nbsp;</p><h2 style=\"font-weight: bold; font-size: 22px; padding-bottom: 10px;\"><strong>Få boktips&nbsp;</strong></h2><p>Hos Adlibris får du mängder av boktips och rekommendationer varje gång du handlar. Få spännande lästips till semestern, upptäck något nytt med engagerande faktaböcker eller browsa igenom personalens favoriter för att hitta något oförväntat. Låt dig inspireras av Adlibris breda sortiment och köp böcker till bästa priset med alumnirabatt. &nbsp; &nbsp;&nbsp;</p><h2 style=\"font-weight: bold; font-size: 22px; padding-bottom: 10px;\"><strong>Köp allt inom garn &amp; konstmaterial</strong></h2><p>Hitta all tänkbar konstmaterial, från målarfärg &amp; penslar till smyckestillverkning, och kom igång med ditt nya kreativa projekt snabbt och enkelt med Adlibris. Köp garn till bästa kvalitet samt alla andra tillbehör till dina stickningsprojekt.&nbsp;&nbsp;</p><h2 style=\"font-weight: bold; font-size: 22px; padding-bottom: 10px;\"><strong>Barnpyssel &amp; leksaker</strong></h2><p>Med alumnirabatt hos Adlibris kan du fynda något för hela familjen. Hitta barnens favoritleksaker – allt från LEGO, dockor och mjukisdjur till åkfordon och cyklar. Aktivera barnen med interaktiva leksaker och experimentlådor eller inspirera deras kreativitet med barnpyssel.</p>",
-        "_hide": false,
-        "key": "",
-        "discounts": [
-          "ccefedfb-877a-4378-818c-d8790893577f",
-          "bd6c081f-f413-49e3-b863-5b89d5ea613e",
-          "ac08efcf-319d-4e8d-ab1d-be328002bd79",
-          "70c2397d-a138-4600-9aee-54f7a300c435"
-        ],
-        "webpage": "adlibris.com"
-      },
-      {
         "id": "76033669-43aa-469f-98f2-aac717f237e2",
         "type": 1,
         "name": "Huel",
@@ -46656,6 +46080,486 @@
         "discounts": [
           "c31c1175-79c0-4b69-adec-672e69d3db23"
         ]
+      },
+      {
+        "id": "c5c534ca-9ad0-4843-bf15-2e70ad586994",
+        "type": 1,
+        "name": "Vy bus4you",
+        "title": "Alumnirabatt hos {brandName}",
+        "validFrom": "2021-04-13T22:00:00Z",
+        "validTo": "2098-12-31T23:00:00Z",
+        "url": "/se/vy-bus4you",
+        "logo": "https://img.meccdn.com/media/93195f69-e149-4a83-bb12-dca50d3eb411.png",
+        "brandId": "a23e5edb-09f0-4ce1-b4d3-fc21bc750710",
+        "descriptionHeader": "Rabatt hos Vy bus4you",
+        "description": "<p>Vy bus4you erbjuder premiumkomfort till rätt pris. Det är en resa där komfort, punktlighet och hållbarhet går hand i hand utformad för att ge dig en stund av avkoppling. Med Vy bus4you reser du i stora, bekväma fåtöljer med extra benutrymme och fällbara säten oavsett om du väljer vår prisvärda ekonomiklass eller vår extra bekväma plusklass med tillgång till singelsäten.</p><p>Ombord finns WiFi och eluttag vid varje plats, perfekt för att streama, plugga eller jobba på vägen. Deras förare kör dig punktligt och tryggt till populära destinationer som Stockholm, Göteborg, Malmö, Oslo, Köpenhamn, Jönköping, Linköping och till flygplatser som Arlanda, Landvetter och Kastrup.</p><p>Vy bus4you erbjuder ett hållbart och medvetet val där komfort, punktlighet och omtänksam service står i fokus. Deras förare ser till att du känner dig trygg och välkommen hela vägen. Våra moderna bussar är ett hållbart alternativ till bil och flyg, utan att kompromissa med komfort eller flexibilitet. Välkommen ombord på en resa där du får mer än du betalar för – i både kvalitet, omtanke och upplevelse.</p>",
+        "facts": " ",
+        "image": "https://img.meccdn.com/media/image1_196_230412153141314764.png",
+        "imageAlt": "Vy bus4you",
+        "category": "G-60",
+        "subcategories": [
+          "G-60"
+        ],
+        "_hide": false,
+        "key": "",
+        "discounts": [
+          "4251aa02-0641-4a98-b249-891a50d20271"
+        ],
+        "webpage": "nettbuss.se"
+      },
+      {
+        "id": "bb171da6-d0c8-4ffb-b529-63369f122f29",
+        "type": 1,
+        "name": "Adlibris",
+        "title": "Alumnirabatt hos {brandName}",
+        "validFrom": "2020-01-14T23:00:00Z",
+        "validTo": "2098-12-31T23:00:00Z",
+        "url": "/se/adlibris",
+        "logo": "https://img.meccdn.com/media/logo_184_241110181936913777.png",
+        "logoAlt": "Adlibris",
+        "brandId": "22107bdf-812e-457a-8011-c0b32f223c39",
+        "descriptionHeader": "Rabatt hos Adlibris",
+        "description": "Över 18 miljoner boktitlar och mycket annat till riktigt låga priser! Hos Adlibris kan du fynda bland nyheter och bästsäljare, inspireras av personalens boktips och läslistor eller fynda i någon av deras kampanjer. Välkommen in och hitta din nästa läsupplevelse.\r\n\r\nFör att ta del av rabatten använder du koden som visas när du klickar dig vidare, då dras din rabatt av i kassan.\r\n\r\nHåll också utkik efter exklusiva erbjudanden under hela året, enbart för dig som är Mecenat alumn. \r\n\r\nAnvänd din unika rabattkod för Adlibris och gör livet efter studierna lite rikare.",
+        "facts": " ",
+        "image": "https://img.meccdn.com/media/image1_184_241110181944595195.jpg",
+        "imageAlt": "Adlibris",
+        "category": "E-20",
+        "subcategories": [
+          "E-10",
+          "E-20",
+          "E-40",
+          "C-60",
+          "A-10",
+          "C-70",
+          "E-60",
+          "A-30"
+        ],
+        "metaText": "<h2 style=\"font-weight: bold; font-size: 22px; padding-bottom: 10px;\"><strong>Fynda böcker hos Adlibris&nbsp;</strong></h2><p>Här hittar du deckare &amp; kriminalromaner, skräck- &amp; spökhistorier, dramatik &amp; fantasi och mycket mer! Från senaste bästsäljare till älskade klassiker – fynda din nästa bok med rabattkod hos Adlibris.&nbsp;&nbsp;</p><h2 style=\"font-weight: bold; font-size: 22px; padding-bottom: 10px;\"><strong>Få boktips&nbsp;</strong></h2><p>Hos Adlibris får du mängder av boktips och rekommendationer varje gång du handlar. Få spännande lästips till semestern, upptäck något nytt med engagerande faktaböcker eller browsa igenom personalens favoriter för att hitta något oförväntat. Låt dig inspireras av Adlibris breda sortiment och köp böcker till bästa priset med alumnirabatt. &nbsp; &nbsp;&nbsp;</p><h2 style=\"font-weight: bold; font-size: 22px; padding-bottom: 10px;\"><strong>Köp allt inom garn &amp; konstmaterial</strong></h2><p>Hitta all tänkbar konstmaterial, från målarfärg &amp; penslar till smyckestillverkning, och kom igång med ditt nya kreativa projekt snabbt och enkelt med Adlibris. Köp garn till bästa kvalitet samt alla andra tillbehör till dina stickningsprojekt.&nbsp;&nbsp;</p><h2 style=\"font-weight: bold; font-size: 22px; padding-bottom: 10px;\"><strong>Barnpyssel &amp; leksaker</strong></h2><p>Med alumnirabatt hos Adlibris kan du fynda något för hela familjen. Hitta barnens favoritleksaker – allt från LEGO, dockor och mjukisdjur till åkfordon och cyklar. Aktivera barnen med interaktiva leksaker och experimentlådor eller inspirera deras kreativitet med barnpyssel.</p>",
+        "_hide": false,
+        "key": "",
+        "discounts": [
+          "ccefedfb-877a-4378-818c-d8790893577f",
+          "bd6c081f-f413-49e3-b863-5b89d5ea613e",
+          "ac08efcf-319d-4e8d-ab1d-be328002bd79",
+          "70c2397d-a138-4600-9aee-54f7a300c435"
+        ],
+        "webpage": "adlibris.com"
+      },
+      {
+        "id": "81863919-444f-4628-91df-972bcb07d655",
+        "type": 1,
+        "name": "Vasaloppet",
+        "title": "Alumnirabatt hos {brandName}",
+        "validFrom": "2024-12-17T23:00:00Z",
+        "validTo": "2099-12-16T23:00:00Z",
+        "url": "/se/vasaloppet",
+        "logo": "https://img.meccdn.com/media/logo_196_241217115516259342.jpg",
+        "brandId": "0e503699-d733-499b-b423-0cfa309538fe",
+        "descriptionHeader": "Rabatt hos Vasaloppet",
+        "description": "Vasaloppet är världens största långlopp på skidor. Första loppet arrangerades 1922 och den klassiska 90 km långa sträckan mellan Berga by i Sälen till Mora var länge det enda loppet. Vasaloppets vintervecka med längdskidåkning och Vasaloppets sommarvecka med mountainbikecykling och löpning lockar årligen nära 100 000 anmälda deltagare. Sedan starten 1922 har över 1,8 miljoner deltagare passerat målportalen i Mora. Vasaloppet är en ideell verksamhet som ägs av IFK Mora och Sälens IF. En motor för folkhälsa och föreningsliv, i fäders spår för framtids segrar!\r\n\r\nAnvänd din unika rabattkod för Vasaloppet och gör livet efter studierna lite rikare.",
+        "facts": " ",
+        "image": "https://img.meccdn.com/media/image1_196_241217103005941423.jpg",
+        "imageAlt": "Vasaloppet",
+        "category": "B-70",
+        "subcategories": [
+          "B-70",
+          "C-60"
+        ],
+        "_hide": false,
+        "key": "",
+        "discounts": [
+          "72085451-38ca-4038-b622-3d15cd273032",
+          "228bd27e-eb92-4b3f-ba35-4909a2510fae",
+          "188091a1-2006-4a1b-8816-3c82c30a0d9f"
+        ],
+        "webpage": "vasaloppet.se"
+      },
+      {
+        "id": "03129bba-64e7-4f01-8c94-37587d899718",
+        "type": 1,
+        "name": "Nelly.com",
+        "title": "Alumnirabatt hos {brandName}",
+        "validFrom": "2017-03-16T23:00:00Z",
+        "validTo": "2098-12-31T23:00:00Z",
+        "url": "/se/nellycom",
+        "logo": "https://img.meccdn.com/media/logo_133_180326163006884214.png",
+        "logoAlt": "Nelly.com",
+        "brandId": "cd8147ca-3144-4577-9dad-37499550ef6f",
+        "descriptionHeader": "Rabatt på Nelly.com",
+        "description": "Nelly.com är Skandinaviens ledande nätshop för kläder, märkesunderkläder, badmode, hudvård, makeup, accessoarer och nätets snyggaste sportmode.\r\n\r\nAlumnirabatten kan inte kombineras med redan rabatterade varor.\r\n\r\nAnvänd din unika rabattkod för Nelly och gör livet efter studierna lite rikare.",
+        "facts": " ",
+        "image": "https://img.meccdn.com/media/10f05df9-e0af-4563-a1a7-cd089d25d748.png",
+        "imageAlt": "Nelly.com",
+        "category": "D-10",
+        "subcategories": [
+          "D-10",
+          "D-20",
+          "D-30"
+        ],
+        "_hide": false,
+        "key": "",
+        "discounts": [
+          "ab1959f8-0741-4153-86a7-b5204e5c7eab",
+          "0dcbef51-662a-42ef-977f-6af8a9cd7cf1"
+        ],
+        "webpage": "nelly.com"
+      },
+      {
+        "id": "67c6a249-4c2e-4e30-af63-f77e010a0236",
+        "type": 1,
+        "name": "SanDisk",
+        "title": "Alumnirabatt hos {brandName}",
+        "validFrom": "2021-03-22T23:00:00Z",
+        "validTo": "2097-12-31T23:00:00Z",
+        "url": "/se/sandisk",
+        "logo": "https://img.meccdn.com/media/logo_114_210323165620448022.jpg",
+        "logoAlt": "SanDisk",
+        "brandId": "206e36e4-7e3c-4027-9727-40f0e3dcd49a",
+        "descriptionHeader": "Rabatt hos SanDisk",
+        "description": "SanDisk har alla interna eller externa hårddiskar som du behöver. Hos SanDisk får du som Mecenat alumn 10 % rabatt på USB Flash drives, minneskort, MP3-spelare, SSDs och bärbara hårddiskar. Lagra, streama och hantera din data stilfullt och säkert.\r\n\r\nAnvänd din unika rabattkod hos SanDisk och gör livet efter studierna lite rikare.",
+        "facts": " ",
+        "image": "https://img.meccdn.com/media/image1_114_210323165631673715.png",
+        "imageAlt": "SanDisk",
+        "category": "F-40",
+        "subcategories": [
+          "F-40"
+        ],
+        "hideInExtension": true,
+        "_hide": false,
+        "key": "",
+        "discounts": [],
+        "webpage": "westerndigital.com"
+      },
+      {
+        "id": "59ccc4b5-2cc2-425c-bfaf-0aac1079dedb",
+        "type": 1,
+        "name": "Länna Möbler",
+        "title": "Alumnirabatt hos {brandName}",
+        "validFrom": "2022-11-02T23:00:00Z",
+        "validTo": "2099-11-02T23:00:00Z",
+        "url": "/se/lanna-mobler",
+        "logo": "https://img.meccdn.com/media/6d06c5c0-b4cf-4c0d-b79c-a121847026d6.png",
+        "logoAlt": "Länna",
+        "brandId": "21f4a8f7-ec39-46e5-9c65-cebde0b0e403",
+        "descriptionHeader": "Rabatt hos Länna Möbler",
+        "description": "<p>Nordiska Galleriet är Skandinaviens ledande auktoritet på designmöbler i över ett sekel. Varje möbel är ett konstverk, ett personligt uttryck och ett sätt att göra ett statement i världen. Genom handplockade möbler från banbrytande formgivare erbjuds en tidlös kollektion av originalprodukter. Länna Möbler fungerar som en mötesplats för modern design som inspirerar och hjälper dig att uttrycka din designidentitet till fullo. Utforska deras inspirerande samling online eller i någon av deras butiker och upptäck möbler som är kuraterade för att avnjutas under många generationer framöver.  </p><p>Använd din unika rabattkod för Länna Möbler och gör studentlivet lite rikare.</p>",
+        "facts": " ",
+        "image": "https://img.meccdn.com/media/image1_196_221103094040760799.jpg",
+        "imageAlt": "Rabatt hos Länna Möbler",
+        "category": "A-20",
+        "subcategories": [
+          "A-10",
+          "A-20"
+        ],
+        "faq": "<p></p>",
+        "hideInExtension": true,
+        "_hide": false,
+        "key": "",
+        "discounts": [
+          "256b405b-a5b5-455e-b086-4837d4d7cfd8"
+        ]
+      },
+      {
+        "id": "6916121f-7d29-4fb7-9058-5bd7d72624a5",
+        "type": 1,
+        "name": "Sunweb",
+        "title": "Alumnirabatt hos {brandName}",
+        "validFrom": "2022-06-30T22:00:00Z",
+        "validTo": "2099-06-30T22:00:00Z",
+        "url": "/se/sunweb",
+        "logo": "https://img.meccdn.com/media/logo_196_220705163459782631.jpg",
+        "logoAlt": "Sunweb",
+        "brandId": "183a65f4-2f1f-42d5-9bb0-6342675dddf9",
+        "descriptionHeader": "Rabatt hos Sunweb",
+        "description": "Sunweb är din researrangör online, med fokus på att erbjuda skräddarsydda paketresor året runt. De ser det som deras främsta uppgift att ge dig oförglömliga semesterminnen, stunder att minnas för resten av livet.\r\n\r\nBoka en smartare charter – Sunweb kallar det Schmarter och det handlar om att ge mer flexibilitet för att göra din resa speciell, just för dig. De är stolta över att kunna erbjuda ett stort utbud av resmål och boenden till marknadens bästa priser, för att du ska få mer semester för pengarna.\r\n\r\nAnvänd din unika rabattkod hos Sunweb och gör livet efter studierna lite rikare.",
+        "facts": " ",
+        "image": "https://img.meccdn.com/media/image1_196_241114161201119135.jpg",
+        "imageAlt": "Sunweb",
+        "category": "G-40",
+        "subcategories": [
+          "G-40",
+          "G-30"
+        ],
+        "_hide": false,
+        "key": "",
+        "discounts": [
+          "eed99a9e-ea4c-4a79-8c4d-0b23296f2307",
+          "76a9b5a9-f483-4ec4-99ec-1c27d3720ead",
+          "1786e000-e509-48e4-939b-99125291c924",
+          "11fd7de8-6bf5-4e28-81be-a7c2ce82d4db",
+          "be534958-a9dc-4905-aa0e-db77e342a02a"
+        ],
+        "webpage": "sunweb.se"
+      },
+      {
+        "id": "ebb5bbe4-955d-447e-a8cd-cef41b3381db",
+        "type": 1,
+        "name": "Boohoo",
+        "title": "Alumnirabatt hos {brandName}",
+        "validFrom": "2024-08-19T22:00:00Z",
+        "validTo": "2099-08-19T22:00:00Z",
+        "url": "/se/boohoo",
+        "logo": "https://img.meccdn.com/media/logo_196_241024142527077722.png",
+        "logoAlt": "Boohoo",
+        "brandId": "bf8e25cd-f5f5-4463-a49f-bb6b1b6a889c",
+        "descriptionHeader": "Alumnirabatt hos Boohoo",
+        "description": "Med en daglig uppdatering på 100 nya produkter i sortimentet varje dag är Boohoo en perfekt onlinebutik för alla modeälskare. \r\n\r\nBoohoo uppmuntrar den individuella stilen och vill att mode ska vara roligt och lättillgängligt för alla!\r\n\r\nDu kan nu betala med klarna.\r\n\r\nAnvänd din unika alumnirabatt hos Boohoo och gör livet efter studierna lite rikare.",
+        "facts": " ",
+        "image": "https://img.meccdn.com/media/6d93afa3-9690-4141-b863-7b4e7c385a50.jpg",
+        "imageAlt": "Rabatt hos Boohoo",
+        "category": "D-10",
+        "subcategories": [
+          "D-10",
+          "D-20",
+          "D-30"
+        ],
+        "_hide": false,
+        "key": "",
+        "discounts": [
+          "7b38c267-eb39-4197-a187-03a7a53949b0",
+          "7771e9db-0bde-4b2d-b259-04e5ba9d66c2",
+          "f1d44508-b028-4466-b279-39993f9a0ffc",
+          "dc788790-bbdb-471f-afd0-dfad102e3dfd",
+          "ba806064-41cb-4a55-b118-ffb9cb7085b9",
+          "3020cd4e-b62f-40b9-b24f-22a63a1fd648"
+        ]
+      },
+      {
+        "id": "fceb4e82-cebe-4cee-9da0-ada830632791",
+        "type": 1,
+        "name": "Lamp24",
+        "title": "Alumnirabatt hos {brandName}",
+        "validFrom": "2022-10-18T22:00:00Z",
+        "validTo": "2099-10-18T22:00:00Z",
+        "url": "/se/lamp24",
+        "logo": "https://img.meccdn.com/media/logo_196_221019163931378712.jpg",
+        "logoAlt": "Lamp24",
+        "brandId": "55bf57a9-f379-49ac-a8ee-66bcdf168dc7",
+        "descriptionHeader": "Rabatt hos Lamp24",
+        "description": "Lamp24.se är Europas största online shop för lampor och belysning! Varje person, vare sig privatperson eller företag, behöver den passande belysningen. Oavsett om det är för hem, arbetskontor eller konferensrummet. \r\n\r\nLampor och ljus måste uppfylla olika behov i de olika rummen. Kraven för ett personligt belysningskoncept varierar, det kan handla om rätt ljusstyrka, bra design, en elegant och autentisk design, en professionell eller fascinerande ljuseffekt. Lika unika som kraven är, så är Lamp24.se sortimentet. Kunder kan enkelt beställa från ett sortiment av ungefär 40 000 lampor online. \r\n\r\nAnvänd din unika rabattkod för Lamp24 och gör livet efter studierna lite rikare.",
+        "facts": " ",
+        "image": "https://img.meccdn.com/media/cbccd642-9553-42ce-9383-9007ea198daf.jfif",
+        "imageAlt": "Lamp24",
+        "category": "A-10",
+        "subcategories": [
+          "A-10"
+        ],
+        "_hide": false,
+        "key": "",
+        "discounts": [
+          "05d522cb-2e10-47c4-8edb-d6fa91a3a9b0"
+        ],
+        "webpage": "lamp24.se"
+      },
+      {
+        "id": "95bee8f1-0904-400e-a19b-f609a2185431",
+        "type": 1,
+        "name": "If",
+        "title": "Alumnirabatt hos {brandName}",
+        "validFrom": "2024-07-31T22:00:00Z",
+        "validTo": "2099-07-02T22:00:00Z",
+        "url": "/se/if",
+        "logo": "https://img.meccdn.com/media/logo_160_250324174145387060.jpg",
+        "logoAlt": "If",
+        "brandId": "d9f86d34-fb02-4a30-88f9-43450f16290e",
+        "descriptionHeader": "Rabatt hos If",
+        "description": "<p>If är Nordens ledande försäkringsbolag. De har över 7 000 medarbetare som arbetar för att ge deras kunder marknadens bästa försäkringslösningar för både privatpersoner och företag. Om olyckan är framme finns If vid din sida för att ge snabb och professionell skadehantering. De får in 1,4 miljoner skador varje år och hanterar över hälften av dem inom 24 timmar. Nio av tio kunder som haft en skada ger If toppbetyg för vår skadehantering.</p>",
+        "facts": " ",
+        "image": "https://img.meccdn.com/media/image1_196_240703162402341557.jpg",
+        "imageAlt": "If",
+        "category": "A-50",
+        "subcategories": [
+          "A-50",
+          "A-40"
+        ],
+        "_hide": false,
+        "key": "",
+        "discounts": [
+          "2dc48f68-3615-4e6c-bfe7-896f0c406ef2",
+          "aef6c495-a964-477b-8030-07a41cc3de0b",
+          "f39d3451-99fe-48f6-b2e0-574ad14da89a",
+          "d4745b2e-446f-40eb-b85c-48a6af068280",
+          "1ea42e41-8395-4b50-a4e4-77b61fa0ffa7",
+          "e4666b44-5091-4c15-85ed-0c1b59378eac"
+        ],
+        "webpage": "if.se"
+      },
+      {
+        "id": "48473f8e-5eaa-4ef0-9f25-e1e6775f3fdf",
+        "type": 1,
+        "name": "Outnorth",
+        "title": "Alumnirabatt hos {brandName}",
+        "validFrom": "2022-09-19T22:00:00Z",
+        "validTo": "2099-09-19T22:00:00Z",
+        "url": "/se/outnorth",
+        "logo": "https://img.meccdn.com/media/logo_196_220920091010012330.jpg",
+        "logoAlt": "Outnorth",
+        "brandId": "1f0d29ce-38a0-4f76-8b7b-92c5ddd4d01c",
+        "descriptionHeader": "Rabatt hos Outnorth",
+        "description": "Outnorth.se är en friluftsbutik med massor av kläder, skor och utrustning för all din hiking, vandring, camping, cykling, paddling, löpning, skidåkning och mycket mer. \r\n\r\nAnvänd din unika rabattkod hos Outnorth och gör livet efter studierna lite rikare.",
+        "facts": " ",
+        "image": "https://img.meccdn.com/media/image1_196_220920090948872910.jpg",
+        "imageAlt": "Outnorth",
+        "category": "D-10",
+        "subcategories": [
+          "D-10",
+          "D-30",
+          "B-40"
+        ],
+        "_hide": false,
+        "key": "",
+        "discounts": [
+          "ecd39c5a-3b28-4bd5-bc68-2f239f2a1a6c",
+          "445e97ca-9b78-4008-83df-9c09bcbc0b04"
+        ],
+        "webpage": "outnorth.com"
+      },
+      {
+        "id": "8b7c4274-ea7b-4c62-8786-84c5fada3bfa",
+        "type": 1,
+        "name": "Samsung",
+        "title": "Alumnirabatt hos {brandName}",
+        "validFrom": "2020-01-29T23:00:00Z",
+        "validTo": "2098-12-31T23:00:00Z",
+        "url": "/se/samsung",
+        "logo": "https://img.meccdn.com/media/logo_114_200127110226966859.png",
+        "logoAlt": "Samsung",
+        "brandId": "d9afd611-af0e-4027-8f84-081185e3c2da",
+        "descriptionHeader": "Rabatt hos Samsung",
+        "description": "Samsung följer en enkel företagsfilosofi: att använda sin talang och teknik för att skapa överlägsna produkter och tjänster som bidrar till ett bättre globalt samhälle. För att uppnå detta värdesätter Samsung sina medarbetare och sin teknik. \r\n\r\nSjälvklart vill dem på Samsung också ge dig som Mecenat alumn extra bra priser på det du behöver. Därför får du upp till 50 % rabatt på TV, ljud, mobiler, klockor, monitorer m.m. när du handlar i Samsung Partner Portal!\r\n\r\nAnvänd din unika rabatt hos Samsung och gör livet efter studierna lite rikare.",
+        "facts": " ",
+        "image": "https://img.meccdn.com/media/image1_114_200127110400878025.png",
+        "imageAlt": "Samsung",
+        "category": "F-30",
+        "subcategories": [
+          "F-20",
+          "F-60",
+          "F-30",
+          "F-50",
+          "F-10",
+          "F-90",
+          "C-20",
+          "F-100"
+        ],
+        "metaText": "<p><strong>Samsung TV&nbsp;</strong></p>\r\n<p>Är du ute efter den nyaste Neo QLED TV:n med överlägsen bildkvalitet? Eller The Frame kanske är mer din stil, som visar digital konst hela dygnet runt. Samsung har TV:n för just dig, handla nu med din Samsung rabattkod!&nbsp;</p>\r\n<p><strong>Samsung Galaxy</strong> </p>\r\n<p>I Samsungs Partner Portal kan du hitta den rätta mobilen för just dig till fantastiska priser! Med Samsungs inbytesprogram kan du även spara mer pengar – byt bara in din gamla telefon (vilket märke som helst) och få pengarna avdraget från nya telefonen!&nbsp;</p>\r\n<p><strong>Samsung tillbehör</strong></p>\r\n<p>Samsungs alla produkter fungerar utmärkt var för sig – men varför inte skapa dig ett smidigare liv med fler av Samsungs galaxyprodukter! I Partner Portalen finner du Galaxy Buds, Galaxy Watch eller en Galaxy Book till bästa priset med din rabattkod.&nbsp;&nbsp;</p>\r\n<p><strong>Samsung och hållbarhet</strong></p>\r\n<p>Samsung prioriterar jorden – de rör sig mot en cirkulär ekonomi med bevarandestrategier i fokus. De strävar till en bättre framtid med hållbarhetsstrategier och innovation i grunden till hela företaget. Med Samsung får du alltid miljömedvetna produkter.</p>",
+        "_hide": false,
+        "key": "",
+        "discounts": [
+          "56ba3ecf-f2a8-4deb-ab50-59754072866d",
+          "9af6f403-1344-4906-b9a2-1cae48f98121",
+          "f873303b-d53a-4c30-92e2-c355962f809a",
+          "d04d64da-e66d-484b-999f-abfab261df2f"
+        ],
+        "webpage": "samsung.com"
+      },
+      {
+        "id": "2cb5063a-dc97-4657-8e77-20a303823edc",
+        "type": 1,
+        "name": "Linas Matkasse",
+        "title": "Alumnirabatt hos {brandName}",
+        "validFrom": "2022-08-16T07:59:08Z",
+        "validTo": "2099-08-15T22:00:00Z",
+        "url": "/se/linas-matkasse",
+        "logo": "https://img.meccdn.com/media/b444055c-e49d-4724-8a59-6f6d1e0d72e8.png",
+        "logoAlt": "Linas Matkasse",
+        "brandId": "b98f95a3-4e2d-4f08-8119-87e7ba04b230",
+        "descriptionHeader": "Rabatt hos Linas Matkasse",
+        "description": "Matkassen med Sveriges bredaste utbud av rätter. Idag kan du välja att anpassa din matkasse helt efter dina önskemål. Vegan, glutenfritt eller enbart fisk? Gör det enkelt och välj en av deras populära färdigkomponerade matkassar som Linas express, Barnfamilj eller Klassiskt och inspirerande. \r\n\r\nAlla recept är framtagna av deras kockar som noggrant näringsberäknar och planerar för minimalt matsvinn. Du kan pausa matkassen när du vill. \r\n\r\nAnvänd din unika rabattkod för Linas Matkasse och gör livet efter studierna lite rikare.",
+        "facts": " ",
+        "image": "https://img.meccdn.com/media/03318d38-8854-404c-880b-f94ac6d1496c.jfif",
+        "imageAlt": "Linas Matkasse",
+        "category": "H-10",
+        "subcategories": [
+          "H-10"
+        ],
+        "_hide": false,
+        "key": "",
+        "discounts": [
+          "d3f2b283-9a8b-4278-9bd1-bbf122790e2b"
+        ]
+      },
+      {
+        "id": "b5fb9e66-2294-4890-8bcf-041baa5eb448",
+        "type": 1,
+        "name": "SEB",
+        "title": "Studentrabatt hos {brandName}",
+        "validFrom": "2026-05-06T22:00:00Z",
+        "validTo": "2099-12-31T22:59:59Z",
+        "url": "/se/seb",
+        "logo": "https://img.meccdn.com/media/logo_196_221013142328005388.jpg",
+        "brandId": "b8320ce5-805e-4479-9c77-ccc2fcd11d64",
+        "descriptionHeader": "Alumnierbjudande hos SEB",
+        "description": "<p>Dags att ta första bolånet? Ingen panik. SEB hjälper dig genom alla steg, från lånelöfte och budgivning till kontraktsskrivning och inflytt.</p><p>Just nu får du som alumn ett extra bra erbjudande när du väljer att ta ditt första bolån hos SEB. Då får du även flera förmånliga rabatter på bland annat banktjänster, försäkringar och juridiska tjänster. Låter det intressant? Klicka dig vidare för att ta del av erbjudandet!</p><p>Använd ditt unika erbjudande för SEB och gör livet efter studierna lite rikare.</p>",
+        "facts": " ",
+        "image": "https://img.meccdn.com/media/image1_160_240301161058071855.jpg",
+        "imageAlt": "Alumnierbjudande hos SEB",
+        "category": "A-40",
+        "subcategories": [
+          "A-40"
+        ],
+        "_hide": false,
+        "key": "",
+        "discounts": [
+          "880f3801-6793-48b7-a0a7-8f21d0d3f32c"
+        ],
+        "webpage": "seb.se"
+      },
+      {
+        "id": "32c49582-540c-4aad-b6b8-92a39e236057",
+        "type": 1,
+        "name": "Vätternrundan",
+        "title": "Alumnirabatt hos {brandName}",
+        "validFrom": "2023-12-13T23:00:00Z",
+        "validTo": "2099-12-13T23:00:00Z",
+        "url": "/se/vatternrundan",
+        "logo": "https://img.meccdn.com/media/logo_196_231214105100417695.jpg",
+        "brandId": "bdba3138-660b-43ae-a752-6cda97c29ee7",
+        "descriptionHeader": "Rabatt hos Vätternrundan",
+        "description": "<p>I juni varje år förvandlas den medelstora svenska staden Motala till ett internationellt mecka för cyklister från hela världen. Ja, Cykelveckan i Motala ska upplevas på plats – och helst från en cykelsadel. Anmäl dig till något av våra fyra landsvägslopp och se själv! Varför inte avsluta veckan med den lika vackra som utmanande svenska klassikern Vätternrundan 315 kilometer?</p><p><strong>Cykelveckan 2027 – då går loppen:</strong><br>12 juni - Tjejvättern 100 km<br>12 juni - Halvvättern 150 km<br>12 juni - Vätternrundan 100 km – loppet där du kan cykla elcykel<br>18-19 juni - Vätternrundan 315 km</p>",
+        "facts": " ",
+        "image": "https://img.meccdn.com/media/image1_196_231214105051183312.png",
+        "imageAlt": "Vätternrundan",
+        "category": "C-60",
+        "subcategories": [
+          "C-60"
+        ],
+        "_hide": false,
+        "key": "",
+        "discounts": [
+          "13d39a21-2042-4d80-9461-72dba87e287a"
+        ],
+        "webpage": "vatternrundan.se"
+      },
+      {
+        "id": "2cafaec1-3870-4b22-a556-82f414a5476a",
+        "type": 1,
+        "name": "Nextory",
+        "title": "Alumnirabatt hos {brandName}",
+        "validFrom": "2018-03-12T09:26:00Z",
+        "validTo": "2098-12-31T23:00:00Z",
+        "url": "/se/nextory",
+        "logo": "https://img.meccdn.com/media/logo_114_211006090909198591.png",
+        "logoAlt": "Nextory",
+        "brandId": "431903d7-8f3c-41d8-86b1-caa0035b6fe7",
+        "descriptionHeader": "Rabatt hos Nextory",
+        "description": "Hos Nextory hittar du hundratusentals e-böcker och ljudböcker. Du hittar allt ifrån klassiker till de senaste nyheterna och aktuella topplistetitlarna. Läs och lyssna i din mobil och surfplatta.\r\n\r\n• Välj bland marknadens största utbud av e-böcker och tusentals ljudböcker, inklusive de senaste topplistetitlarna, direkt i din surfplatta eller mobil.\r\n• Brett sortiment av titlar; skönlitteratur, deckare, barnböcker, erotik, facklitteratur m.m.\r\n• Läs och lyssna när du vill, var du vill, även i offline läge",
+        "facts": " ",
+        "image": "https://img.meccdn.com/media/338d4f12-cd94-46bd-8b49-b30f479cec1e.png",
+        "imageAlt": "Nextory",
+        "category": "E-40",
+        "subcategories": [
+          "E-70",
+          "E-20",
+          "E-40",
+          "C-60"
+        ],
+        "_hide": false,
+        "key": "",
+        "discounts": [
+          "fa65701b-b4c6-42e2-a710-63b9ed170dae",
+          "daaf7c36-509b-4b9f-b617-8f0b020feb1a"
+        ],
+        "webpage": "nextory.com"
       },
       {
         "id": "a96b5f52-404e-4f30-a1d2-3f1e18f2e846",
@@ -49476,34 +49380,6 @@
         "webpage": "bymoller.se"
       },
       {
-        "id": "f75fe746-5d3e-4008-9163-27a399ac1dca",
-        "type": 1,
-        "name": "Travelpro",
-        "title": "Alumnirabatt hos {brandName}",
-        "validFrom": "2025-09-01T22:00:00Z",
-        "validTo": "2026-09-01T22:00:00Z",
-        "url": "/se/travelpro",
-        "logo": "https://img.meccdn.com/media/logo_666_250903120033668595.jpg",
-        "logoAlt": "Travelpro",
-        "brandId": "6f8cf19b-db3a-49e6-8b9e-253b28c7d6fc",
-        "descriptionHeader": "Rabatt hos Travelpro",
-        "description": "<p>Travelpro® hjälper dig att resa smartare. Varumärket grundades av en pilot som blev skaparen av den ursprungliga Rollaboard®-resväskan. Sedan dess har Travelpro varit ett självklart val för erfarna resenärer. Med lätt och hållbart bagage blir varje resa enklare – oavsett om det gäller weekendresor, återträffar eller affärsresor. De stilfulla och funktionella ryggsäckarna är byggda för att hålla länge och följa med långt in i karriären. Travelpro levererar pålitlig utrustning som förenklar livet i rörelse, oavsett om det handlar om att gå till jobbet, hinna med ett flyg eller upptäcka en ny stad.</p>",
-        "facts": "Rabatten gäller på ordinarie priser och kan inte kombineras med andra rabatter eller rabattkoder.\r\nGäller på giltiga köp endast.",
-        "image": "https://img.meccdn.com/media/image1_666_250903120032236823.jpg",
-        "imageAlt": "Rabatt hos Travelpro",
-        "category": "G-80",
-        "subcategories": [
-          "G-80"
-        ],
-        "_hide": false,
-        "key": "",
-        "discounts": [
-          "0309a596-cacd-4365-9f05-c41b6f3e1f4e",
-          "1bb79d9e-1a05-4a3f-8806-870fb91d5fd3"
-        ],
-        "webpage": "travelpro.com"
-      },
-      {
         "id": "f3d93567-2416-403a-8aca-51618b8e6d7d",
         "type": 1,
         "name": "Countryside Hotels",
@@ -49750,34 +49626,6 @@
           "133196bc-8a68-4a8c-9d55-ebb20ffc6706"
         ],
         "webpage": "dcg.se"
-      },
-      {
-        "id": "e3c98cf9-df95-4e5a-8876-749973acc3b4",
-        "type": 1,
-        "name": "Empower",
-        "title": "Alumnirabatt hos {brandName}",
-        "validFrom": "2025-08-27T22:00:00Z",
-        "validTo": "2026-08-28T21:59:59Z",
-        "url": "/se/empower",
-        "logo": "https://img.meccdn.com/media/logo_666_250829070026498164.jpg",
-        "logoAlt": "Empower",
-        "brandId": "fe22cc8e-b089-4b30-b173-b6893759e107",
-        "descriptionHeader": "Rabatt hos Empower",
-        "description": "<p>Empower är mer än ett klädmärke för träningskläder – det är en look, en känsla och ett community. Empower står för stil, styrka och självsäkerhet. Grundat i Stockholm av kvinnor med passion för träning, hälsa och mode. Hjärtat ligger i matchande set som kombinerar stil, funktion och kvalitet. <br><br>Hos Empower hittar du genomtänkta plagg som ger optimal komfort, passform och rörelsefrihet – designade för att hålla både i form och känsla. Till det finns matchande accessoarer allt från snygga strumpor till tumblers och vattenflaskor för en komplett träningsupplevelse, både på och utanför gymmet. Med Empower vid din sida kan du vara säker på att du har det bästa för att uppnå dina drömmar och träningsmål! </p><p>Använd din unika rabattkod för Empower och gör livet efter studierna lite rikare.</p>",
-        "image": "https://img.meccdn.com/media/image1_666_250829070022987356.jpg",
-        "imageAlt": "Rabatt hos Empower",
-        "category": "B-40",
-        "subcategories": [
-          "D-10",
-          "B-40"
-        ],
-        "_hide": false,
-        "key": "",
-        "discounts": [
-          "36497ded-4cf5-4336-b81e-04bf6be6838f",
-          "31d72496-6ce9-4bd9-951a-5b811bc48756"
-        ],
-        "webpage": "empower-sportswear.com"
       },
       {
         "id": "8499847d-d1f6-4df7-aa1e-95290a62aa93",
@@ -50213,33 +50061,6 @@
           "44a0fcb8-0c9b-490b-89b0-1340f567092f"
         ],
         "webpage": "legionova.se"
-      },
-      {
-        "id": "e11478b8-1d44-46f9-889e-e592038dff21",
-        "type": 1,
-        "name": "Afterskistore.se",
-        "title": "Alumnirabatt hos Afterskistore.se",
-        "validFrom": "2025-09-17T22:00:00Z",
-        "validTo": "2099-12-31T22:59:59Z",
-        "url": "/se/afterskistorese",
-        "logo": "https://img.meccdn.com/media/logo_666_250919070027621763.jpg",
-        "logoAlt": "Afterskistore.se",
-        "brandId": "cb88d751-78ed-4475-89f0-0bf7eeade58b",
-        "descriptionHeader": "Rabatt hos Afterskistore.se",
-        "description": "Afterski Team Sweden är svenskarnas egna landslag på skidresan! Där handlar det inte om medaljer – utan om minnen, skratt och maxad gemenskap. \r\nNär du drar på dig deras landslagsutrustning på skidresan är du aldrig ensam – plötsligt har du mängder av nya lagkompisar att festa, sjunga och åka skidor med. \r\n\r\n”Sveriges skönaste landslag” syns i backen och på afterskin. Kort sagt: Afterski Team´s utrustning är din biljett till ”Gemenskap i världsklass” och en skidresa du aldrig glömmer!",
-        "facts": "Kan ej kombineras med andra rabatter.",
-        "image": "https://img.meccdn.com/media/image1_666_250919070027841640.jpg",
-        "imageAlt": "Rabatt hos Afterskistore.se",
-        "category": "D-10",
-        "subcategories": [
-          "D-10"
-        ],
-        "_hide": false,
-        "key": "",
-        "discounts": [
-          "4a3e4993-7baa-43a9-924a-76fe8f2584d5"
-        ],
-        "webpage": "afterskistore.se"
       },
       {
         "id": "535b6e9a-97b0-4f96-85bd-de95237644eb",
@@ -50972,33 +50793,6 @@
           "67fad69b-97c9-4b93-ba5c-c718facebdd1"
         ],
         "webpage": "frankdandy.com"
-      },
-      {
-        "id": "fcf642ef-7515-4520-a328-148ba5c7856e",
-        "type": 1,
-        "name": "VirtuFit",
-        "title": "Alumnirabatt hos {brandName}",
-        "validFrom": "2025-08-26T22:00:00Z",
-        "validTo": "2026-08-27T21:59:59Z",
-        "url": "/se/virtufit",
-        "logo": "https://img.meccdn.com/media/logo_666_250828070048111220.jpg",
-        "logoAlt": "VirtuFit",
-        "brandId": "513f6c53-0c05-4254-b9ed-1ef1047b4783",
-        "descriptionHeader": "Rabatt hos VirtuFit",
-        "description": "<p>Virtufit erbjuder ett brett sortiment av redskap och träningsutrustning till konkurrenskraftiga priser utan att tumma på kvalitet. Produkterna är designade i Holland och har genomgått omfattande tester och optimering för att säkerställa bästa funktion och ergonomi. Som ett resultat uppfyller VirtuFit europeiska kvalitetskrav EN 957-1 och EN 957-5 för fitnessutrustning. </p><p>Använd din unika rabattkod för VirtuFit och gör livet efter studierna lite rikare.</p>",
-        "image": "https://img.meccdn.com/media/image1_666_250828070048314347.jpg",
-        "imageAlt": "Rabatt hos VirtuFit",
-        "category": "B-40",
-        "subcategories": [
-          "B-40"
-        ],
-        "_hide": false,
-        "key": "",
-        "discounts": [
-          "df0e2703-6faa-409d-8977-36cca781dc49",
-          "6a6848d6-f697-418e-9356-98e87d403032"
-        ],
-        "webpage": "virtufit.se"
       },
       {
         "id": "48572851-60a6-4629-a7be-a140f314f39f",
@@ -52636,33 +52430,6 @@
         "webpage": "luftrenare.se"
       },
       {
-        "id": "c6da2dff-fcb5-4ebb-b645-3dadd7a5cfc4",
-        "type": 1,
-        "name": "Fearless Minds",
-        "title": "Alumnirabatt hos {brandName}",
-        "validFrom": "2026-03-03T23:00:00Z",
-        "validTo": "2099-12-31T22:59:59Z",
-        "url": "/se/fearless-minds",
-        "logo": "https://img.meccdn.com/atlas/logo_fearless-minds_1772614735185582476.png",
-        "brandId": "521c3210-5677-486e-89b7-2eba849c1b6b",
-        "descriptionHeader": "Alumnirabatt hos Fearless Minds",
-        "description": "<p>Fearless Minds hjälper dig att utveckla ditt självledarskap och maximera din prestation. Med stöd av forskning inom psykologi och neurovetenskap får du kraftfulla verktyg för att hantera stress, stärka ditt självförtroende och bygga ett hållbart, modigt mindset. Fearless MInds har hyllats av bolag såsom Google och de har jobbat med ett flertal välkända bolag bl.a. H&amp;M, AstraZeneca och Norrsken.</p><p>Använd din unika rabattkod för Fearless Minds och gör livet efter studierna lite rikare.</p>",
-        "image": "https://img.meccdn.com/atlas/bp-image_temp-4d350922-39af-4a75-9f79-075d35328f96_1772615317678881937.png",
-        "imageAlt": "Alumnirabatt hos Fearless Minds",
-        "category": "E-50",
-        "subcategories": [
-          "A-70",
-          "B-70"
-        ],
-        "_hide": false,
-        "key": "",
-        "discounts": [
-          "5080603e-d17d-4bcf-93eb-bc3fbee78ba7",
-          "af8ad258-c968-4392-a513-c095f500334a"
-        ],
-        "webpage": "fearlessminds.se"
-      },
-      {
         "id": "641dc5d1-6096-4d15-8ed4-d43033a09101",
         "type": 1,
         "name": "MAJANA",
@@ -52772,33 +52539,6 @@
           "b3a3a47a-fa89-4904-801d-4b02744c80e2"
         ],
         "webpage": "casstrom.com"
-      },
-      {
-        "id": "6f1e3e1c-2bae-4724-bce2-ca6a4e6266f1",
-        "type": 1,
-        "name": "Lone Golf",
-        "title": "Alumnirabatt hos {brandName}",
-        "validFrom": "2025-08-26T22:00:00Z",
-        "validTo": "2026-08-27T21:59:59Z",
-        "url": "/se/lone-golf",
-        "logo": "https://img.meccdn.com/media/logo_666_250828070039852696.jpg",
-        "logoAlt": "Lone Golf",
-        "brandId": "54110b2a-611d-4552-b756-de4ae97c62ee",
-        "descriptionHeader": "Rabatt hos Lone Golf",
-        "description": "<p>Lone Golf är ett nytt svenskt golfmärke som föddes ur en passion för sporten och en önskan att göra kvalitetsutrustning tillgänglig för fler golfare. Genom att kombinera deras erfarenhet av golf med en förståelse för vad spelare verkligen behöver, strävar de efter att tillhandahålla klubbor som förbättrar spelet för alla, oavsett nivå. Deras fokus ligger på att erbjuda premiumprodukter utan premiumprislappen, vilket gör att fler kan njuta av sporten. </p><p>Använd din unika rabattkod för Lone Golf och gör livet efter studierna lite rikare.</p>",
-        "facts": "Så här använder du erbjudandet:\nLägg till ditt järnset samt din önskade wedge i varukorgen. Wedgen blir då gratis!",
-        "image": "https://img.meccdn.com/media/image1_666_250828070034353416.jpg",
-        "imageAlt": "Rabatt hos Lone Golf",
-        "category": "B-40",
-        "subcategories": [
-          "B-40"
-        ],
-        "_hide": false,
-        "key": "",
-        "discounts": [
-          "b3e28aed-4104-4ea1-8d94-d61f965b540d"
-        ],
-        "webpage": "lonegolf.se"
       },
       {
         "id": "75f18da9-f2d3-4f7c-bcfd-91522927997e",
@@ -56565,35 +56305,6 @@
         "webpage": "dorre.se"
       },
       {
-        "id": "18943824-c0f6-4ad5-b946-242e972c14de",
-        "type": 1,
-        "name": "Bulk",
-        "title": "Alumnirabatt hos Bulk",
-        "validFrom": "2025-10-26T23:00:00Z",
-        "validTo": "2099-12-31T22:59:59Z",
-        "url": "/se/bulk",
-        "logo": "https://img.meccdn.com/media/logo_666_251027120030547342.jpg",
-        "logoAlt": "Bulk",
-        "brandId": "1b657135-ec11-4936-8a63-8452b1978698",
-        "descriptionHeader": "Rabatt hos Bulk",
-        "description": "<p>Sedan 2006 har Bulk fokuserat på att skapa kosttillskott och hälsokost i världsklass. Fyll på med högkvalitativa tillskott inom sportnäring, viktnedgång, hälsa och välmående för att hjälpa dig att prestera på topp. Oavsett om ditt mål är att bygga muskler, gå ner i vikt eller upprätthålla en hälsosam livsstil – Bulk har det du behöver.</p><p>Använd din unika rabattkod för Bulk och gör livet efter studierna lite rikare.</p>",
-        "image": "https://img.meccdn.com/media/image1_666_251027120030767696.jpg",
-        "imageAlt": "Rabatt hos Bulk",
-        "category": "B-60",
-        "subcategories": [
-          "B-60"
-        ],
-        "_hide": false,
-        "key": "",
-        "discounts": [
-          "000de861-a9fe-4586-bb39-0048c120ab7f",
-          "d3238a6c-fd6e-4ec1-a2b0-65adaec3bce6",
-          "975da8a9-1f1e-4913-a4c7-98133b7025df",
-          "de4cebe2-849e-4ee1-bfb3-5d0ce4732fb4"
-        ],
-        "webpage": "bulk.com"
-      },
-      {
         "id": "76417575-1dd6-486b-b107-d7cb8f9d74f3",
         "type": 1,
         "name": "My Driving Academy",
@@ -56763,35 +56474,6 @@
         "webpage": "se.cphgrooming.com"
       },
       {
-        "id": "b4a38ccd-6e21-4cd8-a591-cb681ffcf5f7",
-        "type": 1,
-        "name": "Memira",
-        "title": "Alumnirabatt hos {brandName}",
-        "validFrom": "2023-12-11T23:00:00Z",
-        "validTo": "2099-12-31T22:59:59Z",
-        "url": "/se/memira",
-        "logo": "https://img.meccdn.com/media/a3f282bf-382f-4c39-86ef-4ff6f40fce2c.jfif",
-        "logoAlt": "Memira",
-        "brandId": "5f57823f-faec-469f-b84f-67d2f39039b1",
-        "descriptionHeader": "Rabatt hos Memira",
-        "description": "<p>Memira erbjuder ögonlaser och linsbyte, för att hjälpa människor att bli fria från glasögon och linser. De kan korrigera alla typer av synfel, från närsynthet och översynthet till astigmatism och ålderssynthet. Med erfarna ögonläkare och över 500 000 genomförda operationer hjälper Memira dig till en friare vardag utan glasögon och linser. Använd din unika rabattkod för Memira och gör livet efter studierna lite rikare.</p>",
-        "image": "https://img.meccdn.com/media/image1_666_220906070024727213.jpg",
-        "imageAlt": "Rabatt hos Memira",
-        "category": "B-10",
-        "subcategories": [
-          "B-10"
-        ],
-        "_hide": false,
-        "key": "",
-        "discounts": [
-          "3fb8f273-81b1-470e-9966-3a406eae69eb",
-          "9834ead5-001a-4bfe-9838-c29086e6d5c7",
-          "9e7a41f5-f330-4fdc-b4c5-bdf94981eff6",
-          "f9ee799f-d2ff-48c0-8f2c-617d22c81d33"
-        ],
-        "webpage": "memira.se"
-      },
-      {
         "id": "da2c0c63-0cfd-4a3d-9952-c8f4185ca356",
         "type": 1,
         "name": "AirHelp",
@@ -56873,33 +56555,6 @@
         "webpage": "klippkungen.se"
       },
       {
-        "id": "c7026646-f3ce-4a2d-8792-fc3a9cf84e80",
-        "type": 1,
-        "name": "Grandpa",
-        "title": "Alumnirabatt hos {brandName}",
-        "validFrom": "2025-07-29T22:00:00Z",
-        "validTo": "2099-12-31T22:59:59Z",
-        "url": "/se/grandpa",
-        "logo": "https://img.meccdn.com/media/c5b8d8c0-6f01-4fd9-869f-2dd03a890f43.png",
-        "logoAlt": "Grandpa Logotype",
-        "brandId": "0f9aeefa-dbab-49b2-97cb-b41085fb4e9e",
-        "descriptionHeader": "Rabatt hos Grandpa",
-        "description": "<p>Grandpa - Good People, Good Products, Good Impact. </p><p>Tidlöst mode &amp; livsstil med omtanke.</p><p style=\"line-height:1.38;margin-top:0pt;margin-bottom:0pt;\">Använd din unika rabattkod för Grandpa och gör livet efter studierna lite rikare.</p>",
-        "image": "https://img.meccdn.com/media/9235417f-751d-43e7-9c7e-e200d1f01ed2.png",
-        "imageAlt": "Alumnirabatt hos Grandpa",
-        "category": "D-10",
-        "subcategories": [
-          "D-10",
-          "A-10"
-        ],
-        "_hide": false,
-        "key": "",
-        "discounts": [
-          "92f25604-ce78-48b7-b2fb-a1b137223749"
-        ],
-        "webpage": "grandpastore.com"
-      },
-      {
         "id": "736f0307-eeab-4afb-9e0b-a189cc0a2f1d",
         "type": 1,
         "name": "Planet Nusa",
@@ -56979,34 +56634,6 @@
           "fa08206e-a61f-43ae-89bc-e7a8019d41ff"
         ],
         "webpage": "hartandholm.com"
-      },
-      {
-        "id": "6070d2e2-21ac-4965-b414-ca2d2a9f837d",
-        "type": 1,
-        "name": "Moyagi Stockholm",
-        "title": "Alumnirabatt hos Moyagi Stockholm",
-        "validFrom": "2025-09-03T22:00:00Z",
-        "validTo": "2026-09-03T22:00:00Z",
-        "url": "/se/moyagi-stockholm",
-        "logo": "https://img.meccdn.com/media/logo_666_250905070041215325.jpg",
-        "logoAlt": "Moyagi Stockholm",
-        "brandId": "2222799d-a541-4c98-b120-888dca046b1c",
-        "descriptionHeader": "Rabatt hos Moyagi Stockholm",
-        "description": "<p>Moyagi är en skandinavisk tolkning av japansk karaokekultur - en modern ritual där mat, musik och social energi smälter samman. I privata rum med rumsservice, över 150 000 låtar och högklassigt ljud skapas en upplevelse som känns som en eget värld. Det är karaoke som chambre séparée – där gästerna väljer när de vill vara i sitt space och när de vill kliva ut till baren eller restaurangen. Med japanska smårätter, koreanska influenser och cocktails i världsklass erbjuder Moyagi ett helt nytt sätt att umgås – kurerat, avslappnat och oförglömligt. Moyagi finns i Stockholm, Malmö och London och välkomnar studenter, vänner, sällskap och grupper som söker något mer än en vanlig kväll ute.</p>",
-        "facts": "10 % rabatt fredagar & lördagar\n25 % rabatt onsdagar & torsdagar\nGår inte att kombineras med andra rabatter, medlemskort eller kampanjer.",
-        "image": "https://img.meccdn.com/media/image1_666_250905070035832954.jpg",
-        "imageAlt": "Rabatt hos Moyagi Stockholm",
-        "category": "C-50",
-        "subcategories": [
-          "C-50"
-        ],
-        "_hide": false,
-        "key": "",
-        "discounts": [
-          "828031d8-ded2-449c-9b88-ae0f753bca21",
-          "a4fe4d1c-1b8a-4595-9386-0aa1829b4d37"
-        ],
-        "webpage": "moyagi.com"
       },
       {
         "id": "20a99bfd-d1d0-4dbb-907c-138fa25f0325",
@@ -57821,35 +57448,6 @@
           "d8fe116b-e242-4216-b6f3-33d6c8695ea0"
         ],
         "webpage": "russemerch.com"
-      },
-      {
-        "id": "17198016-6a77-49c7-a2fb-aa0a70293373",
-        "type": 1,
-        "name": "Din Psykolog",
-        "title": "",
-        "validFrom": "2026-08-04T22:00:00Z",
-        "validTo": "2099-12-31T22:59:59Z",
-        "url": "/se/din-psykolog",
-        "logo": "https://img.meccdn.com/atlas/logo_din-psykolog_1785929799661577941.png",
-        "brandId": "476860c8-c2f3-4454-9beb-f82c6a400166",
-        "descriptionHeader": "Alumnirabatt hos Din Psykolog",
-        "description": "<p>Din Psykolog kombinerar mänsklig expertis med smart teknik för att göra psykologisk behandling mer tillgänglig, personlig och effektiv! Livet kan ibland kännas överväldigande, oavsett om det handlar om stress, ångest eller att stå inför svåra livsval. </p><p>Din Psykolog erbjuder evidensbaserad behandling online, så att det blir enkelt att få stöd av en legitimerad behandlare, var man än befinner sig. Din Psykolog hjälper människor att förstå sina utmaningar och hitta verktyg för att må bättre.</p><p>Använd din unika rabatt för Din Psykolog och gör livet efter studierna lite rikare.</p>",
-        "image": "https://img.meccdn.com/atlas/bp-image_temp-888e2977-1dc3-4494-881b-8718dc5cf60a_1785930051015809923.png",
-        "imageAlt": "Alumnirabatt hos Din Psykolog",
-        "category": "B-30",
-        "subcategories": [
-          "F-40",
-          "B-70",
-          "B-60",
-          "B-40",
-          "A-70"
-        ],
-        "_hide": false,
-        "key": "",
-        "discounts": [
-          "2f7b7065-2c46-408c-bdf0-3ee680389fbf"
-        ],
-        "webpage": "dinpsykolog.se"
       },
       {
         "id": "cca3d333-473d-4de6-9182-7618a8a4eedc",
@@ -59039,33 +58637,6 @@
         "webpage": "myheritage.se"
       },
       {
-        "id": "4ed86748-e116-4f69-a3bd-57648bf96401",
-        "type": 1,
-        "name": "Personlig Almanacka",
-        "title": "Alumnirabatt hos {brandName}",
-        "validFrom": "2024-09-18T22:00:00Z",
-        "validTo": "2026-09-08T21:59:59Z",
-        "url": "/se/personlig-almanacka",
-        "logo": "https://img.meccdn.com/media/383bbe98-e06e-4e85-bcaf-2aaf15798d67.png",
-        "logoAlt": "Personlig Almanacka",
-        "brandId": "fdcee07d-ccb9-4dcf-83ba-46ab51d7f9c3",
-        "descriptionHeader": "15% alumnirabatt hos Personlig Almanacka",
-        "description": "Skräddarsy en almanacka, anteckningsbok eller systemkalender så att den passar just dina dagar - och få 15% rabatt. Du väljer startmånad, layout & designar kalenderdelen så att den funkar för just dig. Klicka hem din kalender idag!",
-        "facts": "Koden gäller vid köp av valfri Personlig kalender eller Anteckningsbok. Den inkluderar inte presentkort och kan inte kombineras med andra erbjudanden eller rabattkoder.",
-        "image": "https://img.meccdn.com/media/e69f70a3-fe88-4385-a11a-5afbe8c937d9.png",
-        "category": "E-20",
-        "subcategories": [
-          "E-20"
-        ],
-        "_hide": false,
-        "key": "",
-        "discounts": [
-          "c1825608-a547-4ab1-a216-07f484a3e870",
-          "68009e6f-7b7e-4212-8c33-6ead9956c3d1"
-        ],
-        "webpage": "personligalmanacka.se"
-      },
-      {
         "id": "22bd4598-2f74-4379-aa71-7d8ee9cde0bc",
         "type": 1,
         "name": "Comforth Scandinavia",
@@ -59210,60 +58781,6 @@
           "bb011962-2f33-42cd-9607-21cf9f35732d"
         ],
         "webpage": "nordichair.com"
-      },
-      {
-        "id": "19be70f4-9158-479b-bc68-513d4dddd2ff",
-        "type": 1,
-        "name": "Reuseit",
-        "title": "Alumnirabatt hos {brandName}",
-        "validFrom": "2024-10-27T23:00:00Z",
-        "validTo": "2099-10-28T22:59:59Z",
-        "url": "/se/reuseit",
-        "logo": "https://img.meccdn.com/media/f1a8d640-6ce2-4999-a617-432a22d7ea94.png",
-        "logoAlt": "ReuseIT",
-        "brandId": "7a5c497f-90ed-483c-8747-3ba26a15705d",
-        "descriptionHeader": "Rabatt hos Reuseit",
-        "description": "<p>Reuseit Sweden är ett företag som specialiserar sig på återförsäljning av begagnad och renoverad teknik som smartphones, surfplattor, laptops och andra digitala enheter.</p><p>Genom att erbjuda hållbara alternativ till ny elektronik gör Reuseit det möjligt att få högkvalitativa produkter till ett lägre pris, samtidigt som de bidrar till en grönare framtid. Alla enheter genomgår en noggrann process för att säkerställa att de fungerar som nya, vilket gör att kunder kan känna sig trygga med sina köp. Med studentrabatten gör Reuseit det ännu mer prisvärt att välja återanvänd elektronik – perfekt för dig som vill spara pengar och samtidigt minska din miljöpåverkan. </p><p>Använd din unika rabattkod för Reuseit och gör livet efter studierna lite rikare.</p>",
-        "image": "https://img.meccdn.com/media/image1_666_241029070042046473.jpg",
-        "imageAlt": "Rabatt hos Reuseit",
-        "category": "F-30",
-        "subcategories": [
-          "F-30"
-        ],
-        "_hide": false,
-        "key": "",
-        "discounts": [
-          "8f63ad02-3174-4c83-832c-69c7a1fe337d",
-          "7f894730-f25f-42ce-847a-ab1b27f503a9",
-          "4cbcaceb-4a1a-401c-b729-6f4c8f79c881"
-        ],
-        "webpage": "reuseit.se"
-      },
-      {
-        "id": "9273efcc-aa1f-4491-b24f-b7e7d6c60001",
-        "type": 1,
-        "name": "Pilgrim",
-        "title": "Alumnirabatt hos {brandName}",
-        "validFrom": "2025-04-24T22:00:00Z",
-        "validTo": "2099-12-31T22:59:59Z",
-        "url": "/se/pilgrim",
-        "logo": "https://img.meccdn.com/media/logo_666_240315070032119673.jpg",
-        "logoAlt": "Pilgrim",
-        "brandId": "53e9332b-1fda-4ff9-bf79-2d0f5d27fb5f",
-        "descriptionHeader": "Rabatt hos Pilgrim",
-        "description": "Pilgrim är ett danskt familjeägt smyckesföretag som tillverkar handgjorda smycken och\nsolglasögon med fokus på de nyaste trenderna. Produkterna designas i Danmark och med\nhjärtat på rätt ställe går Pilgrim i spetsen för den internationella smyckesbranschen med sina skandinaviska och internationella designer. \n\nMed 40 års erfarenhet tillverkar Pilgrim guld & silverpläterade smycken för alla som vill uttrycka sig själva och följa med på Pilgrims resa.",
-        "image": "https://img.meccdn.com/media/image1_666_240315070032170676.jpg",
-        "category": "D-20",
-        "subcategories": [
-          "D-20"
-        ],
-        "_hide": false,
-        "key": "",
-        "discounts": [
-          "1da50903-c901-4c30-864c-038b945dfa19",
-          "f7758f6f-e15c-4691-bf62-eda6ae5c872b"
-        ],
-        "webpage": "pilgrim.net"
       },
       {
         "id": "237d92dc-a556-4371-941f-e8ab89943b2d",
@@ -59553,36 +59070,6 @@
         "webpage": "smile2impress.com"
       },
       {
-        "id": "5f321d88-d366-4205-b89c-e24cf8ca2afe",
-        "type": 1,
-        "name": "Midbec Tapeter",
-        "title": "",
-        "validFrom": "2026-08-16T22:00:00Z",
-        "validTo": "2099-12-31T22:59:59Z",
-        "url": "/se/midbec-tapeter",
-        "logo": "https://img.meccdn.com/media/bb5540cd-244a-43f6-80a6-4de3e7cad3c0.png",
-        "logoAlt": "Logotype Midbec Tapeter",
-        "brandId": "b7ff0312-323a-440e-b34f-a6877379f311",
-        "descriptionHeader": "Alumnirabatt hos Midbec Tapeter",
-        "description": "<p>Midbec Tapeter är ett svenskt familjeföretag beläget i Göteborg med stor kärlek till mönster, färg och form sedan 1974. Hos Midbec Tapeter hittar du tapeter i olika stilar och uttryck som ger dina väggar liv och ditt hem personlighet. Med tapeter från Midbec skapar du ett hem att älska och kan känna att du kommer hem, var och hur du än bor.</p><p>Använd din unika rabatt hos Midbec Tapeter och gör livet efter studierna lite rikare.</p>",
-        "image": "https://img.meccdn.com/atlas/bp-image_temp-5e704222-7b01-4d6e-97c9-13a0b47ebf7b_1786952135041796344.jfif",
-        "imageAlt": "Alumnirabatt hos Midbec Tapeter",
-        "category": "A-10",
-        "subcategories": [
-          "A-20",
-          "A-50",
-          "A-70",
-          "A-40",
-          "C-60"
-        ],
-        "_hide": false,
-        "key": "",
-        "discounts": [
-          "dfa753c5-d5f3-471f-99c3-55c4856f8860"
-        ],
-        "webpage": "midbectapeter.se"
-      },
-      {
         "id": "512b95b4-5e7c-4fb3-b769-c8dd6270dd4f",
         "type": 1,
         "name": "ALL I AM Beauty",
@@ -59840,6 +59327,339 @@
           "8dd8987b-5813-4f6b-84a9-ec595e9ef05a"
         ],
         "webpage": "zoegas.se"
+      },
+      {
+        "id": "c7026646-f3ce-4a2d-8792-fc3a9cf84e80",
+        "type": 1,
+        "name": "Grandpa",
+        "title": "Alumnirabatt hos {brandName}",
+        "validFrom": "2025-07-29T22:00:00Z",
+        "validTo": "2099-12-31T22:59:59Z",
+        "url": "/se/grandpa",
+        "logo": "https://img.meccdn.com/media/c5b8d8c0-6f01-4fd9-869f-2dd03a890f43.png",
+        "logoAlt": "Grandpa Logotype",
+        "brandId": "0f9aeefa-dbab-49b2-97cb-b41085fb4e9e",
+        "descriptionHeader": "Rabatt hos Grandpa",
+        "description": "<p>Grandpa - Good People, Good Products, Good Impact. </p><p>Tidlöst mode &amp; livsstil med omtanke.</p><p style=\"line-height:1.38;margin-top:0pt;margin-bottom:0pt;\">Använd din unika rabattkod för Grandpa och gör livet efter studierna lite rikare.</p>",
+        "image": "https://img.meccdn.com/media/9235417f-751d-43e7-9c7e-e200d1f01ed2.png",
+        "imageAlt": "Alumnirabatt hos Grandpa",
+        "category": "D-10",
+        "subcategories": [
+          "D-10",
+          "A-10"
+        ],
+        "_hide": false,
+        "key": "",
+        "discounts": [
+          "92f25604-ce78-48b7-b2fb-a1b137223749"
+        ],
+        "webpage": "grandpastore.com"
+      },
+      {
+        "id": "b4a38ccd-6e21-4cd8-a591-cb681ffcf5f7",
+        "type": 1,
+        "name": "Memira",
+        "title": "Alumnirabatt hos {brandName}",
+        "validFrom": "2023-12-11T23:00:00Z",
+        "validTo": "2099-12-31T22:59:59Z",
+        "url": "/se/memira",
+        "logo": "https://img.meccdn.com/media/a3f282bf-382f-4c39-86ef-4ff6f40fce2c.jfif",
+        "logoAlt": "Memira",
+        "brandId": "5f57823f-faec-469f-b84f-67d2f39039b1",
+        "descriptionHeader": "Rabatt hos Memira",
+        "description": "<p>Memira erbjuder ögonlaser och linsbyte, för att hjälpa människor att bli fria från glasögon och linser. De kan korrigera alla typer av synfel, från närsynthet och översynthet till astigmatism och ålderssynthet. Med erfarna ögonläkare och över 500 000 genomförda operationer hjälper Memira dig till en friare vardag utan glasögon och linser. Använd din unika rabattkod för Memira och gör livet efter studierna lite rikare.</p>",
+        "image": "https://img.meccdn.com/media/image1_666_220906070024727213.jpg",
+        "imageAlt": "Rabatt hos Memira",
+        "category": "B-10",
+        "subcategories": [
+          "B-10"
+        ],
+        "_hide": false,
+        "key": "",
+        "discounts": [
+          "8629b931-f5d4-4e4e-9121-5bfe29f00296",
+          "f9ee799f-d2ff-48c0-8f2c-617d22c81d33"
+        ],
+        "webpage": "memira.se"
+      },
+      {
+        "id": "19be70f4-9158-479b-bc68-513d4dddd2ff",
+        "type": 1,
+        "name": "Reuseit",
+        "title": "Alumnirabatt hos {brandName}",
+        "validFrom": "2024-10-27T23:00:00Z",
+        "validTo": "2099-10-28T22:59:59Z",
+        "url": "/se/reuseit",
+        "logo": "https://img.meccdn.com/media/f1a8d640-6ce2-4999-a617-432a22d7ea94.png",
+        "logoAlt": "ReuseIT",
+        "brandId": "7a5c497f-90ed-483c-8747-3ba26a15705d",
+        "descriptionHeader": "Rabatt hos Reuseit",
+        "description": "<p>Reuseit Sweden är ett företag som specialiserar sig på återförsäljning av begagnad och renoverad teknik som smartphones, surfplattor, laptops och andra digitala enheter.</p><p>Genom att erbjuda hållbara alternativ till ny elektronik gör Reuseit det möjligt att få högkvalitativa produkter till ett lägre pris, samtidigt som de bidrar till en grönare framtid. Alla enheter genomgår en noggrann process för att säkerställa att de fungerar som nya, vilket gör att kunder kan känna sig trygga med sina köp. Med studentrabatten gör Reuseit det ännu mer prisvärt att välja återanvänd elektronik – perfekt för dig som vill spara pengar och samtidigt minska din miljöpåverkan. </p><p>Använd din unika rabattkod för Reuseit och gör livet efter studierna lite rikare.</p>",
+        "image": "https://img.meccdn.com/media/image1_666_241029070042046473.jpg",
+        "imageAlt": "Rabatt hos Reuseit",
+        "category": "F-30",
+        "subcategories": [
+          "F-30"
+        ],
+        "_hide": false,
+        "key": "",
+        "discounts": [
+          "8f63ad02-3174-4c83-832c-69c7a1fe337d",
+          "7f894730-f25f-42ce-847a-ab1b27f503a9",
+          "4cbcaceb-4a1a-401c-b729-6f4c8f79c881"
+        ],
+        "webpage": "reuseit.se"
+      },
+      {
+        "id": "9273efcc-aa1f-4491-b24f-b7e7d6c60001",
+        "type": 1,
+        "name": "Pilgrim",
+        "title": "Alumnirabatt hos {brandName}",
+        "validFrom": "2025-04-24T22:00:00Z",
+        "validTo": "2099-12-31T22:59:59Z",
+        "url": "/se/pilgrim",
+        "logo": "https://img.meccdn.com/media/logo_666_240315070032119673.jpg",
+        "logoAlt": "Pilgrim",
+        "brandId": "53e9332b-1fda-4ff9-bf79-2d0f5d27fb5f",
+        "descriptionHeader": "Rabatt hos Pilgrim",
+        "description": "Pilgrim är ett danskt familjeägt smyckesföretag som tillverkar handgjorda smycken och\nsolglasögon med fokus på de nyaste trenderna. Produkterna designas i Danmark och med\nhjärtat på rätt ställe går Pilgrim i spetsen för den internationella smyckesbranschen med sina skandinaviska och internationella designer. \n\nMed 40 års erfarenhet tillverkar Pilgrim guld & silverpläterade smycken för alla som vill uttrycka sig själva och följa med på Pilgrims resa.",
+        "image": "https://img.meccdn.com/media/image1_666_240315070032170676.jpg",
+        "category": "D-20",
+        "subcategories": [
+          "D-20"
+        ],
+        "_hide": false,
+        "key": "",
+        "discounts": [
+          "1da50903-c901-4c30-864c-038b945dfa19",
+          "f7758f6f-e15c-4691-bf62-eda6ae5c872b"
+        ],
+        "webpage": "pilgrim.net"
+      },
+      {
+        "id": "5f321d88-d366-4205-b89c-e24cf8ca2afe",
+        "type": 1,
+        "name": "Midbec Tapeter",
+        "title": "",
+        "validFrom": "2026-08-16T22:00:00Z",
+        "validTo": "2099-12-31T22:59:59Z",
+        "url": "/se/midbec-tapeter",
+        "logo": "https://img.meccdn.com/media/bb5540cd-244a-43f6-80a6-4de3e7cad3c0.png",
+        "logoAlt": "Logotype Midbec Tapeter",
+        "brandId": "b7ff0312-323a-440e-b34f-a6877379f311",
+        "descriptionHeader": "Alumnirabatt hos Midbec Tapeter",
+        "description": "<p>Midbec Tapeter är ett svenskt familjeföretag beläget i Göteborg med stor kärlek till mönster, färg och form sedan 1974. Hos Midbec Tapeter hittar du tapeter i olika stilar och uttryck som ger dina väggar liv och ditt hem personlighet. Med tapeter från Midbec skapar du ett hem att älska och kan känna att du kommer hem, var och hur du än bor.</p><p>Använd din unika rabatt hos Midbec Tapeter och gör livet efter studierna lite rikare.</p>",
+        "image": "https://img.meccdn.com/atlas/bp-image_temp-5e704222-7b01-4d6e-97c9-13a0b47ebf7b_1786952135041796344.jfif",
+        "imageAlt": "Alumnirabatt hos Midbec Tapeter",
+        "category": "A-10",
+        "subcategories": [
+          "A-20",
+          "A-50",
+          "A-70",
+          "A-40",
+          "C-60"
+        ],
+        "_hide": false,
+        "key": "",
+        "discounts": [
+          "dfa753c5-d5f3-471f-99c3-55c4856f8860"
+        ],
+        "webpage": "midbectapeter.se"
+      },
+      {
+        "id": "c6da2dff-fcb5-4ebb-b645-3dadd7a5cfc4",
+        "type": 1,
+        "name": "Fearless Minds",
+        "title": "Alumnirabatt hos {brandName}",
+        "validFrom": "2026-03-03T23:00:00Z",
+        "validTo": "2099-12-31T22:59:59Z",
+        "url": "/se/fearless-minds",
+        "logo": "https://img.meccdn.com/atlas/logo_fearless-minds_1772614735185582476.png",
+        "brandId": "521c3210-5677-486e-89b7-2eba849c1b6b",
+        "descriptionHeader": "Alumnirabatt hos Fearless Minds",
+        "description": "<p>Fearless Minds hjälper dig att utveckla ditt självledarskap och maximera din prestation. Med stöd av forskning inom psykologi och neurovetenskap får du kraftfulla verktyg för att hantera stress, stärka ditt självförtroende och bygga ett hållbart, modigt mindset. Fearless MInds har hyllats av bolag såsom Google och de har jobbat med ett flertal välkända bolag bl.a. H&amp;M, AstraZeneca och Norrsken.</p><p>Använd din unika rabattkod för Fearless Minds och gör livet efter studierna lite rikare.</p>",
+        "image": "https://img.meccdn.com/atlas/bp-image_temp-4d350922-39af-4a75-9f79-075d35328f96_1772615317678881937.png",
+        "imageAlt": "Alumnirabatt hos Fearless Minds",
+        "category": "E-50",
+        "subcategories": [
+          "A-70",
+          "B-70"
+        ],
+        "hideInExtension": true,
+        "_hide": false,
+        "key": "",
+        "discounts": [
+          "5080603e-d17d-4bcf-93eb-bc3fbee78ba7",
+          "af8ad258-c968-4392-a513-c095f500334a"
+        ],
+        "webpage": "fearlessminds.se"
+      },
+      {
+        "id": "4ed86748-e116-4f69-a3bd-57648bf96401",
+        "type": 1,
+        "name": "Personlig Almanacka",
+        "title": "Alumnirabatt hos {brandName}",
+        "validFrom": "2024-09-18T22:00:00Z",
+        "validTo": "2099-09-08T21:59:00Z",
+        "url": "/se/personlig-almanacka",
+        "logo": "https://img.meccdn.com/media/383bbe98-e06e-4e85-bcaf-2aaf15798d67.png",
+        "logoAlt": "Personlig Almanacka",
+        "brandId": "fdcee07d-ccb9-4dcf-83ba-46ab51d7f9c3",
+        "descriptionHeader": "15% alumnirabatt hos Personlig Almanacka",
+        "description": "Skräddarsy en almanacka, anteckningsbok eller systemkalender så att den passar just dina dagar - och få 15% rabatt. Du väljer startmånad, layout & designar kalenderdelen så att den funkar för just dig. Klicka hem din kalender idag!",
+        "facts": "Koden gäller vid köp av valfri Personlig kalender eller Anteckningsbok. Den inkluderar inte presentkort och kan inte kombineras med andra erbjudanden eller rabattkoder.",
+        "image": "https://img.meccdn.com/media/74319d47-9ca9-4a65-8a96-c2ccbf728e89.png",
+        "category": "E-20",
+        "subcategories": [
+          "E-20"
+        ],
+        "_hide": false,
+        "key": "",
+        "discounts": [
+          "c1825608-a547-4ab1-a216-07f484a3e870",
+          "68009e6f-7b7e-4212-8c33-6ead9956c3d1"
+        ],
+        "webpage": "personligalmanacka.se"
+      },
+      {
+        "id": "f75fe746-5d3e-4008-9163-27a399ac1dca",
+        "type": 1,
+        "name": "Travelpro",
+        "title": "Alumnirabatt hos {brandName}",
+        "validFrom": "2025-09-01T22:00:00Z",
+        "validTo": "2026-09-01T22:00:00Z",
+        "url": "/se/travelpro",
+        "logo": "https://img.meccdn.com/media/logo_666_250903120033668595.jpg",
+        "logoAlt": "Travelpro",
+        "brandId": "6f8cf19b-db3a-49e6-8b9e-253b28c7d6fc",
+        "descriptionHeader": "Rabatt hos Travelpro",
+        "description": "<p>Travelpro® hjälper dig att resa smartare. Varumärket grundades av en pilot som blev skaparen av den ursprungliga Rollaboard®-resväskan. Sedan dess har Travelpro varit ett självklart val för erfarna resenärer. Med lätt och hållbart bagage blir varje resa enklare – oavsett om det gäller weekendresor, återträffar eller affärsresor. De stilfulla och funktionella ryggsäckarna är byggda för att hålla länge och följa med långt in i karriären. Travelpro levererar pålitlig utrustning som förenklar livet i rörelse, oavsett om det handlar om att gå till jobbet, hinna med ett flyg eller upptäcka en ny stad.</p>",
+        "facts": "Rabatten gäller på ordinarie priser och kan inte kombineras med andra rabatter eller rabattkoder.\r\nGäller på giltiga köp endast.",
+        "image": "https://img.meccdn.com/media/image1_666_250903120032236823.jpg",
+        "imageAlt": "Rabatt hos Travelpro",
+        "category": "G-80",
+        "subcategories": [
+          "G-80"
+        ],
+        "_hide": false,
+        "key": "",
+        "discounts": [
+          "0309a596-cacd-4365-9f05-c41b6f3e1f4e",
+          "1bb79d9e-1a05-4a3f-8806-870fb91d5fd3"
+        ],
+        "webpage": "travelpro.com"
+      },
+      {
+        "id": "e11478b8-1d44-46f9-889e-e592038dff21",
+        "type": 1,
+        "name": "Afterskistore.se",
+        "title": "Alumnirabatt hos Afterskistore.se",
+        "validFrom": "2025-09-17T22:00:00Z",
+        "validTo": "2099-12-31T22:59:59Z",
+        "url": "/se/afterskistorese",
+        "logo": "https://img.meccdn.com/media/logo_666_250919070027621763.jpg",
+        "logoAlt": "Afterskistore.se",
+        "brandId": "cb88d751-78ed-4475-89f0-0bf7eeade58b",
+        "descriptionHeader": "Rabatt hos Afterskistore.se",
+        "description": "Afterski Team Sweden är svenskarnas egna landslag på skidresan! Där handlar det inte om medaljer – utan om minnen, skratt och maxad gemenskap. \r\nNär du drar på dig deras landslagsutrustning på skidresan är du aldrig ensam – plötsligt har du mängder av nya lagkompisar att festa, sjunga och åka skidor med. \r\n\r\n”Sveriges skönaste landslag” syns i backen och på afterskin. Kort sagt: Afterski Team´s utrustning är din biljett till ”Gemenskap i världsklass” och en skidresa du aldrig glömmer!",
+        "facts": "Kan ej kombineras med andra rabatter.",
+        "image": "https://img.meccdn.com/media/image1_666_250919070027841640.jpg",
+        "imageAlt": "Rabatt hos Afterskistore.se",
+        "category": "D-10",
+        "subcategories": [
+          "D-10"
+        ],
+        "_hide": false,
+        "key": "",
+        "discounts": [
+          "4a3e4993-7baa-43a9-924a-76fe8f2584d5"
+        ],
+        "webpage": "afterskistore.se"
+      },
+      {
+        "id": "6070d2e2-21ac-4965-b414-ca2d2a9f837d",
+        "type": 1,
+        "name": "Moyagi Stockholm",
+        "title": "Alumnirabatt hos Moyagi Stockholm",
+        "validFrom": "2025-09-03T22:00:00Z",
+        "validTo": "2099-09-03T22:00:00Z",
+        "url": "/se/moyagi-stockholm",
+        "logo": "https://img.meccdn.com/media/logo_666_250905070041215325.jpg",
+        "logoAlt": "Moyagi Stockholm",
+        "brandId": "2222799d-a541-4c98-b120-888dca046b1c",
+        "descriptionHeader": "Rabatt hos Moyagi Stockholm",
+        "description": "<p>Moyagi är en skandinavisk tolkning av japansk karaokekultur - en modern ritual där mat, musik och social energi smälter samman. I privata rum med rumsservice, över 150 000 låtar och högklassigt ljud skapas en upplevelse som känns som en eget värld. Det är karaoke som chambre séparée – där gästerna väljer när de vill vara i sitt space och när de vill kliva ut till baren eller restaurangen. Med japanska smårätter, koreanska influenser och cocktails i världsklass erbjuder Moyagi ett helt nytt sätt att umgås – kurerat, avslappnat och oförglömligt. Moyagi finns i Stockholm, Malmö och London och välkomnar studenter, vänner, sällskap och grupper som söker något mer än en vanlig kväll ute.</p>",
+        "facts": "10 % rabatt fredagar & lördagar\n25 % rabatt onsdagar & torsdagar\nGår inte att kombineras med andra rabatter, medlemskort eller kampanjer.",
+        "image": "https://img.meccdn.com/media/image1_666_250905070035832954.jpg",
+        "imageAlt": "Rabatt hos Moyagi Stockholm",
+        "category": "C-50",
+        "subcategories": [
+          "C-50"
+        ],
+        "_hide": false,
+        "key": "",
+        "discounts": [
+          "828031d8-ded2-449c-9b88-ae0f753bca21",
+          "a4fe4d1c-1b8a-4595-9386-0aa1829b4d37"
+        ],
+        "webpage": "moyagi.com"
+      },
+      {
+        "id": "17198016-6a77-49c7-a2fb-aa0a70293373",
+        "type": 1,
+        "name": "Din Psykolog",
+        "title": "",
+        "validFrom": "2026-08-04T22:00:00Z",
+        "validTo": "2099-12-31T22:59:59Z",
+        "url": "/se/din-psykolog",
+        "logo": "https://img.meccdn.com/atlas/logo_din-psykolog_1785929799661577941.png",
+        "brandId": "476860c8-c2f3-4454-9beb-f82c6a400166",
+        "descriptionHeader": "Alumnirabatt hos Din Psykolog",
+        "description": "<p>Din Psykolog kombinerar mänsklig expertis med smart teknik för att göra psykologisk behandling mer tillgänglig, personlig och effektiv!</p><p>Livet kan ibland kännas överväldigande, oavsett om det handlar om stress, ångest eller att stå inför svåra livsval. Därför erbjuder Din Psykolog evidensbaserad behandling online, så att det blir enkelt att få stöd av en legitimerad behandlare, var man än befinner sig.</p><p>Din Psykologs behandlare hjälper människor att förstå sina utmaningar och hitta verktyg för att må bättre, både på kort och lång sikt. De digitala samtalen ger flexibilitet att prioritera sitt mående, även när studier, arbete och vardag tar mycket tid och energi.</p><p>Använd din unika rabatt för Din Psykolog och gör livet efter studierna lite rikare.</p>",
+        "image": "https://img.meccdn.com/atlas/bp-image_temp-888e2977-1dc3-4494-881b-8718dc5cf60a_1785930051015809923.png",
+        "imageAlt": "Alumnirabatt hos Din Psykolog",
+        "category": "B-30",
+        "subcategories": [
+          "F-40",
+          "B-70",
+          "B-60",
+          "B-40",
+          "A-70"
+        ],
+        "_hide": false,
+        "key": "",
+        "discounts": [
+          "2f7b7065-2c46-408c-bdf0-3ee680389fbf"
+        ],
+        "webpage": "dinpsykolog.se"
+      },
+      {
+        "id": "18943824-c0f6-4ad5-b946-242e972c14de",
+        "type": 1,
+        "name": "Bulk",
+        "title": "Alumnirabatt hos Bulk",
+        "validFrom": "2025-10-26T23:00:00Z",
+        "validTo": "2099-12-31T22:59:59Z",
+        "url": "/se/bulk",
+        "logo": "https://img.meccdn.com/media/logo_666_251027120030547342.jpg",
+        "logoAlt": "Bulk",
+        "brandId": "1b657135-ec11-4936-8a63-8452b1978698",
+        "descriptionHeader": "Rabatt hos Bulk",
+        "description": "<p>Sedan 2006 har Bulk fokuserat på att skapa kosttillskott och hälsokost i världsklass. Fyll på med högkvalitativa tillskott inom sportnäring, viktnedgång, hälsa och välmående för att hjälpa dig att prestera på topp. Oavsett om ditt mål är att bygga muskler, gå ner i vikt eller upprätthålla en hälsosam livsstil – Bulk har det du behöver.</p><p>Använd din unika rabattkod för Bulk och gör livet efter studierna lite rikare.</p>",
+        "image": "https://img.meccdn.com/media/image1_666_251027120030767696.jpg",
+        "imageAlt": "Rabatt hos Bulk",
+        "category": "B-60",
+        "subcategories": [
+          "B-60"
+        ],
+        "_hide": false,
+        "key": "",
+        "discounts": [
+          "975da8a9-1f1e-4913-a4c7-98133b7025df",
+          "3212a2e7-3989-436d-b29d-536f3c01f1b4",
+          "de4cebe2-849e-4ee1-bfb3-5d0ce4732fb4"
+        ],
+        "webpage": "bulk.com"
       }
     ],
     "categories": [
@@ -61594,22 +61414,6 @@
     "totalCount": 63
   },
   "ica": [
-    {
-      "title": "Skara Sommarland: Upp till 25% rabatt på entré till Skara Sommarland",
-      "searchText": "ICA Stammis Barn som leker i vatten. Kultur och nöje",
-      "image": "https://assets.icanet.se/w_400,c_scale,f_auto,q_auto/op2tuksoqlmwovjune6s",
-      "url": "https://www.ica.se/stammis/partnererbjudanden/alla-erbjudanden/skara-sommarland/",
-      "source": "ICA Stammis",
-      "sourceClass": "badge-ica"
-    },
-    {
-      "title": "Sommarkonserter: 20–30 % rabatt på sköna utomhuskonserter",
-      "searchText": "ICA Stammis Bild på folkhav framför en utomhusscen. Som stammis på ICA kan du se se utomhuskonserter arrangerade av Krall med 20–30 % rabatt i sommar. Kultur och nöje",
-      "image": "https://assets.icanet.se/w_400,c_scale,f_auto,q_auto/vgeguvpecwk0hxz1cmtx",
-      "url": "https://www.ica.se/stammis/partnererbjudanden/alla-erbjudanden/Krall/",
-      "source": "ICA Stammis",
-      "sourceClass": "badge-ica"
-    },
     {
       "title": "Destination Gotland: 15 % rabatt på sommarresan till Gotland",
       "searchText": "ICA Stammis En av Destination Gotlands färjor far över ett spegelblankt hav en vacker sommardag. Resor och hotell",
