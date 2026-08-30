@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026-08-29T16:15:00.340Z",
+  "updatedAt": "2026-08-30T08:36:17.204Z",
   "mecenat": {
-    "discountHits": 948,
-    "totalHits": 1981,
+    "discountHits": 947,
+    "totalHits": 1977,
     "localHits": 0,
-    "brandPageHits": 967,
+    "brandPageHits": 964,
     "categoryHits": 66,
     "discounts": [
       {
@@ -2871,39 +2871,6 @@
         "clickoutButtonText": "to_discount"
       },
       {
-        "id": "975da8a9-1f1e-4913-a4c7-98133b7025df",
-        "type": 2,
-        "title": "Upp till 75 % + 10 % extra alumnirabatt ",
-        "subtitle": "Gäller på redan nedsatta priser",
-        "image": "https://img.meccdn.com/media/6459e6dd-1b26-49ab-bedf-b36ec9dbd6f1.png",
-        "imageAlt": "Upp till 75 % + 10 % extra alumnirabatt hos Bulk",
-        "brandLogo": "https://img.meccdn.com/media/logo_666_251027120030547342.jpg",
-        "brandLogoAlt": "Bulk",
-        "brandName": "Bulk",
-        "brandPagePath": "",
-        "brandId": "1b657135-ec11-4936-8a63-8452b1978698",
-        "validFrom": "2026-08-12T22:00:00Z",
-        "validTo": "2026-08-29T21:59:59Z",
-        "url": "/se/bulk/upp-till-75-procent-10-procent-extra-alumnirabatt-",
-        "conditionDescription": "",
-        "conditionURL": "",
-        "conditionHTML": "<p>Gäller t.o.m. 29/8.</p><p>Gäller vid köp över 400 kr.</p><p>Gäller på redan nedsatta priser.</p>",
-        "isCampaign": true,
-        "partnerURL": "https://www.bulk.com/se/",
-        "content": "<p>Efter semestern är det dags att hitta tillbaka till rutinerna igen. Passa på att fylla på med protein, kosttillskott och andra träningsfavoriter till riktigt bra priser. Just nu får du upp till 75 % rabatt på utvalda produkter hos Bulk +  10 % extra rabatt för dig som alumn!</p>",
-        "category": "B-60",
-        "mainCategoryName": "Hälsa",
-        "metaTitle": "",
-        "metaDescription": "",
-        "subcategories": [
-          "B-60"
-        ],
-        "campaignOnly": false,
-        "showCountdown": false,
-        "sortOrder": 0,
-        "clickoutButtonText": "to_discount"
-      },
-      {
         "id": "7f5a6dca-a074-46f5-89c5-c645b2d9abc3",
         "type": 2,
         "title": "299 kr/mån för obegränsad surf i 24 mån",
@@ -3492,6 +3459,43 @@
           "D-80",
           "D-60",
           "B-70"
+        ],
+        "campaignOnly": false,
+        "showCountdown": false,
+        "sortOrder": 0,
+        "clickoutButtonText": "to_discount"
+      },
+      {
+        "id": "90d2dbc9-0032-47bd-ac9c-a1ae30c522f2",
+        "type": 2,
+        "title": "20 % alumnirabatt hos ALL I AM Beauty",
+        "subtitle": "Gäller på ordinarie priser",
+        "image": "https://img.meccdn.com/media/a8791257-9bec-4cbd-8311-691dc512bd36.jfif",
+        "imageAlt": "20 % alumnirabatt hos ALL I AM Beauty",
+        "brandLogo": "https://img.meccdn.com/atlas/logo_all-i-am-beauty_1781596378771019428.png",
+        "brandLogoAlt": "",
+        "brandName": "ALL I AM Beauty",
+        "brandPagePath": "/se/all-i-am-beauty/",
+        "brandId": "8362c5ae-13de-44dc-98cc-26c0bd268871",
+        "validFrom": "2026-08-29T22:00:00Z",
+        "validTo": "2026-09-06T21:59:59Z",
+        "url": "/se/all-i-am-beauty/20-procent-alumnirabatt-hos-all-i-am-beauty",
+        "conditionDescription": "",
+        "conditionURL": "",
+        "conditionHTML": "<p>Gäller t.o.m. 6/9.</p><p>Gäller enskilda produkter. </p><p>Kan ej kombineras med andra erbjudanden.</p>",
+        "isCampaign": true,
+        "partnerURL": "https://alliambeauty.com/collections/best-sellers",
+        "content": "<p>Exklusivt för dig som Mecenat alumn! Få 20 % rabatt hos ALL I AM Beauty och upptäck makeup och beautyfavoriter för ögon, läppar, ansikte och kropp. Passa på!</p>",
+        "category": "D-50",
+        "mainCategoryName": "Kläder & Skönhet",
+        "metaTitle": "",
+        "metaDescription": "",
+        "subcategories": [
+          "D-60",
+          "D-70",
+          "D-80",
+          "D-10",
+          "D-20"
         ],
         "campaignOnly": false,
         "showCountdown": false,
@@ -23587,39 +23591,6 @@
         "metaDescription": "",
         "subcategories": [
           "A-70"
-        ],
-        "campaignOnly": false,
-        "showCountdown": false,
-        "sortOrder": 0,
-        "clickoutButtonText": "to_discount"
-      },
-      {
-        "id": "6379622e-9b36-4554-98af-d0555583357d",
-        "type": 2,
-        "title": "20 % alumnirabatt hos Scandy",
-        "subtitle": "Gäller på ordinarie priser",
-        "image": "https://img.meccdn.com/media/image1_666_250830070039555190.jpg",
-        "imageAlt": "20 % alumnirabatt hos Scandy",
-        "brandLogo": "https://img.meccdn.com/media/logo_666_250830070039335739.jpg",
-        "brandLogoAlt": "Scandy",
-        "brandName": "Scandy",
-        "brandPagePath": "/se/scandy",
-        "brandId": "703bb4f6-f336-4786-8f2d-301fb71958d6",
-        "validFrom": "2025-08-28T22:00:00Z",
-        "validTo": "2026-08-29T21:59:59Z",
-        "url": "/se/scandy/20-procent-alumnirabatt-hos-scandy",
-        "conditionDescription": "",
-        "conditionURL": "",
-        "conditionHTML": "<p>Gäller på ordinarie priser.</p><p>Kan inte kombineras med andra rabatter / rabattkoder.</p>",
-        "isCampaign": false,
-        "partnerURL": "https://www.scandy-shop.com/",
-        "content": "<p>Scandy –  Född i Norden och skapad tillsammans med Gen Z levererar de effektiv, godisdoftande hudvård med en rebellisk attityd som utmanar normer och hyllar allt som gör dig unik. Scandys formulas är inte bara cute på hyllan – de är exceptionellt skonsamma, rengör på djupet, stärker hudbarriären och ger din hud den naturliga lyster den förtjänar. Alla produkter är 97–100 % naturliga, veganska och PETA-certifierade. Scandy är hudvård med attityd – modig, fräsch och självsäker. Precis som du. Som alumn får du 20 % rabatt på allt till ordinarie pris hos Scandy.</p>",
-        "category": "D-50",
-        "mainCategoryName": "Kläder & Skönhet",
-        "metaTitle": "",
-        "metaDescription": "",
-        "subcategories": [
-          "D-50"
         ],
         "campaignOnly": false,
         "showCountdown": false,
@@ -50553,32 +50524,6 @@
         "webpage": "wintherstudio.com"
       },
       {
-        "id": "28cce88d-6ddb-4ddc-90c3-fff3fbb1bfcb",
-        "type": 1,
-        "name": "Scandy",
-        "title": "Alumnirabatt hos {brandName}",
-        "validFrom": "2025-08-28T22:00:00Z",
-        "validTo": "2026-08-29T21:59:59Z",
-        "url": "/se/scandy",
-        "logo": "https://img.meccdn.com/media/logo_666_250830070039335739.jpg",
-        "logoAlt": "Scandy",
-        "brandId": "703bb4f6-f336-4786-8f2d-301fb71958d6",
-        "descriptionHeader": "Rabatt hos Scandy",
-        "description": "<p>Scandy –  Född i Norden och skapad tillsammans med Gen Z levererar de effektiv, godisdoftande hudvård med en rebellisk attityd som utmanar normer och hyllar allt som gör dig unik. Scandys formulas är inte bara cute på hyllan – de är exceptionellt skonsamma, rengör på djupet, stärker hudbarriären och ger din hud den naturliga lyster den förtjänar. Alla produkter är 97–100 % naturliga, veganska och PETA-certifierade. Scandy är hudvård med attityd – modig, fräsch och självsäker. Precis som du. </p><p>Använd din unika rabattkod för Scandy och gör livet efter studierna lite rikare.</p>",
-        "image": "https://img.meccdn.com/media/image1_666_250830070039555190.jpg",
-        "imageAlt": "Rabatt hos Scandy",
-        "category": "D-50",
-        "subcategories": [
-          "D-50"
-        ],
-        "_hide": false,
-        "key": "",
-        "discounts": [
-          "6379622e-9b36-4554-98af-d0555583357d"
-        ],
-        "webpage": "scandy-shop.com"
-      },
-      {
         "id": "a0803fc0-a01a-4a85-bb97-b16c81c9de39",
         "type": 1,
         "name": "Mukama",
@@ -51816,32 +51761,6 @@
         "webpage": "stockholm.fotografiska.com"
       },
       {
-        "id": "ef622b69-13c5-4834-9ebd-10bd2b2bb4a1",
-        "type": 1,
-        "name": "Energiboxen",
-        "title": "Alumnirabatt hos {brandName}",
-        "validFrom": "2025-08-28T22:00:00Z",
-        "validTo": "2026-08-29T21:59:59Z",
-        "url": "/se/energiboxen",
-        "logo": "https://img.meccdn.com/media/169e0ac7-3856-4ebd-9f3d-13eb506abe3d.png",
-        "logoAlt": "Energiboxen",
-        "brandId": "b32b80c5-a3a1-4031-8b6f-d55c78d565ba",
-        "descriptionHeader": "Rabatt på Energiboxen",
-        "description": "<p>Maxat värde. Maxad energi. Varannan månad. Energiboxen är Sveriges nyaste prenumerationsbox med fokus på energi, funktion och hälsa. Varannan månad levereras en box hem till dig som alumn, fylld med drycker, funktionella livsmedel och kosttillskott som boostar vardagen. Varje box är packad med produkter för över 500 kr, men priset är alltid bara 329 kr inklusive fri frakt.</p><p>Som alumn får du 30 % rabatt på första boxen och betalar endast 197 kr. Det betyder att du får en box värd över 500 kr för under 200 kr första gången – perfekt för dig som alumn som vill ha riktigt mycket “bang for the buck”.</p><p>Energiboxen är en av de mest prisvärda prenumerationerna på marknaden inom funktionella produkter – perfekt för dig som vill upptäcka nya varumärken, få mer energi i vardagen och samtidigt maximera värdet för pengarna. Ingen bindningstid – prenumerationen kan pausas eller avslutas när som helst.</p><p>Använd din unika rabattkod för Energiboxen och gör livet efter studierna lite rikare.</p>",
-        "image": "https://img.meccdn.com/media/image1_666_250830070033977322.jpg",
-        "imageAlt": "Rabatt på Energiboxen",
-        "category": "B-60",
-        "subcategories": [
-          "B-60"
-        ],
-        "_hide": false,
-        "key": "",
-        "discounts": [
-          "94188d7a-97f9-4508-8d71-92dc58a24f78"
-        ],
-        "webpage": "energibox.se"
-      },
-      {
         "id": "0a00bd65-6301-4b9f-80e4-c3efd9bd6d22",
         "type": 1,
         "name": "PhoneHero",
@@ -51867,32 +51786,6 @@
           "1fbca824-1e34-44c0-b2f5-4099523c6b25"
         ],
         "webpage": "phonehero.se"
-      },
-      {
-        "id": "8036d57e-f4f0-42d4-a702-3b7c5acead41",
-        "type": 1,
-        "name": "NOBE",
-        "title": "Alumnirabatt hos {brandName}",
-        "validFrom": "2025-08-28T22:00:00Z",
-        "validTo": "2026-08-29T21:59:59Z",
-        "url": "/se/nobe",
-        "logo": "https://img.meccdn.com/media/logo_666_250830070035996094.jpg",
-        "logoAlt": "NOBE",
-        "brandId": "0f56eee0-0cdf-44a7-b3a3-e0f6e8dc1c87",
-        "descriptionHeader": "Rabatt hos NOBE Nordic Beauty",
-        "description": "<p>Nordisk natur möter modern hudvård! Hos NOBE hämtar de inspiration från nordisk natur – från djupa gröna skogar till uppfriskande isdopp och havrens läkande egenskaper. NOBE är ett finländskt naturkosmetika-varumärke som förenar nordisk forskning med modern innovation. Deras produkter är utvecklade med högkvalitativa ingredienser som skyddar, återfuktar och stärker hudens naturliga barriär. Det lugnar och balanserar mikrobiomet och ger dig en hud som känns frisk, strålande och välmående. I deras produkter möts naturens kraft, vetenskaplig effektivitet och nordisk skönhet. NOBE – It’s in your nature. </p><p>Använd din unika rabattkod för NOBE och gör livet efter studierna lite rikare.</p>",
-        "image": "https://img.meccdn.com/media/image1_666_250830070036202756.jpg",
-        "imageAlt": "Rabatt hos NOBE",
-        "category": "D-50",
-        "subcategories": [
-          "D-50"
-        ],
-        "_hide": false,
-        "key": "",
-        "discounts": [
-          "97dfc91d-c460-4847-9127-1d1e64323d62"
-        ],
-        "webpage": "nobenordicbeauty.com"
       },
       {
         "id": "dd6ddc7f-156f-4d0d-b217-d07d4d033490",
