@@ -2,7 +2,8 @@ name: Weekly Offer Scraper
 
 on:
   schedule:
-    - cron: '0 6 * * 1' # Körs varje måndag kl 08:00 (svensk tid)
+    - cron: '17 6 * * 1' # Körs ~08:17 (svensk sommartid)
+    
   workflow_dispatch:
 
 jobs:
