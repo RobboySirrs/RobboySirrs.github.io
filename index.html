@@ -478,7 +478,7 @@
       
 
       try {
-        const res = await fetch('./data.json');
+        const res = await fetch('./data.json?v=' + Date.now());
         if (!res.ok) throw new Error(`Kunde inte ladda data.json (Status ${res.status})`);
         
         const data = await res.json();
