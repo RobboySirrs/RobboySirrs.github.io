@@ -9,7 +9,67 @@ const BROWSER_HEADERS = {
 
 const PLACEHOLDER_IMG = "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 24 24' fill='none' stroke='%23ccc' stroke-width='2'><rect x='3' y='3' width='18' height='18' rx='2'/><circle cx='8.5' cy='8.5' r='1.5'/><polyline points='21 15 16 10 5 21'/></svg>";
 
-function parseIcaHtml(html) {
+/**
+ * Läser in gamla data.json och skapar en uppsättning (Set) med alla titlar som fanns tidigare.
+ */
+function getOldTitles() {
+  const oldTitles = new Set();
+  if (!fs.existsSync('data.json')) return oldTitles;
+
+  try {
+    const raw = fs.readFileSync('data.json', 'utf8');
+    const oldData = JSON.parse(raw);
+
+    // 1. Mecenat
+    if (oldData.mecenat && Array.isArray(oldData.mecenat.discounts)) {
+      oldData.mecenat.discounts.forEach(item => {
+        const title = item.brandName ? `${item.brandName}: ${item.title}` : item.title;
+        if (title) oldTitles.add(title.trim().toLowerCase());
+      });
+    }
+
+    // 2. Hyresgästföreningen
+    if (oldData.hyresgast && Array.isArray(oldData.hyresgast.items)) {
+      oldData.hyresgast.items.forEach(item => {
+        let brandName = '';
+        if (item.url) {
+          const segments = item.url.split('/').filter(Boolean);
+          if (segments.length > 0) {
+            const slug = segments[segments.length - 1];
+            brandName = slug.split('-')
+              .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+              .join(' ');
+          }
+        }
+        const title = brandName ? `${brandName}: ${item.title}` : item.title;
+        if (title) oldTitles.add(title.trim().toLowerCase());
+      });
+    }
+
+    // 3. ICA Stammis
+    if (Array.isArray(oldData.ica)) {
+      oldData.ica.forEach(item => {
+        const title = item.title || item.name || '';
+        if (title) oldTitles.add(title.trim().toLowerCase());
+      });
+    }
+
+    // 4. Coop Medlem
+    if (Array.isArray(oldData.coop)) {
+      oldData.coop.forEach(item => {
+        const title = item.title || '';
+        if (title) oldTitles.add(title.trim().toLowerCase());
+      });
+    }
+
+  } catch (e) {
+    console.warn('Kunde inte läsa in gamla titlar från data.json:', e.message);
+  }
+
+  return oldTitles;
+}
+
+function parseIcaHtml(html, oldTitles) {
   if (!html) return [];
   
   const icaItems = [];
@@ -28,6 +88,9 @@ function parseIcaHtml(html) {
             ? `${partner}: ${preamble}` 
             : preamble;
 
+          const cleanTitle = fullTitle.trim();
+          const isNew = cleanTitle ? !oldTitles.has(cleanTitle.toLowerCase()) : false;
+
           let imageUrl = PLACEHOLDER_IMG;
           const imageId = item.image?.small?.id || item.image?.medium?.id || item.image?.large?.id;
           if (imageId) {
@@ -40,12 +103,13 @@ function parseIcaHtml(html) {
           }
 
           icaItems.push({
-            title: fullTitle.trim(),
+            title: cleanTitle,
             searchText: `${sourceName} ${item.image?.altText || ''} ${item.prefix || ''}`,
             image: imageUrl,
             url: url,
             source: sourceName,
-            sourceClass: 'badge-ica'
+            sourceClass: 'badge-ica',
+            isNew: isNew
           });
         } catch (e) {
           // Hoppa över trasiga objekt
@@ -59,7 +123,7 @@ function parseIcaHtml(html) {
   return icaItems;
 }
 
-async function fetchCoopDeals() {
+async function fetchCoopDeals(oldTitles) {
   console.log('Startar Puppeteer för Coop partnererbjudanden...');
   let browser = null;
 
@@ -127,7 +191,12 @@ async function fetchCoopDeals() {
       }
     }, PLACEHOLDER_IMG);
 
-    return rawDeals.filter(deal => deal.discount !== null && deal.title !== '');
+    return rawDeals
+      .filter(deal => deal.discount !== null && deal.title !== '')
+      .map(deal => ({
+        ...deal,
+        isNew: !oldTitles.has(deal.title.trim().toLowerCase())
+      }));
 
   } catch (err) {
     console.error('Coop fel vid Puppeteer-hämtning:', err.message);
@@ -142,6 +211,10 @@ async function fetchCoopDeals() {
 async function run() {
   console.log('Startar hämtning av erbjudanden...');
 
+  // Hämta alla gamla titlar innan vi läser in ny data
+  const oldTitles = getOldTitles();
+  console.log(`Hittade ${oldTitles.size} befintliga titlar från tidigare data.json.`);
+
   const mecenatUrl = 'https://www.mecenatalumni.com/service/falcon/v2/se/f/query?site=alumni';
   const hyresgastUrl = 'https://www.hyresgastforeningen.se/api/benefitlistingblock/?benefitListingBlockId=1ab9cc507df44e629eb3bf6584c5cc80&itemsLimit=6000&randomSortOrderSeed=825241421';
   const icaUrl = 'https://www.ica.se/stammis/partnererbjudanden/alla-erbjudanden/';
@@ -154,7 +227,16 @@ async function run() {
   // 1. Mecenat Alumni
   try {
     const res = await fetch(mecenatUrl, { headers: BROWSER_HEADERS });
-    if (res.ok) mecenatData = await res.json();
+    if (res.ok) {
+      mecenatData = await res.json();
+      if (mecenatData && Array.isArray(mecenatData.discounts)) {
+        mecenatData.discounts = mecenatData.discounts.map(item => {
+          const title = item.brandName ? `${item.brandName}: ${item.title}` : item.title;
+          const isNew = title ? !oldTitles.has(title.trim().toLowerCase()) : false;
+          return { ...item, isNew };
+        });
+      }
+    }
   } catch (err) {
     console.error('Mecenat fel:', err.message);
   }
@@ -162,7 +244,26 @@ async function run() {
   // 2. Hyresgästföreningen
   try {
     const res = await fetch(hyresgastUrl, { headers: BROWSER_HEADERS });
-    if (res.ok) hyresgastData = await res.json();
+    if (res.ok) {
+      hyresgastData = await res.json();
+      if (hyresgastData && Array.isArray(hyresgastData.items)) {
+        hyresgastData.items = hyresgastData.items.map(item => {
+          let brandName = '';
+          if (item.url) {
+            const segments = item.url.split('/').filter(Boolean);
+            if (segments.length > 0) {
+              const slug = segments[segments.length - 1];
+              brandName = slug.split('-')
+                .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+                .join(' ');
+            }
+          }
+          const title = brandName ? `${brandName}: ${item.title}` : item.title;
+          const isNew = title ? !oldTitles.has(title.trim().toLowerCase()) : false;
+          return { ...item, isNew };
+        });
+      }
+    }
   } catch (err) {
     console.error('Hyresgästföreningen fel:', err.message);
   }
@@ -172,7 +273,7 @@ async function run() {
     const res = await fetch(icaUrl, { headers: BROWSER_HEADERS });
     if (res.ok) {
       const html = await res.text();
-      icaItems = parseIcaHtml(html);
+      icaItems = parseIcaHtml(html, oldTitles);
       console.log(`Hittade ${icaItems.length} ICA-erbjudanden!`);
     }
   } catch (err) {
@@ -181,13 +282,13 @@ async function run() {
 
   // 4. Coop (Kör Puppeteer)
   try {
-    coopItems = await fetchCoopDeals();
+    coopItems = await fetchCoopDeals(oldTitles);
     console.log(`Hittade ${coopItems.length} Coop-erbjudanden med rabatt!`);
   } catch (err) {
     console.error('Coop fel:', err.message);
   }
 
-  // Spara helt färdig parsad JSON
+  // Spara helt färdig parsad JSON med isNew-flaggor
   try {
     const finalData = {
       updatedAt: new Date().toISOString(),
@@ -198,7 +299,7 @@ async function run() {
     };
 
     fs.writeFileSync('data.json', JSON.stringify(finalData, null, 2));
-    console.log('data.json uppdaterad med alla källor!');
+    console.log('data.json uppdaterad med alla källor och "isNew"-märkningar!');
   } catch (err) {
     console.error('Fel vid skrivning till data.json:', err.message);
   }
