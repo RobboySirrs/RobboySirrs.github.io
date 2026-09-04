@@ -1,8 +1,8 @@
 {
-  "updatedAt": "2026-09-04T16:23:52.626Z",
+  "updatedAt": "2026-09-04T18:54:40.405Z",
   "mecenat": {
-    "discountHits": 925,
-    "totalHits": 1958,
+    "discountHits": 924,
+    "totalHits": 1957,
     "localHits": 0,
     "brandPageHits": 967,
     "categoryHits": 66,
@@ -18939,40 +18939,6 @@
         "isNew": false
       },
       {
-        "id": "477f6bcd-8720-4f52-aea9-32d0ba5d5c0d",
-        "type": 2,
-        "title": "15 % alumnirabatt på flyttstädning",
-        "subtitle": "Gäller på ordinarie pris",
-        "image": "https://img.meccdn.com/media/5ce75f8d-5cdd-49b2-b577-e5ac2ee8f9c5.jfif",
-        "imageAlt": "15 % alumnirabatt på flyttstädning hos Qleano",
-        "brandLogo": "https://img.meccdn.com/media/84807d51-9b34-4b34-82c6-ccd86e910ccb.png",
-        "brandLogoAlt": "",
-        "brandName": "Qleano",
-        "brandPagePath": "/se/qleano",
-        "brandId": "b2520066-8e5f-4294-befc-180816a1c634",
-        "validFrom": "2026-08-31T22:00:00Z",
-        "validTo": "2026-12-31T22:59:59Z",
-        "url": "/se/qleano/15-procent-alumnirabatt-pa-flyttstadning",
-        "conditionDescription": "",
-        "conditionURL": "",
-        "conditionHTML": "<p>15 % alumnirabatt gäller på ordinarie pris för flyttstädning.</p><p>Gäller nya bokningar och för dig som är medlem via Mecenat Alumni.</p>",
-        "isCampaign": false,
-        "partnerURL": "https://qleano.se/mec-alu",
-        "content": "<p>Qleano – flyttstädning till bästa pris alla dagar i veckan! Hög rabatt betyder inte alltid lägst pris. Hos Qleano får du ett riktigt bra grundpris + 15 % alumnirabatt i hela Sverige, alla dagar i veckan. Rutavdraget dras direkt på fakturan. Håller något inte måttet fixar Qleano det kostnadsfritt.</p>",
-        "category": "A-50",
-        "mainCategoryName": "Hem & Ekonomi",
-        "metaTitle": "",
-        "metaDescription": "",
-        "subcategories": [
-          "A-50"
-        ],
-        "campaignOnly": false,
-        "showCountdown": false,
-        "sortOrder": 0,
-        "clickoutButtonText": "to_discount",
-        "isNew": false
-      },
-      {
         "id": "d3f2b283-9a8b-4278-9bd1-bbf122790e2b",
         "type": 2,
         "title": "30 % alumnirabatt på din första matkasse",
@@ -19316,7 +19282,7 @@
         "showCountdown": false,
         "sortOrder": 12,
         "clickoutButtonText": "to_discount",
-        "isNew": true
+        "isNew": false
       },
       {
         "id": "e439da7e-1159-4691-a3ce-b13882ddbefc",
@@ -19350,7 +19316,41 @@
         "showCountdown": false,
         "sortOrder": 12,
         "clickoutButtonText": "to_discount",
-        "isNew": true
+        "isNew": false
+      },
+      {
+        "id": "477f6bcd-8720-4f52-aea9-32d0ba5d5c0d",
+        "type": 2,
+        "title": "15 % alumnirabatt på flyttstädning",
+        "subtitle": "Gäller på ordinarie pris",
+        "image": "https://img.meccdn.com/media/5f1b80fa-5d24-4b2f-9bda-3a43e8a61ebe.jfif",
+        "imageAlt": "15 % alumnirabatt på flyttstädning hos Qleano",
+        "brandLogo": "https://img.meccdn.com/media/84807d51-9b34-4b34-82c6-ccd86e910ccb.png",
+        "brandLogoAlt": "",
+        "brandName": "Qleano",
+        "brandPagePath": "/se/qleano",
+        "brandId": "b2520066-8e5f-4294-befc-180816a1c634",
+        "validFrom": "2026-08-31T22:00:00Z",
+        "validTo": "2026-12-31T22:59:59Z",
+        "url": "/se/qleano/15-procent-alumnirabatt-pa-flyttstadning",
+        "conditionDescription": "",
+        "conditionURL": "",
+        "conditionHTML": "<p>15 % alumnirabatt gäller på ordinarie pris för flyttstädning.</p><p>Gäller nya bokningar och för dig som är medlem via Mecenat Alumni.</p>",
+        "isCampaign": false,
+        "partnerURL": "https://qleano.se/mec-alu",
+        "content": "<p>Qleano – flyttstädning till bästa pris alla dagar i veckan! Hög rabatt betyder inte alltid lägst pris. Hos Qleano får du ett riktigt bra grundpris + 15 % alumnirabatt i hela Sverige, alla dagar i veckan. Rutavdraget dras direkt på fakturan. Håller något inte måttet fixar Qleano det kostnadsfritt.</p>",
+        "category": "A-50",
+        "mainCategoryName": "Hem & Ekonomi",
+        "metaTitle": "",
+        "metaDescription": "",
+        "subcategories": [
+          "A-50"
+        ],
+        "campaignOnly": false,
+        "showCountdown": false,
+        "sortOrder": 0,
+        "clickoutButtonText": "to_discount",
+        "isNew": false
       },
       {
         "id": "d8459680-b427-4273-9c20-0061473c4155",
@@ -21027,40 +21027,6 @@
         "metaDescription": "",
         "subcategories": [
           "B-60"
-        ],
-        "campaignOnly": false,
-        "showCountdown": false,
-        "sortOrder": 0,
-        "clickoutButtonText": "to_discount",
-        "isNew": false
-      },
-      {
-        "id": "0ae0bc13-910c-4a99-b4e8-ce4ec55d12fc",
-        "type": 2,
-        "title": "12 % alumnirabatt hos Timarco",
-        "subtitle": "Gäller köp över 499 kr",
-        "image": "https://img.meccdn.com/media/18742c23-a050-45bf-8fc2-bb616e5dba08.jpg",
-        "imageAlt": "12 % alumnirabatt hos Timarco",
-        "brandLogo": "https://img.meccdn.com/media/logo_666_211110070030867185.jpg",
-        "brandLogoAlt": "Timarco",
-        "brandName": "Timarco",
-        "brandPagePath": "/se/timarco",
-        "brandId": "78a36519-dc02-4884-8132-c37ccbdf7b28",
-        "validFrom": "2025-02-23T23:00:00Z",
-        "validTo": "2099-02-23T23:00:00Z",
-        "url": "/se/timarco/12-procent-alumnirabatt-hos-timarco",
-        "conditionDescription": "",
-        "conditionURL": "",
-        "conditionHTML": "<p>Kan ej kombineras med andra erbjudanden.</p><p>Gäller vid köp över 499 kr.</p><p>Gäller ej Calvin Klein, Primadonna, Marie Jo &amp; Anita Care</p>",
-        "isCampaign": false,
-        "partnerURL": "https://www.timarco.com/se?ref=mecenatalumni",
-        "content": "<p>Timarco.com är nordens största onlinebutik för underkläder och har sedan 1997 erbjudit ett brett sortiment med fokus på hög kvalitet och komfort. Här hittar du ett omfattande utbud av underkläder – trosor, kalsonger, BH:ar och sport-BH:ar – från populära varumärken som Sloggi, Triumph och Calida. Med över 100 varumärken i sortimentet erbjuder de även badkläder, skor och sportkläder för alla tillfällen.</p><p>Som alumn får du dessutom alltid 12 % rabatt. Passa på!</p>",
-        "category": "D-20",
-        "mainCategoryName": "Kläder & Skönhet",
-        "metaTitle": "",
-        "metaDescription": "",
-        "subcategories": [
-          "D-20"
         ],
         "campaignOnly": false,
         "showCountdown": false,
@@ -30452,40 +30418,6 @@
         "isNew": false
       },
       {
-        "id": "e2285cb6-f855-475e-b45d-4d98be045b8e",
-        "type": 2,
-        "title": "20 % alumnirabatt hos Namly Design",
-        "subtitle": "Gäller på ordinarie priser",
-        "image": "https://img.meccdn.com/media/image1_666_250602120021940570.jpg",
-        "imageAlt": "20 % alumnirabatt hos Namly Design",
-        "brandLogo": "https://img.meccdn.com/media/logo_666_250602120025549542.jpg",
-        "brandLogoAlt": "Namly Design",
-        "brandName": "Namly Design",
-        "brandPagePath": "/se/namly-design",
-        "brandId": "753081bb-8274-467e-9d26-1a9aedbe8987",
-        "validFrom": "2025-06-01T22:00:00Z",
-        "validTo": "2099-06-01T22:00:00Z",
-        "url": "/se/namly-design/20-procent-alumnirabatt-hos-namly-design",
-        "conditionDescription": "",
-        "conditionURL": "",
-        "conditionHTML": "<p>Kan ej kombineras med andra erbjudanden.</p>",
-        "isCampaign": false,
-        "partnerURL": "https://www.namly.se/",
-        "content": "<p>Namly Design erbjuder smart och personlig inredning för hela hemmet. I sortimentet finns wallstickers, posters, namnlappar, etiketter, dekorplast och klistermärken – perfekta för att dekorera, märka och organisera. Produkterna är enkla att använda och passar i allt från barnrum till kök och kontor. Namly Design gör det lätt att skapa ordning och ge hemmet en personlig touch. Som alumn får du 20 % rabatt hos Namly Design.</p>",
-        "category": "A-10",
-        "mainCategoryName": "Hem & Ekonomi",
-        "metaTitle": "",
-        "metaDescription": "",
-        "subcategories": [
-          "A-10"
-        ],
-        "campaignOnly": false,
-        "showCountdown": false,
-        "sortOrder": 0,
-        "clickoutButtonText": "to_discount",
-        "isNew": false
-      },
-      {
         "id": "99df2182-a1e4-4059-8c72-3622f86526ae",
         "type": 2,
         "title": "10 % alumnirabatt på allt hos Kalenderkungen ",
@@ -32540,7 +32472,7 @@
         "showCountdown": false,
         "sortOrder": 0,
         "clickoutButtonText": "to_discount",
-        "isNew": true
+        "isNew": false
       },
       {
         "id": "cae3a4eb-38df-4399-ae75-b74cdf8a037a",
@@ -32578,7 +32510,7 @@
         "showCountdown": false,
         "sortOrder": 0,
         "clickoutButtonText": "to_discount",
-        "isNew": true
+        "isNew": false
       },
       {
         "id": "ff1d6f65-55f0-4590-bee7-84d7ef50d3db",
@@ -32616,7 +32548,7 @@
         "showCountdown": false,
         "sortOrder": 0,
         "clickoutButtonText": "to_discount",
-        "isNew": true
+        "isNew": false
       },
       {
         "id": "5e7d0079-bdc6-4177-b946-170f07a75be8",
@@ -32654,7 +32586,41 @@
         "showCountdown": false,
         "sortOrder": 0,
         "clickoutButtonText": "to_discount",
-        "isNew": true
+        "isNew": false
+      },
+      {
+        "id": "e2285cb6-f855-475e-b45d-4d98be045b8e",
+        "type": 2,
+        "title": "20 % alumnirabatt hos Namly Design",
+        "subtitle": "Gäller på ordinarie priser",
+        "image": "https://img.meccdn.com/media/image1_666_250602120021940570.jpg",
+        "imageAlt": "20 % alumnirabatt hos Namly Design",
+        "brandLogo": "https://img.meccdn.com/media/logo_666_250602120025549542.jpg",
+        "brandLogoAlt": "Namly Design",
+        "brandName": "Namly Design",
+        "brandPagePath": "/se/namly-design",
+        "brandId": "753081bb-8274-467e-9d26-1a9aedbe8987",
+        "validFrom": "2025-06-01T22:00:00Z",
+        "validTo": "2027-01-31T22:59:59Z",
+        "url": "/se/namly-design/20-procent-alumnirabatt-hos-namly-design",
+        "conditionDescription": "",
+        "conditionURL": "",
+        "conditionHTML": "<p>Kan ej kombineras med andra erbjudanden.</p>",
+        "isCampaign": false,
+        "partnerURL": "https://www.namly.se/",
+        "content": "<p>Namly Design erbjuder smart och personlig inredning för hela hemmet. I sortimentet finns wallstickers, posters, namnlappar, etiketter, dekorplast och klistermärken – perfekta för att dekorera, märka och organisera. Produkterna är enkla att använda och passar i allt från barnrum till kök och kontor. Namly Design gör det lätt att skapa ordning och ge hemmet en personlig touch. Som alumn får du 20 % rabatt hos Namly Design.</p>",
+        "category": "A-10",
+        "mainCategoryName": "Hem & Ekonomi",
+        "metaTitle": "",
+        "metaDescription": "",
+        "subcategories": [
+          "A-10"
+        ],
+        "campaignOnly": false,
+        "showCountdown": false,
+        "sortOrder": 0,
+        "clickoutButtonText": "to_discount",
+        "isNew": false
       }
     ],
     "brandPages": [
@@ -46098,31 +46064,6 @@
         "webpage": "stc.se"
       },
       {
-        "id": "749fdb4e-f889-43b5-9b65-5a360f1a5a77",
-        "type": 1,
-        "name": "Qleano",
-        "title": "",
-        "validFrom": "2026-08-31T22:00:00Z",
-        "validTo": "2099-12-31T22:59:59Z",
-        "url": "/se/qleano",
-        "logo": "https://img.meccdn.com/media/84807d51-9b34-4b34-82c6-ccd86e910ccb.png",
-        "brandId": "b2520066-8e5f-4294-befc-180816a1c634",
-        "descriptionHeader": "Alumnirabatt hos Qleano",
-        "description": "<p>Qleano förmedlar 10 000 flyttstädningar om året i hela Sverige med nöjdkund-garanti. Var i landet du än bor städar kvalitetssäkrade proffs åt dig, alla dagar i veckan, alltid till fast pris. Och blir något inte rätt kommer Qleano tillbaka och åtgärdar det kostnadsfritt. Låt Qleano ta hand om din flyttstädning, så kan du lägga all din tid på det roliga!</p><p>Använd din unika rabattkod för Qleano och gör livet efter studierna lite rikare.</p>",
-        "image": "https://img.meccdn.com/media/6a8efd66-c55e-4318-b3c6-a39f3e540a1d.jfif",
-        "imageAlt": "Alumnirabatt hos Qleano",
-        "category": "A-50",
-        "subcategories": [
-          "A-50"
-        ],
-        "_hide": false,
-        "key": "",
-        "discounts": [
-          "477f6bcd-8720-4f52-aea9-32d0ba5d5c0d"
-        ],
-        "webpage": "qleano.se"
-      },
-      {
         "id": "ca142eb3-e3e0-4c1a-9a77-c661ea048fda",
         "type": 1,
         "name": "Hotels.com",
@@ -46724,6 +46665,31 @@
           "e439da7e-1159-4691-a3ce-b13882ddbefc"
         ],
         "webpage": "liseberg.se"
+      },
+      {
+        "id": "749fdb4e-f889-43b5-9b65-5a360f1a5a77",
+        "type": 1,
+        "name": "Qleano",
+        "title": "",
+        "validFrom": "2026-08-31T22:00:00Z",
+        "validTo": "2099-12-31T22:59:59Z",
+        "url": "/se/qleano",
+        "logo": "https://img.meccdn.com/media/84807d51-9b34-4b34-82c6-ccd86e910ccb.png",
+        "brandId": "b2520066-8e5f-4294-befc-180816a1c634",
+        "descriptionHeader": "Alumnirabatt hos Qleano",
+        "description": "<p>Qleano förmedlar 10 000 flyttstädningar om året i hela Sverige med nöjdkund-garanti. Var i landet du än bor städar kvalitetssäkrade proffs åt dig, alla dagar i veckan, alltid till fast pris. Och blir något inte rätt kommer Qleano tillbaka och åtgärdar det kostnadsfritt. Låt Qleano ta hand om din flyttstädning, så kan du lägga all din tid på det roliga!</p><p>Använd din unika rabattkod för Qleano och gör livet efter studierna lite rikare.</p>",
+        "image": "https://img.meccdn.com/media/6a8efd66-c55e-4318-b3c6-a39f3e540a1d.jfif",
+        "imageAlt": "Alumnirabatt hos Qleano",
+        "category": "A-50",
+        "subcategories": [
+          "A-50"
+        ],
+        "_hide": false,
+        "key": "",
+        "discounts": [
+          "477f6bcd-8720-4f52-aea9-32d0ba5d5c0d"
+        ],
+        "webpage": "qleano.se"
       },
       {
         "id": "a96b5f52-404e-4f30-a1d2-3f1e18f2e846",
@@ -49023,32 +48989,6 @@
           "09b02992-a30e-406e-9910-9302ebd8c5e3"
         ],
         "webpage": "drive4free.se"
-      },
-      {
-        "id": "38b2312a-d86e-44d2-9778-b85c8d2165c6",
-        "type": 1,
-        "name": "Timarco",
-        "title": "Alumnirabatt hos {brandName}",
-        "validFrom": "2025-02-23T23:00:00Z",
-        "validTo": "2099-02-23T23:00:00Z",
-        "url": "/se/timarco",
-        "logo": "https://img.meccdn.com/media/logo_666_211110070030867185.jpg",
-        "logoAlt": "Timarco",
-        "brandId": "78a36519-dc02-4884-8132-c37ccbdf7b28",
-        "descriptionHeader": "Rabatt hos Timarco",
-        "description": "<p style=\"box-sizing: border-box; border: 0px solid; margin: 1.25em 0px; padding: 0px;\">Timarco.com är nordens största onlinebutik för underkläder och har sedan 1997 erbjudit ett brett sortiment med fokus på hög kvalitet och komfort. Här hittar du ett omfattande utbud av underkläder – trosor, kalsonger, BH:ar och sport-BH:ar – från populära varumärken som Sloggi, Triumph och Calida. Med över 100 varumärken i sortimentet erbjuder de även badkläder, skor och sportkläder för alla tillfällen.</p><p>Använd din unika rabattkod för Timarco och gör livet efter studierna lite rikare.</p>",
-        "image": "https://img.meccdn.com/media/18742c23-a050-45bf-8fc2-bb616e5dba08.jpg",
-        "imageAlt": "Rabatt hos Timarco",
-        "category": "D-20",
-        "subcategories": [
-          "D-20"
-        ],
-        "_hide": false,
-        "key": "",
-        "discounts": [
-          "0ae0bc13-910c-4a99-b4e8-ce4ec55d12fc"
-        ],
-        "webpage": "timarco.com"
       },
       {
         "id": "be9a4d12-cdc8-4d00-9070-aeb1ece1c22f",
@@ -57137,34 +57077,6 @@
         "webpage": "sotypicalme.se"
       },
       {
-        "id": "d7fc107f-be57-4a6a-b531-9fdb92529a1b",
-        "type": 1,
-        "name": "Namly Design",
-        "title": "Alumnirabatt hos {brandName}",
-        "validFrom": "2025-06-01T22:00:00Z",
-        "validTo": "2099-06-01T22:00:00Z",
-        "url": "/se/namly-design",
-        "logo": "https://img.meccdn.com/media/logo_666_250602120025549542.jpg",
-        "logoAlt": "Namly Design",
-        "brandId": "753081bb-8274-467e-9d26-1a9aedbe8987",
-        "descriptionHeader": "Rabatt hos Namly Design",
-        "description": "Namly Design erbjuder smart och personlig inredning för hela hemmet. \r\n\r\nI sortimentet finns wallstickers, posters, namnlappar, etiketter, dekorplast och klistermärken – perfekta för att dekorera, märka och organisera. \r\n\r\nProdukterna är enkla att använda och passar i allt från barnrum till kök och kontor. \r\n\r\nNamly Design gör det lätt att skapa ordning och ge hemmet en personlig touch.",
-        "facts": "Kan ej kombineras med andra erbjudanden.",
-        "image": "https://img.meccdn.com/media/image1_666_250602120021940570.jpg",
-        "imageAlt": "Rabatt hos Namly Design",
-        "category": "A-10",
-        "subcategories": [
-          "A-10"
-        ],
-        "_hide": false,
-        "key": "",
-        "discounts": [
-          "8933975c-a4be-4a39-8fd7-d179842d92d6",
-          "e2285cb6-f855-475e-b45d-4d98be045b8e"
-        ],
-        "webpage": "namly.se"
-      },
-      {
         "id": "04b390e7-19e9-4833-bea3-1011f098a990",
         "type": 1,
         "name": "Kalenderkungen",
@@ -59814,6 +59726,59 @@
           "5e7d0079-bdc6-4177-b946-170f07a75be8"
         ],
         "webpage": "dernholt.com"
+      },
+      {
+        "id": "d7fc107f-be57-4a6a-b531-9fdb92529a1b",
+        "type": 1,
+        "name": "Namly Design",
+        "title": "Alumnirabatt hos {brandName}",
+        "validFrom": "2025-06-01T22:00:00Z",
+        "validTo": "2099-12-31T22:59:59Z",
+        "url": "/se/namly-design",
+        "logo": "https://img.meccdn.com/media/logo_666_250602120025549542.jpg",
+        "logoAlt": "Namly Design",
+        "brandId": "753081bb-8274-467e-9d26-1a9aedbe8987",
+        "descriptionHeader": "Rabatt hos Namly Design",
+        "description": "Namly Design erbjuder smart och personlig inredning för hela hemmet. \r\n\r\nI sortimentet finns wallstickers, posters, namnlappar, etiketter, dekorplast och klistermärken – perfekta för att dekorera, märka och organisera. \r\n\r\nProdukterna är enkla att använda och passar i allt från barnrum till kök och kontor. \r\n\r\nNamly Design gör det lätt att skapa ordning och ge hemmet en personlig touch.",
+        "image": "https://img.meccdn.com/media/image1_666_250602120021940570.jpg",
+        "imageAlt": "Rabatt hos Namly Design",
+        "category": "A-10",
+        "subcategories": [
+          "A-10"
+        ],
+        "_hide": false,
+        "key": "",
+        "discounts": [
+          "8933975c-a4be-4a39-8fd7-d179842d92d6",
+          "e2285cb6-f855-475e-b45d-4d98be045b8e"
+        ],
+        "webpage": "namly.se"
+      },
+      {
+        "id": "38b2312a-d86e-44d2-9778-b85c8d2165c6",
+        "type": 1,
+        "name": "Timarco",
+        "title": "Alumnirabatt hos {brandName}",
+        "validFrom": "2025-02-23T23:00:00Z",
+        "validTo": "2099-02-23T23:00:00Z",
+        "url": "/se/timarco",
+        "logo": "https://img.meccdn.com/media/logo_666_211110070030867185.jpg",
+        "logoAlt": "Timarco",
+        "brandId": "78a36519-dc02-4884-8132-c37ccbdf7b28",
+        "descriptionHeader": "Rabatt hos Timarco",
+        "description": "<p style=\"box-sizing: border-box; border: 0px solid; margin: 1.25em 0px; padding: 0px;\">Timarco.com är nordens största onlinebutik för underkläder och har sedan 1997 erbjudit ett brett sortiment med fokus på hög kvalitet och komfort. Här hittar du ett omfattande utbud av underkläder – trosor, kalsonger, BH:ar och sport-BH:ar – från populära varumärken som Sloggi, Triumph och Calida. Med över 100 varumärken i sortimentet erbjuder de även badkläder, skor och sportkläder för alla tillfällen.</p><p>Använd din unika rabattkod för Timarco och gör livet efter studierna lite rikare.</p>",
+        "image": "https://img.meccdn.com/media/18742c23-a050-45bf-8fc2-bb616e5dba08.jpg",
+        "imageAlt": "Rabatt hos Timarco",
+        "category": "D-20",
+        "subcategories": [
+          "D-20"
+        ],
+        "_hide": false,
+        "key": "",
+        "discounts": [
+          "0ae0bc13-910c-4a99-b4e8-ce4ec55d12fc"
+        ],
+        "webpage": "timarco.com"
       }
     ],
     "categories": [
@@ -61705,7 +61670,7 @@
       "url": "https://www.ica.se/stammis/partnererbjudanden/alla-erbjudanden/vikingline/",
       "source": "ICA Stammis",
       "sourceClass": "badge-ica",
-      "isNew": true
+      "isNew": false
     },
     {
       "title": "Ving: Upp till 1000 kr rabatt på resor med Ving",
