@@ -1,8 +1,8 @@
 {
-  "updatedAt": "2026-09-04T18:54:40.405Z",
+  "updatedAt": "2026-09-06T06:12:43.669Z",
   "mecenat": {
-    "discountHits": 924,
-    "totalHits": 1957,
+    "discountHits": 926,
+    "totalHits": 1959,
     "localHits": 0,
     "brandPageHits": 967,
     "categoryHits": 66,
@@ -41,6 +41,40 @@
         "sortOrder": 31591,
         "clickoutButtonText": "to_discount",
         "isNew": false
+      },
+      {
+        "id": "e0000502-4817-4747-8454-79e9eeea271e",
+        "type": 2,
+        "title": "25 % alumnirabatt vid köp av en årsprenumeration",
+        "subtitle": "+ ett gratis NC° Band",
+        "image": "https://img.meccdn.com/media/cc739df1-68fb-48ec-9bfd-ae3272dc79d0.jfif",
+        "imageAlt": "25 % alumnirabatt vid köp av en årsprenumeration",
+        "brandLogo": "https://img.meccdn.com/media/logo_196_240927134751474779.png",
+        "brandLogoAlt": "Natural Cycles",
+        "brandName": "Natural Cycles",
+        "brandPagePath": "",
+        "brandId": "1079435a-46a4-4164-b7b6-b0b5a57e87f3",
+        "validFrom": "2026-09-05T22:00:00Z",
+        "validTo": "2026-09-14T21:59:59Z",
+        "url": "/se/natural-cycles/25-procent-alumnirabatt-vid-kop-av-en-arsprenumeration",
+        "conditionDescription": "",
+        "conditionURL": "",
+        "conditionHTML": "<p>Gäller t.o.m. 14/9.</p><p>Gäller för nya och återkommande Natural Cycles-användare.</p>",
+        "isCampaign": true,
+        "partnerURL": "https://www.naturalcycles.com/sv/join-me?utm_campaign=alumni&utm_medium=organic&utm_content=Mecenat&utm_source=student-discount&code=Alumni25&name=Alumni&percentage=25",
+        "content": "<p>Ta del av Natural Cycles bästa erbjudande och gör dig redo för hösten. Upptäck hur dina hormoner påverkar ditt mående. Just nu får du 25 % alumnirabatt på en årsprenumeration hos Natural Cycles och NC° Band, deras senaste wearable, på köpet.</p>",
+        "category": "B-70",
+        "mainCategoryName": "Hälsa",
+        "metaTitle": "",
+        "metaDescription": "",
+        "subcategories": [
+          "B-70"
+        ],
+        "campaignOnly": false,
+        "showCountdown": false,
+        "sortOrder": 13,
+        "clickoutButtonText": "to_discount",
+        "isNew": true
       },
       {
         "id": "5087e5dd-c7e0-47a2-b8f9-c0207514ac03",
@@ -602,6 +636,41 @@
         "sortOrder": 33,
         "clickoutButtonText": "to_discount",
         "isNew": false
+      },
+      {
+        "id": "b816a665-5174-4d33-bb46-23c455cd0767",
+        "type": 2,
+        "title": "20 % alumnirabatt vid köp av minst 2 varor",
+        "subtitle": "Gäller både online och i butik",
+        "image": "https://img.meccdn.com/media/49824dc3-eedc-434b-9294-522c38563879.jfif",
+        "imageAlt": "20 % alumnirabatt vid köp av minst 2 varor hos MQ Marqet",
+        "brandLogo": "https://img.meccdn.com/media/logo_134_200825155145870979.jpg",
+        "brandLogoAlt": "MQ Marqet",
+        "brandName": "MQ Marqet",
+        "brandPagePath": "",
+        "brandId": "4789b3de-1a58-46fa-9f07-34427be3c0b5",
+        "validFrom": "2026-09-05T22:00:00Z",
+        "validTo": "2026-09-09T21:59:59Z",
+        "url": "/se/mq-marqet/20-procent-alumnirabatt-vid-kop-av-minst-2-varor",
+        "conditionDescription": "",
+        "conditionURL": "",
+        "conditionHTML": "<p>Gäller både online och i butik t.o.m. 9/9.</p><p>Gäller vid köp av minst 2 varor från Stockh lm, Stockh lm Studio, Bläck, Dobber och Bondelid.</p><p>Kan ej kombineras med andra erbjudanden eller rabatter.</p><p>Gäller ej MQ Second hand.</p><p>Vid köp online dras rabatten i kassan med hjälp av din rabattkod.</p><p>Vid köp i butik visar du upp ditt medlemskap.</p>",
+        "isCampaign": true,
+        "partnerURL": "https://www.mq.se/?utm_source=mecenat&utm_medium=edm&utm_campaign=mecenat_edm_alumni",
+        "content": "<p>Passa på att uppdatera garderoben! Just nu får du 20 % alumnirabatt på ett helt köp när du handlar minst 2 varor från Stockh lm, Stockh lm Studio, Bläck, Dobber och Bondelid hos MQ. Gäller både online och i butik.</p>",
+        "category": "D-10",
+        "mainCategoryName": "Kläder & Skönhet",
+        "metaTitle": "",
+        "metaDescription": "",
+        "subcategories": [
+          "D-10",
+          "D-20"
+        ],
+        "campaignOnly": false,
+        "showCountdown": false,
+        "sortOrder": 84,
+        "clickoutButtonText": "to_discount",
+        "isNew": true
       },
       {
         "id": "3fbc0c4b-0987-41f2-8987-83f1792c7c00",
@@ -2123,6 +2192,40 @@
         "isNew": false
       },
       {
+        "id": "85af0e28-a17f-42d8-b037-32338fb87ef7",
+        "type": 2,
+        "title": "Upp till 22 % + 5 % extra alumnirabatt",
+        "subtitle": "Gäller även på rea",
+        "image": "https://img.meccdn.com/media/6377f67e-f40f-4675-bdd6-84c52380e137.jpg",
+        "imageAlt": "Upp till 22 % + 5 % extra alumnirabatt hos Miinto",
+        "brandLogo": "https://img.meccdn.com/media/logo_134_220221103347522012.jpg",
+        "brandLogoAlt": "Miinto",
+        "brandName": "Miinto",
+        "brandPagePath": "/se/miinto",
+        "brandId": "6ef2f109-bf1a-46fa-b52c-a84eff33f502",
+        "validFrom": "2026-09-05T22:00:00Z",
+        "validTo": "2026-09-08T21:59:59Z",
+        "url": "/se/miinto/upp-till-22-procent-5-procent-extra-alumnirabatt",
+        "conditionDescription": "",
+        "conditionURL": "",
+        "conditionHTML": "<p>Gäller t.o.m. 8/9.</p><p>Gäller även på rea och kampanjer.</p>",
+        "isCampaign": true,
+        "partnerURL": "https://www.miinto.se/",
+        "content": "<p>Fyll på höstgarderoben! Just nu är det upp 22 % rabatt hos Miinto och som alumn får du dessutom 5 % extra rabatt på allt. Skynda att fynda!</p>",
+        "category": "D-10",
+        "mainCategoryName": "Kläder & Skönhet",
+        "metaTitle": "",
+        "metaDescription": "",
+        "subcategories": [
+          "D-10"
+        ],
+        "campaignOnly": false,
+        "showCountdown": false,
+        "sortOrder": 20,
+        "clickoutButtonText": "to_discount",
+        "isNew": true
+      },
+      {
         "id": "3dd6720f-1d41-48af-b292-8644094edafa",
         "type": 2,
         "title": "Upp till 25 % alumnirabatt på hårbehandlingar",
@@ -3326,45 +3429,6 @@
         "campaignOnly": false,
         "showCountdown": false,
         "sortOrder": 39,
-        "clickoutButtonText": "to_discount",
-        "isNew": false
-      },
-      {
-        "id": "1a00171d-a536-41e8-a981-9e768f3f48b0",
-        "type": 2,
-        "title": "15 % alumnirabatt på Tjejmilen",
-        "subtitle": "5 september i Stockholm",
-        "image": "https://img.meccdn.com/media/38961137-cc72-4d63-a95d-12e7981b0ada.png",
-        "imageAlt": "15 % alumnirabatt på Tjejmilen",
-        "brandLogo": "https://img.meccdn.com/media/logo_196_230331131553597307.png",
-        "brandLogoAlt": "Marathongruppen",
-        "brandName": "Marathongruppen",
-        "brandPagePath": "/se/marathongruppen",
-        "brandId": "9ecef31b-b7c7-493b-901e-ee1c4654d299",
-        "validFrom": "2026-05-18T22:00:00Z",
-        "validTo": "2026-09-05T21:59:59Z",
-        "url": "/se/marathongruppen/15-procent-alumnirabatt-pa-tjejmilen",
-        "conditionDescription": "",
-        "conditionURL": "",
-        "conditionHTML": "<p>Gäller t.o.m. 5/9.</p><p>Ange din unika rabattkod när du anmäler dig.</p><p>Går ej att kombinera med andra erbjudanden eller rabatter.</p>",
-        "isCampaign": false,
-        "partnerURL": "https://tjejmilen.se/tjejmilen-10k-stockholm/",
-        "content": "<p>Som alumn får du 15 % rabatt på Tjejmilen! Gå, jogga eller spring Sveriges största lopp för kvinnor den 5 september på Södra Djurgården. </p><p>Det är en mil fylld av gemenskap, styrka och individuella mål – oavsett om det är din första mil eller en del av din träningsresa är detta ett lopp för alla kvinnor som vill komma samman i löpning!</p>",
-        "category": "C-80",
-        "mainCategoryName": "Nöje",
-        "metaTitle": "",
-        "metaDescription": "",
-        "subcategories": [
-          "B-70",
-          "C-60",
-          "B-40",
-          "C-40",
-          "C-80",
-          "C-50"
-        ],
-        "campaignOnly": false,
-        "showCountdown": false,
-        "sortOrder": 31009,
         "clickoutButtonText": "to_discount",
         "isNew": false
       },
@@ -38732,36 +38796,6 @@
         "webpage": "sennheiser.com"
       },
       {
-        "id": "6e80205b-1051-4f22-a399-cad3d0727aa1",
-        "type": 1,
-        "name": "Miinto",
-        "title": "Alumnirabatt hos {brandName}",
-        "validFrom": "2024-02-20T23:00:00Z",
-        "validTo": "2099-02-20T23:00:00Z",
-        "url": "/se/miinto",
-        "logo": "https://img.meccdn.com/media/logo_134_220221103347522012.jpg",
-        "logoAlt": "Miinto",
-        "brandId": "6ef2f109-bf1a-46fa-b52c-a84eff33f502",
-        "descriptionHeader": "Rabatt hos Miinto",
-        "description": "Miinto.se gör det möjligt för dig att handla från Sveriges bästa lokala modebutiker från en och samma online-portal. Välj mellan 50 000 styles från mer än 6 000 varumärken som t.ex. Filippa K, By Malene Birger, Ganni, Tiger of Sweden och Odd Molly.\r\n\r\nAnvänd din unika rabattkod för Miinto och gör livet efter studierna lite rikare.",
-        "facts": " ",
-        "image": "https://img.meccdn.com/media/image1_184_240628091923697062.jpg",
-        "imageAlt": "Miinto",
-        "category": "D-10",
-        "subcategories": [
-          "D-10"
-        ],
-        "_hide": false,
-        "key": "",
-        "discounts": [
-          "13c2a893-c8e7-4719-b2de-823b3af358e4",
-          "463130be-d57f-4d46-a5ed-7963994c2b03",
-          "479d0cc7-a2c4-482d-9b8a-d70e85db3c85",
-          "a9475b49-3a84-4dae-84de-12a5afa9ea50",
-          "5fbca0e7-2950-423f-a2d5-ac49e5b24f32"
-        ]
-      },
-      {
         "id": "7a0f2df6-38c0-4dca-b2a5-78ffe1667a23",
         "type": 1,
         "name": "Rolfs Flyg & Buss",
@@ -46690,6 +46724,33 @@
           "477f6bcd-8720-4f52-aea9-32d0ba5d5c0d"
         ],
         "webpage": "qleano.se"
+      },
+      {
+        "id": "6e80205b-1051-4f22-a399-cad3d0727aa1",
+        "type": 1,
+        "name": "Miinto",
+        "title": "Alumnirabatt hos {brandName}",
+        "validFrom": "2024-02-20T23:00:00Z",
+        "validTo": "2099-02-20T23:00:00Z",
+        "url": "/se/miinto",
+        "logo": "https://img.meccdn.com/media/logo_134_220221103347522012.jpg",
+        "logoAlt": "Miinto",
+        "brandId": "6ef2f109-bf1a-46fa-b52c-a84eff33f502",
+        "descriptionHeader": "Rabatt hos Miinto",
+        "description": "Miinto.se gör det möjligt för dig att handla från Sveriges bästa lokala modebutiker från en och samma online-portal. Välj mellan 50 000 styles från mer än 6 000 varumärken som t.ex. Filippa K, By Malene Birger, Ganni, Tiger of Sweden och Odd Molly.\r\n\r\nAnvänd din unika rabattkod för Miinto och gör livet efter studierna lite rikare.",
+        "facts": " ",
+        "image": "https://img.meccdn.com/media/image1_184_240628091923697062.jpg",
+        "imageAlt": "Miinto",
+        "category": "D-10",
+        "subcategories": [
+          "D-10"
+        ],
+        "_hide": false,
+        "key": "",
+        "discounts": [
+          "85af0e28-a17f-42d8-b037-32338fb87ef7",
+          "5fbca0e7-2950-423f-a2d5-ac49e5b24f32"
+        ]
       },
       {
         "id": "a96b5f52-404e-4f30-a1d2-3f1e18f2e846",
