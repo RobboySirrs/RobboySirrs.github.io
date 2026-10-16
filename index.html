@@ -234,6 +234,40 @@
       color: var(--text-color);
     }
 
+    /* ÄNDRING: Stil för "Till toppen"-knappen (placerad en bit upp från botten) */
+    #scrollTopBtn {
+      position: fixed;
+      bottom: 40px;
+      right: 20px;
+      z-index: 99;
+      background-color: var(--primary);
+      color: #fff;
+      border: none;
+      outline: none;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      cursor: pointer;
+      font-size: 1.2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s, visibility 0.3s, background-color 0.2s, transform 0.2s;
+    }
+
+    #scrollTopBtn.show {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    #scrollTopBtn:hover {
+      background-color: var(--primary-hover);
+      transform: translateY(-2px);
+    }
+
     .skeleton-card {
       pointer-events: none;
     }
@@ -304,6 +338,9 @@
 
     <div id="grid" class="grid"></div>
   </div>
+
+  <!-- ÄNDRING: Till toppen-knapp -->
+  <button id="scrollTopBtn" title="Till toppen" onclick="scrollToTop()">↑</button>
 
   <script>
     const PLACEHOLDER_IMG = "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 24 24' fill='none' stroke='%23ccc' stroke-width='2'><rect x='3' y='3' width='18' height='18' rx='2'/><circle cx='8.5' cy='8.5' r='1.5'/><polyline points='21 15 16 10 5 21'/></svg>";
@@ -698,7 +735,6 @@
       }
     }
 
-    /* ÄNDRING: Använder Web Share API (Android/iOS inbyggda delningsmeny) om det stöds, annars kopiering */
     function shareDeal(cardId, title, btn) {
       const cleanURL = window.location.href.split('#')[0] + '#' + cardId;
 
@@ -716,6 +752,20 @@
           }, 1500);
         });
       }
+    }
+
+    /* ÄNDRING: Visar/döljer knappen beroende på scroll samt funktion för att scrolla upp */
+    const scrollTopBtn = document.getElementById('scrollTopBtn');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) {
+        scrollTopBtn.classList.add('show');
+      } else {
+        scrollTopBtn.classList.remove('show');
+      }
+    });
+
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
     document.getElementById('searchInput').addEventListener('input', (e) => {
