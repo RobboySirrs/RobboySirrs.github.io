@@ -118,15 +118,22 @@
       transition: transform 0.2s, box-shadow 0.2s, background-color 0.2s;
     }
 
-    .card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 4px 12px var(--card-shadow-hover);
+    /* ÄNDRING: Hover aktiveras endast på enheter med muspekare (inte touch/mobil) */
+    @media (hover: hover) {
+      .card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 4px 12px var(--card-shadow-hover);
+      }
+    }
+
+    /* Stil för att markera det länkade kortet vid direktlänkning */
+    .card:target {
+      box-shadow: 0 0 0 3px var(--primary);
     }
 
     .card-img-wrapper {
   position: relative;
   height: 180px;
-  /* Shimmer-effekt som bakgrund medan lazy-bilden laddar */
   background: linear-gradient(
     90deg,
     var(--skeleton-base) 25%,
@@ -156,7 +163,6 @@
       text-transform: uppercase;
     }
 
-    /* TILLÄGG: Style för NY-badge till vänster */
     .badge-new {
       position: absolute;
       top: 10px;
@@ -208,7 +214,6 @@
       background-color: var(--primary-hover);
     }
 
-    /* Skeleton Placeholder Styles */
     .skeleton-card {
       pointer-events: none;
     }
@@ -284,11 +289,8 @@
     const PLACEHOLDER_IMG = "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 24 24' fill='none' stroke='%23ccc' stroke-width='2'><rect x='3' y='3' width='18' height='18' rx='2'/><circle cx='8.5' cy='8.5' r='1.5'/><polyline points='21 15 16 10 5 21'/></svg>";
 
     const BRAND_KEYWORDS = {
-      // --- FEST, MASKERAD & PARTY ---
       'partykungen': 'party kungen maskerad halloween fest kostym utklädnad dekoration pynt peruker partyprylar',
       'partyninja': 'party ninja partyninja.se maskerad halloween fest kostym utklädnad dekoration pynt partyprylar',
-
-      // --- RESOR, TRANSPORT & HYRBIL ---
       'europcar': 'hyrbil hyra bil fordon transport biluthyrning',
       'hertz': 'hyrbil hyra bil fordon transport biluthyrning',
       'avis': 'hyrbil hyra bil fordon transport biluthyrning',
@@ -470,12 +472,22 @@
       }
     }
 
+    /* Hjälpfunktion för att skapa säkra ID:n av titlar för länkning */
+    function slugify(text) {
+      return text.toString().toLowerCase()
+        .replace(/\s+/g, '-')       // Ersätt mellanslag med bindestreck
+        .replace(/[åä]/g, 'a')      // Hantera svenska tecken
+        .replace(/ö/g, 'o')
+        .replace(/[^\w\-]+/g, '')   // Ta bort specialtecken
+        .replace(/\-\-+/g, '-')     // Ersätt flera bindestreck med ett
+        .replace(/^-+/, '')         // Trimma bindestreck i början
+        .replace(/-+$/, '');        // Trimma bindestreck i slutet
+    }
+
     async function loadData() {
       showSkeletonPlaceholders(16);
 
-     // Fördröjning på 1.5 sekunder för att visa skeleton-animationen
       await new Promise(resolve => setTimeout(resolve, 800));
-      
 
       try {
         const res = await fetch('./data.json?v=' + Date.now());
@@ -511,7 +523,7 @@
               url: item.url ? `https://www.mecenatalumni.com${item.url}` : '#',
               source: sourceName,
               sourceClass: 'badge-mecenat',
-              isNew: !!item.isNew // TILLÄGG: sparar om objektet har isNew: true
+              isNew: !!item.isNew
             };
           });
         }
@@ -551,7 +563,7 @@
               url: item.url ? `https://www.hyresgastforeningen.se${item.url}` : '#',
               source: sourceName,
               sourceClass: 'badge-hyresgast',
-              isNew: !!item.isNew // TILLÄGG: sparar om objektet har isNew: true
+              isNew: !!item.isNew
             };
           });
         }
@@ -578,7 +590,7 @@
               searchText: searchIndex,
               source: sourceName,
               sourceClass: 'badge-ica',
-              isNew: !!item.isNew // TILLÄGG: sparar om objektet har isNew: true
+              isNew: !!item.isNew
             };
           });
         }
@@ -606,14 +618,13 @@
               url: item.url || '#',
               source: sourceName,
               sourceClass: 'badge-coop',
-              isNew: !!item.isNew // TILLÄGG: sparar om objektet har isNew: true
+              isNew: !!item.isNew
             };
           });
         }
 
         const combinedDeals = [...mecenatItems, ...hyresgastItems, ...icaItems, ...coopItems];
 
-        // TILLÄGG: Slumpa ordningen först, sortera sedan alla isNew === true överst
         const shuffled = shuffleArray(combinedDeals, 42);
         allDeals = shuffled.sort((a, b) => (b.isNew ? 1 : 0) - (a.isNew ? 1 : 0));
 
@@ -640,8 +651,9 @@
       deals.forEach(deal => {
         const card = document.createElement('div');
         card.className = 'card';
+        // ÄNDRING: Sätt ett unikt ID baserat på titeln så man kan länka till det med #id
+        card.id = slugify(deal.title);
 
-        // TILLÄGG: HTML för NY-badge om deal.isNew är sant
         const newBadgeHtml = deal.isNew ? `<span class="badge-new">NY</span>` : '';
 
         card.innerHTML = `
@@ -657,6 +669,16 @@
         `;
         grid.appendChild(card);
       });
+
+      // Kontrollera om det finns en hash i URL:en (t.ex. #detta-erbjudande) när sidan laddats klart
+      if (window.location.hash) {
+        setTimeout(() => {
+          const targetElement = document.querySelector(window.location.hash);
+          if (targetElement) {
+            targetElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          }
+        }, 100);
+      }
     }
 
     document.getElementById('searchInput').addEventListener('input', (e) => {
