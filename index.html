@@ -195,7 +195,6 @@
       margin-bottom: 15px;
     }
 
-    /* ÄNDRING: Container för knappar inuti kortet */
     .card-actions {
       display: flex;
       gap: 8px;
@@ -219,7 +218,6 @@
       background-color: var(--primary-hover);
     }
 
-    /* ÄNDRING: Stil för dela/kopiera-knappen */
     .card-share {
       padding: 10px 12px;
       background-color: transparent;
@@ -683,7 +681,7 @@
             <h2 class="card-title">${deal.title}</h2>
             <div class="card-actions">
               <a href="${deal.url}" target="_blank" rel="noopener noreferrer" class="card-link">Visa rabatt</a>
-              <button class="card-share" title="Kopiera länk till erbjudandet" onclick="copyDealLink('${cardId}', this)">🔗</button>
+              <button class="card-share" title="Dela eller kopiera länk" onclick="shareDeal('${cardId}', '${deal.title.replace(/'/g, "\\'")}', this)">🔗</button>
             </div>
           </div>
         `;
@@ -700,16 +698,24 @@
       }
     }
 
-    /* ÄNDRING: Funktion för att kopiera länk direkt till specifik hash */
-    function copyDealLink(cardId, btn) {
+    /* ÄNDRING: Använder Web Share API (Android/iOS inbyggda delningsmeny) om det stöds, annars kopiering */
+    function shareDeal(cardId, title, btn) {
       const cleanURL = window.location.href.split('#')[0] + '#' + cardId;
-      navigator.clipboard.writeText(cleanURL).then(() => {
-        const originalText = btn.innerText;
-        btn.innerText = '✓';
-        setTimeout(() => {
-          btn.innerText = originalText;
-        }, 1500);
-      });
+
+      if (navigator.share) {
+        navigator.share({
+          title: title,
+          url: cleanURL
+        }).catch(() => {});
+      } else {
+        navigator.clipboard.writeText(cleanURL).then(() => {
+          const originalText = btn.innerText;
+          btn.innerText = '✓';
+          setTimeout(() => {
+            btn.innerText = originalText;
+          }, 1500);
+        });
+      }
     }
 
     document.getElementById('searchInput').addEventListener('input', (e) => {
