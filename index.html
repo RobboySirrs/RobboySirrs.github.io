@@ -118,7 +118,6 @@
       transition: transform 0.2s, box-shadow 0.2s, background-color 0.2s;
     }
 
-    /* ÄNDRING: Hover aktiveras endast på enheter med muspekare (inte touch/mobil) */
     @media (hover: hover) {
       .card:hover {
         transform: translateY(-4px);
@@ -126,7 +125,6 @@
       }
     }
 
-    /* Stil för att markera det länkade kortet vid direktlänkning */
     .card:target {
       box-shadow: 0 0 0 3px var(--primary);
     }
@@ -197,7 +195,14 @@
       margin-bottom: 15px;
     }
 
+    /* ÄNDRING: Container för knappar inuti kortet */
+    .card-actions {
+      display: flex;
+      gap: 8px;
+    }
+
     .card-link {
+      flex: 1;
       display: inline-block;
       text-align: center;
       padding: 10px;
@@ -212,6 +217,23 @@
 
     .card-link:hover {
       background-color: var(--primary-hover);
+    }
+
+    /* ÄNDRING: Stil för dela/kopiera-knappen */
+    .card-share {
+      padding: 10px 12px;
+      background-color: transparent;
+      color: var(--text-muted);
+      border: 1px solid var(--input-border);
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.9rem;
+      transition: background 0.2s, color 0.2s;
+    }
+
+    .card-share:hover {
+      background-color: var(--skeleton-base);
+      color: var(--text-color);
     }
 
     .skeleton-card {
@@ -472,16 +494,15 @@
       }
     }
 
-    /* Hjälpfunktion för att skapa säkra ID:n av titlar för länkning */
     function slugify(text) {
       return text.toString().toLowerCase()
-        .replace(/\s+/g, '-')       // Ersätt mellanslag med bindestreck
-        .replace(/[åä]/g, 'a')      // Hantera svenska tecken
+        .replace(/\s+/g, '-')
+        .replace(/[åä]/g, 'a')
         .replace(/ö/g, 'o')
-        .replace(/[^\w\-]+/g, '')   // Ta bort specialtecken
-        .replace(/\-\-+/g, '-')     // Ersätt flera bindestreck med ett
-        .replace(/^-+/, '')         // Trimma bindestreck i början
-        .replace(/-+$/, '');        // Trimma bindestreck i slutet
+        .replace(/[^\w\-]+/g, '')
+        .replace(/\-\-+/g, '-')
+        .replace(/^-+/, '')
+        .replace(/-+$/, '');
     }
 
     async function loadData() {
@@ -495,7 +516,6 @@
         
         const data = await res.json();
 
-        // 1. Mecenat Alumni
         let mecenatItems = [];
         if (data.mecenat && data.mecenat.discounts) {
           mecenatItems = data.mecenat.discounts.map(item => {
@@ -528,7 +548,6 @@
           });
         }
 
-        // 2. Hyresgästföreningen
         let hyresgastItems = [];
         if (data.hyresgast && data.hyresgast.items) {
           hyresgastItems = data.hyresgast.items.map(item => {
@@ -568,7 +587,6 @@
           });
         }
 
-        // 3. ICA Stammis
         let icaItems = [];
         if (Array.isArray(data.ica)) {
           icaItems = data.ica.map(item => {
@@ -595,7 +613,6 @@
           });
         }
 
-        // 4. Coop Medlem
         let coopItems = [];
         if (Array.isArray(data.coop)) {
           coopItems = data.coop.map(item => {
@@ -651,8 +668,8 @@
       deals.forEach(deal => {
         const card = document.createElement('div');
         card.className = 'card';
-        // ÄNDRING: Sätt ett unikt ID baserat på titeln så man kan länka till det med #id
-        card.id = slugify(deal.title);
+        const cardId = slugify(deal.title);
+        card.id = cardId;
 
         const newBadgeHtml = deal.isNew ? `<span class="badge-new">NY</span>` : '';
 
@@ -664,13 +681,15 @@
           </div>
           <div class="card-content">
             <h2 class="card-title">${deal.title}</h2>
-            <a href="${deal.url}" target="_blank" rel="noopener noreferrer" class="card-link">Visa rabatt</a>
+            <div class="card-actions">
+              <a href="${deal.url}" target="_blank" rel="noopener noreferrer" class="card-link">Visa rabatt</a>
+              <button class="card-share" title="Kopiera länk till erbjudandet" onclick="copyDealLink('${cardId}', this)">🔗</button>
+            </div>
           </div>
         `;
         grid.appendChild(card);
       });
 
-      // Kontrollera om det finns en hash i URL:en (t.ex. #detta-erbjudande) när sidan laddats klart
       if (window.location.hash) {
         setTimeout(() => {
           const targetElement = document.querySelector(window.location.hash);
@@ -679,6 +698,18 @@
           }
         }, 100);
       }
+    }
+
+    /* ÄNDRING: Funktion för att kopiera länk direkt till specifik hash */
+    function copyDealLink(cardId, btn) {
+      const cleanURL = window.location.href.split('#')[0] + '#' + cardId;
+      navigator.clipboard.writeText(cleanURL).then(() => {
+        const originalText = btn.innerText;
+        btn.innerText = '✓';
+        setTimeout(() => {
+          btn.innerText = originalText;
+        }, 1500);
+      });
     }
 
     document.getElementById('searchInput').addEventListener('input', (e) => {
