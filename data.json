@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-22T11:55:20.803Z",
+  "updatedAt": "2026-10-26T13:06:28.443Z",
   "mecenat": null,
   "hyresgast": {
     "items": [
@@ -905,22 +905,13 @@
       "isNew": false
     },
     {
-      "title": "Tomten är far till alla barnen: 20 % rabatt på årets juligaste teaterturné",
-      "searchText": "ICA Stammis Bild från teaterföreställningen Tomten är far till alla barnen, där karaktären \"Janne\" blivit arg på en av sin sambo \"Saras\" ex och är på väg att ge honom, utklädd till tomte, en rak höger. Kultur och nöje",
-      "image": "https://assets.icanet.se/w_400,c_scale,f_auto,q_auto/z3zaj0prxot89xw41xbq",
-      "url": "https://www.ica.se/stammis/partnererbjudanden/alla-erbjudanden/tomtenteater2/",
-      "source": "ICA Stammis",
-      "sourceClass": "badge-ica",
-      "isNew": false
-    },
-    {
       "title": "Christmas night: 40 % rabatt på julturnén Christmas Night",
       "searchText": "ICA Stammis Artisterna Tommy Nilsson, Jessica Andersson, Lasse Kronér och Annika Wickihalder i ett vinrött glittrande strålkastarljus. Kultur och nöje",
       "image": "https://assets.icanet.se/w_400,c_scale,f_auto,q_auto/bdjziufrn9xnitqq5rcv",
       "url": "https://www.ica.se/stammis/partnererbjudanden/alla-erbjudanden/christmas-night/",
       "source": "ICA Stammis",
       "sourceClass": "badge-ica",
-      "isNew": true
+      "isNew": false
     },
     {
       "title": "ICA Stammis: Ta del av rabatter, bonus och stammispoäng",
@@ -1088,13 +1079,13 @@
       "isNew": false
     },
     {
-      "title": "Tallink Silja Line: Upp till 30% rabatt.",
-      "searchText": "Coop Medlem Tallink Silja Line Upp till 30% rabatt.",
-      "image": "https://res.cloudinary.com/coopsverige/image/upload/f_auto,ar_1:1,c_fill,q_auto,h_720/v1775564652/DIGITALT/Partner/2026/Moduler/teaser-tallink-silja_hsipnn.png",
-      "url": "https://www.coop.se/medlem/partnererbjudanden/Tallink-Silja/",
+      "title": "Hurtigruten: 10% rabatt",
+      "searchText": "Coop Medlem Hurtigruten 10% rabatt",
+      "image": "https://res.cloudinary.com/coopsverige/image/upload/f_auto,ar_1:1,c_fill,q_auto,h_720/v1789987376/%C3%96vrigt/partnererbjudande/htxjzddrdry00wh1vhnq.jpg",
+      "url": "https://www.coop.se/medlem/partnererbjudanden/hurtigruten/",
       "source": "Coop Medlem",
       "sourceClass": "badge-coop",
-      "discount": "Upp till 30% rabatt.",
+      "discount": "10% rabatt",
       "isNew": false
     },
     {
@@ -1258,16 +1249,6 @@
       "isNew": false
     },
     {
-      "title": "Outnorth: 20% rabatt på utvalda märken med Coop rabattkod.",
-      "searchText": "Coop Medlem Outnorth 20% rabatt på utvalda märken med Coop rabattkod.",
-      "image": "https://res.cloudinary.com/coopsverige/image/upload/f_auto,ar_1:1,c_fill,q_auto,h_720/v1775564632/DIGITALT/Partner/2026/Moduler/teaser-outnorth_lauwjl.png",
-      "url": "https://www.coop.se/medlem/partnererbjudanden/outnorth/",
-      "source": "Coop Medlem",
-      "sourceClass": "badge-coop",
-      "discount": "20% rabatt på utvalda märken med Coop rabattkod.",
-      "isNew": false
-    },
-    {
       "title": "Sembo: 10% rabatt på boende.",
       "searchText": "Coop Medlem Sembo 10% rabatt på boende.",
       "image": "https://res.cloudinary.com/coopsverige/image/upload/f_auto,ar_1:1,c_fill,q_auto,h_720/v1789975280/%C3%96vrigt/partnererbjudande/ubyhzpgapazosjlzl2qm.png",
@@ -1276,6 +1257,16 @@
       "sourceClass": "badge-coop",
       "discount": "10% rabatt på boende.",
       "isNew": false
+    },
+    {
+      "title": "SF Anytime: Få 20% rabatt som medlem i Ditt Coop.",
+      "searchText": "Coop Medlem SF Anytime Få 20% rabatt som medlem i Ditt Coop.",
+      "image": "https://res.cloudinary.com/coopsverige/image/upload/f_auto,ar_1:1,c_fill,q_auto,h_720/v1792679114/lyiopzvdajqrof19kspp.jpg",
+      "url": "https://www.coop.se/medlem/partnererbjudanden/sfanytime/",
+      "source": "Coop Medlem",
+      "sourceClass": "badge-coop",
+      "discount": "Få 20% rabatt som medlem i Ditt Coop.",
+      "isNew": true
     },
     {
       "title": "SJ: 5 % rabatt.",
