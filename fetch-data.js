@@ -268,7 +268,8 @@ async function run() {
     console.error('Hyresgästföreningen fel:', err.message);
   }
 
-  // 3. ICA (Hämta HTML och kör parsning)
+    // 3. ICA (Hämta HTML och kör parsning)
+  /*
   try {
     const res = await fetch(icaUrl, { headers: BROWSER_HEADERS });
     if (res.ok) {
@@ -279,6 +280,8 @@ async function run() {
   } catch (err) {
     console.error('ICA fel:', err.message);
   }
+  */
+
 
   // 4. Coop (Kör Puppeteer)
   try {
