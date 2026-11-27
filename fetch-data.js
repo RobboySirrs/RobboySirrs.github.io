@@ -224,9 +224,10 @@ async function run() {
   let icaItems = [];
   let coopItems = [];
 
-  // 1. Mecenat Alumni
+    // 1. Mecenat Alumni
   try {
     const res = await fetch(mecenatUrl, { headers: BROWSER_HEADERS });
+    console.log('Mecenat status:', res.status);
     if (res.ok) {
       mecenatData = await res.json();
       if (mecenatData && Array.isArray(mecenatData.discounts)) {
@@ -235,11 +236,18 @@ async function run() {
           const isNew = title ? !oldTitles.has(title.trim().toLowerCase()) : false;
           return { ...item, isNew };
         });
+        console.log(`Hittade ${mecenatData.discounts.length} Mecenat-erbjudanden!`);
+      } else {
+        console.log('Mecenat oväntad struktur:', Object.keys(mecenatData || {}));
       }
+    } else {
+      const text = await res.text();
+      console.warn('Mecenat nekad:', text.slice(0, 200));
     }
   } catch (err) {
     console.error('Mecenat fel:', err.message);
   }
+
 
   // 2. Hyresgästföreningen
   try {
