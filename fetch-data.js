@@ -224,11 +224,17 @@ async function run() {
   let icaItems = [];
   let coopItems = [];
 
-    // 1. Mecenat Alumni
+      // 1. Mecenat Alumni (med enkel retry vid 504/502/503)
   try {
-    const res = await fetch(mecenatUrl, { headers: BROWSER_HEADERS });
-    console.log('Mecenat status:', res.status);
-    if (res.ok) {
+    let res = null;
+    for (let attempt = 1; attempt <= 3; attempt++) {
+      res = await fetch(mecenatUrl, { headers: BROWSER_HEADERS, signal: AbortSignal.timeout(15000) });
+      console.log(`Mecenat status (försök ${attempt}):`, res.status);
+      if (res.ok || ![502, 503, 504].includes(res.status)) break;
+      await new Promise(r => setTimeout(r, 2000 * attempt));
+    }
+
+    if (res && res.ok) {
       mecenatData = await res.json();
       if (mecenatData && Array.isArray(mecenatData.discounts)) {
         mecenatData.discounts = mecenatData.discounts.map(item => {
@@ -240,13 +246,14 @@ async function run() {
       } else {
         console.log('Mecenat oväntad struktur:', Object.keys(mecenatData || {}));
       }
-    } else {
+    } else if (res) {
       const text = await res.text();
       console.warn('Mecenat nekad:', text.slice(0, 200));
     }
   } catch (err) {
     console.error('Mecenat fel:', err.message);
   }
+
 
 
   // 2. Hyresgästföreningen
