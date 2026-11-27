@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-26T16:55:55.580Z",
+  "updatedAt": "2026-11-27T07:08:05.799Z",
   "mecenat": null,
   "hyresgast": {
     "items": [
@@ -878,7 +878,7 @@
       "source": "Coop Medlem",
       "sourceClass": "badge-coop",
       "discount": "Upp till 40% rabatt.",
-      "isNew": true
+      "isNew": false
     },
     {
       "title": "Bo Kaspers på Cirkus: 20% rabatt.",
@@ -908,7 +908,7 @@
       "source": "Coop Medlem",
       "sourceClass": "badge-coop",
       "discount": "Upp till 6600 kr i rabatt",
-      "isNew": true
+      "isNew": false
     },
     {
       "title": "EF Education: Upp till 20 000 kr rabatt.",
@@ -948,7 +948,7 @@
       "source": "Coop Medlem",
       "sourceClass": "badge-coop",
       "discount": "Upp till 60% rabatt på utvalda varor.",
-      "isNew": true
+      "isNew": false
     },
     {
       "title": "Euroflorist: 10% rabatt.",
@@ -1048,7 +1048,7 @@
       "source": "Coop Medlem",
       "sourceClass": "badge-coop",
       "discount": "Upp till 60% rabatt.",
-      "isNew": true
+      "isNew": false
     },
     {
       "title": "Komplett.se: Upp till 70% rabatt.",
@@ -1058,7 +1058,7 @@
       "source": "Coop Medlem",
       "sourceClass": "badge-coop",
       "discount": "Upp till 70% rabatt.",
-      "isNew": true
+      "isNew": false
     },
     {
       "title": "Live it: Upp till 15% rabatt.",
@@ -1088,7 +1088,7 @@
       "source": "Coop Medlem",
       "sourceClass": "badge-coop",
       "discount": "20% rabatt på utvalda varor.",
-      "isNew": true
+      "isNew": false
     },
     {
       "title": "Sembo: 10% rabatt på boende.",
